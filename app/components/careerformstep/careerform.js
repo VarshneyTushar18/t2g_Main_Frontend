@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+
+
 import { useState, useEffect, useMemo } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Link from "next/link";
@@ -7,152 +8,203 @@ import { useSearchParams } from "next/navigation";
 
 export default function MultiStepSignup() {
   const [formData, setFormData] = useState({
-    jobId: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    portfolioLink: "",
-    currentCTC: "",
-    expectedCTC: "",
-    joinDate: "",
-    lastCompany: "",
-    noticePeriod: "",
-    comments: "",
-    resume: null,
-  });
+jobId: "",
+firstName: "",
+lastName: "",
+email: "",
+phone: "",
+portfolioLink: "",
+currentCTC: "",
+expectedCTC: "",
+joinDate: "",
+lastCompany: "",
+noticePeriod: "",
+comments: "",
+resume: null,
+});
 
-  const [errors, setErrors] = useState({});
+const [errors, setErrors] = useState({});
+const [jobs, setJobs] = useState([]);
+const [step, setStep] = useState(1);
+const totalSteps = 5;
 
-  const [jobs, setJobs] = useState([]);
+// ✅ SAFE handling of search params
+const params = useSearchParams();
+const [jobId, setJobId] = useState(null);
 
-  const [step, setStep] = useState(1);
-  const totalSteps = 5;
+useEffect(() => {
+const id = params.get("jid");
+setJobId(id);
+}, [params]);
 
-  const params = useSearchParams();
-  const jobId = params.get("jid");
+// ✅ Fetch jobs ONLY once
+useEffect(() => {
+async function loadJobs() {
+try {
+const res = await fetch(
+${process.env.NEXT_PUBLIC_API_URL}/api/career/jobs
+);
+const data = await res.json();
+setJobs(data.data || []);
+} catch (err) {
+console.error("Failed to load jobs:", err);
+}
+}
 
-  useEffect(() => {
-    async function loadJobs() {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/career/jobs`,
-      );
-      const data = await res.json();
-      setJobs(data.data || []);
-      if (jobId) {
-        setFormData(prev => ({ ...prev, jobId }));
-      }
+loadJobs();
+
+}, []);
+
+// ✅ Apply jobId after it's available
+useEffect(() => {
+if (jobId) {
+setFormData((prev) => ({ ...prev, jobId }));
+}
+}, [jobId]);
+
+const validateEmail = (email) =>
+/^[^\s@]+@[^\s@]+.[^\s@]+$/.test(email);
+
+const validatePhone = (phone) =>
+/^+?[\d\s-()]{10,}$/.test(phone);
+
+const validateURL = (url) => {
+if (!url) return true;
+try {
+new URL(url);
+return true;
+} catch {
+return false;
+}
+};
+
+const isStepValid = (currentStep) => {
+if (currentStep === 1) {
+return (
+formData.firstName.trim() &&
+formData.lastName.trim() &&
+formData.email.trim() &&
+validateEmail(formData.email) &&
+validateURL(formData.portfolioLink)
+);
+} else if (currentStep === 2) {
+return (
+formData.jobId &&
+formData.currentCTC &&
+formData.expectedCTC &&
+formData.joinDate
+);
+} else if (currentStep === 3) {
+return (
+formData.phone.trim() &&
+validatePhone(formData.phone) &&
+formData.resume &&
+formData.resume.size <= 3 * 1024 * 1024
+);
+}
+return true;
+};
+
+const validateStep = (currentStep) => {
+const newErrors = {};
+
+if (currentStep === 1) {
+  if (!formData.firstName.trim())
+    newErrors.firstName = "First name is required";
+  if (!formData.lastName.trim())
+    newErrors.lastName = "Last name is required";
+  if (!formData.email.trim())
+    newErrors.email = "Email is required";
+  else if (!validateEmail(formData.email))
+    newErrors.email = "Invalid email format";
+  if (!validateURL(formData.portfolioLink))
+    newErrors.portfolioLink = "Invalid URL format";
+}
+
+if (currentStep === 2) {
+  if (!formData.jobId)
+    newErrors.jobId = "Please select a position";
+  if (!formData.currentCTC)
+    newErrors.currentCTC = "Current CTC is required";
+  if (!formData.expectedCTC)
+    newErrors.expectedCTC = "Expected CTC is required";
+  if (!formData.joinDate)
+    newErrors.joinDate = "Join date is required";
+}
+
+if (currentStep === 3) {
+  if (!formData.phone.trim())
+    newErrors.phone = "Phone number is required";
+  else if (!validatePhone(formData.phone))
+    newErrors.phone = "Invalid phone format";
+
+  if (!formData.resume)
+    newErrors.resume = "Resume is required";
+  else if (formData.resume.size > 3 * 1024 * 1024)
+    newErrors.resume = "File size must be less than 3MB";
+}
+
+setErrors(newErrors);
+return Object.keys(newErrors).length === 0;
+
+};
+
+const nextStep = () => {
+if (validateStep(step)) {
+setStep((s) => Math.min(s + 1, totalSteps));
+}
+};
+
+const prevStep = () =>
+setStep((s) => Math.max(s - 1, 1));
+
+const isCurrentStepValid = useMemo(
+() => isStepValid(step),
+[formData, step]
+);
+
+const handleSubmit = async () => {
+let allValid = true;
+
+for (let i = 1; i <= 4; i++) {
+  if (!validateStep(i)) {
+    allValid = false;
+    setStep(i);
+    break;
+  }
+}
+
+if (!allValid) return;
+
+const data = new FormData();
+
+Object.keys(formData).forEach((key) => {
+  if (formData[key]) {
+    data.append(key, formData[key]);
+  }
+});
+
+try {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/career/apply`,
+    {
+      method: "POST",
+      body: data,
     }
+  );
 
-    loadJobs();
-  }, [jobId]);
+  const result = await res.json();
 
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-  };
+  if (res.ok) {
+    setStep(5);
+  } else {
+    alert(result.error);
+  }
+} catch (err) {
+  console.error(err);
+}
 
-  const validatePhone = (phone) => {
-    const re = /^\+?[\d\s\-\(\)]{10,}$/;
-    return re.test(phone);
-  };
-
-  const validateURL = (url) => {
-    if (!url) return true; // optional
-    try {
-      new URL(url);
-      return true;
-    } catch {
-      return false;
-    }
-  };
-
-  const isStepValid = (currentStep) => {
-    if (currentStep === 1) {
-      return formData.firstName.trim() && formData.lastName.trim() && formData.email.trim() && validateEmail(formData.email) && validateURL(formData.portfolioLink);
-    } else if (currentStep === 2) {
-      return formData.jobId && formData.currentCTC && formData.expectedCTC && formData.joinDate;
-    } else if (currentStep === 3) {
-      return formData.phone.trim() && validatePhone(formData.phone) && formData.resume && formData.resume.size <= 3 * 1024 * 1024;
-    }
-    return true;
-  };
-
-  const validateStep = (currentStep) => {
-    const newErrors = {};
-
-    if (currentStep === 1) {
-      if (!formData.firstName.trim()) newErrors.firstName = "First name is required";
-      if (!formData.lastName.trim()) newErrors.lastName = "Last name is required";
-      if (!formData.email.trim()) newErrors.email = "Email is required";
-      else if (!validateEmail(formData.email)) newErrors.email = "Invalid email format";
-      if (!validateURL(formData.portfolioLink)) newErrors.portfolioLink = "Invalid URL format";
-    } else if (currentStep === 2) {
-      if (!formData.jobId) newErrors.jobId = "Please select a position";
-      if (!formData.currentCTC) newErrors.currentCTC = "Current CTC is required";
-      if (!formData.expectedCTC) newErrors.expectedCTC = "Expected CTC is required";
-      if (!formData.joinDate) newErrors.joinDate = "Join date is required";
-    } else if (currentStep === 3) {
-      if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
-      else if (!validatePhone(formData.phone)) newErrors.phone = "Invalid phone format";
-      if (!formData.resume) newErrors.resume = "Resume is required";
-      else if (formData.resume.size > 3 * 1024 * 1024) newErrors.resume = "File size must be less than 3MB";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const nextStep = () => {
-    if (validateStep(step)) {
-      setStep((s) => Math.min(s + 1, totalSteps));
-    }
-  };
-
-  const prevStep = () => setStep((s) => Math.max(s - 1, 1));
-
-  const isCurrentStepValid = useMemo(() => isStepValid(step), [formData, step]);
-
-  const handleSubmit = async () => {
-    // Validate all steps
-    let allValid = true;
-    for (let i = 1; i <= 4; i++) {
-      if (!validateStep(i)) {
-        allValid = false;
-        setStep(i);
-        break;
-      }
-    }
-    if (!allValid) return;
-
-    const data = new FormData();
-
-    Object.keys(formData).forEach((key) => {
-      if (formData[key] !== null && formData[key] !== "") {
-        data.append(key, formData[key]);
-      }
-    });
-
-    try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/career/apply`,
-        {
-          method: "POST",
-          body: data,
-        },
-      );
-
-      const result = await res.json();
-
-      if (res.ok) {
-        setStep(5);
-      } else {
-        alert(result.error);
-      }
-    } catch (err) {
-      console.error(err);
-    }
-  };
+};
 
   return (
     <div className="container-fluid">
