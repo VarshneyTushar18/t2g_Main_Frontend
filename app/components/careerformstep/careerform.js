@@ -1,210 +1,179 @@
 "use client";
 
-
 import { useState, useEffect, useMemo } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
+
 export default function MultiStepSignup() {
   const [formData, setFormData] = useState({
-jobId: "",
-firstName: "",
-lastName: "",
-email: "",
-phone: "",
-portfolioLink: "",
-currentCTC: "",
-expectedCTC: "",
-joinDate: "",
-lastCompany: "",
-noticePeriod: "",
-comments: "",
-resume: null,
-});
+    jobId: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    portfolioLink: "",
+    currentCTC: "",
+    expectedCTC: "",
+    joinDate: "",
+    lastCompany: "",
+    noticePeriod: "",
+    comments: "",
+    resume: null,
+  });
 
-const [errors, setErrors] = useState({});
-const [jobs, setJobs] = useState([]);
-const [step, setStep] = useState(1);
-const totalSteps = 5;
+  const [errors, setErrors] = useState({});
+  const [jobs, setJobs] = useState([]);
+  const [step, setStep] = useState(1);
 
-// ✅ SAFE handling of search params
-const params = useSearchParams();
-const [jobId, setJobId] = useState(null);
+  const [loadingJobs, setLoadingJobs] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
+  const [apiError, setApiError] = useState("");
 
-useEffect(() => {
-const id = params.get("jid");
-setJobId(id);
-}, [params]);
+  const params = useSearchParams();
+  const [jobId, setJobId] = useState(null);
 
-// ✅ Fetch jobs ONLY once
-useEffect(() => {
-async function loadJobs() {
-try {
-const res = await fetch(
-${process.env.NEXT_PUBLIC_API_URL}/api/career/jobs
-);
-const data = await res.json();
-setJobs(data.data || []);
-} catch (err) {
-console.error("Failed to load jobs:", err);
-}
-}
+  // Handle query param safely
+  useEffect(() => {
+    const id = params.get("jid");
+    if (id) setJobId(id);
+  }, [params]);
 
-loadJobs();
-
-}, []);
-
-// ✅ Apply jobId after it's available
-useEffect(() => {
-if (jobId) {
-setFormData((prev) => ({ ...prev, jobId }));
-}
-}, [jobId]);
-
-const validateEmail = (email) =>
-/^[^\s@]+@[^\s@]+.[^\s@]+$/.test(email);
-
-const validatePhone = (phone) =>
-/^+?[\d\s-()]{10,}$/.test(phone);
-
-const validateURL = (url) => {
-if (!url) return true;
-try {
-new URL(url);
-return true;
-} catch {
-return false;
-}
-};
-
-const isStepValid = (currentStep) => {
-if (currentStep === 1) {
-return (
-formData.firstName.trim() &&
-formData.lastName.trim() &&
-formData.email.trim() &&
-validateEmail(formData.email) &&
-validateURL(formData.portfolioLink)
-);
-} else if (currentStep === 2) {
-return (
-formData.jobId &&
-formData.currentCTC &&
-formData.expectedCTC &&
-formData.joinDate
-);
-} else if (currentStep === 3) {
-return (
-formData.phone.trim() &&
-validatePhone(formData.phone) &&
-formData.resume &&
-formData.resume.size <= 3 * 1024 * 1024
-);
-}
-return true;
-};
-
-const validateStep = (currentStep) => {
-const newErrors = {};
-
-if (currentStep === 1) {
-  if (!formData.firstName.trim())
-    newErrors.firstName = "First name is required";
-  if (!formData.lastName.trim())
-    newErrors.lastName = "Last name is required";
-  if (!formData.email.trim())
-    newErrors.email = "Email is required";
-  else if (!validateEmail(formData.email))
-    newErrors.email = "Invalid email format";
-  if (!validateURL(formData.portfolioLink))
-    newErrors.portfolioLink = "Invalid URL format";
-}
-
-if (currentStep === 2) {
-  if (!formData.jobId)
-    newErrors.jobId = "Please select a position";
-  if (!formData.currentCTC)
-    newErrors.currentCTC = "Current CTC is required";
-  if (!formData.expectedCTC)
-    newErrors.expectedCTC = "Expected CTC is required";
-  if (!formData.joinDate)
-    newErrors.joinDate = "Join date is required";
-}
-
-if (currentStep === 3) {
-  if (!formData.phone.trim())
-    newErrors.phone = "Phone number is required";
-  else if (!validatePhone(formData.phone))
-    newErrors.phone = "Invalid phone format";
-
-  if (!formData.resume)
-    newErrors.resume = "Resume is required";
-  else if (formData.resume.size > 3 * 1024 * 1024)
-    newErrors.resume = "File size must be less than 3MB";
-}
-
-setErrors(newErrors);
-return Object.keys(newErrors).length === 0;
-
-};
-
-const nextStep = () => {
-if (validateStep(step)) {
-setStep((s) => Math.min(s + 1, totalSteps));
-}
-};
-
-const prevStep = () =>
-setStep((s) => Math.max(s - 1, 1));
-
-const isCurrentStepValid = useMemo(
-() => isStepValid(step),
-[formData, step]
-);
-
-const handleSubmit = async () => {
-let allValid = true;
-
-for (let i = 1; i <= 4; i++) {
-  if (!validateStep(i)) {
-    allValid = false;
-    setStep(i);
-    break;
-  }
-}
-
-if (!allValid) return;
-
-const data = new FormData();
-
-Object.keys(formData).forEach((key) => {
-  if (formData[key]) {
-    data.append(key, formData[key]);
-  }
-});
-
-try {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/career/apply`,
-    {
-      method: "POST",
-      body: data,
+  // Fetch jobs
+  useEffect(() => {
+    async function loadJobs() {
+      setLoadingJobs(true);
+      try {
+        const res = await fetch(`${API_BASE}/api/career/jobs`);
+        const data = await res.json();
+        setJobs(data?.data || []);
+      } catch (err) {
+        console.error(err);
+        setApiError("Unable to load job listings.");
+      } finally {
+        setLoadingJobs(false);
+      }
     }
-  );
 
-  const result = await res.json();
+    loadJobs();
+  }, []);
 
-  if (res.ok) {
-    setStep(5);
-  } else {
-    alert(result.error);
-  }
-} catch (err) {
-  console.error(err);
-}
+  // Apply jobId from URL
+  useEffect(() => {
+    if (jobId) {
+      setFormData((prev) => ({ ...prev, jobId }));
+    }
+  }, [jobId]);
 
-};
+  // Validators
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  const validatePhone = (phone) => /^\+?[\d\s\-()]{10,}$/.test(phone);
+
+  const validateURL = (url) => {
+    if (!url) return true;
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  const validateStep = (currentStep) => {
+    const newErrors = {};
+
+    if (currentStep === 1) {
+      if (!formData.firstName.trim())
+        newErrors.firstName = "First name is required";
+      if (!formData.lastName.trim())
+        newErrors.lastName = "Last name is required";
+      if (!formData.email.trim()) newErrors.email = "Email is required";
+      else if (!validateEmail(formData.email))
+        newErrors.email = "Invalid email format";
+      if (!validateURL(formData.portfolioLink))
+        newErrors.portfolioLink = "Invalid URL format";
+    }
+
+    if (currentStep === 2) {
+      if (!formData.jobId) newErrors.jobId = "Please select a position";
+      if (!formData.currentCTC)
+        newErrors.currentCTC = "Current CTC is required";
+      if (!formData.expectedCTC)
+        newErrors.expectedCTC = "Expected CTC is required";
+      if (!formData.joinDate) newErrors.joinDate = "Join date is required";
+    }
+
+    if (currentStep === 3) {
+      if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+      else if (!validatePhone(formData.phone))
+        newErrors.phone = "Invalid phone format";
+
+      if (!formData.resume) newErrors.resume = "Resume is required";
+      else if (formData.resume.size > 3 * 1024 * 1024)
+        newErrors.resume = "File size must be less than 3MB";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const nextStep = () => {
+    if (validateStep(step)) {
+      setStep((s) => s + 1);
+    }
+  };
+
+  const prevStep = () => {
+    setStep((s) => s - 1);
+  };
+
+  const handleSubmit = async () => {
+    if (submitting) return;
+
+    let valid = true;
+    for (let i = 1; i <= 4; i++) {
+      if (!validateStep(i)) {
+        valid = false;
+        setStep(i);
+        break;
+      }
+    }
+
+    if (!valid) return;
+
+    setSubmitting(true);
+    setApiError("");
+
+    const data = new FormData();
+    Object.keys(formData).forEach((key) => {
+      if (formData[key]) {
+        data.append(key, formData[key]);
+      }
+    });
+
+    try {
+      const res = await fetch(`${API_BASE}/api/career/apply`, {
+        method: "POST",
+        body: data,
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        setStep(5);
+      } else {
+        setApiError(result?.error || "Submission failed.");
+      }
+    } catch (err) {
+      console.error(err);
+      setApiError("Network error. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <div className="container-fluid">
@@ -256,7 +225,11 @@ try {
                         setFormData({ ...formData, firstName: e.target.value })
                       }
                     />
-                    {errors.firstName && <span style={{color: 'red', fontSize: '12px'}}>{errors.firstName}</span>}
+                    {errors.firstName && (
+                      <span style={{ color: "red", fontSize: "12px" }}>
+                        {errors.firstName}
+                      </span>
+                    )}
                     <label className="fieldlabels">Last name *</label>
                     <input
                       type="text"
@@ -267,7 +240,11 @@ try {
                         setFormData({ ...formData, lastName: e.target.value })
                       }
                     />
-                    {errors.lastName && <span style={{color: 'red', fontSize: '12px'}}>{errors.lastName}</span>}
+                    {errors.lastName && (
+                      <span style={{ color: "red", fontSize: "12px" }}>
+                        {errors.lastName}
+                      </span>
+                    )}
                     <label className="fieldlabels">Email *</label>
                     <input
                       type="email"
@@ -279,7 +256,11 @@ try {
                         setFormData({ ...formData, email: e.target.value })
                       }
                     />
-                    {errors.email && <span style={{color: 'red', fontSize: '12px'}}>{errors.email}</span>}
+                    {errors.email && (
+                      <span style={{ color: "red", fontSize: "12px" }}>
+                        {errors.email}
+                      </span>
+                    )}
 
                     <label className="fieldlabels">Portfolio Link</label>
                     <input
@@ -294,7 +275,11 @@ try {
                         })
                       }
                     />
-                    {errors.portfolioLink && <span style={{color: 'red', fontSize: '12px'}}>{errors.portfolioLink}</span>}
+                    {errors.portfolioLink && (
+                      <span style={{ color: "red", fontSize: "12px" }}>
+                        {errors.portfolioLink}
+                      </span>
+                    )}
                   </div>
 
                   <input
@@ -342,10 +327,18 @@ try {
                         </option>
                       ))}
                     </select>
-                    {errors.jobId && <span style={{color: 'red', fontSize: '12px'}}>{errors.jobId}</span>}
+                    {errors.jobId && (
+                      <span style={{ color: "red", fontSize: "12px" }}>
+                        {errors.jobId}
+                      </span>
+                    )}
 
                     <label className="fieldlabels">Current CTC (PA.) *</label>
-                    {errors.currentCTC && <span style={{color: 'red', fontSize: '12px'}}>{errors.currentCTC}</span>}
+                    {errors.currentCTC && (
+                      <span style={{ color: "red", fontSize: "12px" }}>
+                        {errors.currentCTC}
+                      </span>
+                    )}
 
                     <div className="row">
                       <div className="col-md-6">
@@ -406,7 +399,11 @@ try {
                     </div>
 
                     <label className="fieldlabels">Expected CTC (PA.) *</label>
-                    {errors.expectedCTC && <span style={{color: 'red', fontSize: '12px'}}>{errors.expectedCTC}</span>}
+                    {errors.expectedCTC && (
+                      <span style={{ color: "red", fontSize: "12px" }}>
+                        {errors.expectedCTC}
+                      </span>
+                    )}
                     <div className="row">
                       <div className="col-md-6">
                         <select
@@ -475,7 +472,11 @@ try {
                         setFormData({ ...formData, joinDate: e.target.value })
                       }
                     />
-                    {errors.joinDate && <span style={{color: 'red', fontSize: '12px'}}>{errors.joinDate}</span>}
+                    {errors.joinDate && (
+                      <span style={{ color: "red", fontSize: "12px" }}>
+                        {errors.joinDate}
+                      </span>
+                    )}
                   </div>
 
                   <input
@@ -520,7 +521,11 @@ try {
                         setFormData({ ...formData, phone: e.target.value })
                       }
                     />
-                    {errors.phone && <span style={{color: 'red', fontSize: '12px'}}>{errors.phone}</span>}
+                    {errors.phone && (
+                      <span style={{ color: "red", fontSize: "12px" }}>
+                        {errors.phone}
+                      </span>
+                    )}
 
                     <label className="fieldlabels">Upload Your Resume *</label>
                     <input
@@ -532,7 +537,11 @@ try {
                       }
                       accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
                     />
-                    {errors.resume && <span style={{color: 'red', fontSize: '12px'}}>{errors.resume}</span>}
+                    {errors.resume && (
+                      <span style={{ color: "red", fontSize: "12px" }}>
+                        {errors.resume}
+                      </span>
+                    )}
 
                     <span className="text-muted">
                       Allowed file types: PDF, JPG, PNG, Word, DOC (Max size:
