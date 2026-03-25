@@ -7,7 +7,8 @@ import Style from "./ContactSection.module.css"; // optional if you want CSS mod
 import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpenText, faPhone } from "@fortawesome/free-solid-svg-icons";
 
-const apiBaseUrl = "http://localhost:5000";
+
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
-    const response = await fetch(`${apiBaseUrl}/api/leads`, {
+    const response = await fetch(`${API}/api/leads`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
