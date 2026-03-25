@@ -1,10 +1,10 @@
 import Style from "./style.module.css";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PageHeader from "@/app/components/services/PageHeader/PageHeader";
-import './custom.css';
+import "./custom.css";
 import BrandSection from "@/app/components/home/BrandSection/BrandSection";
 import MultiStepSignup from "@/app/components/careerformstep/careerform";
-
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Career - Online Marketing & IT Consulting Career - Tech2Globe",
@@ -28,11 +28,10 @@ export const metadata = {
   },
 };
 
-
 const pageHeaderData = {
   title: "Apply Job At Tech2Globe",
   backgroundImage: "/images/skyscraper.jpg",
-  shortBanner: true
+  shortBanner: true,
 };
 
 export default function CareerForm() {
@@ -40,17 +39,15 @@ export default function CareerForm() {
     <>
       <PageHeader pageHeaderData={pageHeaderData} />
 
-      <Breadcrumb
-        parentName="About Us"
-        pageName="Career Form"
-      />
+      <Breadcrumb parentName="About Us" pageName="Career Form" />
 
       <BrandSection />
+
       <section className={Style.PageContent}>
-        <MultiStepSignup/>
+        <Suspense fallback={<div>Loading...</div>}>
+          <MultiStepSignup />
+        </Suspense>
       </section>
-
-
     </>
   );
 }

@@ -7,6 +7,8 @@ import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { Fragment } from "react";
 import "./custom.css";
 
+export const dynamic = "force-dynamic"
+
 export const metadata = {
   title: "Career - Online Marketing & IT Consulting Career - Tech2Globe",
   description:

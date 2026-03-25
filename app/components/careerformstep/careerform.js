@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { useState, useEffect, useMemo, Suspense } from "react";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 
-export default function MultiStepSignup() {
+ function MultiStepSignupInner() {
   const [formData, setFormData] = useState({
     jobId: "",
     firstName: "",
@@ -668,9 +668,19 @@ export default function MultiStepSignup() {
                 </fieldset>
               )}
             </form>
+
           </div>
         </div>
       </div>
     </div>
+  );
+}
+
+
+export default function MultiStepSignup() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <MultiStepSignupInner />
+    </Suspense>
   );
 }
