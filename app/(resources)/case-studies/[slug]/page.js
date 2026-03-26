@@ -5,6 +5,7 @@ import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSide
 import Link from "next/link";
 import { FaAngleDoubleRight } from "react-icons/fa";
 import DOMPurify from "isomorphic-dompurify";
+export const dynamic = "force-dynamic";
 
 
 
@@ -19,8 +20,15 @@ const resources = [
 const sidebarSections = [{ heading: "Resources", links: resources }];
 
 // ===== DYNAMIC METADATA =====
-export async function generateMetadata({ params }) {
-  const { slug } = params;
+  export async function generateMetadata({ params }) {
+  const slug = params?.slug;
+
+  if (!slug) {
+    return {
+      title: "Case Study | Tech2Globe",
+      description: "Browse our case studies",
+    };
+  }
 
   try {
     const res = await fetch(`${API}/api/case-studies/${slug}`, {
