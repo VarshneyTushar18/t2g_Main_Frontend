@@ -184,16 +184,16 @@ const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 
             <form id="msform" onSubmit={(e) => e.preventDefault()}>
               <ul id="progressbar" className="p-0">
-                <li className={step >= 1 ? "active" : ""}>
+                <li className={step >= 1 ? "active" : ""} id="account">
                   <strong>Personal Information</strong>
                 </li>
-                <li className={step >= 2 ? "active" : ""}>
+                <li className={step >= 2 ? "active" : ""} id="profile">
                   <strong>Application Details</strong>
                 </li>
-                <li className={step >= 3 ? "active" : ""}>
+                <li className={step >= 3 ? "active" : ""} id="education">
                   <strong>Professional Details</strong>
                 </li>
-                <li className={step >= 4 ? "active" : ""}>
+                <li className={step >= 4 ? "active" : ""} id="experience">
                   <strong>Additional Information</strong>
                 </li>
               </ul>
@@ -219,6 +219,7 @@ const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
                     <input
                       type="text"
                       name="firstName"
+                      placeholder="First Name"
                       value={formData.firstName}
                       required
                       onChange={(e) =>
@@ -234,6 +235,7 @@ const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
                     <input
                       type="text"
                       name="lastName"
+                      placeholder="Last Name"
                       value={formData.lastName}
                       required
                       onChange={(e) =>

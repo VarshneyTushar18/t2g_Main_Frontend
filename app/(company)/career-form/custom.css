@@ -7,7 +7,8 @@
 #msform {
     text-align: center;
     position: relative;
-    margin-top: 20px
+    margin-top: 20px;
+    font-family: 'poppins', sans-serif!important;
 }
 
 #msform fieldset {
@@ -39,7 +40,7 @@
     margin-top: 2px;
     width: 100%;
     box-sizing: border-box;
-    font-family: montserrat;
+    font-family: poppins!important;
     color: #2C3E50;
     background-color: #ECEFF1;
     font-size: 16px;
@@ -53,7 +54,15 @@
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     border: 1px solid #cb010d;
-    outline-width: 0
+    outline-width: 0;
+    font-family: poppins!important;
+}
+
+#msform ::placeholder {
+    font-family: poppins!important;
+    color: #7c7c7c;
+    opacity: 1;
+    font-weight: normal!important;
 }
 
 #msform .action-button {
@@ -66,7 +75,8 @@
     cursor: pointer;
     padding: 10px 5px;
     margin: 10px 0px 10px 5px;
-    float: right
+    float: right;
+    font-family: poppins;
 }
 
 #msform .action-button:hover,
@@ -181,7 +191,7 @@
     background-position: center;
 }
 
-#progressbar #personal:before {
+#progressbar #profile:before {
     content: '';
     background-image: url('/images/services/service-inner/user-icon-svg.svg');
     background-size: 24px;
@@ -189,7 +199,7 @@
     background-position: center;
 }
 
-#progressbar #payment:before {
+#progressbar #education:before {
     content: '';
     background-image: url('/images/services/service-inner/attach-icon-svg.svg');
     background-size: 24px;
@@ -197,7 +207,7 @@
     background-position: center;
 }
 
-#progressbar #confirm:before {
+#progressbar #experience:before {
     content: '';
     background-image: url('/images/services/service-inner/check-image-svg.svg');
     background-size: 24px;
@@ -258,4 +268,9 @@
     #msform input, #msform textarea, #msform select{
         margin-bottom: 20px;
     }
+}
+
+#msform span{
+    display: block;
+    margin-top: -20px;
 }
