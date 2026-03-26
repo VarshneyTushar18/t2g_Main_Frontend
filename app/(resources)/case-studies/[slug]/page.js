@@ -4,6 +4,8 @@ import CaseStudiesCard from "@/app/components/cscard/cscard";
 import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSidebar";
 import Link from "next/link";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import DOMPurify from "isomorphic-dompurify";
+
 
 
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -83,9 +85,7 @@ export default async function CaseStudySingle({ params }) {
     const others = [];
 
     allGroups.forEach((group) => {
-      const isCurrentCategory = group.items?.some(
-        (item) => item.slug === slug
-      );
+      const isCurrentCategory = group.items?.some((item) => item.slug === slug);
 
       if (isCurrentCategory) {
         // RELATED (same category)
@@ -118,15 +118,20 @@ export default async function CaseStudySingle({ params }) {
   const formattedContent = (data.content || "")
     .replace(
       /<figure[^>]*class="[^"]*table[^"]*"[^>]*>/gi,
-      '<div class="table-responsive">'
+      '<div class="table-responsive">',
     )
     .replace(/<\/figure>/gi, "</div>")
     .replace(
       /<table/gi,
-      '<table class="table table-bordered table-striped table-hover"'
+      '<table class="table table-bordered table-striped table-hover"',
     )
     .replace(/<img/gi, '<img class="img-fluid" ')
     .replace(/<tr>\s*(<td>\s*<\/td>\s*)+<\/tr>/gi, "");
+
+  const safeContent = DOMPurify.sanitize(formattedContent, {
+    FORBID_TAGS: ["style", "script"],
+    FORBID_ATTR: ["style", "onclick", "onmouseover", "onerror"],
+  });
 
   return (
     <>
@@ -167,9 +172,7 @@ export default async function CaseStudySingle({ params }) {
 
               <div className={Style.ContentWrapper}>
                 {formattedContent ? (
-                  <div
-                    dangerouslySetInnerHTML={{ __html: formattedContent }}
-                  />
+                  <div dangerouslySetInnerHTML={{ __html: safeContent }} />
                 ) : (
                   <p>No content available.</p>
                 )}
@@ -228,9 +231,7 @@ export default async function CaseStudySingle({ params }) {
 
         {/* OTHER */}
         <div className="container pt-5">
-          <h2 className="text-center pb-4">
-            Explore Other Case Studies
-          </h2>
+          <h2 className="text-center pb-4">Explore Other Case Studies</h2>
 
           {otherStudies.length > 0 ? (
             <>
@@ -255,9 +256,7 @@ export default async function CaseStudySingle({ params }) {
               </div>
             </>
           ) : (
-            <p className="text-center">
-              No other case studies available.
-            </p>
+            <p className="text-center">No other case studies available.</p>
           )}
         </div>
       </section>

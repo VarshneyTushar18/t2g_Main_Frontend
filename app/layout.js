@@ -7,8 +7,10 @@ import Header from "./ui/Header/Header";
 import Footer from "./ui/Footer/Footer";
 import NextTopLoader from "nextjs-toploader";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import { fixRelativeLinks } from "@/app/utilities/fixRelativeLinks";
+import FixLinksWrapper from "@/app/utilities/FixLinksWrapper";
 
-const poppins = Poppins({ 
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-poppins",
@@ -22,7 +24,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={poppins.variable}>
+      {/* ✅ ADD THIS BLOCK */}
+      <head>
+        <base href="/" />
+      </head>
+
       <body>
+       <FixLinksWrapper/>
+       <fixRelativeLinks/>
         <ScrollToTop />
         <NextTopLoader
           color="#c01f29"
