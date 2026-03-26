@@ -4,7 +4,6 @@ import CaseStudiesCard from "@/app/components/cscard/cscard";
 import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSidebar";
 import Link from "next/link";
 import { FaAngleDoubleRight } from "react-icons/fa";
-import DOMPurify from "isomorphic-dompurify";
 export const dynamic = "force-dynamic";
 
 
@@ -136,10 +135,7 @@ export default async function CaseStudySingle({ params }) {
     .replace(/<img/gi, '<img class="img-fluid" ')
     .replace(/<tr>\s*(<td>\s*<\/td>\s*)+<\/tr>/gi, "");
 
-  const safeContent = DOMPurify.sanitize(formattedContent, {
-    FORBID_TAGS: ["style", "script"],
-    FORBID_ATTR: ["style", "onclick", "onmouseover", "onerror"],
-  });
+  const safeContent = formattedContent;
 
   return (
     <>
