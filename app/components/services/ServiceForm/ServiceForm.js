@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { countries } from "@/data/countries";
-
+import Select from "react-select";
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 export default function ServiceForm() {
@@ -33,12 +33,12 @@ export default function ServiceForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name:       formData.name,
-          email:      formData.email,
-          country:    formData.country,   // maps countrycode → country
-          phone:      formData.phone,
-          message:    formData.comment,        // maps comment → message
-          form_type:  "service_form",
+          name: formData.name,
+          email: formData.email,
+          country: formData.country,   // maps countrycode → country
+          phone: formData.phone,
+          message: formData.comment,        // maps comment → message
+          form_type: "service_form",
           source_page: typeof window !== "undefined" ? window.location.pathname : "",
         }),
       });
@@ -103,20 +103,21 @@ export default function ServiceForm() {
         {/* Country */}
         <div className="col-12 input-fields px-0">
           <div className="form-group newform">
-            <select
-              className="form-control mb-3"
-              name="country"
-              value={formData.country}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Select Country</option>
-              {countries.map((c, idx) => (
-                <option key={idx} value={c.value}>
-                  {c.label}
-                </option>
-              ))}
-            </select>
+            <Select
+              options={countries}
+              placeholder="Select Country"
+              isSearchable
+              className="mb-3"
+              value={countries.find(
+                (c) => c.value === formData.country
+              )}
+              onChange={(selectedOption) => {
+                setFormData((prev) => ({
+                  ...prev,
+                  country: selectedOption?.value || "",
+                }));
+              }}
+            />
           </div>
         </div>
 

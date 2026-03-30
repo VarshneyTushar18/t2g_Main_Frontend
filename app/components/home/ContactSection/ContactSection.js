@@ -1,5 +1,5 @@
 "use client";
-
+import Select from "react-select";
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +9,115 @@ import { faEnvelopeOpenText, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
+const countryOptions = [
+  { value: "+1", label: "United States (+1)" },
+  { value: "+1", label: "Canada (+1)" },
+  { value: "+7", label: "Russia (+7)" },
+  { value: "+20", label: "Egypt (+20)" },
+  { value: "+27", label: "South Africa (+27)" },
+  { value: "+30", label: "Greece (+30)" },
+  { value: "+31", label: "Netherlands (+31)" },
+  { value: "+32", label: "Belgium (+32)" },
+  { value: "+33", label: "France (+33)" },
+  { value: "+34", label: "Spain (+34)" },
+  { value: "+36", label: "Hungary (+36)" },
+  { value: "+39", label: "Italy (+39)" },
+  { value: "+40", label: "Romania (+40)" },
+  { value: "+41", label: "Switzerland (+41)" },
+  { value: "+43", label: "Austria (+43)" },
+  { value: "+44", label: "United Kingdom (+44)" },
+  { value: "+45", label: "Denmark (+45)" },
+  { value: "+46", label: "Sweden (+46)" },
+  { value: "+47", label: "Norway (+47)" },
+  { value: "+48", label: "Poland (+48)" },
+  { value: "+49", label: "Germany (+49)" },
+  { value: "+52", label: "Mexico (+52)" },
+  { value: "+53", label: "Cuba (+53)" },
+  { value: "+54", label: "Argentina (+54)" },
+  { value: "+55", label: "Brazil (+55)" },
+  { value: "+56", label: "Chile (+56)" },
+  { value: "+57", label: "Colombia (+57)" },
+  { value: "+58", label: "Venezuela (+58)" },
+  { value: "+60", label: "Malaysia (+60)" },
+  { value: "+61", label: "Australia (+61)" },
+  { value: "+62", label: "Indonesia (+62)" },
+  { value: "+63", label: "Philippines (+63)" },
+  { value: "+64", label: "New Zealand (+64)" },
+  { value: "+65", label: "Singapore (+65)" },
+  { value: "+66", label: "Thailand (+66)" },
+  { value: "+81", label: "Japan (+81)" },
+  { value: "+82", label: "South Korea (+82)" },
+  { value: "+84", label: "Vietnam (+84)" },
+  { value: "+86", label: "China (+86)" },
+  { value: "+90", label: "Turkey (+90)" },
+  { value: "+91", label: "India (+91)" },
+  { value: "+92", label: "Pakistan (+92)" },
+  { value: "+93", label: "Afghanistan (+93)" },
+  { value: "+94", label: "Sri Lanka (+94)" },
+  { value: "+95", label: "Myanmar (+95)" },
+  { value: "+98", label: "Iran (+98)" },
+  { value: "+211", label: "South Sudan (+211)" },
+  { value: "+212", label: "Morocco (+212)" },
+  { value: "+213", label: "Algeria (+213)" },
+  { value: "+216", label: "Tunisia (+216)" },
+  { value: "+218", label: "Libya (+218)" },
+  { value: "+220", label: "Gambia (+220)" },
+  { value: "+221", label: "Senegal (+221)" },
+  { value: "+222", label: "Mauritania (+222)" },
+  { value: "+223", label: "Mali (+223)" },
+  { value: "+224", label: "Guinea (+224)" },
+  { value: "+225", label: "Ivory Coast (+225)" },
+  { value: "+226", label: "Burkina Faso (+226)" },
+  { value: "+227", label: "Niger (+227)" },
+  { value: "+228", label: "Togo (+228)" },
+  { value: "+229", label: "Benin (+229)" },
+  { value: "+230", label: "Mauritius (+230)" },
+  { value: "+231", label: "Liberia (+231)" },
+  { value: "+232", label: "Sierra Leone (+232)" },
+  { value: "+233", label: "Ghana (+233)" },
+  { value: "+234", label: "Nigeria (+234)" },
+  { value: "+235", label: "Chad (+235)" },
+  { value: "+236", label: "Central African Republic (+236)" },
+  { value: "+237", label: "Cameroon (+237)" },
+  { value: "+238", label: "Cape Verde (+238)" },
+  { value: "+239", label: "Sao Tome and Principe (+239)" },
+  { value: "+240", label: "Equatorial Guinea (+240)" },
+  { value: "+241", label: "Gabon (+241)" },
+  { value: "+242", label: "Congo (+242)" },
+  { value: "+243", label: "DR Congo (+243)" },
+  { value: "+244", label: "Angola (+244)" },
+  { value: "+245", label: "Guinea-Bissau (+245)" },
+  { value: "+248", label: "Seychelles (+248)" },
+  { value: "+249", label: "Sudan (+249)" },
+  { value: "+250", label: "Rwanda (+250)" },
+  { value: "+251", label: "Ethiopia (+251)" },
+  { value: "+252", label: "Somalia (+252)" },
+  { value: "+253", label: "Djibouti (+253)" },
+  { value: "+254", label: "Kenya (+254)" },
+  { value: "+255", label: "Tanzania (+255)" },
+  { value: "+256", label: "Uganda (+256)" },
+  { value: "+257", label: "Burundi (+257)" },
+  { value: "+258", label: "Mozambique (+258)" },
+  { value: "+260", label: "Zambia (+260)" },
+  { value: "+261", label: "Madagascar (+261)" },
+  { value: "+262", label: "Reunion (+262)" },
+  { value: "+263", label: "Zimbabwe (+263)" },
+  { value: "+264", label: "Namibia (+264)" },
+  { value: "+265", label: "Malawi (+265)" },
+  { value: "+266", label: "Lesotho (+266)" },
+  { value: "+267", label: "Botswana (+267)" },
+  { value: "+268", label: "Eswatini (+268)" },
+  { value: "+269", label: "Comoros (+269)" },
+  { value: "+971", label: "United Arab Emirates (+971)" },
+  { value: "+972", label: "Israel (+972)" },
+  { value: "+973", label: "Bahrain (+973)" },
+  { value: "+974", label: "Qatar (+974)" },
+  { value: "+975", label: "Bhutan (+975)" },
+  { value: "+976", label: "Mongolia (+976)" },
+  { value: "+977", label: "Nepal (+977)" },
+  { value: "+880", label: "Bangladesh (+880)" },
+];
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -56,55 +165,55 @@ export default function ContactSection() {
     }
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  if (!validate()) return;
+    if (!validate()) return;
 
-  try {
-    const response = await fetch(`${API}/api/leads`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        country: formData.country,
-        phone: formData.phone,
-        message: formData.message,
-        form_type: "contact_page",
-        source_page: "contact-us",
-      }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error("API Error:", errorText);
-      alert("Submission failed");
-      return;
-    }
-
-    const data = await response.json();
-
-    if (data.success) {
-      alert("Message sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        country: "",
-        phone: "",
-        message: "",
+    try {
+      const response = await fetch(`${API}/api/leads`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          country: formData.country,
+          phone: formData.phone,
+          message: formData.message,
+          form_type: "contact_page",
+          source_page: "contact-us",
+        }),
       });
-      setErrors({});
-    } else {
-      alert("Submission failed");
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("API Error:", errorText);
+        alert("Submission failed");
+        return;
+      }
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          country: "",
+          phone: "",
+          message: "",
+        });
+        setErrors({});
+      } else {
+        alert("Submission failed");
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+      alert("Server error");
     }
-  } catch (error) {
-    console.error("Network error:", error);
-    alert("Server error");
-  }
-};
+  };
 
   return (
     <section
@@ -275,124 +384,30 @@ const handleSubmit = async (e) => {
 
                   <div className="row g-3 mb-3">
                     <div className="col-md-6">
-                      <select
-                        name="country"
-                        className={`form-select ${errors.country ? 'is-invalid' : ''}`}
-                        value={formData.country}
-                        onChange={handleChange}
-                        required
-                      >
-                        <option value="">Select Country</option>
+                      <Select
+                        classNamePrefix="custom-select"
+                        menuPortalTarget={typeof window !== "undefined" ? document.body : null}
+                        menuPosition="fixed"
+                        options={countryOptions}
+                        placeholder="Select Country"
+                        isSearchable
+                        value={countryOptions.find(
+                          (opt) => opt.value === formData.country
+                        )}
+                        onChange={(selectedOption) => {
+                          setFormData({
+                            ...formData,
+                            country: selectedOption?.value || "",
+                          });
 
-                        <option value="+1">+1 United States</option>
-                        <option value="+1">+1 Canada</option>
-                        <option value="+7">+7 Russia</option>
-                        <option value="+20">+20 Egypt</option>
-                        <option value="+27">+27 South Africa</option>
-                        <option value="+30">+30 Greece</option>
-                        <option value="+31">+31 Netherlands</option>
-                        <option value="+32">+32 Belgium</option>
-                        <option value="+33">+33 France</option>
-                        <option value="+34">+34 Spain</option>
-                        <option value="+36">+36 Hungary</option>
-                        <option value="+39">+39 Italy</option>
-                        <option value="+40">+40 Romania</option>
-                        <option value="+41">+41 Switzerland</option>
-                        <option value="+43">+43 Austria</option>
-                        <option value="+44">+44 United Kingdom</option>
-                        <option value="+45">+45 Denmark</option>
-                        <option value="+46">+46 Sweden</option>
-                        <option value="+47">+47 Norway</option>
-                        <option value="+48">+48 Poland</option>
-                        <option value="+49">+49 Germany</option>
-                        <option value="+52">+52 Mexico</option>
-                        <option value="+53">+53 Cuba</option>
-                        <option value="+54">+54 Argentina</option>
-                        <option value="+55">+55 Brazil</option>
-                        <option value="+56">+56 Chile</option>
-                        <option value="+57">+57 Colombia</option>
-                        <option value="+58">+58 Venezuela</option>
-                        <option value="+60">+60 Malaysia</option>
-                        <option value="+61">+61 Australia</option>
-                        <option value="+62">+62 Indonesia</option>
-                        <option value="+63">+63 Philippines</option>
-                        <option value="+64">+64 New Zealand</option>
-                        <option value="+65">+65 Singapore</option>
-                        <option value="+66">+66 Thailand</option>
-                        <option value="+81">+81 Japan</option>
-                        <option value="+82">+82 South Korea</option>
-                        <option value="+84">+84 Vietnam</option>
-                        <option value="+86">+86 China</option>
-                        <option value="+90">+90 Turkey</option>
-                        <option value="+91">+91 India</option>
-                        <option value="+92">+92 Pakistan</option>
-                        <option value="+93">+93 Afghanistan</option>
-                        <option value="+94">+94 Sri Lanka</option>
-                        <option value="+95">+95 Myanmar</option>
-                        <option value="+98">+98 Iran</option>
-                        <option value="+211">+211 South Sudan</option>
-                        <option value="+212">+212 Morocco</option>
-                        <option value="+213">+213 Algeria</option>
-                        <option value="+216">+216 Tunisia</option>
-                        <option value="+218">+218 Libya</option>
-                        <option value="+220">+220 Gambia</option>
-                        <option value="+221">+221 Senegal</option>
-                        <option value="+222">+222 Mauritania</option>
-                        <option value="+223">+223 Mali</option>
-                        <option value="+224">+224 Guinea</option>
-                        <option value="+225">+225 Ivory Coast</option>
-                        <option value="+226">+226 Burkina Faso</option>
-                        <option value="+227">+227 Niger</option>
-                        <option value="+228">+228 Togo</option>
-                        <option value="+229">+229 Benin</option>
-                        <option value="+230">+230 Mauritius</option>
-                        <option value="+231">+231 Liberia</option>
-                        <option value="+232">+232 Sierra Leone</option>
-                        <option value="+233">+233 Ghana</option>
-                        <option value="+234">+234 Nigeria</option>
-                        <option value="+235">+235 Chad</option>
-                        <option value="+236">
-                          +236 Central African Republic
-                        </option>
-                        <option value="+237">+237 Cameroon</option>
-                        <option value="+238">+238 Cape Verde</option>
-                        <option value="+239">+239 Sao Tome and Principe</option>
-                        <option value="+240">+240 Equatorial Guinea</option>
-                        <option value="+241">+241 Gabon</option>
-                        <option value="+242">+242 Congo</option>
-                        <option value="+243">+243 DR Congo</option>
-                        <option value="+244">+244 Angola</option>
-                        <option value="+245">+245 Guinea-Bissau</option>
-                        <option value="+248">+248 Seychelles</option>
-                        <option value="+249">+249 Sudan</option>
-                        <option value="+250">+250 Rwanda</option>
-                        <option value="+251">+251 Ethiopia</option>
-                        <option value="+252">+252 Somalia</option>
-                        <option value="+253">+253 Djibouti</option>
-                        <option value="+254">+254 Kenya</option>
-                        <option value="+255">+255 Tanzania</option>
-                        <option value="+256">+256 Uganda</option>
-                        <option value="+257">+257 Burundi</option>
-                        <option value="+258">+258 Mozambique</option>
-                        <option value="+260">+260 Zambia</option>
-                        <option value="+261">+261 Madagascar</option>
-                        <option value="+262">+262 Reunion</option>
-                        <option value="+263">+263 Zimbabwe</option>
-                        <option value="+264">+264 Namibia</option>
-                        <option value="+265">+265 Malawi</option>
-                        <option value="+266">+266 Lesotho</option>
-                        <option value="+267">+267 Botswana</option>
-                        <option value="+268">+268 Eswatini</option>
-                        <option value="+269">+269 Comoros</option>
-                        <option value="+971">+971 United Arab Emirates</option>
-                        <option value="+972">+972 Israel</option>
-                        <option value="+973">+973 Bahrain</option>
-                        <option value="+974">+974 Qatar</option>
-                        <option value="+975">+975 Bhutan</option>
-                        <option value="+976">+976 Mongolia</option>
-                        <option value="+977">+977 Nepal</option>
-                        <option value="+880">+880 Bangladesh</option>
-                      </select>
+                          if (errors.country) {
+                            setErrors({
+                              ...errors,
+                              country: null,
+                            });
+                          }
+                        }}
+                      />
                       {errors.country && <div className="invalid-feedback text-start">{errors.country}</div>}
                     </div>
                     <div className="col-md-6">
