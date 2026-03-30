@@ -62,9 +62,13 @@ export default function ContactForm() {
   };
 
   const handleChange = (e) => {
+    let value = e.target.value;
+    if (e.target.name === "name") {
+      value = value.replace(/[^A-Za-z\s]/g, "");
+    }
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: value,
     });
     // Clear error for this field
     if (errors[e.target.name]) {
@@ -301,7 +305,9 @@ export default function ContactForm() {
                   <option value="+233">+233 Ghana</option>
                   <option value="+234">+234 Nigeria</option>
                   <option value="+235">+235 Chad</option>
-                  <option value="+236">+236 Central African Republic</option>
+                  <option value="+236">
+                    +236 Central African Republic
+                  </option>
                   <option value="+237">+237 Cameroon</option>
                   <option value="+238">+238 Cape Verde</option>
                   <option value="+239">+239 Sao Tome and Principe</option>

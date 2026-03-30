@@ -18,16 +18,48 @@ export default function ContactSection() {
     phone: "",
     message: "",
   });
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    let newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Name is required.";
+    else if (!/^[A-Za-z\s]+$/.test(formData.name)) newErrors.name = "Name can only contain letters and spaces.";
+
+    if (!formData.email.trim()) newErrors.email = "Email is required.";
+    else if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = "Invalid email format.";
+
+    if (!formData.country) newErrors.country = "Please select a country.";
+
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required.";
+    else if (!/^\+?[0-9\s\-]{7,15}$/.test(formData.phone)) newErrors.phone = "Invalid phone number.";
+
+    if (!formData.message.trim()) newErrors.message = "Message is required.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleChange = (e) => {
+    let value = e.target.value;
+    if (e.target.name === "name") {
+      value = value.replace(/[^A-Za-z\s]/g, "");
+    }
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: value,
     });
+    if (errors[e.target.name]) {
+      setErrors({
+        ...errors,
+        [e.target.name]: null,
+      });
+    }
   };
 
 const handleSubmit = async (e) => {
   e.preventDefault();
+
+  if (!validate()) return;
 
   try {
     const response = await fetch(`${API}/api/leads`, {
@@ -64,6 +96,7 @@ const handleSubmit = async (e) => {
         phone: "",
         message: "",
       });
+      setErrors({});
     } else {
       alert("Submission failed");
     }
@@ -215,7 +248,7 @@ const handleSubmit = async (e) => {
                     <div className="col-md-6">
                       <input
                         type="text"
-                        className="form-control"
+                        className={`form-control ${errors.name ? 'is-invalid' : ''}`}
                         name="name"
                         id="name"
                         value={formData.name}
@@ -223,11 +256,12 @@ const handleSubmit = async (e) => {
                         placeholder="Your Name"
                         required
                       />
+                      {errors.name && <div className="invalid-feedback text-start">{errors.name}</div>}
                     </div>
                     <div className="col-md-6">
                       <input
-                        type="text"
-                        className="form-control"
+                        type="email"
+                        className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                         name="email"
                         id="email"
                         onChange={handleChange}
@@ -235,6 +269,7 @@ const handleSubmit = async (e) => {
                         placeholder="Your Email"
                         required
                       />
+                      {errors.email && <div className="invalid-feedback text-start">{errors.email}</div>}
                     </div>
                   </div>
 
@@ -242,7 +277,7 @@ const handleSubmit = async (e) => {
                     <div className="col-md-6">
                       <select
                         name="country"
-                        className="form-select"
+                        className={`form-select ${errors.country ? 'is-invalid' : ''}`}
                         value={formData.country}
                         onChange={handleChange}
                         required
@@ -358,11 +393,12 @@ const handleSubmit = async (e) => {
                         <option value="+977">+977 Nepal</option>
                         <option value="+880">+880 Bangladesh</option>
                       </select>
+                      {errors.country && <div className="invalid-feedback text-start">{errors.country}</div>}
                     </div>
                     <div className="col-md-6">
                       <input
                         type="tel"
-                        className="form-control"
+                        className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
                         name="phone"
                         id="phoneNumber"
                         value={formData.phone}
@@ -370,12 +406,13 @@ const handleSubmit = async (e) => {
                         placeholder="Your Phone No."
                         required
                       />
+                      {errors.phone && <div className="invalid-feedback text-start">{errors.phone}</div>}
                     </div>
                   </div>
 
                   <div className="mb-3">
                     <textarea
-                      className="form-control"
+                      className={`form-control ${errors.message ? 'is-invalid' : ''}`}
                       placeholder="Enter Your Query"
                       name="message"
                       id="message"
@@ -384,6 +421,7 @@ const handleSubmit = async (e) => {
                       rows={4}
                       required
                     ></textarea>
+                    {errors.message && <div className="invalid-feedback text-start">{errors.message}</div>}
                   </div>
 
                   {/* Turnstile */}

@@ -17,7 +17,10 @@ export default function ServiceForm() {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
+    if (name === "name") {
+      value = value.replace(/[^A-Za-z\s]/g, "");
+    }
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
