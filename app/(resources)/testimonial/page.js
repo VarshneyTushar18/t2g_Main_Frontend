@@ -49,10 +49,15 @@ async function getTestimonials() {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}/api/testimonials`,
-     
+      { cache: "no-store" } // ✅ always get fresh data
     );
     const json = await res.json();
-    return (json.data || []).filter((t) => t.status === "active");
+
+    // ✅ Handle both { data: [] } and direct array response
+    const list = Array.isArray(json) ? json : (json.data || []);
+
+    // ✅ Handle status as integer (1) OR string ("active")
+    return list.filter((t) => t.status === 1 || t.status === "active" || t.status === true);
   } catch (err) {
     console.error("Failed to fetch testimonials:", err);
     return [];
