@@ -1578,6 +1578,123 @@ export default function Header() {
                         </div>
 
                      </li>
+                     <li className="HasMegaChild">
+   <a href="#!">Lets Talk AI</a>
+   <div className="container-fluid megamenu">
+      <div className="h-100">
+         <div className="row justify-content-between py-2 h-100">
+            <div className="col-md-3 m-0">
+               <div className="p-4 rounded cta h-100" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/images/top-view-unrecognizable-hacker-performing-cyberattack-night.webp)', borderRadius: 15, backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
+               <h2 className="text-white mb-4">Innovative Web & Mobile Solutions</h2>
+               <p className="text-white">Build high performance, secure, and user friendly websites & mobile apps with Tech2Globe.</p>
+            </div>
+         </div>
+         <div className="col-md-2 pb-2 bg-light-blue">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/custom-ai-development" className="text-decoration-none">Custom AI Development</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-application-development">AI Application Development</a>
+               </li>
+               <li><a className="menu-link" href="/generative-ai-solutions">Generative AI Solutions</a>
+               </li>
+               <li><a className="menu-link" href="/prompt-engineering-services">Prompt Engineering Services</a>
+               </li>
+               <li><a className="menu-link" href="/ai-api-integration">AI API Integration</a>
+               </li>
+               <li><a className="menu-link" href="/ai-chatbot-development">AI Chatbot Development</a>
+               </li>
+            </ul>
+         </div>
+         <div className="col-md-2 pb-2">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/conversational-ai-solutions" className="text-decoration-none">Conversational AI Solutions</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/customer-support-ai-chatbots">Customer Support AI Chatbots</a>
+               </li>
+               <li><a className="menu-link" href="/voice-bots-ai-ivr">Voice Bots & AI IVR</a>
+               </li>
+               <li><a className="menu-link" href="/whatsapp-web-app-chatbots">WhatsApp / Web / App Chatbots</a>
+               </li>
+               <li><a className="menu-link" href="/ai-helpdesk-automation">AI Helpdesk Automation</a>
+               </li>
+               <li><a className="menu-link" href="/multilingual-nlp-chatbots">Multilingual NLP Chatbots</a>
+               </li>
+            </ul>
+         </div>
+         <div className="col-md-2 pb-2 bg-light-blue">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/ai-for-ecommerce" className="text-decoration-none">AI for Ecommerce</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-product-recommendations">AI Product Recommendations</a>
+               </li>
+               <li><a className="menu-link" href="/ai-powered-catalog-optimization">AI-Powered Catalog Optimization</a>
+               </li>
+               <li><a className="menu-link" href="/ai-sales-forecasting">AI Sales Forecasting</a>
+               </li>
+            </ul>
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/ai-powered-catalog-optimization" className="text-decoration-none">AI-Powered Digital Marketing</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-content-generation">AI Content Generation</a>
+               </li>
+               <li><a className="menu-link" href="/ai-seo-automation">AI SEO Automation</a>
+               </li>
+               <li><a className="menu-link" href="/ai-ad-campaign-optimization">AI Ad Campaign Optimization</a>
+               </li>
+               <li><a className="menu-link" href="/marketing-automation-with-ai">Marketing Automation with AI</a>
+               </li>
+            </ul>
+         </div>
+         <div className="col-md-2 pb-2">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/data-ai-automation" className="text-decoration-none">Data & AI Automation</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/process-automation-consulting">Process Automation Consulting</a>
+               </li>
+               <li><a className="menu-link" href="/ai-data-entry-automation">AI Data Entry Automation</a>
+               </li>
+               <li><a className="menu-link" href="/workflow-automation">Workflow Automation</a>
+               </li>
+               <li><a className="menu-link" href="/web-application-development">AI Data Annotation</a>
+               </li>
+               <li><a className="menu-link" href="/data-cleansing-for-ai">Data Cleansing for AI</a>
+               </li>
+            </ul>
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/ai-support-managed-services" className="text-decoration-none">AI Support & Managed Services</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-operations-aiops">AI Operations (AIOps)</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   </div>
+</li>
                      <li className="HasChild">
                         <Link href="#">Resources</Link>
                         <ul className="Dropdown">
