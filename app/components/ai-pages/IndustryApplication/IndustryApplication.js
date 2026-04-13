@@ -10,14 +10,8 @@ import "swiper/css/pagination";
 
 export default function IndustryApplication({ data }) {
   return (
-    <div className="row pt-5 pb-5 industry-applications-section">
-      
-      <div className="col-md-12">
-        <h2 className="text-center mb-4">
-          Industry Applications of Custom AI Development
-        </h2>
-      </div>
-
+    <div className="row pb-5 industry-applications-section">
+    
       {/* Center Image (same as your HTML) */}
       <div className="application-image text-center mb-4">
         <Image

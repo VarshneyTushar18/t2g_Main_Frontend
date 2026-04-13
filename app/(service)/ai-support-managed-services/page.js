@@ -25,32 +25,67 @@ import FutureSlider from "@/app/components/ai-pages/FutureSlider/FutureSlider";
 
 
 export const metadata = {
-  title: "",
+  title: "AI Support & Managed Services | Tech2Globe",
   description:
-    "",
-  keywords: "",
+    "Empower your business with AI support & managed services. Hire expert AI developers for ongoing support, system monitoring, and optimization to ensure smooth AI operations.",
+  keywords: "AI support, managed services, AI developers, system monitoring, AI optimization, proactive support, AI maintenance",
 
   openGraph: {
-    title: "",
+    title: "AI Support & Managed Services | Tech2Globe",
     description:
-      "",
-    url: "",
+      "Unlock seamless AI management with our AI support & managed services. Ensure your systems are always performing at their best with expert monitoring and optimization.",
+    url: "/service/ai-support-managed-services",
     siteName: "Tech2Globe",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "",
+    title: "AI Support & Managed Services | Tech2Globe",
     description:
-      "",
+      "Hire expert AI developers for AI support & managed services. Continuous monitoring, optimization, and proactive support for your AI systems.",
   },
 
   alternates: {
-    canonical: "",
+    canonical: "/service/ai-support-managed-services",
   },
 };
 
-
+const developmentProcess = [
+  {
+    id: 1,
+    title: "Dedicated Project Management",
+    description:
+      "A dedicated project manager will oversee AI system support, ensuring all tasks are completed on time and in alignment with your business goals.",
+    icon: <FaComment />,
+  },
+  {
+    id: 2,
+    title: "Transparent Support Process",
+    description:
+      "We provide regular updates on system performance, monitoring results, and areas for improvement, keeping you informed and aligned with your objectives.",
+    icon: <FaClipboardList />,
+  },
+  {
+    id: 3,
+    title: "Agile Methodology",
+    description:
+      "Our agile approach ensures that we can quickly adapt to new requirements, provide updates, and handle evolving business needs with ease.",
+    icon: <FaProjectDiagram />,
+  },
+  {
+    id: 4,
+    title: "24/7 Support",
+    description:
+      "Our team is available round the clock to provide support, troubleshoot issues, and ensure your AI systems remain fully operational.",
+    icon: <FaRobot />,
+  },
+  {
+    id: 5,
+    title: "Cross-Functional Teams",
+    description: "We offer a diverse team of AI professionals, from system integrators to data security experts, ensuring that every aspect of your AI system is well-managed and optimized.",
+    icon: <FaHeadset />,
+  },
+];
 
 const futureData = [
   {
@@ -76,75 +111,36 @@ const futureData = [
 ];
 
 const services = [
-
   {
     title: "System Monitoring & Performance Optimization",
-    desc: "<strong>Continuous Monitoring:</strong> Our team ensures that your AI systems are always operational, monitoring for performance issues or system failures and ensuring a smooth operation.<br/> <strong>Optimization:</strong> We conduct regular performance evaluations to identify areas for improvement, ensuring that AI systems run at peak performance, enhancing productivity and reducing downtime.",
+    desc: "",
     points: [
-      "Supervised and unsupervised learning models",
-      "Predictive analytics and forecasting",
-      "Data mining and clustering",
-      "Custom recommendation systems",
+      "Continuous Monitoring: Our team ensures that your AI systems are always operational, monitoring for performance issues or system failures and ensuring a smooth operation.",
+      "Optimization: We conduct regular performance evaluations to identify areas for improvement, ensuring that AI systems run at peak performance, enhancing productivity and reducing downtime.",
     ],
   },
   {
-    title: "Machine Learning Development",
-    desc: "We build custom machine learning models that enable businesses to make smarter, data driven decisions. Whether you need predictive analytics, recommendation systems, or anomaly detection models, we’ll tailor the right machine learning algorithms to meet your needs.",
+    title: "Proactive Support",
+    desc: "",
     points: [
-      "Supervised and unsupervised learning models",
-      "Predictive analytics and forecasting",
-      "Data mining and clustering",
-      "Custom recommendation systems",
+      "24/7 Availability: Our AI support team is available around the clock to address any issues, provide timely resolutions, and assist with AI system enhancements.",
+      "Troubleshooting: We quickly resolve system issues or unexpected behaviors, ensuring your AI systems are always performing optimally and without disruptions.",
     ],
   },
   {
-    title: "Natural Language Processing (NLP)",
-    desc: "Natural Language Processing (NLP) allows computers to understand, interpret, and respond to human language. We develop custom NLP solutions that help businesses improve customer service, automate content generation, and gain insights from unstructured text data.",
+    title: "System Updates & Patches",
+    desc: "",
     points: [
-      "Sentiment analysis",
-      "Chatbots and virtual assistants",
-      "Text classification and summarization",
-      "Language translation models",
+      "Continuous Improvement: We keep your AI systems up-to-date with the latest technology, deploying regular system updates, patches, and enhancements to maintain security and efficiency.",
+      "Scalability: Our support services ensure that your AI solutions can grow with your business, adapting to new data, users, or operational requirements without disruptions.",
     ],
   },
   {
-    title: "AI Powered Automation",
-    desc: "We help businesses integrate AI into their workflows to automate routine tasks, optimize operations, and enhance productivity. Custom AI powered automation solutions can help you reduce manual intervention and increase efficiency.",
+    title: "Security & Compliance Management",
+    desc: "",
     points: [
-      "Workflow automation",
-      "Robotic Process Automation (RPA)",
-      "Intelligent process automation (IPA)",
-      "Real-time decision making automation",
-    ],
-  },
-  {
-    title: "Computer Vision Development",
-    desc: "Computer vision enables machines to interpret and understand visual data from the world. We develop custom computer vision applications for industries such as manufacturing, healthcare, and retail, helping businesses automate processes and enhance visual data analysis.",
-    points: [
-      "Object recognition and tracking",
-      "Image classification and segmentation",
-      "Video analytics",
-      "Facial recognition and biometric systems",
-    ],
-  },
-  {
-    title: "Custom AI Integration & Implementation",
-    desc: "We ensure seamless integration of AI solutions into your existing systems, applications, and workflows. Our team works with your infrastructure to ensure that AI tools are fully integrated and functional, offering support throughout the entire implementation process.",
-    points: [
-      "Integration with existing platforms (CRM, ERP, etc.)",
-      "Cloud-based AI infrastructure setup",
-      "API development for AI services",
-      "End-to-end solution implementation",
-    ],
-  },
-  {
-    title: "AI Maintenance & Support",
-    desc: "AI systems require ongoing monitoring, optimization, and maintenance to ensure peak performance. Our team provides continuous support for the AI solutions we develop, offering regular updates, model retraining, and troubleshooting to ensure your AI tools evolve with your business needs.",
-    points: [
-      "Model retraining and optimization",
-      "Ongoing performance monitoring",
-      "Support for scaling and system upgrades",
-      "Troubleshooting and bug fixing",
+      "Data Security: We implement robust security protocols to protect your AI systems from cyber threats, ensuring the confidentiality and integrity of your business data.",
+      "Regulatory Compliance: Our team ensures that your AI solutions adhere to relevant industry regulations and data protection laws, minimizing risks related to compliance.",
     ],
   },
 ];
@@ -152,32 +148,22 @@ const services = [
 const industryData = [
   {
     left: {
-      title: "Healthcare",
-      desc: "Improve patient data management, diagnostic accuracy, and predictive healthcare analytics.",
+      title: "AI in Ecommerce",
+      desc: "Ensure seamless customer experiences by providing continuous support for AI systems handling customer queries, order processing, and personalized recommendations.",
     },
     right: {
-      title: "Retail & E-commerce",
-      desc: "Enhance personalization, demand forecasting, pricing optimization, and inventory planning.",
+      title: "AI in Healthcare",
+      desc: "Maintain patient data management systems, automate billing processes, and optimize diagnostics tools with ongoing AI system monitoring and updates.",
     },
   },
   {
     left: {
-      title: "Finance",
-      desc: "Strengthen fraud detection systems, automate compliance processes, and improve forecasting accuracy.",
+      title: "AI in Finance",
+      desc: "Offer continuous monitoring and optimization of AI tools for fraud detection, transaction analysis, and risk management, ensuring high performance and accuracy.",
     },
     right: {
-      title: "Education",
-      desc: "Enable adaptive learning models, personalized content delivery, and performance analysis tools.",
-    },
-  },
-  {
-    left: {
-      title: "Manufacturing",
-      desc: "Optimize supply chain processes, implement predictive maintenance systems, and improve production efficiency.",
-    },
-    right: {
-      title: "Logistics",
-      desc: "Improve route optimization, shipment tracking, and operational forecasting.",
+      title: "AI in Manufacturing",
+      desc: "Monitor and optimize AI systems for predictive maintenance, inventory management, and production scheduling to improve efficiency and reduce downtime.",
     },
   },
 ];
@@ -187,7 +173,7 @@ const ctaData = [
   {
     title: "Contact Us to Hire AI Developers for Support & Managed Services",
     description: [
-      "Hiring expert AI developers ensures your systems are continuously monitored, optimized, and supported for maximum performance. With our AI support and managed services, your business can operate smoothly, maintain security, and achieve long-term success."
+      "Hiring expert AI developers ensures your systems are continuously monitored, optimized, and supported for maximum performance. With our AI support and managed services, your business can operate smoothly, maintain security, and achieve long-term success.",
     ],
     buttonText: "Get in Touch",
     buttonLink: "/contact-us"
@@ -227,19 +213,21 @@ const faqData = [
   },
 ];
 
+
 export default function AiSupportManagedServices() {
   return (
 
     <>
-      <Breadcrumb parentName="Services" pageName="Ai Support Managed Services" />
+      <Breadcrumb parentName="Services" pageName="AI Support & Managed Services" />
       <BrandSection />
       <div className="container">
 
         <div className="row">
           <div className="col-sm-12 col-md-8 col-lg-8 col-xl-8 page-content">
             <div className="cardblock">
-              <h2>Empower Your Business with AI Support & Managed Services</h2>
-              <h5 className="fw-normal mb-3">Unlock Seamless AI Management and Support for Your Business</h5>
+              <h2>AI Support & Managed Services</h2>
+              <h5 className="fw-normal mb-3">Empower Your Business with AI Support & Managed Services</h5>
+              <p>Unlock Seamless AI Management and Support for Your Business</p>
               <p>Hire expert AI developers and leverage our AI support and managed services to ensure your systems are always performing at their best. Our AI managed services are designed to provide businesses with ongoing support, system monitoring, and optimization, ensuring smooth and effective AI system operations. With our support, you can focus on growth while we handle the complexities of managing and maintaining your AI solutions.</p>
               <p>We provide tailored solutions that cater to your specific needs, offering proactive support and troubleshooting to keep your AI systems running smoothly. Let us handle your AI needs so you can focus on scaling your business with confidence.</p>
               <p>Enhance operational efficiency with Tech2Globe Workflow Automation solutions designed to eliminate repetitive manual tasks and streamline complex business processes. Our automation frameworks help organizations create structured, efficient workflows that improve productivity, reduce delays, and ensure consistent task execution across departments.</p>
@@ -249,7 +237,7 @@ export default function AiSupportManagedServices() {
 
           <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 page-content">
             <div className="cardimage">
-              <img src="/images/custom-ai-image.webp" className="img-fluid" alt="Custom AI Development Services" />
+              <img src="/images/custom-ai-image.webp" className="img-fluid" alt="AI Support & Managed Services" />
             </div>
             <div className="cta-btn">
               <h5 className="fw-normal mb-4">Talk To Our Experts Now!</h5>
@@ -300,7 +288,7 @@ export default function AiSupportManagedServices() {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3">
               <div className="whychoosebox h-100 p-0">
-                <img src="/images/whychoose-image.webp" className="img-fluid" alt="Why Choose Custom AI Development" />
+                <img src="/images/whychoose-image.webp" className="img-fluid" alt="What Does Hiring AI Support & Managed Services Entail?" />
               </div>
             </div>
           </div>
@@ -310,140 +298,139 @@ export default function AiSupportManagedServices() {
         <div className="row pt-5">
           <div className="col-md-12">
             <h2>What Does Hiring AI Support & Managed Services Entail?</h2>
-            <h5 className="fw-normal mb-3">Comprehensive AI Support for Your Business Needs</h5>
             <p>When you hire AI developers for managed services and support, you ensure that your AI systems are fully optimized, monitored, and maintained over time. Our services include proactive monitoring, troubleshooting, system updates, and more, all designed to ensure your AI solutions continue to meet your business objectives. Here’s what expert AI developers bring to your organization:</p>
           </div>
         </div>
         <ServiceSlider services={services} />
 
 
-        <div class="row pt-5 whychoosesection">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 page-content">
-                <h2>Why Businesses Should Hire AI Support & Managed Services</h2>
-                    <p>AI support and managed services offer businesses long-term stability and efficiency by ensuring their AI systems are maintained, optimized, and secure. Here’s why it’s crucial to hire professional AI developers for support and managed services:</p>
-            </div>
-        
+        <div className="mb-3 pt-3 pb-1">
+          <h2> Machine Learning: Ensuring Continuous Improvement in AI Solutions
+          </h2>
+          <p className="mb-0"> <strong>Harness Data for Smarter Business Decisions</strong> AI developers incorporate machine learning algorithms into your systems to continually improve performance over time. Key features of our support services include:</p>
 
-            <div class="row pt-3 pb-3">
-                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3" >
-                    <div class="whychoosebox h-100 mb-3">
-                        <h5 class="fw-medium mb-3">Expert AI Developers for Continuous Support</h5>
-                        <p>Our skilled AI developers provide ongoing support to monitor and maintain your AI systems, offering expert troubleshooting, updates, and system enhancements to ensure peak performance at all times.</p>
+          <div className="py-5">
+            <div className="container">
+              <div className="row text-center g-4">
+
+                <div className="col-md-4">
+                  <div className="p-4 shadow-sm rounded bg-light h-100">
+                    <div className="mb-3 text-primary fs-2">
+                      <FaFileContract />
                     </div>
-                </div> 
-                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3">
-                    <div class="whychoosebox h-100 ">
-                        <h5 class="fw-medium mb-3">Maximized ROI with Continuous Optimization</h5>
-                        <p>With AI support and managed services, your business gains the most value from your AI systems by ensuring they operate efficiently, effectively, and with minimal downtime, leading to better returns on investment.</p>
-                    </div>
-                </div> 
-                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3">
-                    <div class="whychoosebox h-100 ">
-                        <h5 class="fw-medium mb-3">Scalability for Growing Businesses</h5>
-                        <p>As your business grows, your AI solutions need to scale. Our support services ensure your systems adapt to increasing data, users, and evolving business needs, providing the flexibility and scalability required for continued success.</p>
-                    </div>
-                </div> 
-                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3">
-                    <div class="whychoosebox h-100 ">
-                        <h5 class="fw-medium mb-3">Improved Security & Compliance</h5>
-                        <p>With our comprehensive security measures and compliance management, your AI systems are safeguarded against cyber threats, and your data is protected in accordance with industry regulations, reducing the risk of data breaches and non-compliance penalties.</p>
-                    </div>
-                </div> 
-                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3">
-                    <div class="whychoosebox h-100 ">
-                        <h5 class="fw-medium mb-3">Reduced Operational Risks</h5>
-                        <p>Our proactive approach to AI system monitoring and issue resolution minimizes the risk of unexpected system failures, ensuring your operations run smoothly without costly disruptions.</p>
-                    </div>
+                    <h5 className="fw-bold">Real-Time Data Processing</h5>
+                    <p className="mb-0">Machine learning allows your AI systems to process data in real-time, learning from new data to continually improve predictions, recommendations, and decision-making capabilities.</p>
+                  </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-3">
-                    <div class="whychoosebox h-100 p-0">
-                        <img src="/images/whychoose-image.webp" class="img-fluid" alt="Why Choose Custom AI Development"/>
+
+                <div className="col-md-4">
+                  <div className="p-4 shadow-sm rounded bg-light h-100">
+                    <div className="mb-3 text-primary fs-2">
+                      <FaUsersCog />
                     </div>
+                    <h5 className="fw-bold">Automated Feedback Loops</h5>
+                    <p className="mb-0">Our AI support systems automatically analyze feedback and performance metrics, optimizing the AI’s processes and increasing efficiency across your business.</p>
+                  </div>
                 </div>
+
+                <div className="col-md-4">
+                  <div className="p-4 shadow-sm rounded bg-light h-100">
+                    <div className="mb-3 text-primary fs-2">
+                      <FaCode />
+                    </div>
+                    <h5 className="fw-bold">Predictive Analytics for Proactive Management</h5>
+                    <p className="mb-0">AI systems equipped with predictive analytics can foresee issues and opportunities, allowing businesses to take proactive measures and reduce downtime or inefficiencies in real-time.</p>
+                  </div>
+                </div>
+
+
+              </div>
             </div>
-        </div> 
-
-
-        <div class="row pt-5 pb-5 whychoosedev">
-          <div class="col-md-12">
-            <h2 >Machine Learning: Ensuring Continuous Improvement in AI Solutions</h2>
-            <h5 class="fw-normal mb-3">Harness Data for Smarter Business Decisions</h5>
-            <p>AI developers incorporate machine learning algorithms into your systems to continually improve performance over time. Key features of our support services include:</p>
           </div>
-          <div class="row">
-            <div class="col-md-4 mb-3">
-              <div class="bordered-card-wrapper">
-                <div class="custom-card">
-                  <h5>Real-Time Data Processing</h5>
-                  <p>Machine learning allows your AI systems to process data in real-time, learning from new data to continually improve predictions, recommendations, and decision-making capabilities.</p>
+
+        </div>
+
+        <div className="row pt-5 pb-5 whychoosedev">
+          <div className="col-md-12">
+            <h2 className="mb-4">Why Businesses Should Hire AI Support & Managed Services</h2>
+            <p>AI support and managed services offer businesses long-term stability and efficiency by ensuring their AI systems are maintained, optimized, and secure. Here’s why it’s crucial to hire professional AI developers for support and managed services.</p>
+          </div>
+          <div className="row">
+            <div className="col-md-4 mb-3">
+              <div className="bordered-card-wrapper">
+                <div className="custom-card">
+                  <h5>Expert AI Developers for Continuous Support</h5>
+                  <p>Our skilled AI developers provide ongoing support to monitor and maintain your AI systems, offering expert troubleshooting, updates, and system enhancements to ensure peak performance at all times.</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="bordered-card-wrapper">
-                <div class="custom-card">
-                  <h5>Automated Feedback Loops</h5>
-                  <p>Our AI support systems automatically analyze feedback and performance metrics, optimizing the AI’s processes and increasing efficiency across your business.</p>
+            <div className="col-md-4 mb-3">
+              <div className="bordered-card-wrapper">
+                <div className="custom-card">
+                  <h5>Maximized ROI with Continuous Optimization</h5>
+                  <p>With AI support and managed services, your business gains the most value from your AI systems by ensuring they operate efficiently, effectively, and with minimal downtime, leading to better returns on investment.</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-3">
-              <div class="bordered-card-wrapper">
-                <div class="custom-card">
-                  <h5>Predictive Analytics for Proactive Management</h5>
-                  <p>AI systems equipped with predictive analytics can foresee issues and opportunities, allowing businesses to take proactive measures and reduce downtime or inefficiencies in real-time.</p>
+            <div className="col-md-4 mb-3">
+              <div className="bordered-card-wrapper">
+                <div className="custom-card">
+                  <h5>Scalability for Growing Businesses</h5>
+                  <p>As your business grows, your AI solutions need to scale. Our support services ensure your systems adapt to increasing data, users, and evolving business needs, providing the flexibility and scalability required for continued success.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 mb-3">
+              <div className="bordered-card-wrapper">
+                <div className="custom-card">
+                  <h5>Improved Security & Compliance</h5>
+                  <p>With our comprehensive security measures and compliance management, your AI systems are safeguarded against cyber threats, and your data is protected in accordance with industry regulations, reducing the risk of data breaches and non-compliance penalties.</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 mb-3">
+              <div className="bordered-card-wrapper">
+                <div className="custom-card">
+                  <h5>Reduced Operational Risks</h5>
+                  <p>Our proactive approach to AI system monitoring and issue resolution minimizes the risk of unexpected system failures, ensuring your operations run smoothly without costly disruptions.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-
-        <div class="row g-4">
-
-          <div class="col-md-12">
-            <div class="p-4 shadow-sm rounded bg-light h-100">
-              <h5 class="fw-bold">Elevate Your Business with AI Support & Managed Services Expertise</h5>
-              <p class="mb-0">Hire expert AI developers and gain access to premium support and managed services that ensure your AI systems are always up to date, secure, and optimized. With continuous monitoring, performance enhancements, and proactive support, we help your business stay ahead of the competition and maintain operational excellence.</p>
-            </div>
-          </div>
-
-        </div>
-
-
-        <div class="row pt-5 pb-5 invest-section">
-          <div class="col-md-12">
+        <div className="row pt-5 pb-5 invest-section">
+          <div className="col-md-12">
             <h2>How NLP Enhances Communication and Support in AI Systems</h2>
-            <h5 class="fw-normal mb-3">Streamlining Customer and System Communication with NLP Solutions</h5>
-            <p class="mb-4">Natural Language Processing (NLP) enhances AI support systems by allowing them to understand and interact with human language. Here’s how NLP adds value to AI support:</p>
+            <p className="mb-4">Natural Language Processing (NLP) enhances AI support systems by allowing them to understand and interact with human language. Here’s how NLP adds value to AI support:</p>
           </div>
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-6 mb-2">
-                <div class="white-dashed-box h-100 mb-2">
-                  <h3><i class="fa-solid fa-headset me-2"></i> Automated Customer Support</h3>
-                  <p class="mb-0">NLP-powered chatbots provide real-time support for customer inquiries, offering instant responses to frequently asked questions and assisting with problem resolution.</p>
+          <div className="col-md-12">
+            <div className="row">
+              <div className="col-md-6 mb-2">
+                <div className="white-dashed-box h-100 mb-2">
+                  <h3><FaCog className="me-2" />Automated Customer Support</h3>
+                  <p className="mb-0">NLP-powered chatbots provide real-time support for customer inquiries, offering instant responses to frequently asked questions and assisting with problem resolution.</p>
                 </div>
               </div>
 
-              <div class="col-md-6 mb-2">
-                <div class="white-dashed-box h-100 mb-2">
-                  <h3><i class="fa-solid fa-face-smile me-2"></i> Sentiment Analysis for Support Enhancement</h3>
-                  <p class="mb-2">NLP helps analyze customer interactions and feedback across various platforms, enabling businesses to gain insights into customer sentiment and improve customer support strategies accordingly.</p>
+              <div className="col-md-6 mb-2">
+                <div className="white-dashed-box h-100 mb-2">
+                  <h3><FaBrain className="me-2" /> Sentiment Analysis for Support Enhancement</h3>
+                  <p className="mb-2">NLP helps analyze customer interactions and feedback across various platforms, enabling businesses to gain insights into customer sentiment and improve customer support strategies accordingly.</p>
                 </div>
               </div>
 
-              <div class="col-md-6 mb-2">
-                <div class="white-dashed-box h-100 mb-2">
-                  <h3><i class="fa-solid fa-ticket me-2"></i> Automated Ticketing Systems</h3>
-                  <p class="mb-2">NLP automates the ticketing process, categorizing and prioritizing customer issues, which helps reduce resolution time and improves efficiency in support operations.</p>
+              <div className="col-md-6 mb-2">
+                <div className="white-dashed-box h-100 mb-2">
+                  <h3><FaUserCheck className="me-2" /> Automated Ticketing Systems</h3>
+                  <p className="mb-2">NLP automates the ticketing process, categorizing and prioritizing customer issues, which helps reduce resolution time and improves efficiency in support operations.</p>
                 </div>
               </div>
 
-              <div class="col-md-6 mb-2">
-                <div class="white-dashed-box h-100 mb-2">
-                  <h3><i class="fa-solid fa-file-lines me-2"></i> Documentation and Reporting Automation</h3>
-                  <p class="mb-2">NLP automates the creation of reports and documentation, providing a seamless experience for customers and internal teams by instantly summarizing information from customer interactions and system performance.</p>
+              <div className="col-md-6 mb-2">
+                <div className="white-dashed-box h-100 mb-2">
+                  <h3><FaCoins className="me-2" /> Documentation and Reporting Automation</h3>
+                  <p className="mb-2">NLP automates the creation of reports and documentation, providing a seamless experience for customers and internal teams by instantly summarizing information from customer interactions and system performance.</p>
                 </div>
               </div>
 
@@ -452,39 +439,45 @@ export default function AiSupportManagedServices() {
           </div>
         </div>
 
-
-        <div class="row pt-5 pb-5 bg-integration">
-          <div class="col-md-6">
-            <div class="block-fixed">
-              <h2 class="text-white">Integrating AI Support & Managed Services Seamlessly with Your Business</h2>
-              <h4 class="text-white fw-normal mb-5">Ensure Seamless Integration of AI Support Solutions</h4>
-              <img src="images/Seamless-Integration.jpg" class="img-fluid integrationImg" alt="Seamless Integration with Business Infrastructure" />
+        <div className="row pt-5 pb-5 bg-integration">
+          <div className="col-md-6">
+            <div className="block-fixed">
+              <h2 className="text-white">Integrating AI Support & Managed Services Seamlessly with Your Business</h2>
+              <h4 className="text-white fw-normal mb-5">Ensure Seamless Integration of AI Support Solutions</h4>
+              <img src="images/Seamless-Integration.jpg" className="img-fluid integrationImg" alt="Key Use Cases of AI Support & Managed Services in Business" />
             </div>
           </div>
-          <div class="col-md-6">
-            <p class="mb-5">AI developers work to integrate support and managed services into your existing infrastructure, ensuring minimal disruption and maximum impact. Here’s how we ensure smooth integration:</p>
-            <div class="int-card mb-3">
-              <h5 class="mb-3">Minimal Disruption</h5>
+          <div className="col-md-6">
+            <p className="mb-5">AI developers work to integrate support and managed services into your existing infrastructure, ensuring minimal disruption and maximum impact. Here’s how we ensure smooth integration:</p>
+            <div className="int-card mb-3">
+              <h5 className="mb-3">Minimal Disruption</h5>
               <p>Our AI support solutions are designed to integrate seamlessly with your existing systems, ensuring business continuity while implementing new features, updates, and optimizations.</p>
             </div>
-            <div class="int-card mb-3">
-              <h5 class="mb-3">Custom APIs for Seamless Communication</h5>
+            <div className="int-card mb-3">
+              <h5 className="mb-3">Custom APIs for Seamless Communication</h5>
               <p>We develop custom APIs to ensure smooth communication between your AI systems and existing business applications, allowing for the efficient flow of data and support tasks.</p>
             </div>
-            <div class="int-card mb-3">
-              <h5 class="mb-3">System Compatibility</h5>
+            <div className="int-card mb-3">
+              <h5 className="mb-3">System Compatibility</h5>
               <p>Our AI support services are designed to complement your current systems without requiring major infrastructure changes, ensuring compatibility with minimal effort.</p>
             </div>
-            <div class="int-card mb-3">
-              <h5 class="mb-3">Scalability for Growing Needs</h5>
+            <div className="int-card mb-3">
+              <h5 className="mb-3">Scalability for Growing Needs</h5>
               <p>As your business grows, so do your AI support needs. Our services are scalable to accommodate increasing data volumes, new users, and evolving requirements, ensuring long-term success.</p>
             </div>
-            <div class="int-card">
-              <h5 class="mb-3">Regulatory Compliance</h5>
+            <div className="int-card mb-3">
+              <h5 className="mb-3">Regulatory Compliance</h5>
               <p>We ensure that your AI solutions meet the necessary data protection and compliance standards, keeping your business secure and aligned with industry regulations.</p>
             </div>
           </div>
         </div>
+
+        <div className="row pt-5">
+          <div className="col-md-12 text-center">
+            <h2 className="text-center">Key Use Cases of AI Support & Managed Services in Business</h2>
+          </div>
+        </div>
+        <IndustryApplication data={industryData} />
 
         <div class="row pt-5 pb-5">
           <div class="col-md-12">
@@ -492,7 +485,7 @@ export default function AiSupportManagedServices() {
               <div class="row">
                 <div class="col-md-12">
                   <h2 class="mb-4">How We Ensure Seamless Collaboration for AI Support & Managed Services Projects</h2>
-                  <h5 className="fw-normal mb-3"></h5>
+                  <h5 className="fw-normal mb-3">A Comprehensive Approach to AI System Maintenance and Support</h5>
                   <p>Our process for delivering AI support and managed services ensures your business objectives are met and systems are fully optimized. Here’s how we collaborate with you:</p>
                 </div>
               </div>
@@ -502,63 +495,6 @@ export default function AiSupportManagedServices() {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="mb-3 pt-3 pb-1">
-          <h2 className="text-center"> Key Use Cases of AI Support & Managed Services in Business
-          </h2>
-          <h5 className="text-center fw-normal mb-3">Unlock Industry-Specific Innovations with AI Support</h5>
-          <p className="mb-0 text-center"> AI support and managed services can transform various business operations across industries. Here are some key use cases:</p>
-
-          <div className="py-5">
-            <div className="container">
-              <div className="row text-center g-4">
-
-                <div className="col-md-6">
-                  <div className="p-4 shadow-sm rounded bg-light h-100">
-                    <div className="mb-3 text-primary fs-2">
-                      <FaFileContract />
-                    </div>
-                    <h5 className="fw-bold">AI in Ecommerce</h5>
-                    <p className="mb-0">Ensure seamless customer experiences by providing continuous support for AI systems handling customer queries, order processing, and personalized recommendations.</p>
-                  </div>
-                </div>
-
-                <div className="col-md-6">
-                  <div className="p-4 shadow-sm rounded bg-light h-100">
-                    <div className="mb-3 text-primary fs-2">
-                      <FaUsersCog />
-                    </div>
-                    <h5 className="fw-bold">AI in Healthcare</h5>
-                    <p className="mb-0">Maintain patient data management systems, automate billing processes, and optimize diagnostics tools with ongoing AI system monitoring and updates.</p>
-                  </div>
-                </div>
-
-                <div className="col-md-6">
-                  <div className="p-4 shadow-sm rounded bg-light h-100">
-                    <div className="mb-3 text-primary fs-2">
-                      <FaCode />
-                    </div>
-                    <h5 className="fw-bold">AI in Finance</h5>
-                    <p className="mb-0">Offer continuous monitoring and optimization of AI tools for fraud detection, transaction analysis, and risk management, ensuring high performance and accuracy.</p>
-                  </div>
-                </div>
-
-                <div className="col-md-6">
-                  <div className="p-4 shadow-sm rounded bg-light h-100">
-                    <div className="mb-3 text-primary fs-2">
-                      <FaVial />
-                    </div>
-                    <h5 className="fw-bold">AI in Manufacturing</h5>
-                    <p className="mb-0">Monitor and optimize AI systems for predictive maintenance, inventory management, and production scheduling to improve efficiency and reduce downtime.</p>
-                  </div>
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-
         </div>
 
         <CTASection data={ctaData} />
