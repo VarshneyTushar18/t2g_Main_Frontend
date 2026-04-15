@@ -1584,9 +1584,9 @@ export default function Header() {
       <div className="h-100">
          <div className="row justify-content-between py-2 h-100">
             <div className="col-md-3 m-0">
-               <div className="p-4 rounded cta h-100" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/images/top-view-unrecognizable-hacker-performing-cyberattack-night.webp)', borderRadius: 15, backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
-               <h2 className="text-white mb-4">Innovative Web & Mobile Solutions</h2>
-               <p className="text-white">Build high performance, secure, and user friendly websites & mobile apps with Tech2Globe.</p>
+               <div className="p-4 rounded cta h-100" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/images/ai-menubg.webp)', borderRadius: 15, backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
+               <h2 className="text-white mb-4">Smart AI-Powered Services</h2>
+               <p className="text-white">Transform your operations with advanced AI solutions designed to automate processes, enhance customer experiences, and unlock valuable insights from your data.</p>
             </div>
          </div>
          <div className="col-md-2 pb-2 bg-light-blue">
@@ -1695,6 +1695,89 @@ export default function Header() {
    </div>
    </div>
 </li>
+<li className="HasMegaChild">
+   <a href="#!">Let's Talk AI</a>
+   <div className="container-fluid megamenu">
+      <div className="row justify-content-between py-2 h-100">
+         <div className="col-md-3 m-0">
+            <div className="p-4 rounded cta h-100" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/images/portrait-person-ai-robot.webp)', borderRadius: 15, backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
+               <h2 className="text-white mb-4">Unlock the Power of AI</h2>
+               <p className="text-white">Transform your business with cutting-edge AI solutions from Tech2Globe.</p>
+            </div>
+         </div>
+         <div className="col-md-2 pb-2 bg-light-blue">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/ai-development-applications" className="text-decoration-none">AI Development & Applications</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-chatbot-development">AI Chatbot Development</a></li>
+               <li><a className="menu-link" href="/ai-powered-video-analytics">AI Powered Video Analytics</a></li>
+               <li><a className="menu-link" href="/machine-learning-services-and-consultation">Machine Learning</a></li>
+               <li><a className="menu-link" href="/ai-application-development">AI Application Development</a></li>
+               <li><a className="menu-link" href="/ai-api-integration">AI API Integration</a></li>
+               <li><a className="menu-link" href="/ai-operations-aiops">AI Operations (AIOps)</a></li>
+            </ul>
+         </div>
+         <div className="col-md-2 pb-2">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/ai-data-automation" className="text-decoration-none">AI Data & Automation</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-data-entry-automation">AI Data Entry Automation</a></li>
+               <li><a className="menu-link" href="/ai-data-annotation-services">AI Data Annotation</a></li>
+               <li><a className="menu-link" href="/data-cleansing-for-ai">Data Cleansing for AI</a></li>
+               <li><a className="menu-link" href="/process-automation-consulting">Process Automation Consulting</a></li>
+               <li><a className="menu-link" href="/workflow-automation">Workflow Automation</a></li>
+               <li><a className="menu-link" href="/ai-data-support-kpo-ai-services">AI Data Support For KPO Services</a></li>
+               <li><a className="menu-link" href="/ai-data-support-ai-services">AI Data Support Services</a></li>
+               <li><a className="menu-link" href="/customer-data-migration-services">Customer Data Migration Services</a></li>
+               <li><a className="menu-link" href="/reporting-and-analytics">Reporting And Analytics</a></li>
+            </ul>
+         </div>
+         <div className="col-md-2 pb-2 bg-light-blue">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/ai-marketing" className="text-decoration-none">AI Marketing</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-content-generation">AI Content Generation</a></li>
+               <li><a className="menu-link" href="/ai-seo-automation">AI SEO Automation</a></li>
+               <li><a className="menu-link" href="/ai-ad-campaign-optimization">AI Ad Campaign Optimization</a></li>
+               <li><a className="menu-link" href="/marketing-automation-with-ai">Marketing Automation with AI</a></li>
+               <li><a className="menu-link" href="/ai-powered-catalog-optimization">AI-Powered Catalog Optimization</a></li>
+               <li><a className="menu-link" href="/ai-powered-digital-marketing">AI-Powered Digital Marketing</a></li>
+               <li><a className="menu-link" href="/ai-product-recommendations">AI Product Recommendations</a></li>
+               <li><a className="menu-link" href="/ai-sales-forecasting">AI Sales Forecasting</a></li>
+            </ul>
+         </div>
+         <div className="col-md-2 pb-2">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/ai-support-managed-services" className="text-decoration-none">AI Support & Managed Services</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-support-managed-services">AI Support & Managed Services</a></li>
+               <li><a className="menu-link" href="/chat-support-services">Chat Support Services For AI Products</a></li>
+               <li><a className="menu-link" href="/voice-support-for-ai-products">Voice Support For AI Products</a></li>
+               <li><a className="menu-link" href="/customer-onboarding-services">Customer Onboarding Services</a></li>
+               <li><a className="menu-link" href="/project-implementation-services">Project Implementation Services</a></li>
+               <li><a className="menu-link" href="/virtual-assistant-services">Virtual Assistant Services</a></li>
+               <li><a className="menu-link" href="/ai-helpdesk-automation">AI Helpdesk Automation</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</li>
                      <li className="HasChild">
                         <Link href="#">Resources</Link>
                         <ul className="Dropdown">
@@ -1748,6 +1831,9 @@ export default function Header() {
                         <button className="nav-link text-secondary" id="nav-technologies-tab" data-bs-toggle="tab"
                            data-bs-target="#nav-technologies" type="button" role="tab" aria-controls="nav-technologies"
                            aria-selected="false">Technologies</button>
+                        <button className="nav-link text-secondary" id="nav-aiservice-tab" data-bs-toggle="tab"
+                           data-bs-target="#nav-aiservice" type="button" role="tab" aria-controls="nav-aiservice"
+                           aria-selected="false">Let's Talk AI</button>
                      </div>
                   </nav>
                   <div className="tab-content" id="nav-tabContent">
@@ -3876,6 +3962,96 @@ export default function Header() {
                                              </div>
                                           </div>
                                        </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div className="tab-pane fade" id="nav-aiservice" role="tabpanel" aria-labelledby="nav-aiservice-tab" tabIndex="0">
+                        <div className="accordion" id="accordionNavAI">
+                           <div className="accordion-item">
+                              <h2 className="accordion-header">
+                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAI1" aria-expanded="false" aria-controls="collapseAI1">
+                                    <strong>AI Development & Applications</strong>
+                                 </button>
+                              </h2>
+                              <div id="collapseAI1" className="accordion-collapse collapse" data-bs-parent="#accordionNavAI">
+                                 <div className="accordion-body">
+                                    <ul>
+                                       <li><a href="/ai-chatbot-development">AI Chatbot Development</a></li>
+                                       <li><a href="/ai-powered-video-analytics">AI Powered Video Analytics</a></li>
+                                       <li><a href="/machine-learning-services-and-consultation">Machine Learning</a></li>
+                                       <li><a href="/ai-application-development">AI Application Development</a></li>
+                                       <li><a href="/ai-api-integration">AI API Integration</a></li>
+                                       <li><a href="/ai-operations-aiops">AI Operations (AIOps)</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div className="accordion-item">
+                              <h2 className="accordion-header">
+                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAI2" aria-expanded="false" aria-controls="collapseAI2">
+                                    <strong>AI Data & Automation</strong>
+                                 </button>
+                              </h2>
+                              <div id="collapseAI2" className="accordion-collapse collapse" data-bs-parent="#accordionNavAI">
+                                 <div className="accordion-body">
+                                    <ul>
+                                       <li><a href="/ai-data-entry-automation">AI Data Entry Automation</a></li>
+                                       <li><a href="/ai-data-annotation-services">AI Data Annotation</a></li>
+                                       <li><a href="/data-cleansing-for-ai">Data Cleansing for AI</a></li>
+                                       <li><a href="/process-automation-consulting">Process Automation Consulting</a></li>
+                                       <li><a href="/workflow-automation">Workflow Automation</a></li>
+                                       <li><a href="/ai-data-support-kpo-ai-services">AI Data Support For KPO Services</a></li>
+                                       <li><a href="/ai-data-support-ai-services">AI Data Support Services</a></li>
+                                       <li><a href="/customer-data-migration-services">Customer Data Migration Services</a></li>
+                                       <li><a href="/reporting-and-analytics">Reporting And Analytics</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div className="accordion-item">
+                              <h2 className="accordion-header">
+                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAI3" aria-expanded="false" aria-controls="collapseAI3">
+                                    <strong>AI Marketing</strong>
+                                 </button>
+                              </h2>
+                              <div id="collapseAI3" className="accordion-collapse collapse" data-bs-parent="#accordionNavAI">
+                                 <div className="accordion-body">
+                                    <ul>
+                                       <li><a href="/ai-content-generation">AI Content Generation</a></li>
+                                       <li><a href="/ai-seo-automation">AI SEO Automation</a></li>
+                                       <li><a href="/ai-ad-campaign-optimization">AI Ad Campaign Optimization</a></li>
+                                       <li><a href="/marketing-automation-with-ai">Marketing Automation with AI</a></li>
+                                       <li><a href="/ai-powered-catalog-optimization">AI-Powered Catalog Optimization</a></li>
+                                       <li><a href="/ai-powered-digital-marketing">AI-Powered Digital Marketing</a></li>
+                                       <li><a href="/ai-product-recommendations">AI Product Recommendations</a></li>
+                                       <li><a href="/ai-sales-forecasting">AI Sales Forecasting</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div className="accordion-item">
+                              <h2 className="accordion-header">
+                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAI4" aria-expanded="false" aria-controls="collapseAI4">
+                                    <strong>AI Support & Managed Services</strong>
+                                 </button>
+                              </h2>
+                              <div id="collapseAI4" className="accordion-collapse collapse" data-bs-parent="#accordionNavAI">
+                                 <div className="accordion-body">
+                                    <ul>
+                                       <li><a href="/ai-support-managed-services">AI Support & Managed Services</a></li>
+                                       <li><a href="/chat-support-services">Chat Support Services For AI Products</a></li>
+                                       <li><a href="/voice-support-for-ai-products">Voice Support For AI Products</a></li>
+                                       <li><a href="/customer-onboarding-services">Customer Onboarding Services</a></li>
+                                       <li><a href="/project-implementation-services">Project Implementation Services</a></li>
+                                       <li><a href="/virtual-assistant-services">Virtual Assistant Services</a></li>
+                                       <li><a href="/ai-helpdesk-automation">AI Helpdesk Automation</a></li>
                                     </ul>
                                  </div>
                               </div>
