@@ -1399,22 +1399,22 @@ export default function Header() {
                                  <div className="menu-container">
                                     <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
                                     <h5 className="menu-header">
-                                       <a href=" seo-services" className="text-decoration-none">Search Engine Optimization</a>
+                                       <a href="seo-services" className="text-decoration-none">Search Engine Optimization</a>
                                     </h5>
                                  </div>
                                  <ul className="list-unstyled ps-2 menu-items">
-                                    <li><a href=" local-seo" className="menu-link">Local SEO</a></li>
-                                    <li><a href=" technical-seo" className="menu-link">Technical
+                                    <li><a href="local-seo" className="menu-link">Local SEO</a></li>
+                                    <li><a href="technical-seo" className="menu-link">Technical
                                        SEO</a></li>
-                                    <li><a className="menu-link" href=" ecommerce-seo-services">ECommerce
+                                    <li><a className="menu-link" href="ecommerce-seo-services">ECommerce
                                        SEO Services</a></li>
-                                    <li><a className="menu-link" href=" seo-by-industry">SEO By
+                                    <li><a className="menu-link" href="seo-by-industry">SEO By
                                        Industry</a></li>
-                                    <li><a className="menu-link" href=" seo-for-small-business">SEO
+                                    <li><a className="menu-link" href="seo-for-small-business">SEO
                                        For Small Business</a></li>
-                                    <li><a className="menu-link" href=" link-building-services">Link
+                                    <li><a className="menu-link" href="link-building-services">Link
                                        Building Services</a></li>
-                                    <li><a className="menu-link" href=" mobile-seo-services">Mobile
+                                    <li><a className="menu-link" href="mobile-seo-services">Mobile
                                        SEO Services</a></li>
                                  </ul>
                                  <div className="menu-container">
@@ -1424,20 +1424,20 @@ export default function Header() {
                                     </h5>
                                  </div>
                                  <ul className="list-unstyled ps-2 menu-items">
-                                    <li><a className="menu-link" href=" smo-services">Social
+                                    <li><a className="menu-link" href="smo-services">Social
                                        Media Optimization</a></li>
-                                    <li><a className="menu-link" href=" social-media-marketing">Social
+                                    <li><a className="menu-link" href="social-media-marketing">Social
                                        Media Marketing</a></li>
-                                    <li><a className="menu-link" href=" influencer-marketing-agency">Influencer
+                                    <li><a className="menu-link" href="influencer-marketing-agency">Influencer
                                        Marketing Agency</a></li>
-                                    <li><a className="menu-link" href=" ecommerce-social-media-marketing">Ecommerce
+                                    <li><a className="menu-link" href="ecommerce-social-media-marketing">Ecommerce
                                        Social Media Marketing</a></li>
-                                    <li><a className="menu-link" href=" tiktok-shop-management-services">TikTok Shop Management Services</a></li>
-                                    <li><a className="menu-link" href=" linkedin-marketing-services">LinkedIn Marketing Services</a></li>
-                                    <li><a className="menu-link" href=" instagram-marketing-services">Instagram Marketing Services</a></li>
-                                    <li><a className="menu-link" href=" facebook-marketing-and-advertising-services">Facebook Marketing &amp; Advertising Services</a></li>
-                                    <li><a className="menu-link" href=" youtube-marketing-services">YouTube Marketing Services </a></li>
-                                    <li><a className="menu-link" href=" x-marketing-services">X(Twitter) Marketing Services </a></li>
+                                    <li><a className="menu-link" href="tiktok-shop-management-services">TikTok Shop Management Services</a></li>
+                                    <li><a className="menu-link" href="linkedin-marketing-services">LinkedIn Marketing Services</a></li>
+                                    <li><a className="menu-link" href="instagram-marketing-services">Instagram Marketing Services</a></li>
+                                    <li><a className="menu-link" href="facebook-marketing-and-advertising-services">Facebook Marketing &amp; Advertising Services</a></li>
+                                    <li><a className="menu-link" href="youtube-marketing-services">YouTube Marketing Services </a></li>
+                                    <li><a className="menu-link" href="x-marketing-services">X(Twitter) Marketing Services </a></li>
                                  </ul>
                               </div>
                               {/* Services Column 2 */}
@@ -1445,32 +1445,32 @@ export default function Header() {
                                  <div className="menu-container">
                                     <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
                                     <h5 className="menu-header">
-                                       <a href=" ppc-services" className="text-decoration-none">Pay Per Click (PPC)</a>
+                                       <a href="ppc-services" className="text-decoration-none">Pay Per Click (PPC)</a>
                                     </h5>
                                  </div>
                                  <ul className="list-unstyled ps-2 menu-items">
-                                    <li><a className="menu-link" href=" remarketing-services">Remarketing
+                                    <li><a className="menu-link" href="remarketing-services">Remarketing
                                        Services</a></li>
-                                    <li><a className="menu-link" href=" shopping-ads-services">Shopping
+                                    <li><a className="menu-link" href="shopping-ads-services">Shopping
                                        Ads Services</a></li>
-                                    <li><a className="menu-link" href=" youtube-advertising-services">YouTube
+                                    <li><a className="menu-link" href="youtube-advertising-services">YouTube
                                        Advertising Services</a></li>
-                                    <li><a className="menu-link" href=" ecommerce-social-media-marketing">Ecommerce
+                                    <li><a className="menu-link" href="ecommerce-social-media-marketing">Ecommerce
                                        Social Media Marketing</a></li>
-                                    <li><a className="menu-link" href=" display-advertising-services">Display
+                                    <li><a className="menu-link" href="display-advertising-services">Display
                                        Advertising Services</a>
                                     </li>
                                  </ul>
                                  <div className="menu-container">
                                     <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
                                     <h5 className="menu-header">
-                                       <a href=" digital-marketing-services" className="text-decoration-none">Digital Marketing Services</a>
+                                       <a href="digital-marketing-services" className="text-decoration-none">Digital Marketing Services</a>
                                     </h5>
                                  </div>
                                  <div className="menu-container">
                                     <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
                                     <h5 className="menu-header">
-                                       <a href=" startup-consulting" className="text-decoration-none">Startup Consulting</a>
+                                       <a href="startup-consulting" className="text-decoration-none">Startup Consulting</a>
                                     </h5>
                                  </div>
                                  <div className="menu-container">
@@ -1480,9 +1480,9 @@ export default function Header() {
                                     </h5>
                                  </div>
                                  <ul className="list-unstyled ps-2 menu-items">
-                                    <li><a className="menu-link" href=" email-marketing-design">Email
+                                    <li><a className="menu-link" href="email-marketing-design">Email
                                        Marketing Design</a></li>
-                                    <li><a className="menu-link" href=" email-marketing-services">Email
+                                    <li><a className="menu-link" href="email-marketing-services">Email
                                        Marketing Services</a></li>
                                  </ul>
                               </div>
@@ -1491,43 +1491,43 @@ export default function Header() {
                                  <div className="menu-container">
                                     <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
                                     <h5 className="menu-header">
-                                       <a href=" digital-marketing-packages" className="text-decoration-none">ORM</a>
+                                       <a href="digital-marketing-packages" className="text-decoration-none">ORM</a>
                                     </h5>
                                  </div>
                                  <ul className="list-unstyled ps-2 menu-items">
-                                    <li><a className="menu-link" href=" brand-reputation-management">Brand
+                                    <li><a className="menu-link" href="brand-reputation-management">Brand
                                        Reputation Management</a></li>
-                                    <li><a className="menu-link" href=" corporate-reputation-management-services">Corporate
+                                    <li><a className="menu-link" href="corporate-reputation-management-services">Corporate
                                        Reputation Management Services</a></li>
-                                    <li><a className="menu-link" href=" orm-services">ORM
+                                    <li><a className="menu-link" href="orm-services">ORM
                                        Services</a></li>
                                  </ul>
                                  <div className="menu-container">
                                     <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
                                     <h5 className="menu-header">
-                                       <a href=" digital-marketing-packages" className="text-decoration-none">Digital Marketing Packages</a>
+                                       <a href="digital-marketing-packages" className="text-decoration-none">Digital Marketing Packages</a>
                                     </h5>
                                  </div>
                                  <ul className="list-unstyled ps-2 menu-items">
-                                    <li><a className="menu-link" href=" influencer-marketing-package">Influencer
+                                    <li><a className="menu-link" href="influencer-marketing-package">Influencer
                                        Marketing Packages</a></li>
-                                    <li><a className="menu-link" href=" seo-packages">SEO
+                                    <li><a className="menu-link" href="seo-packages">SEO
                                        Packages</a></li>
-                                    <li><a className="menu-link" href=" social-media-marketing-packages">Social
+                                    <li><a className="menu-link" href="social-media-marketing-packages">Social
                                        Media Marketing Packages</a></li>
-                                    <li><a className="menu-link" href=" guest-posting-packages">Guest
+                                    <li><a className="menu-link" href="guest-posting-packages">Guest
                                        Posting Packages</a></li>
-                                    <li><a className="menu-link" href=" ppc-packages">PPC
+                                    <li><a className="menu-link" href="ppc-packages">PPC
                                        Packages</a></li>
-                                    <li><a className="menu-link" href=" smo-packages">SMO
+                                    <li><a className="menu-link" href="smo-packages">SMO
                                        Packages</a></li>
-                                    <li><a className="menu-link" href=" performance-marketing-packages">Performance
+                                    <li><a className="menu-link" href="performance-marketing-packages">Performance
                                        Marketing Packages</a></li>
-                                    <li><a className="menu-link" href=" ecommerce-ppc-packages">Ecommerce
+                                    <li><a className="menu-link" href="ecommerce-ppc-packages">Ecommerce
                                        PPC Packages</a></li>
-                                    <li><a className="menu-link" href=" ecommerce-seo-packages">Ecommerce
+                                    <li><a className="menu-link" href="ecommerce-seo-packages">Ecommerce
                                        SEO Packages</a></li>
-                                    <li><a className="menu-link" href=" local-seo-packages">Local
+                                    <li><a className="menu-link" href="local-seo-packages">Local
                                        SEO Packages</a></li>
                                  </ul>
                               </div>
@@ -1540,7 +1540,7 @@ export default function Header() {
                                     </h5>
                                  </div>
                                  <ul className="list-unstyled ps-2 menu-items">
-                                    <li><a className="menu-link" href=" digital-marketing-for-law-firms">Digital Marketing for Law Firms</a></li>
+                                    <li><a className="menu-link" href="digital-marketing-for-law-firms">Digital Marketing for Law Firms</a></li>
                                  </ul>
                                  <div className="menu-container">
                                     <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
@@ -1549,16 +1549,16 @@ export default function Header() {
                                     </h5>
                                  </div>
                                  <ul className="list-unstyled ps-2 menu-items">
-                                    <li><a className="menu-link" href=" miami-digital-marketing-agency">Miami</a></li>
-                                    <li><a className="menu-link" href=" oakland-digital-marketing-agency">Oakland</a></li>
-                                    <li><a className="menu-link" href=" san-diego-digital-marketing-agency">San
+                                    <li><a className="menu-link" href="miami-digital-marketing-agency">Miami</a></li>
+                                    <li><a className="menu-link" href="oakland-digital-marketing-agency">Oakland</a></li>
+                                    <li><a className="menu-link" href="san-diego-digital-marketing-agency">San
                                        Diego</a></li>
-                                    <li><a className="menu-link" href=" minneapolis-digital-marketing-agency">Minneapolis</a></li>
-                                    <li><a className="menu-link" href=" chicago-digital-marketing-agency">Chicago</a></li>
-                                    <li><a className="menu-link" href=" los-angeles-digital-marketing-agency">Los
+                                    <li><a className="menu-link" href="minneapolis-digital-marketing-agency">Minneapolis</a></li>
+                                    <li><a className="menu-link" href="chicago-digital-marketing-agency">Chicago</a></li>
+                                    <li><a className="menu-link" href="los-angeles-digital-marketing-agency">Los
                                        Angeles</a></li>
-                                    <li><a className="menu-link" href=" portland-digital-marketing-agency">Portland</a></li>
-                                    <li><a className="menu-link" href=" new-york-digital-marketing-agency">New
+                                    <li><a className="menu-link" href="portland-digital-marketing-agency">Portland</a></li>
+                                    <li><a className="menu-link" href="new-york-digital-marketing-agency">New
                                        York</a></li>
                                  </ul>
                                  <div className="menu-container">
@@ -1568,9 +1568,9 @@ export default function Header() {
                                     </h5>
                                  </div>
                                  <ul className="list-unstyled ps-2 menu-items">
-                                    <li><a className="menu-link" href=" guest-posting-services">Guest
+                                    <li><a className="menu-link" href="guest-posting-services">Guest
                                        Posting Services</a></li>
-                                    <li><a className="menu-link" href=" content-marketing-services">Content
+                                    <li><a className="menu-link" href="content-marketing-services">Content
                                        Marketing Services</a></li>
                                  </ul>
                               </div>
