@@ -1578,6 +1578,124 @@ export default function Header() {
                         </div>
 
                      </li>
+                     <li className="HasMegaChild">
+   <a href="#!">Lets Talk AI</a>
+   <div className="container-fluid megamenu">
+      <div className="h-100">
+         <div className="row justify-content-between py-2 h-100">
+            <div className="col-md-3 m-0">
+               <div className="p-4 rounded cta h-100" style={{ background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(/images/ai-menubg.webp)', borderRadius: 15, backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
+               <h2 className="text-white mb-4">Smart AI-Powered Services</h2>
+               <p className="text-white">Transform your operations with advanced AI solutions designed to automate processes, enhance customer experiences, and unlock valuable insights from your data.</p>
+            </div>
+         </div>
+         <div className="col-md-2 pb-2 bg-light-blue">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/custom-ai-development" className="text-decoration-none">Custom AI Development</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-application-development">AI Application Development</a>
+               </li>
+               <li><a className="menu-link" href="/generative-ai-solutions">Generative AI Solutions</a>
+               </li>
+               <li><a className="menu-link" href="/prompt-engineering-services">Prompt Engineering Services</a>
+               </li>
+               <li><a className="menu-link" href="/ai-api-integration">AI API Integration</a>
+               </li>
+               <li><a className="menu-link" href="/ai-chatbot-development">AI Chatbot Development</a>
+               </li>
+            </ul>
+         </div>
+         <div className="col-md-2 pb-2">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/conversational-ai-solutions" className="text-decoration-none">Conversational AI Solutions</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/customer-support-ai-chatbots">Customer Support AI Chatbots</a>
+               </li>
+               <li><a className="menu-link" href="/voice-bots-ai-ivr">Voice Bots & AI IVR</a>
+               </li>
+               <li><a className="menu-link" href="/whatsapp-web-app-chatbots">WhatsApp / Web / App Chatbots</a>
+               </li>
+               <li><a className="menu-link" href="/ai-helpdesk-automation">AI Helpdesk Automation</a>
+               </li>
+               <li><a className="menu-link" href="/multilingual-nlp-chatbots">Multilingual NLP Chatbots</a>
+               </li>
+            </ul>
+         </div>
+         <div className="col-md-2 pb-2 bg-light-blue">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/ai-for-ecommerce" className="text-decoration-none">AI for Ecommerce</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-product-recommendations">AI Product Recommendations</a>
+               </li>
+               <li><a className="menu-link" href="/ai-powered-catalog-optimization">AI-Powered Catalog Optimization</a>
+               </li>
+               <li><a className="menu-link" href="/ai-sales-forecasting">AI Sales Forecasting</a>
+               </li>
+            </ul>
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/ai-powered-catalog-optimization" className="text-decoration-none">AI-Powered Digital Marketing</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-content-generation">AI Content Generation</a>
+               </li>
+               <li><a className="menu-link" href="/ai-seo-automation">AI SEO Automation</a>
+               </li>
+               <li><a className="menu-link" href="/ai-ad-campaign-optimization">AI Ad Campaign Optimization</a>
+               </li>
+               <li><a className="menu-link" href="/marketing-automation-with-ai">Marketing Automation with AI</a>
+               </li>
+            </ul>
+         </div>
+         <div className="col-md-2 pb-2">
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/data-ai-automation" className="text-decoration-none">Data & AI Automation</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/process-automation-consulting">Process Automation Consulting</a>
+               </li>
+               <li><a className="menu-link" href="/ai-data-entry-automation">AI Data Entry Automation</a>
+               </li>
+               <li><a className="menu-link" href="/workflow-automation">Workflow Automation</a>
+               </li>
+               <li><a className="menu-link" href="/web-application-development">AI Data Annotation</a>
+               </li>
+               <li><a className="menu-link" href="/data-cleansing-for-ai">Data Cleansing for AI</a>
+               </li>
+            </ul>
+            <div className="menu-container">
+               <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
+               <h5 className="menu-header">
+                  <a href="/ai-support-managed-services" className="text-decoration-none">AI Support & Managed Services</a>
+               </h5>
+            </div>
+            <ul className="list-unstyled ps-2 menu-items">
+               <li><a className="menu-link" href="/ai-operations-aiops">AI Operations (AIOps)</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   </div>
+</li>
+
                      <li className="HasChild">
                         <Link href="#">Resources</Link>
                         <ul className="Dropdown">
@@ -1631,6 +1749,9 @@ export default function Header() {
                         <button className="nav-link text-secondary" id="nav-technologies-tab" data-bs-toggle="tab"
                            data-bs-target="#nav-technologies" type="button" role="tab" aria-controls="nav-technologies"
                            aria-selected="false">Technologies</button>
+                        <button className="nav-link text-secondary" id="nav-aiservice-tab" data-bs-toggle="tab"
+                           data-bs-target="#nav-aiservice" type="button" role="tab" aria-controls="nav-aiservice"
+                           aria-selected="false">Let's Talk AI</button>
                      </div>
                   </nav>
                   <div className="tab-content" id="nav-tabContent">
@@ -3759,6 +3880,130 @@ export default function Header() {
                                              </div>
                                           </div>
                                        </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div className="tab-pane fade" id="nav-aiservice" role="tabpanel" aria-labelledby="nav-aiservice-tab" tabIndex="0">
+                        <div className="accordion" id="accordionNavAI">
+                           <div className="accordion-item">
+                              <h2 className="accordion-header">
+                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAI1" aria-expanded="false" aria-controls="collapseAI1">
+                                    <strong>Custom AI Development</strong>
+                                 </button>
+                              </h2>
+                              <div id="collapseAI1" className="accordion-collapse collapse" data-bs-parent="#accordionNavAI">
+                                 <div className="accordion-body">
+                                    <ul>
+                                       <li><a href="/custom-ai-development">Custom AI Development</a></li>
+                                       <li><a href="/ai-application-development">AI Application Development</a></li>
+                                       <li><a href="/Generative-AI-Solutions">Generative AI Solutions </a></li>
+                                       <li><a href="/ai-application-development">Prompt Engineering Services</a></li>
+                                       <li><a href="/ai-api-integration">AI API Integration</a></li>
+                                       <li><a href="/ai-chatbot-development">AI Chatbot Development</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div className="accordion-item">
+                              <h2 className="accordion-header">
+                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAI2" aria-expanded="false" aria-controls="collapseAI2">
+                                    <strong>Conversational AI Solutions</strong>
+                                 </button>
+                              </h2>
+                              <div id="collapseAI2" className="accordion-collapse collapse" data-bs-parent="#accordionNavAI">
+                                 <div className="accordion-body">
+                                    <ul>
+                                       <li><a href="/conversational-ai-solutions">Conversational AI Solutions</a></li>
+                                       <li><a href="/customer-support-ai-chatbots">Customer Support AI Chatbots</a></li>
+                                       <li><a href="/voice-bots-ai-ivr">Voice Bots & AI IVR</a></li>
+                                       <li><a href="/whatsapp-web-app-chatbots">WhatsApp / Web / App Chatbots </a></li>
+                                       <li><a href="/ai-helpdesk-automation">AI Helpdesk Automation</a></li>
+                                       <li><a href="/multilingual-nlp-chatbots">Multilingual NLP Chatbots</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div className="accordion-item">
+                              <h2 className="accordion-header">
+                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAI3" aria-expanded="false" aria-controls="collapseAI3">
+                                    <strong>AI For Ecommerce</strong>
+                                 </button>
+                              </h2>
+                              <div id="collapseAI3" className="accordion-collapse collapse" data-bs-parent="#accordionNavAI">
+                                 <div className="accordion-body">
+                                    <ul>
+                                       <li><a href="/ai-for-ecommerce">AI For Ecommerce</a></li>
+                                       <li><a href="/ai-product-recommendations">AI Product Recommendations</a></li>
+                                       <li><a href="/ai-powered-catalog-optimization">AI-Powered Catalog Optimization</a></li>                                      
+                                       <li><a href="/ai-sales-forecasting">AI Sales Forecasting</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div className="accordion-item">
+                              <h2 className="accordion-header">
+                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAI4" aria-expanded="false" aria-controls="collapseAI4">
+                                    <strong>AI Powered Digital Marketing</strong>
+                                 </button>
+                              </h2>
+                              <div id="collapseAI4" className="accordion-collapse collapse" data-bs-parent="#accordionNavAI">
+                                 <div className="accordion-body">
+                                    <ul>
+                                       <li><a href="/ai-powered-digital-marketing">AI-Powered Digital Marketing</a></li>
+                                       <li><a href="/ai-content-generation">AI Content Generation</a></li>
+                                       <li><a href="/ai-seo-automation">AI SEO Automation</a></li>
+                                       <li><a href="/ai-ad-campaign-optimization">AI Ad Campaign Optimization</a></li>
+                                       <li><a href="/marketing-automation-with-ai">Marketing Automation with AI</a></li>
+                                       <li><a href="/ai-support-managed-services">AI Support & Managed Services</a></li>
+                                       <li><a href="/chat-support-services">Chat Support Services For AI Products</a></li>
+                                       <li><a href="/voice-support-for-ai-products">Voice Support For AI Products</a></li>
+                                       <li><a href="/customer-onboarding-services">Customer Onboarding Services</a></li>
+                                       <li><a href="/project-implementation-services">Project Implementation Services</a></li>
+                                       <li><a href="/virtual-assistant-services">Virtual Assistant Services</a></li>
+                                       <li><a href="/ai-helpdesk-automation">AI Helpdesk Automation</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div className="accordion-item">
+                              <h2 className="accordion-header">
+                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAI5" aria-expanded="false" aria-controls="collapseAI5">
+                                    <strong>Data & AI Automation</strong>
+                                 </button>
+                              </h2>
+                              <div id="collapseAI5" className="accordion-collapse collapse" data-bs-parent="#accordionNavAI">
+                                 <div className="accordion-body">
+                                    <ul>
+                                       <li><a href="/data-ai-automation">Data & AI Automation</a></li>
+                                       <li><a href="/process-automation-consulting">Process Automation Consulting</a></li>
+                                       <li><a href="/ai-data-entry-automation">AI Data Entry Automation</a></li>
+                                       <li><a href="/workflow-automation">Workflow Automation</a></li>
+                                       <li><a href="/ai-data-annotation">AI Data Annotation</a></li>
+                                       <li><a href="/data-cleansing-for-ai">Data Cleansing For AI</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div className="accordion-item">
+                              <h2 className="accordion-header">
+                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseAI6" aria-expanded="false" aria-controls="collapseAI6">
+                                    <strong>AI Support & Managed Services</strong>
+                                 </button>
+                              </h2>
+                              <div id="collapseAI6" className="accordion-collapse collapse" data-bs-parent="#accordionNavAI">
+                                 <div className="accordion-body">
+                                    <ul>
+                                       <li><a href="/ai-support-managed-services">AI Support & Managed Services</a></li>
+                                       <li><a href="/ai-operations-aiops">AI Operations (AIOps)</a></li>
                                     </ul>
                                  </div>
                               </div>

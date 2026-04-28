@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
 
       <body>
        <FixLinksWrapper/>
-       <fixRelativeLinks/>
+       {/* <fixRelativeLinks/> */}
         <ScrollToTop />
         <NextTopLoader
           color="#c01f29"
