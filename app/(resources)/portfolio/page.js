@@ -11,11 +11,10 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL + "/api/portfolio/tree";
 const pageHeaderData = {
   title: "Portfolio",
   backgroundImage: "/images/skyscraper.jpg",
-  shortBanner: true
+  shortBanner: true,
 };
 
 export default function Portfolio() {
-
   const [portfolio, setPortfolio] = useState([]);
 
   useEffect(() => {
@@ -24,14 +23,12 @@ export default function Portfolio() {
 
   const loadPortfolio = async () => {
     try {
-
       const res = await fetch(API_URL, {
-        cache: "no-store"
+        cache: "no-store",
       });
-
       const data = await res.json();
+      console.log("API RAW RESPONSE:", data);
       setPortfolio(data);
-
     } catch (err) {
       console.error("Portfolio load error", err);
     }
@@ -41,14 +38,10 @@ export default function Portfolio() {
     <>
       <PageHeader pageHeaderData={pageHeaderData} />
 
-      <Breadcrumb
-        parentName="Resources"
-        pageName="Portfolio"
-      />
+      <Breadcrumb parentName="Resources" pageName="Portfolio" />
 
       <section className={Style.PageContent}>
         <div className="container">
-
           <div className={Style.ContentDiv}>
             <h2>Our Portfolio</h2>
 
@@ -65,7 +58,6 @@ export default function Portfolio() {
               description="These are the projects we are most passionate about"
             />
           </div>
-
         </div>
       </section>
     </>
