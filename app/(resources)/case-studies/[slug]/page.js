@@ -151,28 +151,9 @@ export default async function CaseStudySingle({ params }) {
             <div className="col-lg-9 case-study-single">
               <h1 className={Style.Title}>{data.title}</h1>
 
-              <h3 className={Style.SectionHeading}>Client Profile</h3>
+             
 
-              <table className="table table-bordered mb-4">
-                <tbody>
-                  <tr>
-                    <th className="w-25">INDUSTRY</th>
-                    <td>Retailer/Distributor</td>
-                  </tr>
-                  <tr>
-                    <th>BUSINESS MODEL</th>
-                    <td>Online eCommerce Website & Store</td>
-                  </tr>
-                  <tr>
-                    <th>MARKETPLACE</th>
-                    <td>Amazon, eBay, Onbuy</td>
-                  </tr>
-                  <tr>
-                    <th>PRODUCT CATEGORY</th>
-                    <td>Multi Categories</td>
-                  </tr>
-                </tbody>
-              </table>
+              
 
               <div className={Style.ContentWrapper}>
                 {formattedContent ? (
