@@ -54,30 +54,30 @@ const leadership = [
 ];
 
 const pillars = [
-  {
-    name: "Shivendra Tiwari",
-    designation: "Assistant Vice President",
-    department: "Technology",
-    image: "/images/team/ShivendraTiwari-Pic.jpg",
-  },
+  // {
+  //   name: "Shivendra Tiwari",
+  //   designation: "Assistant Vice President",
+  //   department: "Technology",
+  //   image: "/images/team/ShivendraTiwari-Pic.jpg",
+  // },
   {
     name: "Prateek Sharma",
-    designation: "Operations Manager",
+    designation: "Service Delivery Manager",
     department: "Ecommerce",
     image: "/images/team/PrateekSharma-pic.png",
   },
-  {
-    name: "Devender Rathore",
-    designation: "Operations Manager",
-    department: "Operations",
-    image: "/images/team/DevenderRathore-pic.png",
-  },
-  {
-    name: "Garima Mahajan",
-    designation: "Digital Marketing Manager",
-    department: "Digital Marketing",
-    image: "/images/team/GarimaMahajan-pic.png",
-  },
+  // {
+  //   name: "Devender Rathore",
+  //   designation: "Operations Manager",
+  //   department: "Operations",
+  //   image: "/images/team/DevenderRathore-pic.png",
+  // },
+  // {
+  //   name: "Garima Mahajan",
+  //   designation: "Digital Marketing Manager",
+  //   department: "Digital Marketing",
+  //   image: "/images/team/GarimaMahajan-pic.png",
+  // },
   {
     name: "Megha Anand",
     designation: "HR Manager",
@@ -96,12 +96,12 @@ const pillars = [
     department: "IT",
     image: "/images/team/gaurav-tyagi.jpg",
   },
-  {
-    name: "Manoj Kumar Sharma",
-    designation: "Sr. Project Manager",
-    department: "Data Management",
-    image: "/images/team/ManojKumarSharma-Pic.jpg",
-  },
+  // {
+  //   name: "Manoj Kumar Sharma",
+  //   designation: "Sr. Project Manager",
+  //   department: "Data Management",
+  //   image: "/images/team/ManojKumarSharma-Pic.jpg",
+  // },
   {
     name: "Paritosh Singh",
     designation: "Project Coordinator",
@@ -162,12 +162,12 @@ const pillars = [
     department: "Data Management",
     image: "/images/team/VijayKumarRoy-pic.png",
   },
-  {
-    name: "Harvinder Singh",
-    designation: "Team Lead",
-    department: "Graphics",
-    image: "/images/team/HarvinderSingh-pic.png",
-  },
+  // {
+  //   name: "Harvinder Singh",
+  //   designation: "Team Lead",
+  //   department: "Graphics",
+  //   image: "/images/team/HarvinderSingh-pic.png",
+  // },
   {
     name: "David Mboyo",
     designation: "Team Leader/QA (French)",
