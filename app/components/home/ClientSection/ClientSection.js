@@ -11,6 +11,9 @@ import styles from "./ClientSection.module.css";
 import Image from "next/image";
 
 const row1 = [
+  "/images/clients/ministry-of-ayush.webp",
+  "/images/clients/ministry-of-defence.webp",
+  "/images/clients/ministry-of-jal-shakti.webp",
   "/images/clients/amazon-usa.webp",
   "/images/clients/aquatech.webp",
   "/images/clients/bluebird.webp",

@@ -44,6 +44,9 @@ const sidebarSections = [
 ];
 
 const clients = [
+  { img: "/images/clients/ministry-of-jal-shakti.webp", title: "Ministry of Jal Shakti" },
+  { img: "/images/clients/ministry-of-ayush.webp", title: "Ministry of Ayush" },
+  { img: "/images/clients/ministry-of-defence.webp", title: "Ministry of Defence" },
   { img: "/images/clients/clientpage/delivery-hero.jpg", title: "Delivery Hero" },
   { img: "/images/clients/clientpage/aon-hewiit.png", title: "Aon Hewitt" },
   { img: "/images/clients/clientpage/foodora.png", title: "Foodora" },
