@@ -1,31 +1,31 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import Image from 'next/image';
-import FancyGallery from '../EventGallery/FancyGallery';
-import './custom.css';
+import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import Image from "next/image";
+import FancyGallery from "../EventGallery/FancyGallery";
+import "./custom.css";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 export default function EventTabs() {
-  const [categories, setCategories]   = useState([]);
-  const [activeTab, setActiveTab]     = useState(null);
-  const [years, setYears]             = useState([]);
-  const [activeYear, setActiveYear]   = useState(null);
+  const [categories, setCategories] = useState([]);
+  const [activeTab, setActiveTab] = useState(null);
+  const [years, setYears] = useState([]);
+  const [activeYear, setActiveYear] = useState(null);
   const [galleryData, setGalleryData] = useState(null); // single row { banner, gallery[], description }
   const [openGallery, setOpenGallery] = useState(false);
-  const [loading, setLoading]         = useState(true);
-  const [error, setError]             = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   // ── Step 1: Fetch categories on mount ──
   useEffect(() => {
     fetch(`${BASE_URL}/api/life/categories`)
       .then((res) => {
-        if (!res.ok) throw new Error('Failed to fetch categories');
+        if (!res.ok) throw new Error("Failed to fetch categories");
         return res.json();
       })
       .then(({ data }) => {
@@ -46,7 +46,7 @@ export default function EventTabs() {
 
     fetch(`${BASE_URL}/api/life/years/${activeTab.category}`)
       .then((res) => {
-        if (!res.ok) throw new Error('Failed to fetch years');
+        if (!res.ok) throw new Error("Failed to fetch years");
         return res.json();
       })
       .then(({ data }) => {
@@ -64,7 +64,7 @@ export default function EventTabs() {
 
     fetch(`${BASE_URL}/api/life/gallery/${activeTab.category}/${activeYear}`)
       .then((res) => {
-        if (!res.ok) throw new Error('Failed to fetch gallery');
+        if (!res.ok) throw new Error("Failed to fetch gallery");
         return res.json();
       })
       .then(({ data }) => {
@@ -80,8 +80,10 @@ export default function EventTabs() {
   };
 
   if (loading) return <p className="text-center py-5">Loading...</p>;
-  if (error)   return <p className="text-center text-danger py-5">{error}</p>;
-  if (!categories.length) return <p className="text-center py-5">No data found.</p>;
+  if (error) return <p className="text-center text-danger py-5">{error}</p>;
+  if (!categories.length)
+    return <p className="text-center py-5">No data found.</p>;
+  const cleanTitle = activeTab?.category_title?.replace(/ Collection$/i, "");
 
   return (
     <>
@@ -91,16 +93,16 @@ export default function EventTabs() {
         navigation
         spaceBetween={20}
         breakpoints={{
-          320:  { slidesPerView: 3 },
-          640:  { slidesPerView: 6 },
-          768:  { slidesPerView: 7 },
+          320: { slidesPerView: 3 },
+          640: { slidesPerView: 6 },
+          768: { slidesPerView: 7 },
           1024: { slidesPerView: 8 },
         }}
       >
         {categories.map((item) => (
           <SwiperSlide key={item.category}>
             <div
-              className={`tabCard ${activeTab?.category === item.category ? 'active' : ''}`}
+              className={`tabCard ${activeTab?.category === item.category ? "active" : ""}`}
               onClick={() => handleTabChange(item)}
             >
               <div className="imgWrapper">
@@ -119,7 +121,7 @@ export default function EventTabs() {
 
       {/* ── Tab Content ── */}
       <div className="contentBox pt-5">
-        <h2>{activeTab?.category_title} Collection</h2>
+        <h2>{cleanTitle} Collection</h2>
 
         {/* ── Year Buttons ── */}
         <div className="yearTabs pb-4">
@@ -128,7 +130,7 @@ export default function EventTabs() {
               <button
                 key={year}
                 onClick={() => setActiveYear(year)}
-                className={`yearBtn ${activeYear === year ? 'active' : ''}`}
+                className={`yearBtn ${activeYear === year ? "active" : ""}`}
               >
                 {year}
               </button>
@@ -151,7 +153,7 @@ export default function EventTabs() {
                   className="rounded-4 object-fit-cover imgBanner"
                 />
                 <div className="bannerContentBlock">
-                  <h4>{activeTab?.category_title}</h4>
+                  <h4>{cleanTitle}</h4>
                   <button
                     className="btn bg-danger"
                     disabled={!galleryData.gallery?.length}
