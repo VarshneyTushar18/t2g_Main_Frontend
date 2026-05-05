@@ -83,7 +83,9 @@ export default function EventTabs() {
   if (error) return <p className="text-center text-danger py-5">{error}</p>;
   if (!categories.length)
     return <p className="text-center py-5">No data found.</p>;
-  const cleanTitle = activeTab?.category_title?.replace(/ Collection$/i, "");
+const cleanTitle = activeTab?.category
+  ?.replace(/-/g, " ")
+  ?.replace(/\b\w/g, c => c.toUpperCase());
 
   return (
     <>
@@ -153,7 +155,7 @@ export default function EventTabs() {
                   className="rounded-4 object-fit-cover imgBanner"
                 />
                 <div className="bannerContentBlock">
-                  <h4>{cleanTitle}</h4>
+               <h4>{galleryData?.description}</h4>
                   <button
                     className="btn bg-danger"
                     disabled={!galleryData.gallery?.length}
