@@ -42,7 +42,7 @@ export default function Footer() {
                                 <li><Link href="/associations-ascription">Associations</Link></li>
                                 <li><Link href="/clients">Clients</Link></li>
                                 <li><Link href="/our-team">Our Team</Link></li>
-                                <li><Link href="/life-at-tech2globe">Life at Tech2globe</Link></li>
+                                {/* <li><Link href="/life-at-tech2globe">Life at Tech2globe</Link></li> */}
                             </ul>
                         </div>
 
