@@ -8,7 +8,6 @@ import Select from "react-select";
 
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
-
 const countryOptions = [
   { value: "+1", label: "United States (+1)" },
   { value: "+1", label: "Canada (+1)" },
@@ -118,8 +117,6 @@ const countryOptions = [
   { value: "+880", label: "Bangladesh (+880)" },
 ];
 
-
-
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -205,6 +202,16 @@ export default function ContactForm() {
       return;
     }
 
+    // ✅ GET CAPTCHA TOKEN
+    const form = document.getElementById("contactForm");
+    const formDataObj = new FormData(form);
+    const token = formDataObj.get("cf-turnstile-response");
+
+    if (!token) {
+      alert("Please complete captcha");
+      return;
+    }
+
     try {
       const response = await fetch(`${API}/api/leads`, {
         method: "POST",
@@ -219,6 +226,7 @@ export default function ContactForm() {
           message: formData.comment,
           form_type: "contact_page",
           source_page: "contact-us",
+          captchaToken: token, // ✅ NOW THIS WORKS
         }),
       });
 
@@ -235,6 +243,11 @@ export default function ContactForm() {
           comment: "",
           website: "",
         });
+
+        // ✅ OPTIONAL: reset captcha
+        if (window.turnstile) {
+          window.turnstile.reset();
+        }
       } else {
         alert("Submission failed");
       }
@@ -325,7 +338,9 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 />
-                {errors.name && <div className="text-danger mt-1">{errors.name}</div>}
+                {errors.name && (
+                  <div className="text-danger mt-1">{errors.name}</div>
+                )}
               </div>
 
               <div className="mb-3">
@@ -338,7 +353,9 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 />
-                {errors.mailid && <div className="text-danger mt-1">{errors.mailid}</div>}
+                {errors.mailid && (
+                  <div className="text-danger mt-1">{errors.mailid}</div>
+                )}
               </div>
 
               <div className="mb-3">
@@ -346,7 +363,7 @@ export default function ContactForm() {
                   options={countryOptions}
                   placeholder="Select Country"
                   value={countryOptions.find(
-                    (opt) => opt.value === formData.countrycode
+                    (opt) => opt.value === formData.countrycode,
                   )}
                   onChange={(selectedOption) => {
                     setFormData({
@@ -363,7 +380,9 @@ export default function ContactForm() {
                   }}
                   isSearchable
                 />
-                {errors.countrycode && <div className="text-danger mt-1">{errors.countrycode}</div>}
+                {errors.countrycode && (
+                  <div className="text-danger mt-1">{errors.countrycode}</div>
+                )}
               </div>
 
               <div className="mb-3">
@@ -379,7 +398,9 @@ export default function ContactForm() {
                   maxLength={13}
                   required
                 />
-                {errors.phone && <div className="text-danger mt-1">{errors.phone}</div>}
+                {errors.phone && (
+                  <div className="text-danger mt-1">{errors.phone}</div>
+                )}
               </div>
 
               <div className="mb-3">
@@ -391,7 +412,9 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 ></textarea>
-                {errors.comment && <div className="text-danger mt-1">{errors.comment}</div>}
+                {errors.comment && (
+                  <div className="text-danger mt-1">{errors.comment}</div>
+                )}
               </div>
 
               {/* Honeypot Field */}
@@ -400,7 +423,7 @@ export default function ContactForm() {
               {/* Cloudflare Turnstile */}
               <div
                 className="cf-turnstile"
-                data-sitekey="0x4AAAAAAAZkfkKo2ooZlFK4"
+                data-sitekey="0x4AAAAAACu4Eb4Q25bWJD9B"
                 data-theme="light"
               ></div>
 

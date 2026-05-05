@@ -9,6 +9,7 @@ import NextTopLoader from "nextjs-toploader";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { fixRelativeLinks } from "@/app/utilities/fixRelativeLinks";
 import FixLinksWrapper from "@/app/utilities/FixLinksWrapper";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,8 +31,13 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-       <FixLinksWrapper/>
-       {/* <fixRelativeLinks/> */}
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="afterInteractive"
+          
+        />
+        <FixLinksWrapper />
+        {/* <fixRelativeLinks/> */}
         <ScrollToTop />
         <NextTopLoader
           color="#c01f29"
