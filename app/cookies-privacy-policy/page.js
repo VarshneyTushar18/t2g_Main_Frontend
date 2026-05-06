@@ -42,7 +42,7 @@ const testimonials = [
     },
 ];
 
-export default function CookiePolicy() {
+export default function CookiePrivacyPolicy() {
     return (
         <>
             <PageHeader pageHeaderData={pageHeaderData} />

@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import GlobalPresence from "@/app/components/home/GlobalPresence/GlobalPresence";
 import { usePathname } from "next/navigation";
+import SocialSidebar from "@/app/components/SocialSidebar/SocialSidebar";
 
 export default function Footer() {
 
@@ -26,7 +27,7 @@ export default function Footer() {
                             <h5>Our Policies</h5>
                             <ul className="list-unstyled mb-0">
                                 <li><Link href="/">Home</Link></li>
-                                <li><Link href="/Privacy-Policy">Privacy Policy</Link></li>
+                                <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                                 <li><Link href="/cookies-privacy-policy">Cookies</Link></li>
                                 <li><Link href="/sitemap.xml">Sitemap</Link></li>
                             </ul>
@@ -152,6 +153,10 @@ export default function Footer() {
                 </div>
 
             </footer>
+
+            <elevenlabs-convai agent-id="agent_0901k7egwwhhejatq2wv0gf0k1ax"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+
+            <SocialSidebar />
         </>
     )
 }

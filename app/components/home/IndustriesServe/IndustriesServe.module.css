@@ -1,9 +1,8 @@
-
 .IndustriesServe :global(.title-section) {
     max-width: 475px;
 }
 
-.IndustriesServe :global(.swiper){
+.IndustriesServe :global(.swiper) {
     margin: 50px 0px 0px 0px;
 }
 
@@ -71,3 +70,8 @@
 }
 
 
+@media (max-width:767px) {
+    .IndustriesCard {
+        width: 100%;
+    }
+}

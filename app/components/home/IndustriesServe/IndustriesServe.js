@@ -32,7 +32,6 @@ const industries = [
 
 
 
-
 export default function IndustriesServe() {
 
     const prevRef = useRef(null);
@@ -93,10 +92,10 @@ export default function IndustriesServe() {
                 </Swiper>
 
                 {/* Custom Arrows */}
-                <div className="arrowblock">
+                {/* <div className="arrowblock">
                     <div className="custom-prev" ref={prevRef}><FaChevronLeft /></div>
                     <div className="custom-next" ref={nextRef}><FaChevronRight /></div>
-                </div>
+                </div> */}
             </div>
         </section>
     );
