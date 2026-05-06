@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { countries } from "@/data/countries";
 import Select from "react-select";
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
@@ -15,6 +15,74 @@ export default function ServiceForm() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState("");
+  const turnstileRef = useRef(null);
+  const widgetIdRef = useRef(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const initTurnstile = () => {
+      if (
+        !isMounted ||
+        !window.turnstile ||
+        !turnstileRef.current ||
+        widgetIdRef.current !== null
+      ) {
+        return;
+      }
+
+      try {
+        widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
+          sitekey: "0x4AAAAAACu4Eb4Q25bWJD9B",
+          theme: "light",
+          size: "flexible",
+          callback: (token) => {
+            setCaptchaToken(token);
+          },
+          "expired-callback": () => {
+            setCaptchaToken("");
+          },
+          "error-callback": () => {
+            setCaptchaToken("");
+            console.error("Turnstile failed");
+          },
+        });
+      } catch (error) {
+        console.error("Turnstile render failed:", error);
+      }
+    };
+
+    if (window.turnstile && window.turnstile.render) {
+      initTurnstile();
+    } else {
+      const existingScript = document.querySelector('script[src*="turnstile"]');
+
+      if (!existingScript) {
+        const script = document.createElement("script");
+        script.src =
+          "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+        script.async = true;
+        script.defer = true;
+        script.onload = initTurnstile;
+        document.body.appendChild(script);
+      } else {
+        existingScript.addEventListener("load", initTurnstile);
+      }
+    }
+
+    return () => {
+      isMounted = false;
+      try {
+        if (window.turnstile && widgetIdRef.current !== null) {
+          window.turnstile.remove(widgetIdRef.current);
+          widgetIdRef.current = null;
+        }
+      } catch (error) {
+        console.error("Turnstile cleanup failed:", error);
+      }
+    };
+  }, []);
 
   const handleChange = (e) => {
     let { name, value } = e.target;
@@ -28,6 +96,12 @@ export default function ServiceForm() {
     e.preventDefault();
     setLoading(true);
 
+    if (!captchaToken) {
+      alert("Please complete captcha");
+      setLoading(false);
+      return;
+    }
+
     try {
       const response = await fetch(`${API}/api/leads`, {
         method: "POST",
@@ -40,6 +114,7 @@ export default function ServiceForm() {
           message: formData.comment,        // maps comment → message
           form_type: "service_form",
           source_page: typeof window !== "undefined" ? window.location.pathname : "",
+          captchaToken,
         }),
       });
 
@@ -54,6 +129,10 @@ export default function ServiceForm() {
           phone: "",
           comment: "",
         });
+        setCaptchaToken("");
+        if (window.turnstile && widgetIdRef.current !== null) {
+          window.turnstile.reset(widgetIdRef.current);
+        }
       } else {
         alert("Submission failed. Please try again.");
       }
@@ -159,11 +238,7 @@ export default function ServiceForm() {
       {/* Cloudflare Turnstile */}
       <div className="row">
         <div className="col-12 px-0">
-          <div
-            className="cf-turnstile"
-            data-sitekey="0x4AAAAAAAaIGkjRLxuffu9G"
-            data-theme="light"
-          />
+          <div ref={turnstileRef} style={{ minHeight: "70px" }} />
         </div>
       </div>
 
