@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Style from "./ContactForm.module.css";
 import Select from "react-select";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API =
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 const countryOptions = [
   { value: "+1", label: "United States (+1)" },
@@ -128,15 +129,104 @@ export default function ContactForm() {
   });
 
   const [errors, setErrors] = useState({});
+  const [captchaToken, setCaptchaToken] = useState("");
+
+  const turnstileRef = useRef(null);
+  const widgetIdRef = useRef(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const renderTurnstile = () => {
+      if (
+        !isMounted ||
+        !window.turnstile ||
+        !turnstileRef.current ||
+        widgetIdRef.current
+      ) {
+        return;
+      }
+
+      try {
+        widgetIdRef.current = window.turnstile.render(
+          turnstileRef.current,
+          {
+            sitekey: "0x4AAAAAACu4Eb4Q25bWJD9B",
+            theme: "light",
+
+            callback: (token) => {
+              setCaptchaToken(token);
+            },
+
+            "expired-callback": () => {
+              setCaptchaToken("");
+            },
+
+            "error-callback": () => {
+              setCaptchaToken("");
+              console.error("Turnstile failed");
+            },
+          },
+        );
+      } catch (error) {
+        console.error("Turnstile render error:", error);
+      }
+    };
+
+    if (!window.turnstile) {
+      const existingScript = document.querySelector(
+        'script[src*="turnstile"]',
+      );
+
+      if (!existingScript) {
+        const script = document.createElement("script");
+
+        script.src =
+          "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+
+        script.async = true;
+        script.defer = true;
+
+        script.onload = renderTurnstile;
+
+        document.body.appendChild(script);
+      } else {
+        existingScript.addEventListener(
+          "load",
+          renderTurnstile,
+        );
+      }
+    } else {
+      renderTurnstile();
+    }
+
+    return () => {
+      isMounted = false;
+
+      try {
+        if (
+          window.turnstile &&
+          widgetIdRef.current !== null
+        ) {
+          window.turnstile.remove(widgetIdRef.current);
+          widgetIdRef.current = null;
+        }
+      } catch (error) {
+        console.error("Turnstile cleanup error:", error);
+      }
+    };
+  }, []);
 
   const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     return emailRegex.test(email);
   };
 
-  const validatePhone = (phone, countryCode) => {
-    // Basic phone validation - adjust based on country if needed
-    const phoneRegex = /^[0-9]{7,15}$/; // Allow 7-15 digits
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[0-9]{7,15}$/;
+
     return phoneRegex.test(phone);
   };
 
@@ -150,17 +240,21 @@ export default function ContactForm() {
     if (!formData.mailid.trim()) {
       newErrors.mailid = "Email is required";
     } else if (!validateEmail(formData.mailid)) {
-      newErrors.mailid = "Please enter a valid email address";
+      newErrors.mailid =
+        "Please enter a valid email address";
     }
 
     if (!formData.countrycode) {
-      newErrors.countrycode = "Please select a country";
+      newErrors.countrycode =
+        "Please select a country";
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
-    } else if (!validatePhone(formData.phone, formData.countrycode)) {
-      newErrors.phone = "Please enter a valid phone number (7-15 digits)";
+      newErrors.phone =
+        "Phone number is required";
+    } else if (!validatePhone(formData.phone)) {
+      newErrors.phone =
+        "Please enter a valid phone number";
     }
 
     if (!formData.comment.trim()) {
@@ -168,19 +262,22 @@ export default function ContactForm() {
     }
 
     setErrors(newErrors);
+
     return Object.keys(newErrors).length === 0;
   };
 
   const handleChange = (e) => {
     let value = e.target.value;
+
     if (e.target.name === "name") {
       value = value.replace(/[^A-Za-z\s]/g, "");
     }
+
     setFormData({
       ...formData,
       [e.target.name]: value,
     });
-    // Clear error for this field
+
     if (errors[e.target.name]) {
       setErrors({
         ...errors,
@@ -189,9 +286,22 @@ export default function ContactForm() {
     }
   };
 
-  const handleNumberOnly = (e) => {
-    if (!/[0-9]/.test(e.key)) {
-      e.preventDefault();
+  const handlePhoneChange = (e) => {
+    const value = e.target.value.replace(
+      /\D/g,
+      "",
+    );
+
+    setFormData({
+      ...formData,
+      phone: value,
+    });
+
+    if (errors.phone) {
+      setErrors({
+        ...errors,
+        phone: "",
+      });
     }
   };
 
@@ -202,33 +312,32 @@ export default function ContactForm() {
       return;
     }
 
-    // ✅ GET CAPTCHA TOKEN
-    const form = document.getElementById("contactForm");
-    const formDataObj = new FormData(form);
-    const token = formDataObj.get("cf-turnstile-response");
-
-    if (!token) {
+    if (!captchaToken) {
       alert("Please complete captcha");
       return;
     }
 
     try {
-      const response = await fetch(`${API}/api/leads`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `${API}/api/leads`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type":
+              "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.mailid,
+            country: formData.countrycode,
+            phone: formData.phone,
+            message: formData.comment,
+            form_type: "contact_page",
+            source_page: "contact-us",
+            captchaToken,
+          }),
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.mailid,
-          country: formData.countrycode,
-          phone: formData.phone,
-          message: formData.comment,
-          form_type: "contact_page",
-          source_page: "contact-us",
-          captchaToken: token, // ✅ NOW THIS WORKS
-        }),
-      });
+      );
 
       const data = await response.json();
 
@@ -244,9 +353,15 @@ export default function ContactForm() {
           website: "",
         });
 
-        // ✅ OPTIONAL: reset captcha
-        if (window.turnstile) {
-          window.turnstile.reset();
+        setCaptchaToken("");
+
+        if (
+          window.turnstile &&
+          widgetIdRef.current !== null
+        ) {
+          window.turnstile.reset(
+            widgetIdRef.current,
+          );
         }
       } else {
         alert("Submission failed");
@@ -261,9 +376,11 @@ export default function ContactForm() {
     <div className={Style.ContactFormSection}>
       <div className="container">
         <div className="row d-flex justify-content-between align-items-center">
+
           {/* Left Section */}
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div className="feature-banner2-caption text-white">
+
               <Link
                 href="/scam-alert"
                 target="_blank"
@@ -277,24 +394,36 @@ export default function ContactForm() {
               <ol>
                 <li>
                   <p>
-                    Drop us your requirements. <br />
-                    Our team will get back to you within 1 business day.
+                    Drop us your requirements.
+                    <br />
+                    Our team will get back to you
+                    within 1 business day.
                   </p>
                 </li>
 
                 <li>
-                  <strong>Ask your query:</strong>
+                  <strong>
+                    Ask your query:
+                  </strong>
                   <br />
+
                   <a href="mailto:info@tech2globe.com">
-                    <u>Info@tech2globe.com</u>
+                    <u>
+                      Info@tech2globe.com
+                    </u>
                   </a>
                 </li>
 
                 <li>
-                  <strong>Career with us:</strong>
+                  <strong>
+                    Career with us:
+                  </strong>
+
                   <br />
+
                   <p>
                     Helping build dream{" "}
+
                     <Link
                       href="/career"
                       className="text-white text-decoration-underline d-inline-block"
@@ -305,14 +434,24 @@ export default function ContactForm() {
                 </li>
 
                 <li className="pt-0">
-                  <strong>Contact HR Department:</strong>
+                  <strong>
+                    Contact HR Department:
+                  </strong>
+
                   <br />
+
                   <a href="tel:+91-9871102889">
-                    <u>+91-9871102889 (HR)</u>
+                    <u>
+                      +91-9871102889 (HR)
+                    </u>
                   </a>
+
                   <br />
+
                   <a href="mailto:career@tech2globe.com">
-                    <u>career@tech2globe.com</u>
+                    <u>
+                      career@tech2globe.com
+                    </u>
                   </a>
                 </li>
               </ol>
@@ -321,12 +460,15 @@ export default function ContactForm() {
 
           {/* Right Form Section */}
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
             <form
               id="contactForm"
               onSubmit={handleSubmit}
               className={Style.Formbox}
             >
-              <h2 className="fw-normal">Get in touch</h2>
+              <h2 className="fw-normal">
+                Get in touch
+              </h2>
 
               <div className="mb-3">
                 <input
@@ -338,8 +480,11 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 />
+
                 {errors.name && (
-                  <div className="text-danger mt-1">{errors.name}</div>
+                  <div className="text-danger mt-1">
+                    {errors.name}
+                  </div>
                 )}
               </div>
 
@@ -353,8 +498,11 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 />
+
                 {errors.mailid && (
-                  <div className="text-danger mt-1">{errors.mailid}</div>
+                  <div className="text-danger mt-1">
+                    {errors.mailid}
+                  </div>
                 )}
               </div>
 
@@ -363,12 +511,18 @@ export default function ContactForm() {
                   options={countryOptions}
                   placeholder="Select Country"
                   value={countryOptions.find(
-                    (opt) => opt.value === formData.countrycode,
+                    (opt) =>
+                      opt.value ===
+                      formData.countrycode,
                   )}
-                  onChange={(selectedOption) => {
+                  onChange={(
+                    selectedOption,
+                  ) => {
                     setFormData({
                       ...formData,
-                      countrycode: selectedOption?.value || "",
+                      countrycode:
+                        selectedOption?.value ||
+                        "",
                     });
 
                     if (errors.countrycode) {
@@ -380,8 +534,11 @@ export default function ContactForm() {
                   }}
                   isSearchable
                 />
+
                 {errors.countrycode && (
-                  <div className="text-danger mt-1">{errors.countrycode}</div>
+                  <div className="text-danger mt-1">
+                    {errors.countrycode}
+                  </div>
                 )}
               </div>
 
@@ -392,14 +549,17 @@ export default function ContactForm() {
                   placeholder="Your Phone Number"
                   name="phone"
                   value={formData.phone}
-                  onChange={handleChange}
-                  onKeyPress={handleNumberOnly}
-                  minLength={10}
-                  maxLength={13}
+                  onChange={handlePhoneChange}
+                  inputMode="numeric"
+                  minLength={7}
+                  maxLength={15}
                   required
                 />
+
                 {errors.phone && (
-                  <div className="text-danger mt-1">{errors.phone}</div>
+                  <div className="text-danger mt-1">
+                    {errors.phone}
+                  </div>
                 )}
               </div>
 
@@ -412,19 +572,25 @@ export default function ContactForm() {
                   onChange={handleChange}
                   required
                 ></textarea>
+
                 {errors.comment && (
-                  <div className="text-danger mt-1">{errors.comment}</div>
+                  <div className="text-danger mt-1">
+                    {errors.comment}
+                  </div>
                 )}
               </div>
 
-              {/* Honeypot Field */}
-              <input type="text" name="website" className="d-none" />
+              {/* Honeypot */}
+              <input
+                type="text"
+                name="website"
+                className="d-none"
+              />
 
               {/* Cloudflare Turnstile */}
               <div
-                className="cf-turnstile"
-                data-sitekey="0x4AAAAAACu4Eb4Q25bWJD9B"
-                data-theme="light"
+                ref={turnstileRef}
+                className="mb-3"
               ></div>
 
               <button

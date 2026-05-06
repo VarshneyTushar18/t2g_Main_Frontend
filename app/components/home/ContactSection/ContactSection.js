@@ -1,12 +1,10 @@
 "use client";
 import Select from "react-select";
-import { useState } from "react";
-
+import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Style from "./ContactSection.module.css"; // optional if you want CSS module
 import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpenText, faPhone } from "@fortawesome/free-solid-svg-icons";
-
 
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
@@ -128,19 +126,27 @@ export default function ContactSection() {
     message: "",
   });
   const [errors, setErrors] = useState({});
+  const [captchaToken, setCaptchaToken] = useState("");
+
+  const turnstileRef = useRef(null);
+
+  const widgetIdRef = useRef(null);
 
   const validate = () => {
     let newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required.";
-    else if (!/^[A-Za-z\s]+$/.test(formData.name)) newErrors.name = "Name can only contain letters and spaces.";
+    else if (!/^[A-Za-z\s]+$/.test(formData.name))
+      newErrors.name = "Name can only contain letters and spaces.";
 
     if (!formData.email.trim()) newErrors.email = "Email is required.";
-    else if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = "Invalid email format.";
+    else if (!/^\S+@\S+\.\S+$/.test(formData.email))
+      newErrors.email = "Invalid email format.";
 
     if (!formData.country) newErrors.country = "Please select a country.";
 
     if (!formData.phone.trim()) newErrors.phone = "Phone number is required.";
-    else if (!/^\+?[0-9\s\-]{7,15}$/.test(formData.phone)) newErrors.phone = "Invalid phone number.";
+    else if (!/^\+?[0-9\s\-]{7,15}$/.test(formData.phone))
+      newErrors.phone = "Invalid phone number.";
 
     if (!formData.message.trim()) newErrors.message = "Message is required.";
 
@@ -165,39 +171,148 @@ export default function ContactSection() {
     }
   };
 
+  useEffect(() => {
+    let isMounted = true;
+
+    const initTurnstile = () => {
+      if (!isMounted || !window.turnstile || !turnstileRef.current) {
+        return;
+      }
+
+      // Prevent duplicate render
+      if (widgetIdRef.current !== null) {
+        return;
+      }
+
+      try {
+        widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
+          sitekey: "0x4AAAAAACu4Eb4Q25bWJD9B",
+
+          theme: "light",
+
+          size: "flexible",
+
+          callback: (token) => {
+            console.log("CAPTCHA TOKEN:", token);
+
+            setCaptchaToken(token);
+          },
+
+          "expired-callback": () => {
+            setCaptchaToken("");
+          },
+
+          "error-callback": (err) => {
+            console.error("Turnstile error:", err);
+
+            setCaptchaToken("");
+          },
+        });
+      } catch (err) {
+        console.error("Turnstile render failed:", err);
+      }
+    };
+
+    if (window.turnstile && window.turnstile.render) {
+      initTurnstile();
+    } else {
+      const existingScript = document.querySelector(
+        'script[src*="turnstile"]',
+      );
+
+      if (!existingScript) {
+        const script = document.createElement("script");
+
+        script.src =
+          "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+
+        script.async = true;
+
+        script.defer = true;
+
+        script.onload = initTurnstile;
+
+        document.body.appendChild(script);
+      } else {
+        existingScript.addEventListener("load", initTurnstile);
+      }
+    }
+
+    return () => {
+      isMounted = false;
+
+      try {
+        if (window.turnstile && widgetIdRef.current !== null) {
+          window.turnstile.remove(widgetIdRef.current);
+
+          widgetIdRef.current = null;
+        }
+      } catch (err) {
+        console.error("Turnstile cleanup failed:", err);
+      }
+    };
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validate()) return;
+    // Form validation
+    if (!validate()) {
+      return;
+    }
+
+    // Captcha validation
+    if (!captchaToken) {
+      alert("Please complete captcha");
+      return;
+    }
 
     try {
       const response = await fetch(`${API}/api/leads`, {
         method: "POST",
+
         headers: {
           "Content-Type": "application/json",
         },
+
         body: JSON.stringify({
           name: formData.name,
+
           email: formData.email,
+
           country: formData.country,
+
           phone: formData.phone,
+
           message: formData.message,
+
           form_type: "contact_page",
+
           source_page: "contact-us",
+
+          // IMPORTANT
+          captchaToken,
         }),
       });
 
+      // API failed
       if (!response.ok) {
         const errorText = await response.text();
+
         console.error("API Error:", errorText);
+
         alert("Submission failed");
+
         return;
       }
 
       const data = await response.json();
 
+      // Success
       if (data.success) {
         alert("Message sent successfully!");
+
+        // Reset form
         setFormData({
           name: "",
           email: "",
@@ -205,12 +320,23 @@ export default function ContactSection() {
           phone: "",
           message: "",
         });
+
+        // Clear validation errors
         setErrors({});
+
+        // Clear captcha token
+        setCaptchaToken("");
+
+        // Reset Turnstile widget
+        if (window.turnstile && widgetIdRef.current !== null) {
+          window.turnstile.reset(widgetIdRef.current);
+        }
       } else {
         alert("Submission failed");
       }
     } catch (error) {
       console.error("Network error:", error);
+
       alert("Server error");
     }
   };
@@ -351,7 +477,7 @@ export default function ContactSection() {
                     <div className="col-md-6">
                       <input
                         type="text"
-                        className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+                        className={`form-control ${errors.name ? "is-invalid" : ""}`}
                         name="name"
                         id="name"
                         value={formData.name}
@@ -359,12 +485,16 @@ export default function ContactSection() {
                         placeholder="Your Name"
                         required
                       />
-                      {errors.name && <div className="invalid-feedback text-start">{errors.name}</div>}
+                      {errors.name && (
+                        <div className="invalid-feedback text-start">
+                          {errors.name}
+                        </div>
+                      )}
                     </div>
                     <div className="col-md-6">
                       <input
                         type="email"
-                        className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                        className={`form-control ${errors.email ? "is-invalid" : ""}`}
                         name="email"
                         id="email"
                         onChange={handleChange}
@@ -372,7 +502,11 @@ export default function ContactSection() {
                         placeholder="Your Email"
                         required
                       />
-                      {errors.email && <div className="invalid-feedback text-start">{errors.email}</div>}
+                      {errors.email && (
+                        <div className="invalid-feedback text-start">
+                          {errors.email}
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -380,13 +514,15 @@ export default function ContactSection() {
                     <div className="col-md-6">
                       <Select
                         classNamePrefix="custom-select"
-                        menuPortalTarget={typeof window !== "undefined" ? document.body : null}
+                        menuPortalTarget={
+                          typeof window !== "undefined" ? document.body : null
+                        }
                         menuPosition="fixed"
                         options={countryOptions}
                         placeholder="Select Country"
                         isSearchable
                         value={countryOptions.find(
-                          (opt) => opt.value === formData.country
+                          (opt) => opt.value === formData.country,
                         )}
                         onChange={(selectedOption) => {
                           setFormData({
@@ -402,12 +538,16 @@ export default function ContactSection() {
                           }
                         }}
                       />
-                      {errors.country && <div className="invalid-feedback text-start">{errors.country}</div>}
+                      {errors.country && (
+                        <div className="invalid-feedback text-start">
+                          {errors.country}
+                        </div>
+                      )}
                     </div>
                     <div className="col-md-6">
                       <input
                         type="tel"
-                        className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
+                        className={`form-control ${errors.phone ? "is-invalid" : ""}`}
                         name="phone"
                         id="phoneNumber"
                         value={formData.phone}
@@ -415,13 +555,17 @@ export default function ContactSection() {
                         placeholder="Your Phone No."
                         required
                       />
-                      {errors.phone && <div className="invalid-feedback text-start">{errors.phone}</div>}
+                      {errors.phone && (
+                        <div className="invalid-feedback text-start">
+                          {errors.phone}
+                        </div>
+                      )}
                     </div>
                   </div>
 
                   <div className="mb-3">
                     <textarea
-                      className={`form-control ${errors.message ? 'is-invalid' : ''}`}
+                      className={`form-control ${errors.message ? "is-invalid" : ""}`}
                       placeholder="Enter Your Query"
                       name="message"
                       id="message"
@@ -430,17 +574,30 @@ export default function ContactSection() {
                       rows={4}
                       required
                     ></textarea>
-                    {errors.message && <div className="invalid-feedback text-start">{errors.message}</div>}
+                    {errors.message && (
+                      <div className="invalid-feedback text-start">
+                        {errors.message}
+                      </div>
+                    )}
                   </div>
 
-                  {/* Turnstile */}
+                  {/* Turnstile
                   <div style={{ display: "block", flexFlow: "row" }}>
                     <div
                       className="cf-turnstile"
-                      data-sitekey="0x4AAAAAAAZkfkKo2ooZlFK4"
+                      data-sitekey="0x4AAAAAACu4Eb4Q25bWJD9B"
                       data-size="flexible"
                       data-theme="light"
                     ></div>
+                  </div> */}
+
+                  <div
+                    style={{
+                      minHeight: "70px",
+                      marginBottom: "16px",
+                    }}
+                  >
+                    <div ref={turnstileRef}></div>
                   </div>
 
                   <button
