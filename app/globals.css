@@ -379,6 +379,7 @@ button.btn-close.logs__client__close__btn {
   padding: 0;
 }
 
+
 @media (max-width: 1365px) {
   .display-none {
     display: none;
@@ -670,25 +671,24 @@ button#nav-home-tab {
 }
 
 .dropdown__services__for__mobile .accordion-button::after {
-  font-weight: 600;
+  /* font-weight: 600;
   content: "\f107";
   font-family: "FontAwesome";
-  /* content: "\2b"; */
   font-size: 18px;
   background: none;
   color: #474747 !important;
-  text-align: right;
+  text-align: right; */
 }
 
 .dropdown__services__for__mobile .accordion-button:not(.collapsed)::after {
   /* content: "\f068" !important; */
-  content: "\f107";
+  /* content: "\f107";
   font-family: "FontAwesome";
   font-weight: 100;
   font-size: 18px;
   display: flex;
   align-items: center;
-  color: #000 !important;
+  color: #000 !important; */
 }
 
 .dropdown__services__for__mobile .accordion-button:not(.collapsed) {
@@ -711,7 +711,7 @@ button#nav-home-tab {
 
 
 .dropdown__services__for__mobile .accordion-button:not(.collapsed) a {
-  color: #000;
+  /* color: #000; */
 }
 
 .dropdown__services__for__mobile .accordion__item__megamenu a {
@@ -1321,22 +1321,22 @@ h1 {
   text-align: center;
 }
 
-.casestudy-competitive-advantages .col-md-2{
+.casestudy-competitive-advantages .col-md-2 {
   width: 20%;
   margin: 0 auto;
   text-align: center;
 }
 
-.casestudy-competitive-advantages .card{
+.casestudy-competitive-advantages .card {
   border: 1px solid #ffffff !important;
 }
 
-.casestudy-competitive-advantages .card:hover{
+.casestudy-competitive-advantages .card:hover {
   border: 1px solid #141E46 !important;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .casestudy-competitive-advantages .col-md-2{
+  .casestudy-competitive-advantages .col-md-2 {
     width: 33.33%;
     margin: 0 auto;
     text-align: center;
@@ -1345,9 +1345,115 @@ h1 {
 
 
 @media (max-width: 767px) {
-  .casestudy-competitive-advantages .col-md-2{
+  .casestudy-competitive-advantages .col-md-2 {
     width: 50%;
     margin: 0 auto;
     text-align: center;
+  }
+}
+
+
+.offcanvas .dropdown__services__for__mobile .accordion-button::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid #474747;
+  border-bottom: 2px solid #474747;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-left: auto;
+  background-image: none !important;
+  flex-shrink: 0;
+  position: relative;
+  top: -2px;
+}
+
+/* Open State */
+.offcanvas .dropdown__services__for__mobile .accordion-button:not(.collapsed)::after {
+  transform: rotate(-135deg);
+  top: 2px;
+}
+
+.offcanvas .dropdown__services__for__mobile ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.offcanvas .logs__client__close__btn {
+  position: absolute;
+  top: 22px;
+  right: 0px;
+  width: 25px;
+  height: 25px;
+  left: -33px;
+  border-radius: 0;
+}
+
+.offcanvas .accordion-button a::after {
+  display: none !important;
+}
+
+.offcanvas .logs__client__close__btn {
+  position: absolute;
+  right: 100%;
+}
+
+@media (min-width:1200px) {
+  .certification-logos {
+    height: 320px;
+    overflow-y: auto;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #999 transparent;
+  }
+
+  /* Chrome, Edge, Safari */
+  .certification-logos::-webkit-scrollbar {
+    width: 5px;
+    /* thin scrollbar */
+  }
+
+  .certification-logos::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .certification-logos::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+  }
+
+  .certification-logos::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+}
+
+@media (min-width:1600px) {
+  .certification-logos {
+    height: 320px;
+    overflow-y: auto;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #999 transparent;
+  }
+
+  /* Chrome, Edge, Safari */
+  .certification-logos::-webkit-scrollbar {
+    width: 5px;
+    /* thin scrollbar */
+  }
+
+  .certification-logos::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .certification-logos::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 10px;
+  }
+
+  .certification-logos::-webkit-scrollbar-thumb:hover {
+    background: #666;
   }
 }

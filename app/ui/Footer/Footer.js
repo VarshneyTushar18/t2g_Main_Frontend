@@ -61,7 +61,16 @@ export default function Footer() {
                         </div>
 
                         <div className={`${Style.FooterCertifications} col-12 col-sm-6 col-md-6 col-lg-5 col-xl-3 mb-4 mb-md-5 mb-xl-0`}>
-                            <div className={`${Style.CertificationLogos} d-flex flex-wrap`}>
+                            <div className={`${Style.CertificationLogos} certification-logos d-flex flex-wrap`}>
+                                <Link href="/pdf/305025090301q-tech2globewebsolutionsllp-iso900-20151.pdf">
+                                    <Image src="/images/ISO_9001-2015.webp" alt="ISO 9001 2015" width={110} height={110} className="img-fluid rounded mb-3" />
+                                </Link>
+                                <Link href="/pdf/2025082219TECH2GLOBEWEBSOLUTIONSLLP-CMMILevel3UKCERT1.pdf">
+                                    <Image src="/images/cmmi3.webp" alt="ISO 9001 2015" width={110} height={110} className="img-fluid rounded mb-3" />
+                                </Link>
+                                <Link href="/pdf/305025090302is-tech2globewebsolutionsllp-iso-iec27001-20221.pdf">
+                                    <Image src="/images/iso-iec.webp" alt="ISO 9001 2015" width={110} height={110} className="img-fluid rounded mb-3" />
+                                </Link>
                                 <Link href="https://clutch.co/profile/tech2globe-web-solutions">
                                     <Image src="/images/footer/Clutch.png" alt="Tech2Globe Clutch Reviews" width={110} height={110} className="img-fluid mb-3" />
                                 </Link>
