@@ -65,7 +65,7 @@
 }
 
 /* Media query for small devices */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .social-sidebar {
         position: fixed;
         bottom: 0;
@@ -78,6 +78,7 @@
         padding: 15px 0;
         border-radius: 0;
         margin: 0 !important;
+        display: none;
     }
 
     .social-sidebar .icon-container {
