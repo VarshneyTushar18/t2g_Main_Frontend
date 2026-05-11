@@ -1,6 +1,7 @@
 "use client";
 import Select from "react-select";
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Style from "./ContactSection.module.css"; // optional if you want CSS module
 import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
@@ -118,6 +119,7 @@ const countryOptions = [
 ];
 
 export default function ContactSection() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -310,8 +312,6 @@ export default function ContactSection() {
 
       // Success
       if (data.success) {
-        alert("Message sent successfully!");
-
         // Reset form
         setFormData({
           name: "",
@@ -331,6 +331,8 @@ export default function ContactSection() {
         if (window.turnstile && widgetIdRef.current !== null) {
           window.turnstile.reset(widgetIdRef.current);
         }
+
+        router.push("/thank-you");
       } else {
         alert("Submission failed");
       }

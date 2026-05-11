@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Style from "./ContactForm.module.css";
 import Select from "react-select";
 
@@ -119,6 +120,7 @@ const countryOptions = [
 ];
 
 export default function ContactForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     mailid: "",
@@ -342,8 +344,6 @@ export default function ContactForm() {
       const data = await response.json();
 
       if (data.success) {
-        alert("Message sent successfully!");
-
         setFormData({
           name: "",
           mailid: "",
@@ -363,6 +363,8 @@ export default function ContactForm() {
             widgetIdRef.current,
           );
         }
+
+        router.push("/thank-you");
       } else {
         alert("Submission failed");
       }

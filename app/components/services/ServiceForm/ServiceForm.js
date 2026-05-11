@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { countries } from "@/data/countries";
 import Select from "react-select";
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 export default function ServiceForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -121,7 +123,6 @@ export default function ServiceForm() {
       const data = await response.json();
 
       if (data.success) {
-        alert("Thank you! Your message has been sent successfully.");
         setFormData({
           name: "",
           email: "",
@@ -133,6 +134,7 @@ export default function ServiceForm() {
         if (window.turnstile && widgetIdRef.current !== null) {
           window.turnstile.reset(widgetIdRef.current);
         }
+        router.push("/thank-you");
       } else {
         alert("Submission failed. Please try again.");
       }
