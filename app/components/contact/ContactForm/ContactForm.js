@@ -312,7 +312,7 @@ export default function ContactForm() {
           phone: formData.phone,
           message: formData.comment,
           form_type: "contact_page",
-          source_page: "contact-us",
+          source_page: window.location.href,
           captchaToken,
         }),
       });
