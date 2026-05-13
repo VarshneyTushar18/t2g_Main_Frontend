@@ -7,8 +7,7 @@ import { useRouter } from "next/navigation";
 import Style from "./ContactForm.module.css";
 import Select from "react-select";
 
-const API =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 const countryOptions = [
   { value: "+1", label: "United States (+1)" },
@@ -150,35 +149,30 @@ export default function ContactForm() {
       }
 
       try {
-        widgetIdRef.current = window.turnstile.render(
-          turnstileRef.current,
-          {
-            sitekey: "0x4AAAAAACu4Eb4Q25bWJD9B",
-            theme: "light",
+        widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
+          sitekey: "0x4AAAAAACu4Eb4Q25bWJD9B",
+          theme: "light",
 
-            callback: (token) => {
-              setCaptchaToken(token);
-            },
-
-            "expired-callback": () => {
-              setCaptchaToken("");
-            },
-
-            "error-callback": () => {
-              setCaptchaToken("");
-              console.error("Turnstile failed");
-            },
+          callback: (token) => {
+            setCaptchaToken(token);
           },
-        );
+
+          "expired-callback": () => {
+            setCaptchaToken("");
+          },
+
+          "error-callback": () => {
+            setCaptchaToken("");
+            console.error("Turnstile failed");
+          },
+        });
       } catch (error) {
         console.error("Turnstile render error:", error);
       }
     };
 
     if (!window.turnstile) {
-      const existingScript = document.querySelector(
-        'script[src*="turnstile"]',
-      );
+      const existingScript = document.querySelector('script[src*="turnstile"]');
 
       if (!existingScript) {
         const script = document.createElement("script");
@@ -193,10 +187,7 @@ export default function ContactForm() {
 
         document.body.appendChild(script);
       } else {
-        existingScript.addEventListener(
-          "load",
-          renderTurnstile,
-        );
+        existingScript.addEventListener("load", renderTurnstile);
       }
     } else {
       renderTurnstile();
@@ -206,10 +197,7 @@ export default function ContactForm() {
       isMounted = false;
 
       try {
-        if (
-          window.turnstile &&
-          widgetIdRef.current !== null
-        ) {
+        if (window.turnstile && widgetIdRef.current !== null) {
           window.turnstile.remove(widgetIdRef.current);
           widgetIdRef.current = null;
         }
@@ -220,8 +208,7 @@ export default function ContactForm() {
   }, []);
 
   const validateEmail = (email) => {
-    const emailRegex =
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     return emailRegex.test(email);
   };
@@ -242,21 +229,17 @@ export default function ContactForm() {
     if (!formData.mailid.trim()) {
       newErrors.mailid = "Email is required";
     } else if (!validateEmail(formData.mailid)) {
-      newErrors.mailid =
-        "Please enter a valid email address";
+      newErrors.mailid = "Please enter a valid email address";
     }
 
     if (!formData.countrycode) {
-      newErrors.countrycode =
-        "Please select a country";
+      newErrors.countrycode = "Please select a country";
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone =
-        "Phone number is required";
+      newErrors.phone = "Phone number is required";
     } else if (!validatePhone(formData.phone)) {
-      newErrors.phone =
-        "Please enter a valid phone number";
+      newErrors.phone = "Please enter a valid phone number";
     }
 
     if (!formData.comment.trim()) {
@@ -289,10 +272,7 @@ export default function ContactForm() {
   };
 
   const handlePhoneChange = (e) => {
-    const value = e.target.value.replace(
-      /\D/g,
-      "",
-    );
+    const value = e.target.value.replace(/\D/g, "");
 
     setFormData({
       ...formData,
@@ -320,26 +300,22 @@ export default function ContactForm() {
     }
 
     try {
-      const response = await fetch(
-        `${API}/api/leads`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type":
-              "application/json",
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.mailid,
-            country: formData.countrycode,
-            phone: formData.phone,
-            message: formData.comment,
-            form_type: "contact_page",
-            source_page: "contact-us",
-            captchaToken,
-          }),
+      const response = await fetch(`${API}/api/leads`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.mailid,
+          country: formData.countrycode,
+          phone: formData.phone,
+          message: formData.comment,
+          form_type: "contact_page",
+          source_page: "contact-us",
+          captchaToken,
+        }),
+      });
 
       const data = await response.json();
 
@@ -355,13 +331,8 @@ export default function ContactForm() {
 
         setCaptchaToken("");
 
-        if (
-          window.turnstile &&
-          widgetIdRef.current !== null
-        ) {
-          window.turnstile.reset(
-            widgetIdRef.current,
-          );
+        if (window.turnstile && widgetIdRef.current !== null) {
+          window.turnstile.reset(widgetIdRef.current);
         }
 
         router.push("/thank-you");
@@ -378,11 +349,9 @@ export default function ContactForm() {
     <div className={Style.ContactFormSection}>
       <div className="container">
         <div className="row d-flex justify-content-between align-items-center">
-
           {/* Left Section */}
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div className="feature-banner2-caption text-white">
-
               <Link
                 href="/scam-alert"
                 target="_blank"
@@ -398,34 +367,26 @@ export default function ContactForm() {
                   <p>
                     Drop us your requirements.
                     <br />
-                    Our team will get back to you
-                    within 1 business day.
+                    Our team will get back to you within 1 business day.
                   </p>
                 </li>
 
                 <li>
-                  <strong>
-                    Ask your query:
-                  </strong>
+                  <strong>Ask your query:</strong>
                   <br />
 
                   <a href="mailto:info@tech2globe.com">
-                    <u>
-                      Info@tech2globe.com
-                    </u>
+                    <u>Info@tech2globe.com</u>
                   </a>
                 </li>
 
                 <li>
-                  <strong>
-                    Career with us:
-                  </strong>
+                  <strong>Career with us:</strong>
 
                   <br />
 
                   <p>
                     Helping build dream{" "}
-
                     <Link
                       href="/career"
                       className="text-white text-decoration-underline d-inline-block"
@@ -436,24 +397,18 @@ export default function ContactForm() {
                 </li>
 
                 <li className="pt-0">
-                  <strong>
-                    Contact HR Department:
-                  </strong>
+                  <strong>Contact HR Department:</strong>
 
                   <br />
 
                   <a href="tel:+91-9871102889">
-                    <u>
-                      +91-9871102889 (HR)
-                    </u>
+                    <u>+91-9871102889 (HR)</u>
                   </a>
 
                   <br />
 
                   <a href="mailto:career@tech2globe.com">
-                    <u>
-                      career@tech2globe.com
-                    </u>
+                    <u>career@tech2globe.com</u>
                   </a>
                 </li>
               </ol>
@@ -462,15 +417,12 @@ export default function ContactForm() {
 
           {/* Right Form Section */}
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
             <form
               id="contactForm"
               onSubmit={handleSubmit}
               className={Style.Formbox}
             >
-              <h2 className="fw-normal">
-                Get in touch
-              </h2>
+              <h2 className="fw-normal">Get in touch</h2>
 
               <div className="mb-3">
                 <input
@@ -484,9 +436,7 @@ export default function ContactForm() {
                 />
 
                 {errors.name && (
-                  <div className="text-danger mt-1">
-                    {errors.name}
-                  </div>
+                  <div className="text-danger mt-1">{errors.name}</div>
                 )}
               </div>
 
@@ -502,9 +452,7 @@ export default function ContactForm() {
                 />
 
                 {errors.mailid && (
-                  <div className="text-danger mt-1">
-                    {errors.mailid}
-                  </div>
+                  <div className="text-danger mt-1">{errors.mailid}</div>
                 )}
               </div>
 
@@ -513,18 +461,12 @@ export default function ContactForm() {
                   options={countryOptions}
                   placeholder="Select Country"
                   value={countryOptions.find(
-                    (opt) =>
-                      opt.value ===
-                      formData.countrycode,
+                    (opt) => opt.label === formData.countrycode,
                   )}
-                  onChange={(
-                    selectedOption,
-                  ) => {
+                  onChange={(selectedOption) => {
                     setFormData({
                       ...formData,
-                      countrycode:
-                        selectedOption?.value ||
-                        "",
+                      countrycode: selectedOption?.label || "",
                     });
 
                     if (errors.countrycode) {
@@ -538,9 +480,7 @@ export default function ContactForm() {
                 />
 
                 {errors.countrycode && (
-                  <div className="text-danger mt-1">
-                    {errors.countrycode}
-                  </div>
+                  <div className="text-danger mt-1">{errors.countrycode}</div>
                 )}
               </div>
 
@@ -559,9 +499,7 @@ export default function ContactForm() {
                 />
 
                 {errors.phone && (
-                  <div className="text-danger mt-1">
-                    {errors.phone}
-                  </div>
+                  <div className="text-danger mt-1">{errors.phone}</div>
                 )}
               </div>
 
@@ -576,24 +514,15 @@ export default function ContactForm() {
                 ></textarea>
 
                 {errors.comment && (
-                  <div className="text-danger mt-1">
-                    {errors.comment}
-                  </div>
+                  <div className="text-danger mt-1">{errors.comment}</div>
                 )}
               </div>
 
               {/* Honeypot */}
-              <input
-                type="text"
-                name="website"
-                className="d-none"
-              />
+              <input type="text" name="website" className="d-none" />
 
               {/* Cloudflare Turnstile */}
-              <div
-                ref={turnstileRef}
-                className="mb-3"
-              ></div>
+              <div ref={turnstileRef} className="mb-3"></div>
 
               <button
                 type="submit"
