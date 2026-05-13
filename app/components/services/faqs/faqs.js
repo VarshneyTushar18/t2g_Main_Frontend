@@ -21,7 +21,7 @@ export default function FaqSection({ faqs }) {
                                         <div className={Style.Panel}>
                                             <div className={`${Style.PanelHeading} d-flex`} role="tab" id={`question${faq.id}`}>
                                                 <div className={Style.FaqIcon}>
-                                                    <FaArrowRight/>
+                                                    <FaArrowRight />
                                                 </div>
                                                 <h3 className={Style.PanelTitle}>
                                                     <a

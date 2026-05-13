@@ -31,25 +31,27 @@ export default function RootLayout({ children }) {
       </head>
 
       <body>
-        <Script
-          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          strategy="afterInteractive"
-          
-        />
-        <FixLinksWrapper />
-        {/* <fixRelativeLinks/> */}
-        <ScrollToTop />
-        <NextTopLoader
-          color="#c01f29"
-          height={3}
-          showSpinner={false}
-          speed={200}
-        />
-        <Header />
-        {children}
-        <LightboxInitializer />
-        <BootstrapClient />
-        <Footer />
+        <div className="main-wrapper">
+          <Script
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+            strategy="afterInteractive"
+
+          />
+          <FixLinksWrapper />
+          {/* <fixRelativeLinks/> */}
+          <ScrollToTop />
+          <NextTopLoader
+            color="#c01f29"
+            height={3}
+            showSpinner={false}
+            speed={200}
+          />
+          <Header />
+          {children}
+          <LightboxInitializer />
+          <BootstrapClient />
+          <Footer />
+        </div>
       </body>
     </html>
   );

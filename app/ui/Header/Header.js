@@ -13,36 +13,7 @@ export default function Header() {
                > </FontAwesomeIcon>
                   info@tech2globe.com</Link>
                <Link href="https://teams.microsoft.com/l/chat/0/0?users=info@tech2globe.com" className="hover-underline">
-                  <svg
-                     xmlns="http://www.w3.org/2000/svg"
-                     width="20"
-                     height="20"
-                     viewBox="0 0 100 100"
-                     fill="none"
-                  >
-                     <g>
-                        <path
-                           fill="#ffffff"
-                           d="M84.025 35.881c5.797 0 10.513-4.729 10.513-10.54-.577-13.983-20.45-13.979-21.026 0 0 5.811 4.717 10.54 10.513 10.54z"
-                        />
-                        <path
-                           fill="#ffffff"
-                           d="M90.958 38.71H51.61v-3.68c.784.139 1.605.232 2.467.268.093.001.186-.006.279-.007a15.5 15.5 0 0 0 1.063-.053c.12-.011.239-.021.357-.035.403-.045.801-.104 1.193-.181.024-.005.05-.008.074-.012a14.377 14.377 0 0 0 5.167-2.17 14.504 14.504 0 0 0 3.693-3.615c.26-.341.497-.697.718-1.061.021-.036.044-.07.065-.107.17-.287.32-.584.466-.884.064-.13.13-.26.19-.392.154-.345.296-.696.421-1.053l.032-.088c1.427-4.208.774-9.156-1.676-12.856a14.476 14.476 0 0 0-2.268-2.574c-.176-.153-.344-.314-.529-.457a14.41 14.41 0 0 0-3.567-2.159 12.49 12.49 0 0 0-1.347-.493c-.264-.081-.538-.141-.808-.207-.239-.058-.475-.121-.717-.166-.2-.038-.405-.062-.607-.092-.352-.05-.704-.096-1.06-.121-.122-.009-.245-.012-.368-.018a14.095 14.095 0 0 0-1.088-.007c-2.08.121-3.926.558-5.543 1.24-.33.149-.664.294-.975.47-3.242 1.766-5.722 4.772-6.867 8.293a15.274 15.274 0 0 0-.187 8.129l.02.076.097.345c.039.137.085.273.128.409.039.11.08.219.121.329H8.774a5.168 5.168 0 0 0-5.162 5.162v37.672a5.168 5.168 0 0 0 5.162 5.162h20.122c.026.118.059.232.087.349 2.77 10.899 12.463 18.607 23.917 18.885 9.503-.231 17.666-5.721 21.753-13.592.061.022.124.038.185.059 10.182 3.851 21.752-4.229 21.546-15.131V44.122c.001-2.984-2.434-5.412-5.426-5.412z"
-                        />
-                        <path
-                           fill="#ebebeb"
-                           d="M77.444 44.232c.069-2.971-2.287-5.448-5.251-5.521H50.761a1.43 1.43 0 0 0-1.429 1.433v29.095a2.433 2.433 0 0 1-2.428 2.433H30.199a1.429 1.429 0 0 0-1.399 1.721c2.367 11.561 12.248 19.837 24.1 20.126 13.856-.34 24.866-11.914 24.544-25.767z"
-                        />
-                        <path
-                           fill="#ffffff"
-                           d="M46.448 25.783H8.774a5.168 5.168 0 0 0-5.162 5.162v37.672a5.168 5.168 0 0 0 5.162 5.162h37.674a5.167 5.167 0 0 0 5.161-5.162V30.945a5.166 5.166 0 0 0-5.161-5.162z"
-                        />
-                        <path
-                           fill="#234268"
-                           d="M37.109 36.271h-19.28c-.771 0-1.395.625-1.395 1.396v3.514c0 .771.624 1.396 1.395 1.396h6.22v19.575c0 .771.624 1.396 1.395 1.396h4.134c.771 0 1.395-.625 1.395-1.396V42.577h6.136c.771 0 1.395-.625 1.395-1.396v-3.514c0-.771-.624-1.396-1.395-1.396z"
-                        />
-                     </g>
-                  </svg>
+                  <img src="images/Microsoft_Office_Teams_Logo.svg" width={20} />
                   &nbsp;info@tech2globe.com</Link>
             </div>
             <div className="scam">
@@ -1053,7 +1024,7 @@ export default function Header() {
                                              <li><a className="menu-link" href="/complete-ecommerce-solution-india">ECommerce
                                                 Solutions</a>
                                              </li>
-                                             <li><a className="menu-link" href="/IT-Staffing">IT
+                                             <li><a className="menu-link" href="/it-staffing">IT
                                                 Staffing Services</a>
                                              </li>
                                           </ul>
@@ -1156,7 +1127,7 @@ export default function Header() {
                                           <ul className="list-unstyled ps-2 menu-items">
                                              <li><a className="menu-link" href="/joomla-development">Joomla</a></li>
                                              <li><a className="menu-link" href="/drupal-development">Drupal</a></li>
-                                             <li><a className="menu-link" href="/wordPress-development">WordPress</a></li>
+                                             <li><a className="menu-link" href="/wordpress-development">WordPress</a></li>
                                           </ul>
                                        </div>
 
@@ -3042,7 +3013,7 @@ export default function Header() {
                                                       href="/complete-ecommerce-solution-india">ECommerce
                                                       Solutions</a>
                                                    </li>
-                                                   <li><a href="/IT-Staffing">IT
+                                                   <li><a href="/it-staffing">IT
                                                       Staffing Services</a>
                                                    </li>
                                                 </ul>
@@ -3561,7 +3532,7 @@ export default function Header() {
                                                       href="/drupal-development">Drupal</a>
                                                    </li>
                                                    <li><a
-                                                      href="/wordPress-development">WordPress</a>
+                                                      href="/wordpress-development">WordPress</a>
                                                    </li>
                                                 </ul>
                                              </div>

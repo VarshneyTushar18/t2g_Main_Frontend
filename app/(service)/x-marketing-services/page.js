@@ -64,23 +64,18 @@ const sidebarSections = [
 const faqs = [
     {
         "id": "One",
-        "question": "Why is Instagram Marketing Services important for Businesses?",
-        "answer": "Instagram has high user engagement rate which makes it optimal platform for building brand awareness and attracting more customers. By sharing visually appealing posts & stories, businesses can connect with audiences, showcasing their products and services, and stay on top."
+        "question": "How do I get started with Tech2Globe's X marketing services",
+        "answer": "Getting started is very easy. Simply contact us to discuss your goals and we will assign our X marketing team to create a customised strategy according to it. We will begin with profile audit, strategy development, and a customized plan to drive results to increase engagement and conversions."
     },
     {
         "id": "Two",
-        "question": "How can I use Instagram to promote my brand?",
-        "answer": "Define your goals. For example, you want lead generation, brand visibility, target audience, etc. Then share consistent, high-quality content like reels & stories. Partnering with Instagram marketing agency like Tech2Globe will optimize your profiles, run targeted ads, and engage with your followers regularly. We combine customized strategies, data-driven optimization, and creative content to deliver measurable results."
+        "question": "What industries does Tech2Globe serve for X marketing",
+        "answer": "Tech2Globe serves a wide range of industries including e-commerce, food, travel, technology, home appliances, and more. Our customized approach ensures that our twitter marketing strategy is tailored to the requirements of your specific industry."
     },
     {
         "id": "Three",
-        "question": "How do Instagram Advertising benefits my business?",
-        "answer": "Instagram ads offer precise targeting, affordable ad formats, and high engagement, driving traffic and conversions. Out Instagram marketing services optimize campaigns to reduce costs and increase lead quality."
-    },
-    {
-        "id": "Four",
-        "question": "How often should I post on Instagram?",
-        "answer": "At least 3-4 times a week is recommended. Posting stories everyday can maximize visibility and engagement. Our Instagram marketing agency creates schedules to post content regularly."
+        "question": "How long does it takes to see results from X marketing",
+        "answer": "It varies according to the goals and requirements of the specific industry. Our data driven strategies often deliver initial improvements in engagements and visibility within weeks. For instance, clients have reported a 50% followers increase and over 3x times within the first few months of our campaigns."
     },
 
 ];
@@ -88,7 +83,7 @@ const faqs = [
 
 
 
-export default function InstagramMarketingServices() {
+export default function XMarketingServices() {
     return (
         <>
             <PageHeader pageHeaderData={pageHeaderData} />
@@ -102,38 +97,203 @@ export default function InstagramMarketingServices() {
 
                             <div className={Style.ContentDiv}>
                                 <h4 className={Style.HeadTitle}><img src="/images/services/service-inner/question.png" /> Why Marketing on X is Essential?</h4>
-                                <p>X marketing, earlier referred as Twitter advertising, is the global center of conversation and social engagement.</p>
-                                <div className="row align-items-center pb-5">
-                                    <div className="col-md-6">
-                                        <img src="images/services/service-inner/insta.jpg" className="img-fluid rounded" />
+                                <p><strong>X marketing</strong>, earlier referred as Twitter advertising, is the global center of conversation and social engagement.</p>
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-start align-items-center gap-3 mb-fx">
+
+                                    <div
+                                        className="col-md-2 col-sm-2 col-xs-3 wpb_single_image d-sm-block"
+                                        style={{
+                                            border: "2px dotted #e5e2e2",
+                                            padding: "10px",
+                                        }}
+                                    >
+                                        <img
+                                            src="/images/services/service-inner/global-reach.jpg"
+                                            className="img-responsive img-fluid"
+                                            alt="Global reach to diverse audience"
+                                        />
                                     </div>
-                                    <div className="col-md-6">
-                                        Instagram has 1 billion+ monthly active users and among them over 200 million check out at least one business profile every day. This gives businesses like fashion, travel, food, art and craft industries an opportunity to reach more audiences and getting more followers.<br /><br />Over 62% users says that they became more interested in the product after seeing it on Instagram. Users give feedback and reviews which the general audience trust even more. This helps with brand's online reputation, customers feel familiarity and trust the products. This presents an excellent opportunity for brands to increase sales and revenues for their investments.
+
+                                    <div className="col-md-10 col-sm-10 col-xs-12 text-left pt-3">
+                                        <h4
+                                            style={{
+                                                color: "#c6010b",
+                                                fontSize: "18px",
+                                            }}
+                                        >
+                                            <strong>Global Reach to Diverse Audience</strong>
+                                        </h4>
+
+                                        <p className="text-start">
+                                            With enormous amount of netizens from various countries, age,
+                                            gender, and interests, gives businesses access to worldwide market.
+                                        </p>
                                     </div>
+
                                 </div>
+
+                                <hr />
+
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-start align-items-center gap-3 mb-fx">
+
+                                    <div
+                                        className="col-md-2 col-sm-2 col-xs-3 wpb_single_image d-sm-block"
+                                        style={{
+                                            border: "2px dotted #e5e2e2",
+                                            padding: "10px",
+                                        }}
+                                    >
+                                        <img
+                                            src="/images/services/service-inner/real-time-engagement-with-users.jpg"
+                                            className="img-responsive img-fluid"
+                                            alt="Realtime Engagement With Users"
+                                        />
+                                    </div>
+
+                                    <div className="col-md-10 col-sm-10 col-xs-12 text-left pt-3">
+                                        <h4
+                                            style={{
+                                                color: "#c6010b",
+                                                fontSize: "18px",
+                                            }}
+                                        >
+                                            <strong>Realtime Engagement With Users</strong>
+                                        </h4>
+
+                                        <p className="text-start">
+                                            X enables real time engagement unlike traditional media platforms, allowing businesses to get involved in trending topics, engage with customers and showcase their brands.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <hr />
+
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-start align-items-center gap-3 mb-fx">
+
+                                    <div
+                                        className="col-md-2 col-sm-2 col-xs-3 wpb_single_image d-sm-block"
+                                        style={{
+                                            border: "2px dotted #e5e2e2",
+                                            padding: "10px",
+                                        }}
+                                    >
+                                        <img
+                                            src="/images/services/service-inner/audience-targeting-on-x.jpg"
+                                            className="img-responsive img-fluid"
+                                            alt="Audience Targeting on X"
+                                        />
+                                    </div>
+
+                                    <div className="col-md-10 col-sm-10 col-xs-12 text-left pt-3">
+                                        <h4
+                                            style={{
+                                                color: "#c6010b",
+                                                fontSize: "18px",
+                                            }}
+                                        >
+                                            <strong>Audience Targeting on X</strong>
+                                        </h4>
+
+                                        <p className="text-start">
+                                            With advanced targeting features on X, brands can customize content to suit the relevant customers. Detailed analysis based on age, gender, interests, and behavior, allows businesses to tailor the content to resonate with the right customers.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <hr />
+
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-start align-items-center gap-3 mb-fx">
+
+                                    <div
+                                        className="col-md-2 col-sm-2 col-xs-3 wpb_single_image d-sm-block"
+                                        style={{
+                                            border: "2px dotted #e5e2e2",
+                                            padding: "10px",
+                                        }}
+                                    >
+                                        <img
+                                            src="/images/services/service-inner/Ad-Formats.jpg"
+                                            className="img-responsive img-fluid"
+                                            alt="Ad Formats"
+                                        />
+                                    </div>
+
+                                    <div className="col-md-10 col-sm-10 col-xs-12 text-left pt-3">
+                                        <h4
+                                            style={{
+                                                color: "#c6010b",
+                                                fontSize: "18px",
+                                            }}
+                                        >
+                                            <strong>Ad Formats</strong>
+                                        </h4>
+
+                                        <p className="text-start">
+                                            X advertising offers customizable ad budgets and optimizing tools that will maximize the return on investment and is suitable for all types of businesses, whether a startup or established enterprise.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <hr />
+
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-start align-items-center gap-3 mb-fx">
+
+                                    <div
+                                        className="col-md-2 col-sm-2 col-xs-3 wpb_single_image d-sm-block"
+                                        style={{
+                                            border: "2px dotted #e5e2e2",
+                                            padding: "10px",
+                                        }}
+                                    >
+                                        <img
+                                            src="/images/services/service-inner/consumer-insight.jpg"
+                                            className="img-responsive img-fluid"
+                                            alt="Consumer Insight"
+                                        />
+                                    </div>
+
+                                    <div className="col-md-10 col-sm-10 col-xs-12 text-left pt-3">
+                                        <h4
+                                            style={{
+                                                color: "#c6010b",
+                                                fontSize: "18px",
+                                            }}
+                                        >
+                                            <strong>Consumer Insight</strong>
+                                        </h4>
+
+                                        <p className="text-start">
+                                            X provides data on consumer behavior enabling businesses to understand market outlook by monitoring trends, hashtags and conversations. This makes marketing on X essential due to scale, precision, and efficiency.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <br /><br />
+
+
                             </div>
 
 
 
 
                             <div className={Style.ContentDiv}>
-                                <h4 className={Style.HeadTitle}><img src="/images/services/service-inner/services-icon.png" /> Services</h4>
+                                <h4 className={Style.HeadTitle}><img src="/images/services/service-inner/services-icon.png" />Our Services</h4>
                                 <div className="row">
                                     <div className="col-md-6 pt-3 pb-3">
                                         <div className={Style.WaListCard}>
-                                            <h5>Profile Optimization</h5>
-                                            <p>Optimizing your profile to rank higher in searches, enhance brand identity, and drive traffic, easier navigation and regional discoverability with</p>
+                                            <h5>Profile Setup & Optimization</h5>
+                                            <p>We set up your brand's profile on X to enhance visibility and brand's credibility with optimized keywords. Using visually appealing page setup, bio, handle, and links to website to establish brand's identity and professional setup for better marketing.</p>
 
                                             <ul className={Style.ExpList}>
-                                                <li><FaArrowRight />&nbsp;&nbsp; SEO-Optimized Bio
+                                                <li><FaArrowRight />&nbsp;&nbsp; X-Page Setup
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Branded Visuals
+                                                <li><FaArrowRight />&nbsp;&nbsp; Cover/Profile Photo Design
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; CTA links
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Story Highlights
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Keyword research
+                                                <li><FaArrowRight />&nbsp;&nbsp; X Page Audit
                                                 </li>
                                             </ul>
                                         </div>
@@ -141,19 +301,14 @@ export default function InstagramMarketingServices() {
 
                                     <div className="col-md-6 pt-3 pb-3">
                                         <div className={Style.WaListCard}>
-                                            <h5>Content Development</h5>
-                                            <p>Developing content which is customised to brand voice, showcase industry's expertise, capture audience's attention, create high engagement and wider reach through:</p>
+                                            <h5>Content Creation</h5>
+                                            <p>Our <strong>X Marketing Services</strong> includes crafting innovative, engaging, relevant and trending content that attracts audience. With creative posts, visually appealing graphics, trending hashtags, and SEO optimized keywords to boost visibility, increased search ranking and reaching wider audience.</p>
+
 
                                             <ul className={Style.ExpList}>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Engaging Posts
+                                                <li><FaArrowRight />&nbsp;&nbsp; Creating Posts
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Reels & Stories
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Hashtag research
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Consistent posts
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Tailored posts
+                                                <li><FaArrowRight />&nbsp;&nbsp; SEO Optimized Posts
                                                 </li>
                                             </ul>
                                         </div>
@@ -161,21 +316,15 @@ export default function InstagramMarketingServices() {
 
                                     <div className="col-md-6 pt-3 pb-3">
                                         <div className={Style.WaListCard}>
-                                            <h5>Ads & Marketing</h5>
-                                            <p>Design campaigns to acquire details, generate leads, higher conversion, boost click-through rates, amplify reach, and maximize ROI through:</p>
+                                            <h5>Strategy Development</h5>
+                                            <p>We develop <strong>X Marketing Strategies</strong> by conducting in-depth analysis of competitors' content, community engagement, post frequencies, and objectives to identify <strong>Key Performance Indicators (KPIs)</strong>. By creating optimum and high-impact strategies, we will put your brand to stand out and connect with the market's user community.</p>
 
                                             <ul className={Style.ExpList}>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Targeted Ad campaigns
+                                                <li><FaArrowRight />&nbsp;&nbsp; Social Media Strategy
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Lead Ads
+                                                <li><FaArrowRight />&nbsp;&nbsp; Strategy Development
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Custom landing pages
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Personalized ads
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Influencer collabs
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Ad spend
+                                                <li><FaArrowRight />&nbsp;&nbsp; Competitor Analysis
                                                 </li>
                                             </ul>
                                         </div>
@@ -183,19 +332,15 @@ export default function InstagramMarketingServices() {
 
                                     <div className="col-md-6 pt-3 pb-3">
                                         <div className={Style.WaListCard}>
-                                            <h5>Analytics & Reports</h5>
-                                            <p>Delivering detailed reports with recommendations, highlighting successes, challenges and optimization strategies by using tools like Instagram Insight, Google Analytics, and CRM systems to:</p>
+                                            <h5>Audience Targeting & Engagement</h5>
+                                            <p>We will market outreach programs to maximize impact of X marketing campaigns to direct resources towards high-value audience. With precision marketing, we will focus on engaging with specific groups based on age, gender, location, interests and customer behavior for retargeting.</p>
 
                                             <ul className={Style.ExpList}>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Track metrics (likes, comments, shares)
+                                                <li><FaArrowRight />&nbsp;&nbsp; Demographic Targeting
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; ROI analysis
+                                                <li><FaArrowRight />&nbsp;&nbsp; Interest Targeting
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Third-party integration
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Regular reports
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Audience insights
+                                                <li><FaArrowRight />&nbsp;&nbsp; Retargeting
                                                 </li>
                                             </ul>
                                         </div>
@@ -203,19 +348,17 @@ export default function InstagramMarketingServices() {
 
                                     <div className="col-md-6 pt-3 pb-3">
                                         <div className={Style.WaListCard}>
-                                            <h5>Monitoring & Management</h5>
-                                            <p>Regular monitoring ad performance, community engagement, audience feedback, posting consistency, optimizing content visibility, identifying opportunities to stay ahead of your competition.</p>
+                                            <h5>Ad Campaign Management</h5>
+                                            <p>Our <strong>X Marketing Services</strong> involves creating compelling <strong>X ads</strong> that grab attention and regularly testing and optimizing them to identify what's appealing to the audience. By optimizing budget to ensure correct ad spend, we will ensure that the campaigns achieve verifiable results from enhanced website traffic to improved sales performances.</p>
 
                                             <ul className={Style.ExpList}>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Campaign oversight
+                                                <li><FaArrowRight />&nbsp;&nbsp; Ad Copywriting
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Content scheduling
+                                                <li><FaArrowRight />&nbsp;&nbsp; A/B Testing
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Feedback response
+                                                <li><FaArrowRight />&nbsp;&nbsp; Ongoing Campaign Management
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Optimize content visibility
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Competitor monitoring
+                                                <li><FaArrowRight />&nbsp;&nbsp; Budget Optimization
                                                 </li>
                                             </ul>
                                         </div>
@@ -223,19 +366,15 @@ export default function InstagramMarketingServices() {
 
                                     <div className="col-md-6 pt-3 pb-3">
                                         <div className={Style.WaListCard}>
-                                            <h5>Audience Targeting</h5>
-                                            <p>Creating strategies according to the customers' need, relevance, and interests to drive conversion through:</p>
+                                            <h5>Monitoring & Reporting</h5>
+                                            <p>We will track your user interactions (likes, retweets, comments), mentions, and trending hashtags to address customer feedback and understand market sentiment. With detailed reporting, we will provide you with thorough analysis on campaign performance, conversion rate, and audience demographics to boost ROI and scale businesses.</p>
 
                                             <ul className={Style.ExpList}>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Demographic targeting
+                                                <li><FaArrowRight />&nbsp;&nbsp; Regular Social Media Monitoring
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Remarketing
+                                                <li><FaArrowRight />&nbsp;&nbsp; Performance Tracking
                                                 </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Hashtag targeting
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Regional targeting
-                                                </li>
-                                                <li><FaArrowRight />&nbsp;&nbsp; Influencer audience leverage
+                                                <li><FaArrowRight />&nbsp;&nbsp; Regular Reporting
                                                 </li>
                                             </ul>
                                         </div>
@@ -244,18 +383,124 @@ export default function InstagramMarketingServices() {
                                 </div>
                             </div>
 
-                            <hr />
+                            <div className={Style.ContentDiv}>
+                                <h4 className={Style.HeadTitle}><img src="/images/services/service-inner/growth-icon.png" /> Process</h4>
+                                <div className="row pt-3 pb-3">
+                                    <div className="col-md-4 mb-3">
+                                        <div className={Style.NumCard}>
+                                            <div className={Style.NumTitle} style={{ backgroundColor: '#c1222c' }}>1</div>
+                                            <h3>Planning &amp; Research</h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-4 mb-3">
+                                        <div className={Style.NumCard}>
+                                            <div className={Style.NumTitle} style={{ backgroundColor: '#ffc107' }}>2</div>
+                                            <h3>Strategizing</h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-4 mb-3">
+                                        <div className={Style.NumCard}>
+                                            <div className={Style.NumTitle} style={{ backgroundColor: '#03a9f4' }}>3</div>
+                                            <h3>Target Research</h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-4 mb-3">
+                                        <div className={Style.NumCard}>
+                                            <div className={Style.NumTitle} style={{ backgroundColor: '#607d8b' }}>4</div>
+                                            <h3>Ad Customization</h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-4 mb-3">
+                                        <div className={Style.NumCard}>
+                                            <div className={Style.NumTitle} style={{ backgroundColor: '#9c27b0' }}>5</div>
+                                            <h3>Budget & Bidding</h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-4 mb-3">
+                                        <div className={Style.NumCard}>
+                                            <div className={Style.NumTitle} style={{ backgroundColor: '#00764e' }}>6</div>
+                                            <h3>Launching Campaign</h3>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-4 mb-3">
+                                        <div className={Style.NumCard}>
+                                            <div className={Style.NumTitle} style={{ backgroundColor: '#000000' }}>7</div>
+                                            <h3>Tracking Performance</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <div className={Style.ContentDiv}>
-                                <h4 className={Style.HeadTitle}><img src="/images/services/service-inner/question.png" /> Why Work with Tech2Globe?</h4>
+                                <h4 className={Style.HeadTitle}><img src="/images/services/service-inner/question.png" /> Why Choose Tech2globe for X Marketing?</h4>
 
-                                <p>
-                                    At Tech2Globe, we have a team of experts dedicated to provide you with full service management. Our Instagram marketing agency can deliver original and high-quality Instagram content. Our deeper understanding of the platform will put you forward as a leading brand.<br /><br />
+                                <div className="row align-items-center pt-3">
+                                    <div className="col-md-6">
+                                        <img src="images/services/service-inner/social-media-experts.jpg" alt="Social Media Experts" className="img-fluid rounded pb-3" />
+                                    </div>
+                                    <div className="col-md-6">
+                                        <h5>Social Media Experts</h5>
+                                        <p>Our X marketing company is proficient in marketing on x. We have deeper understandings of X trends, algorithms and best practices to develop engaging content, boosting audience engagement. We have achieved over 50% increase in followers on X for several brands.</p>
+                                    </div>
+                                </div>
 
-                                    We take data driven approach for marketing. By data analysis, A/B testing and CRM integration, our Instagram marketing agency create strategies to target audience, customize ads, optimize content, reduce cost, and maximize ROI.<br /><br />
+                                <div className="row align-items-center pt-3">
 
-                                    You will be provide with cost effective packages tailored to your needs. Whether you are a small or a large business, we will provide you with customised solutions aligned with your brand. Our Instagram marketing services are dedicated to your goals and helping you to achieve your dreams.
-                                </p>
+                                    <div className="col-md-6 order-2 order-md-1">
+                                        <h5>Custom X Marketing Services</h5>
+                                        <p>
+                                            We will customise content to according to your needs and business goals.
+                                            Our services include profile setup, content creation, targeting,
+                                            competitor analysis, optimized keywords and posts to maximize reach on X.
+                                            We have given over 70% increase in e-commerce sales for our past clients.
+                                        </p>
+                                    </div>
+
+                                    <div className="col-md-6 order-1 order-md-2">
+                                        <img
+                                            src="images/services/service-inner/custom-x-marketing-services.jpg"
+                                            alt="Custom X Marketing Services"
+                                            className="img-fluid rounded  pb-3"
+                                        />
+                                    </div>
+
+                                </div>
+
+                                <div className="row align-items-center pt-3">
+                                    <div className="col-md-6">
+                                        <img src="images/services/service-inner/detailed-reporting.jpg" alt="Detailed Reporting" className="img-fluid rounded pb-3" />
+                                    </div>
+                                    <div className="col-md-6">
+                                        <h5>Detailed Reporting</h5>
+                                        <p>We provide detailed analysis on key metrics such as views, clicks, comments, engagement and conversions. To enhance campaign optimization, we track keyword performance, audience behavior and competitor's content and accumulate maximum return on investment (ROI). Our clients have reported more than 3x times increase in organic traffic due to our data-driven insights.</p>
+                                    </div>
+                                </div>
+
+                                <div className="row align-items-center pt-3">
+
+                                    <div className="col-md-6 order-2 order-md-1">
+                                        <h5>Compliant Practices</h5>
+                                        <p>
+                                            Our X marketing agency strictly adhere to ethical and platform compliant marketing strategies. We make sure to avoid manipulative techniques to protect brand's reputation. Our posts are SEO optimized and our X ads are aligned with its algorithms. Our clients have commended our white-hat tactics used for their businesses.
+                                        </p>
+                                    </div>
+
+                                    <div className="col-md-6 order-1 order-md-2">
+                                        <img
+                                            src="images/services/service-inner/compliant-practices.jpg"
+                                            alt="Compliant Practices"
+                                            className="img-fluid rounded  pb-3"
+                                        />
+                                    </div>
+
+                                </div>
 
                             </div>
 
