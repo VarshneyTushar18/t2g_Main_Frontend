@@ -11,19 +11,19 @@ export const metadata = {
     title: "5 YEARS CREW | Online Marketing Agency - Tech2Globe",
     description:
       "Join the 5 Years Crew at Tech2Globe, an online marketing agency. Experience expert strategies, innovation, and growth for your business.",
-    url: "https://www.tech2globe.com/5Years-milemakers",
+    url: "https://www.tech2globe.com/5years-milemakers",
     siteName: "Tech2Globe",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.tech2globe.com/5Years-milemakers",
+    canonical: "https://www.tech2globe.com/5years-milemakers",
   },
 };
 
 const pageHeaderData = {
-    title: "5 Years Crew",
-    backgroundImage: "/images/skyscraper.jpg",
-    shortBanner: true
+  title: "5 Years Crew",
+  backgroundImage: "/images/skyscraper.jpg",
+  shortBanner: true
 };
 
 const MilesmakerMembers = [
@@ -160,28 +160,28 @@ const MilesmakerMembers = [
 ];
 
 export default function YearsMilemakers() {
-    return (
-        <>
-            <PageHeader pageHeaderData={pageHeaderData} />
-            <Breadcrumb
-                parentName="About Us"
-                pageName="5Years milemakers"
-            />
-            <section className={Style.PageContent}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <h2 className="text-danger text-center pb-5">5 Years Milemakers</h2>
-                        </div>
-                    </div>
+  return (
+    <>
+      <PageHeader pageHeaderData={pageHeaderData} />
+      <Breadcrumb
+        parentName="About Us"
+        pageName="5Years milemakers"
+      />
+      <section className={Style.PageContent}>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h2 className="text-danger text-center pb-5">5 Years Milemakers</h2>
+            </div>
+          </div>
 
-                    <div className="row">
-                        {MilesmakerMembers.map((m) => (
-                            <MilesmakerCard key={m.id} member={m} />
-                        ))}
-                    </div>
-                </div>
-            </section>
-        </>
-    );
+          <div className="row">
+            {MilesmakerMembers.map((m) => (
+              <MilesmakerCard key={m.id} member={m} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
