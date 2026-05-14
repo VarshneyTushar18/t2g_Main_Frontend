@@ -71,6 +71,29 @@ export default function AssociationsAscription() {
 
               <div className={Style.ContentDiv}>
                 <div className="row">
+                   
+
+                  <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
+                    <div className={Style.AssociationsCard}>
+                      <img src="/images/iso-innerimage.webp" alt="ISO 9001 2015" />
+                      <h3>ISO 9001 2015</h3>
+                    </div>
+                  </div>              
+
+                  <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
+                    <div className={Style.AssociationsCard}>
+                      <img src="/images/cmmi-innerimage.webp" alt="CMMI 3"/>
+                      <h3>CMMI 3</h3>
+                    </div>
+                  </div>              
+
+                  <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
+                    <div className={Style.AssociationsCard}>
+                      <img src="/images/iso-iec-innerpage.webp" alt="ISO IEC"/>
+                      <h3>ISO IEC</h3>
+                    </div>
+                  </div>
+                  
                   <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
                     <div className={Style.AssociationsCard}>
                       <img src="images/associations-ascription/topsesos-best-in-search.png" alt="Top SEOs Best in Search Award"/>
