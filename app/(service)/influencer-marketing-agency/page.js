@@ -1,12 +1,7 @@
 import Style from "./style.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import BrandSection from "@/app/components/home/BrandSection/BrandSection";
-import ServiceBanner from "@/app/components/services/ServiceBanner/ServiceBanner";
-import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSidebar";
-import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
-import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/ServiceCaseStudy";
-import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+
 import { FaAngleRight, FaChartBar, FaCheckSquare, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaGlobe, FaHandPointRight, FaIndustry, FaLightbulb, FaMedal, FaSearch, FaShieldAlt, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import Faq from "@/app/(resources)/faq/page";
@@ -70,525 +65,682 @@ const usefullinks = [
 ];
 
 
-const sidebarSections = [
-  { heading: "Useful Links", links: usefullinks },
-];
-
-const portfolio = [
-  {
-    title: "Product Uploading",
-    items: [
-      {
-        title: "Lacanvas",
-        tech: "PHP, Mysql, Jquery",
-        link: "http://www.lacanvas.com/",
-        img: "/images/services/portfolio-img/lacanvas.jpg",
-      },
-      {
-        title: "Linkcycle",
-        tech: "PHP, Mysql, Jquery",
-        link: "http://www.linkcycle.com/",
-        img: "/images/services/portfolio-img/linkcycle.jpg",
-      },
-      {
-        title: "Silver Goldinto Cash",
-        tech: "PHP, Mysql",
-        link: "http://www.silvergoldintocash.com/",
-        img: "/images/services/portfolio-img/silvergoldintocash.jpg",
-      },
-      {
-        title: "Travel Blue",
-        tech: "PHP, Mysql, Jquery",
-        link: "http://www.travel-blue.com/",
-        img: "/images/services/portfolio-img/travel-blue.jpg",
-      },
-      {
-        title: "Windsor One",
-        tech: "PHP, Mysql, Jquery",
-        link: "http://www.windsorone.com/",
-        img: "/images/services/portfolio-img/windsorone.jpg",
-      },
-      {
-        title: "Zphotoedit",
-        tech: "PHP, Mysql, Jquery",
-        link: "http://www.zphotoedit.com/",
-        img: "/images/services/portfolio-img/zphotoedit.jpg",
-      },
-      {
-        title: "Luiolei",
-        tech: "Asp.net, C#,SQL Server , Jquery.",
-        link: "https://www.luiolei.com/",
-        img: "/images/services/portfolio-img/luiolei.jpg",
-      },
-      {
-        title: "Plaza Surf Sports",
-        tech: "Asp.net, C#,SQL Server , Jquery.",
-        link: "http://www.plazasurfsports.com/",
-        img: "/images/services/portfolio-img/plazasurfsports.jpg",
-      },
-      {
-        title: "Shopaloo",
-        tech: "Asp.net, C#,SQL Server , Jquery.",
-        link: "https://shopaloo.com/",
-        img: "/images/services/portfolio-img/shopaloo.jpg",
-      },
-      {
-        title: "Sports456",
-        tech: "Asp.net, C#,SQL Server , Jquery.",
-        link: "https://www.sports456.com/",
-        img: "/images/services/portfolio-img/sports456.jpg",
-      }
-    ],
-  },
-  {
-    title: "Web Stores Design & Dev",
-    items: [
-      {
-        title: "Consult for PPP",
-        tech: "Asp.net, C#, SQL Server, Jquery.",
-        link: "https://consultforppp.com/",
-        img: "/images/services/portfolio-img/consultforppp.jpg",
-      },
-      {
-        title: "Devouttechs",
-        tech: "Asp.net, C#, SQL Server, Jquery.",
-        link: "http://devouttechs.com/",
-        img: "/images/services/portfolio-img/devouttechs.jpg",
-      },
-      {
-        title: "Geturkart",
-        tech: "Asp.net, C#, SQL Server, Jquery.",
-        link: "https://geturkart.com/",
-        img: "/images/services/portfolio-img/geturkart.jpg",
-      },
-      {
-        title: "Nopextensions",
-        tech: "Asp.net, C#, SQL Server, Jquery.",
-        link: "http://nopextensions.com/",
-        img: "/images/services/portfolio-img/nopextensions.jpg",
-      },
-      {
-        title: "Shopaloo",
-        tech: "Asp.net, C#,SQL Server , Jquery.",
-        link: "https://shopaloo.com/",
-        img: "/images/services/portfolio-img/shopaloo.jpg",
-      },
-      {
-        title: "Sports456",
-        tech: "Asp.net, C#,SQL Server , Jquery.",
-        link: "https://www.sports456.com/",
-        img: "/images/services/portfolio-img/sports456.jpg",
-      },
-      {
-        title: "Luiolei",
-        tech: "Asp.net, C#,SQL Server , Jquery.",
-        link: "https://www.luiolei.com/",
-        img: "/images/services/portfolio-img/luiolei.jpg",
-      },
-      {
-        title: "Plaza Surf Sports",
-        tech: "Asp.net, C#,SQL Server , Jquery.",
-        link: "http://www.plazasurfsports.com/",
-        img: "/images/services/portfolio-img/plazasurfsports.jpg",
-      }
-    ],
-  },
-  {
-    title: "Indian Ecomm MarketPlace",
-    items: [
-      {
-        title: "Windsor One",
-        tech: "PHP, Mysql, Jquery",
-        link: "http://www.windsorone.com/",
-        img: "/images/services/portfolio-img/windsorone.jpg",
-      },
-      {
-        title: "Zphotoedit",
-        tech: "PHP, Mysql, Jquery",
-        link: "http://www.zphotoedit.com/",
-        img: "/images/services/portfolio-img/zphotoedit.jpg",
-      },
-      {
-        title: "My Orthosoft",
-        tech: "Cake PHP",
-        link: "http://www.myorthosoft.com/",
-        img: "/images/services/portfolio-img/myorthosoft.jpg",
-      },
-      {
-        title: "Saleswarp",
-        tech: "Cake PHP",
-        link: "https://saleswarp.com/",
-        img: "/images/services/portfolio-img/saleswarp.jpg",
-      },
-      {
-        title: "Webmallng",
-        tech: "PHP, Mysql, Jquery.",
-        link: "https://www.webmallng.com/",
-        img: "/images/services/portfolio-img/webmallng.jpg",
-      },
-      {
-        title: "UnotechonLine",
-        tech: "PHP, Mysql, Jquery.",
-        link: "https://www.unotechonline.com/",
-        img: "/images/services/portfolio-img/unotechonline.jpg",
-      },
-      {
-        title: "Lacanvas",
-        tech: "PHP, Mysql, Jquery.",
-        link: "http://www.lacanvas.com/",
-        img: "/images/services/portfolio-img/lacanvas.jpg",
-      },
-      {
-        title: "Linkcycle",
-        tech: "PHP, Mysql, Jquery",
-        link: "http://www.linkcycle.com/",
-        img: "/images/services/portfolio-img/linkcycle.jpg",
-      },
-      {
-        title: "Silver Goldinto Cash",
-        tech: "PHP, Mysql",
-        link: "http://www.silvergoldintocash.com/",
-        img: "/images/services/portfolio-img/silvergoldintocash.jpg",
-      },
-      {
-        title: "Travel Blue",
-        tech: "PHP, Mysql, Jquery",
-        link: "http://www.travel-blue.com/",
-        img: "/images/services/portfolio-img/travel-blue.jpg",
-      },
-    ],
-  },
-  {
-    title: "International Ecomm Marketplace",
-    subTabs: [
-      {
-        title: "Shopify",
-        items: [
-          {
-            title: "Shop Modern Accessory",
-            tech: "Shopify",
-            link: "http://shopmodernaccessory.com/",
-            img: "/images/services/portfolio-img/shopmodernaccessory.jpg",
-          },
-          {
-            title: "Donna Bella Jewelry",
-            tech: "Shopify",
-            link: "http://www.donnabellajewelry.dk/",
-            img: "/images/services/portfolio-img/donnabellajewelry.jpg",
-          },
-          {
-            title: "E-Panneur",
-            tech: "Shopify",
-            link: "http://e-panneur.ca/",
-            img: "/images/services/portfolio-img/e-panneur.jpg",
-          },
-        ],
-      },
-      {
-        title: "Magento",
-        items: [
-          {
-            title: "Sports456",
-            tech: "Magento",
-            link: "http://www.sports456.com/",
-            img: "/images/services/portfolio-img/sports456.jpg",
-          },
-          {
-            title: "All Extreme",
-            tech: "Magento",
-            link: "http://www.allextreme.in/",
-            img: "/images/services/portfolio-img/allextreme.jpg",
-          },
-          {
-            title: "Shoesuite",
-            tech: "Magento",
-            link: "https://www.shoesuite.ie/",
-            img: "/images/services/portfolio-img/shoesuite.jpg",
-          },
-          {
-            title: "Atkins",
-            tech: "Magento",
-            link: "https://www.atkins.ie/",
-            img: "/images/services/portfolio-img/atkins.jpg",
-          },
-          {
-            title: "Director Derblinds",
-            tech: "Magento",
-            link: "https://www.directorderblinds.co.uk/",
-            img: "/images/services/portfolio-img/directorderblinds.jpg",
-          },
-        ],
-      },
-      {
-        title: "BigCommerce",
-        items: [
-          {
-            title: "Coovy Sports",
-            tech: "BigCommerce",
-            link: "https://coovysports.com/",
-            img: "/images/services/portfolio-img/coovysports.jpg",
-          },
-        ],
-      },
-      {
-        title: "NopCommerce",
-        items: [
-          {
-            title: "Luiolei",
-            tech: "NopCommerce",
-            link: "http://www.luiolei.com/",
-            img: "/images/services/portfolio-img/luiolei.jpg",
-          },
-          {
-            title: "Plaza Surf Sports",
-            tech: "NopCommerce",
-            link: "http://www.plazasurfsports.com/",
-            img: "/images/services/portfolio-img/plazasurfsports.jpg",
-          },
-          {
-            title: "Home Turph",
-            tech: "NopCommerce",
-            link: "https://www.hometurph.com/",
-            img: "/images/services/portfolio-img/hometurph.jpg",
-          },
-        ],
-      },
-    ],
-  },
-]
-
-const caseStudies = [
-  {
-    id: 1,
-    title: "e-Commerce Store Version Upgrade",
-    image: "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
-    description:
-      "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-    docLink: "https://www.tech2globe.com/casestudies-docs/E-commerce%20version%20upgrade.pdf",
-  },
-  {
-    id: 2,
-    title: "e-Commerce Multivendor Store",
-    image: "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
-    description:
-      "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-    docLink: "https://www.tech2globe.com/casestudies-docs1/E-commerce%20version%20upgrade%20(1).pdf",
-  },
-  {
-    id: 3,
-    title: "e-Commerce Multivendor Store",
-    image: "/images/services/service-inner/portfolio/4.jpg",
-    description:
-      "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-    docLink: "https://www.tech2globe.com/casestudies-docs1/E-commerce%20version%20upgrade%20(1).pdf",
-  },
-  {
-    id: 4,
-    title: "Migration from Sooq to Amazon.ae",
-    image: "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
-    description:
-      "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-    docLink: "https://www.tech2globe.com/casestudies-docs1/E-Commerce%20Store%20for%20Luxury%20Goods-converted.pdf",
-  },
-  {
-    id: 5,
-    title: "About Drop shipping",
-    image: "/images/services/service-inner/about-drop-shipping.jpg",
-    description:
-      "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-    docLink: "https://www.tech2globe.com/casestudies-docs1/Case%20Study%202%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
-  },
-  {
-    id: 6,
-    title: "Amazon Sale Boost",
-    image: "/images/services/service-inner/amazon-sale-boost.jpg",
-    description:
-      "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-    docLink: "https://www.tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf",
-  },
-
-]
-
-const testimonials = [
-  {
-    id: 1,
-    quote: "/images/services/service-inner/quote-icon.png",
-    text: "They have excellent service and management, this is honest review after a month of experience with them, team is hardworking, knowledgeable and do every task on time. I hope they continue to deliver me same output.",
-    name: "Roxel- Account Management India",
-  },
-  {
-    id: 2,
-    quote: "/images/services/service-inner/quote-icon.png",
-    text: "Excellent Team, good results in sales",
-    name: "Andriana- Amazon Sponsored Ads USA",
-  },
-  {
-    id: 3,
-    quote: "/images/services/service-inner/quote-icon.png",
-    text: "Excellent service by Tech2globe, brilliant service and hardworking",
-    name: "Neo Global- Vendor Account Management UK",
-  },
-  {
-    id: 4,
-    quote: "/images/services/service-inner/quote-icon.png",
-    text: "Courteous, professional, quality work, best bang for your buck",
-    name: " Medi Hub- Amazon Store Creations USA",
-  },
-  {
-    id: 5,
-    quote: "/images/services/service-inner/quote-icon.png",
-    text: "Very professional and creative team. They patiently worked on changes I asked for and delivered on time. Thank you.",
-    name: "Teliamed- Amazon Enhance Brand Content USA",
-  },
-];
-
-
 export default function InfluencerMarketingAgency() {
 
 
   return (
     <>
 
-      <Breadcrumb pageName="Influencer Marketing Agency" />
-      <BrandSection />
-      <section className={Style.PageContent}>
+      <div className="container-fluid py-5" style={{ background: "#ff9b04" }}>
         <div className="container">
-          <div className="row">
-            <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-              <ServiceBanner pageName="Data Support Kpo Ai Services" imageSrc="/images/services/service-inner/data-support-for-ai-banner.jpg" />
-              <div className={Style.ContentDiv}>
+          <div className="row align-items-center">
+            <div className="col-md-6 text-center">
+              <img src="/images/services/service-inner/ima-banner-image.png" className="img-fluid" />
+            </div>
+            <div className="col-md-6 banner-btns">
+              <h1 className="mt-5 pt-2 text-left text-light">We are a Top Influencer Marketing Agency</h1>
 
-                <h2>Why Does AI Based KPO Need Data Support Experts?</h2>
+              <p className="my-3 text-white weare-para">At Tech2Globe, we create and execute advertising
+                campaigns for influencers on a global basis. We create the best approach that is effective for you based on
+                your brand objectives. It involves connecting you with top social media influencers, vloggers, and content
+                creators to improve your target audience's engagement.</p>
 
-                <p><strong>AI data support experts</strong> gather the best practices and the latest technologies to create innovative and self-automated tools to work on your client's projects. If you want to create new strategic value for your products to increase ROI and save cost, then going with <strong>AI based KPO data support experts</strong> is the right choice!</p>
+              <a href="/influencer-marketing-package" className="btn btn-danger btn-large rounded-pill p-3 text-uppercase mb-1" target="_blank">See Our Packages <span className="badge badge-light"><svg className="svg-inline--fa fa-angles-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L370.7 256 233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L178.7 256 41.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"></path></svg></span></a>
+              <a href="/pdf/Influencer-ppt.pdf" target="_blank" className="btn btn-danger btn-large rounded-pill p-3 mb-1 text-uppercase">See Portfolio <span className="badge badge-light"><svg className="svg-inline--fa fa-angles-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L370.7 256 233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L178.7 256 41.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"></path></svg></span></a>
+              <a href="/case-studies/case-study-revised.pdf" target="_blank" className="btn btn-danger btn-large rounded-pill mb-1 p-3 text-uppercase">See Case Study <span className="badge badge-light"><svg className="svg-inline--fa fa-angles-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L370.7 256 233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L178.7 256 41.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"></path></svg></span></a>
 
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <Breadcrumb pageName="Influencer Marketing Agency" />
+
+      <section className="container cartFeature portfolio inner-page-content portfolio-influencer" id="portfolio-influencer">
+        <div className="row">
+          <div className="col-md-12 influencer-portfolio mb-3">
+            <h2 className="main-heading influencer-portfolio-heading text-center">Our Portfolio</h2>
+          </div>
+        </div>
+
+
+
+
+        <div className="row first-row port-row">
+          <div className="col-md-3 col-6 influ-port-box mb-4">
+            <div className="card shadow-sm p-3 text-center border">
+              <div className="card-img">
+                <img className="influencer-portfolio-logo w-100" src="images/services/service-inner/blue.jpg" />
               </div>
+              <h3 className="in-port-title">Blue Angel Farm</h3>
+            </div>
+          </div>
 
-              <div className={Style.ContentDiv}>
-                <h4 className="text-danger">We Are Capable Of Providing You The Non Parallel AI Data Support For Your KPO Services</h4>
-                <p>You can avail of our services to leverage several advantages, including:</p>
-                <div className="card h-100 p-3 mb-3  shadow-sm">
-                  <h5><FaLightbulb fontSize={32} /> Innovation Driven</h5>
-                  <p className="mb-0">Our data support gives you a smart and comprehensively innovative approach to help your business meet the needs of customers.</p>
-                </div>
-
-
-                <div className="card h-100 p-3 mb-3 shadow-sm">
-                  <h5>
-                    <FaIndustry fontSize={32} /> We Cover Almost Every Industry
-                  </h5>
-                  <p className="mb-0">
-                    We provide our complete data support for AI KPO services
-                    in areas like business research, marketing research,
-                    business, technical analysis, and more.
-                  </p>
-                </div>
-
-                <div className="card h-100 p-3 mb-3 shadow-sm">
-                  <h5>
-                    <FaMedal fontSize={32} /> Data Experts Make The Final Checks
-                  </h5>
-                  <p className="mb-0">
-                    We have a team of data support experts that ensure the
-                    consistency and quality of the services provided.
-                  </p>
-                </div>
-
+          <div className="col-md-3 col-6 influ-port-box mb-4">
+            <div className="card h-100 shadow-sm p-3 text-center border">
+              <div className="card-img">
+                <img className="influencer-portfolio-logo w-100" src="images/services/service-inner/Aspire.png" />
               </div>
+              <h3 className="in-port-title">Aspire</h3>
+            </div>
+          </div>
 
-              <div className={Style.ContentDiv}>
-                <h2 className="text-danger pt-3 pb-3">What Makes Our Data Support Services Best Among Others?</h2>
-                <div className="row">
-                  <div className="col-md-6 mb-3">
-                    <div className="card h-100 p-3 shadow-sm">
-                      <h5><FaCheckSquare fontSize={32} /> Cost-Efficient</h5>
-                      <p className="mb-0">We provide <strong>data support for AI KPO services</strong> from decades of experience with new impacts and better ways. Ultimately, these include the latest technologies that can reduce your administrative costs with improved performance. Also, our experts help you with lower staffing and training costs.</p>
+
+          <div className="col-md-3 col-6 influ-port-box mb-4">
+            <div className="card h-100  shadow-sm p-3 text-center border">
+              <div className="card-img">
+                <img className="influencer-portfolio-logo w-100" src="images/services/service-inner/Athena.jpg" />
+              </div>
+              <h3 className="in-port-title">Athena Lifestyle</h3>
+            </div>
+          </div>
+
+          <div className="col-md-3 col-6 influ-port-box mb-4">
+            <div className="card h-100  shadow-sm p-3 text-center border">
+              <div className="card-img">
+                <img className="influencer-portfolio-logo w-100" src="images/services/service-inner/Medicover.jpg" />
+              </div>
+              <h3 className="in-port-title">Medicover</h3>
+            </div>
+          </div>
+
+
+          <div className="col-md-3 col-6 influ-port-box mb-4">
+            <div className="card h-100  shadow-sm p-3 text-center border">
+              <div className="card-img">
+                <img className="influencer-portfolio-logo w-100" src="images/services/service-inner/ms-glamour.jpg" />
+              </div>
+              <h3 className="in-port-title">MS Glamour</h3>
+            </div>
+          </div>
+
+          <div className="col-md-3 col-6 influ-port-box mb-4">
+            <div className="card h-100  shadow-sm p-3 text-center border">
+              <div className="card-img">
+                <img className="influencer-portfolio-logo w-100" src="images/services/service-inner/Fleur.jpg" />
+              </div>
+              <h3 className="in-port-title">Fleur</h3>
+            </div>
+          </div>
+
+          <div className="col-md-3 col-6 influ-port-box mb-4">
+            <div className="card h-100  shadow-sm p-3 text-center border">
+              <div className="card-img">
+                <img className="influencer-portfolio-logo w-100" src="images/services/service-inner/Flipclip.jpg" />
+              </div>
+              <h3 className="in-port-title">Flipclip</h3>
+            </div>
+          </div>
+
+          <div className="col-md-3 col-6 influ-port-box mb-4">
+            <div className="card h-100  shadow-sm p-3 text-center border">
+              <div className="card-img">
+                <img className="influencer-portfolio-logo w-100" src="images/services/service-inner/Sutra.jpg" />
+              </div>
+              <h3 className="in-port-title">Your Life Sutra</h3>
+            </div>
+          </div>
+
+
+        </div>
+
+      </section>
+
+      <div className="container mt-5 mb-5">
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <div className="row">
+              <div className="col-md-12 mb-5">
+                <h2 className="main-heading influencer-portfolio-heading text-center">Influencers We Served</h2>
+              </div>
+            </div>
+
+
+            <ul className="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button className="nav-link my-influance-tab text-uppercase active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-btobAgency" type="button" role="tab" aria-controls="pills-home" aria-selected="true" fdprocessedid="1e06qb"><img src="images/services/service-inner/b2b-icon-1-w.png" className="img-fluid" /><br />B2B</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link my-influance-tab text-uppercase" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-ecommerceAgency" type="button" role="tab" aria-controls="pills-profile" aria-selected="false" tabIndex="-1"><img src="images/services/service-inner/ecommerce-w.png" className="img-fluid" /><br />e-commerce</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link my-influance-tab text-uppercase" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-educationAgency" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" tabIndex="-1"><img src="images/services/service-inner/education-w.png" className="img-fluid" /><br />Education</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link my-influance-tab text-uppercase" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-HealthcareAgency" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" tabIndex="-1"><img src="images/services/service-inner/healthcare-1-w.png" className="img-fluid" /><br />Healthcare</button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button className="nav-link my-influance-tab text-uppercase" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-TravelAgency" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" tabIndex="-1"><img src="images/services/service-inner/travel-w.png" className="img-fluid" /><br />Travel</button>
+              </li>
+
+              <li className="nav-item" role="presentation">
+                <button className="nav-link my-influance-tab text-uppercase" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-AutomotiveAgency" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" tabIndex="-1"><img src="images/services/service-inner/automotive-w.png" className="img-fluid" /><br />Automotive</button>
+              </li>
+
+              <li className="nav-item" role="presentation">
+                <button className="nav-link my-influance-tab text-uppercase" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-FashionAgenciesAgency" type="button" role="tab" aria-controls="pills-contact" aria-selected="false" tabIndex="-1"><img src="images/services/service-inner/fashion-1-w.png" className="img-fluid" /><br />Fashion
+                  Agencies</button>
+              </li>
+
+
+            </ul>
+
+            <div className="tab-content" id="pills-tabContent">
+              <div className="tab-pane fade active show" id="pills-btobAgency" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4  text-center">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/neil-patelneil-patel(b2b).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Neil Patel</h5>
+                          <p className="card-text text-center">B2B</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 ">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/avinash-kaushik(b2b).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Avinash Kaushik</h5>
+                          <p className="card-text text-center">B2B</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 ">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/hiten-shah(b2b).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Hiten Shah</h5>
+                          <p className="card-text text-center">B2B</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 ">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/harsh-agrawal(b2b).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Harsh Agrawal</h5>
+                          <p className="card-text text-center">B2B</p>
+
+                        </div>
+                      </div>
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className="tab-pane fade" id="pills-ecommerceAgency" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 text-center">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/aakriti-rana.jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Aakriti Rana</h5>
+                          <p className="card-text text-center">E-commerce</p>
 
-                  <div className="col-md-6 mb-3">
-                    <div className="card h-100 p-3 shadow-sm">
-                      <h5><FaGlobe fontSize={32} /> Improved Working In Other Domains</h5>
-                      <p className="mb-0">Our services allow you sufficient time to focus on other key areas, such as data entry, billing, analysis reports, or documentation services. We carefully handle all these to meet state-of-the-art results.</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/aashna-shroff.jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Aashna Shroff</h5>
+                          <p className="card-text text-center">E-commerce</p>
 
-                  <div className="col-md-6 mb-3">
-                    <div className="card h-100 p-3 shadow-sm">
-                      <h5><FaChartBar fontSize={32} /> Improved Operational Efficiency</h5>
-                      <p className="mb-0">With our data support to your AI-KPO services, you can save time, achieve better result accuracy in your KPO services and increase the overall productivity of your business.</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/mayur-saroj-rajput.jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Mayur Saroj Rajput</h5>
+                          <p className="card-text text-center">E-commerce</p>
 
-                  <div className="col-md-6 mb-3">
-                    <div className="card h-100 p-3 shadow-sm">
-                      <h5><FaLightbulb fontSize={32} /> Focus On Business Core</h5>
-                      <p className="mb-0">We spend valuable time improving customer satisfaction and achieving high standards with our data support services.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/santoshi-shetty.jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Santoshi Shetty</h5>
+                          <p className="card-text text-center">E-commerce</p>
+
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-
               </div>
+              <div className="tab-pane fade" id="pills-educationAgency" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 text-center">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/awal-ts-madaan(education).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Awal Ts Madaan</h5>
+                          <p className="card-text text-center">Education</p>
 
-              <div className={Style.ContentDiv}>
-                <div className="row">
-                  <div className="col-md-12">
-                    <h2 className="text-danger mb-3">Why Should You Switch To Tech2Globe For Data Support Experts For Your AI KPO Services?</h2>
-                    <p className="mb-0"><strong>Our Motto!</strong></p>
-                    <p className="mb-3">We serve to transform operations as our <strong>data support experts</strong> are capable enough to let you achieve your business goals.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/mahendra-dogney(educations).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Mahendra Dogney</h5>
+                          <p className="card-text text-center">Education</p>
 
-                    <h5 className="mb-3">How Beneficial Is It For You?</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/raoul-bhatnagar(education).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Rahul Bhatnagar</h5>
+                          <p className="card-text text-center">Education</p>
 
-                    <p>Our <strong>data support for AI KPO services</strong> comes with modernisation & platform management which ultimately enables businesses to outperform in the market.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/himesh-madaan(education).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Himesh Madaan</h5>
+                          <p className="card-text text-center">Education</p>
 
-                    <p>Our global expertise, combined with the latest knowledge from partners and hyperscalers, prepares your business for AI. We keep our services updated with automated workflows and state-of-the-art <strong>AI data support</strong> systems.</p>
-
-                    <p>To kickstart with our new project, we mix dependable, modular, and scalable solutions with your current KPO services structure.</p>
-
-                    <h5 className="mb-3">The Process Of Our AI Data Support For KPO Services Includes The Below Steps :</h5>
-
-                    <p>We include expert technical knowledge while processing AI support for your KPO services:</p>
-
-                    <ul>
-                      <li>Identifying client issues</li>
-                      <li>Considering and gaining knowledge from the data gathered</li>
-                      <li>Providing specific and appropriate AI solutions</li>
-                      <li>Offer immediate assistance</li>
-                      <li>Observing the number of customers complaints and concerns.</li>
-                      <li>Reporting submission post project completion</li>
-                    </ul>
-
-                    <h5 className="mb-3">Key Highlights Of Our AI Data Support For KPO Services :</h5>
-
-                    <ul>
-                      <li>Seamless Service</li>
-                      <li>Industry Standards</li>
-                      <li>Advanced Technology</li>
-                      <li>Improved Quality</li>
-                      <li>Best AI Support</li>
-                      <li>Strong Technical And Professional Expertise</li>
-                    </ul>
-
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                </div>
+              </div>
+              <div className="tab-pane fade" id="pills-HealthcareAgency" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4  text-center">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/nidhi-mohan-kamal(health).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Nidhi Mohan Kamal</h5>
+                          <p className="card-text text-center">Health</p>
 
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 ">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/ranveer-allahbadia(health).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Ranveer Allahbadia</h5>
+                          <p className="card-text text-center">Health</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 ">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/namrata-purohit(health).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Namrata Purohit</h5>
+                          <p className="card-text text-center">Health</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 ">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/sahil-khan(health).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Sahil Khan</h5>
+                          <p className="card-text text-center">Health</p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="tab-pane fade" id="pills-TravelAgency" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 text-center">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/aakriti-rana.jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Aakriti Rana</h5>
+                          <p className="card-text text-center">Travel</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/shivya-nath(travel).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Shivya Nath</h5>
+                          <p className="card-text text-center">Travel</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/siddartha-joshi(travel).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Siddartha Joshi</h5>
+                          <p className="card-text text-center">Travel</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/savi-and-vid(travel).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Savi and Vid</h5>
+                          <p className="card-text text-center">Travel</p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="tab-pane fade" id="pills-AutomotiveAgency" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 text-center">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/abin-saran(automotive).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Abin Saran</h5>
+                          <p className="card-text text-center">Automotive</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/neharika-yadav(automotive).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Neharika Yadav</h5>
+                          <p className="card-text text-center">Automotive</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/priyanka-kochhar(automotive).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Priyanka Kochar</h5>
+                          <p className="card-text text-center">Automotive</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/candida-louis(automotive).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Candida Louis</h5>
+                          <p className="card-text text-center">Automotive</p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className={Style.ContentDiv}>
-                <h3 className="text-danger">Get Connected With Us Today!</h3>
-                <p>To connect with us, you can request a demo to see how our <strong>AI data support experts</strong> work for your business. We are there for our customers 24/7, making it easier for you to have a seamless experience when you perform KPO services.</p>
+              <div className="tab-pane fade" id="pills-FashionAgenciesAgency" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4 text-center">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/jannat-zubair(fashion).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Jannat Zubair</h5>
+                          <p className="card-text text-center">Fashion</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/kritika-khurana(faishion).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Krithika Khurana</h5>
+                          <p className="card-text text-center">Fashion</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/avneet-kaur(fashion).jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Avneet Kaur</h5>
+                          <p className="card-text text-center">Fashion</p>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-12 mb-4">
+                      <div className="card" style={{ width: "100%" }}>
+                        <img className="card-img-top" src="images/services/service-inner/aashna-shroff.jpg" alt="User-img" />
+                        <div className="card-body">
+                          <h5 className="card-title h3">Aashna Shroff</h5>
+                          <p className="card-text text-center">Fashion</p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
             </div>
-            <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-              <div className={Style.StickyTop}>
-                <ServiceSidebar sections={sidebarSections} />
+
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="row">
+
+          <div className="col-md-12 mb-5">
+            <h2 className="main-heading influencer-portfolio-heading text-center">Our Top Notch Influencer Marketing Services
+            </h2>
+          </div>
+          <div className="col-md-6 pt-2 pb-2">
+
+            <div className="media">
+              <div className="media-left">
+                <img src="images/services/service-inner/strategy-y.png" className="align-self-start mr-3 img-fluid " alt="icon" />
+              </div>
+              <div className="media-body">
+                <h3 className="media-heading h3 our-to-media-subheading">Influencer marketing strategy</h3>
+                <p>We create creative marketing campaigns for influencers with long-term potential and influencers at their
+                  center.</p>
+              </div>
+            </div>
+
+          </div>
+          <div className="col-md-6 pt-2 pb-2">
+            <div className="media">
+              <div className="media-left">
+                <img src="images/services/service-inner/mismatch-y.png" className="align-self-start mr-3 img-fluid" alt="icon" />
+              </div>
+              <div className="media-body">
+                <h3 className="media-heading h3 our-to-media-subheading">Influencer Mismatching</h3>
+                <p>There's a significant influencer for every brand, and we always know how to reach them. We connect you to
+                  influencers who make people talk and act.</p>
+              </div>
+            </div>
+          </div>
+          <div className="clearfix"></div>
+
+          <div className="col-md-6 pt-2 pb-2">
+            <div className="media">
+              <div className="media-left">
+                <img src="images/services/service-inner/content-y.png" className="align-self-start mr-3 img-fluid" alt="icon" />
+              </div>
+              <div className="media-body">
+                <h3 className="media-heading h3 our-to-media-subheading">Content Strategies</h3>
+                <p>On the networks in which they have the most influence, our content strategies give influencers the
+                  freedom to be genuine. It's not publicity - it's creativity.</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-6 pt-2 pb-2">
+            <div className="media">
+              <div className="media-left">
+                <img src="images/services/service-inner/campaign-management-y.png" className="align-self-start mr-3 img-fluid" alt="icon" />
+              </div>
+              <div className="media-body">
+                <h3 className="media-heading h3 our-to-media-subheading">Campaign Management</h3>
+                <p>During the implementation of your campaign, our committed team of campaign and impact planners provides
+                  hands-on guidance.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-6 pt-2 pb-2">
+            <div className="media">
+
+              <div className="media-left">
+                <a href="#">
+                  <img src="images/services/service-inner/advertising-y.png" className="align-self-start mr-3 img-fluid" alt="icon" />
+                </a>
+              </div>
+              <div className="media-body">
+                <h3 className="media-heading h3 our-to-media-subheading">Social Media Advertising</h3>
+                <p>Our Influencer Marketing management uses paid media to promote your marketing strategy for influencers,
+                  ensuring your brand's best results.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div className="container-fluid how-our-bg">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 mb-5">
+              <h2 className="main-heading influencer-portfolio-heading text-center">How Our Experts Do Influencer Marketing?
+              </h2>
+            </div>
+
+            <div className="col-xl-3 col-lg-3 col-md-4 col-md-6 col-12 text-center mb-4">
+              <div className="our-expert-content h-100 shadow-sm p-4 rounded">
+                <div className="our-exper-icon bg-primary">
+                  <img src="images/services/service-inner/business-y.png" className="img-fluid" />
+                </div>
+                <h3 className="mt-3">Learn Your Business</h3>
+                <p>To provide them with exactly what their brand needs, we aim to have a detailed understanding of our
+                  client's business. Being custom-made for your plan gives our marketing strategies for influencers to
+                  deliver the best results consistently.</p>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-3 col-md-4 col-md-6 col-12 text-center mb-4">
+              <div className="our-expert-content h-100 shadow-sm p-4 rounded">
+                <div className="our-exper-icon bg-warning">
+                  <img src="images/services/service-inner/research-icon-y.png" className="img-fluid" />
+                </div>
+                <h3 className="mt-3">Research Your Target Audience</h3>
+                <p>We understand your clients, their ways of accessing the data, what and who inspires them, and encourage
+                  them to join. We are also in an excellent position to give you precisely what your industry wants.</p>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-3 col-md-4 col-md-6 col-12 text-center mb-4">
+              <div className="our-expert-content h-100 shadow-sm p-4 rounded">
+                <div className="our-exper-icon bg-danger">
+                  <img src="images/services/service-inner/develop-y.png" className="img-fluid" />
+                </div>
+                <h3 className="mt-3">Develop Influencer Strategies</h3>
+                <p>Our campaign managers are the force to deal with, from choosing the appropriate Influencer Marketing
+                  Techniques for your brand to successfully implementing those strategies!</p>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-3 col-md-4 col-md-6 col-12 text-center mb-4">
+              <div className="our-expert-content h-100 shadow-sm p-4 rounded">
+                <div className="our-exper-icon bg-success">
+                  <img src="images/services/service-inner/identify-1-y.png" className="img-fluid" />
+                </div>
+                <h3 className="mt-3">Identify the influencers in your market!</h3>
+                <p>How much effect you would have on your target audience is decided by having the right influencers! Give
+                  it for others to look at the influencers appropriate to your business and, appropriately, give you the
+                  highest quality options.</p>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-3 col-md-4 col-md-6 col-12 text-center mb-4">
+              <div className="our-expert-content h-100 shadow-sm p-4 rounded">
+                <div className="our-exper-icon bg-danger">
+                  <img src="images/services/service-inner/launch-y.png" className="img-fluid" />
+                </div>
+                <h3 className="mt-3">Launch Your influencers content</h3>
+                <p>The influencer content will be released as the meetings and agreements with the influencers are
+                  concluded. On Facebook, Instagram, YouTube, Twitter, which is possible by social media influencer
+                  marketing, you could see the posts starting to go, but it builds customer brand visibility.</p>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-3 col-md-4 col-md-6 col-12 text-center mb-4">
+              <div className="our-expert-content h-100 shadow-sm p-4 rounded">
+                <div className="our-exper-icon bg-dark">
+                  <img src="images/services/service-inner/collaborate-y.png" className="img-fluid" />
+                </div>
+                <h3 className="mt-3">Collaborate with Influencer!</h3>
+                <p>We will manage all the teamwork, as well. From tracking the posts to ensuring that the posts about your
+                  campaign are regular, leave it to us to handle all this for you.</p>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-3 col-md-4 col-md-6 col-12 text-center mb-4">
+              <div className="our-expert-content h-100 shadow-sm p-4 rounded">
+                <div className="our-exper-icon">
+                  <img src="images/services/service-inner/performance-y.png" className="img-fluid" />
+                </div>
+                <h3 className="mt-3">Monitoring Your Performance</h3>
+                <p>It is not necessary to launch an influencer campaign. It is about how well the campaign works and the
+                  outcomes it produces. We will monitor your influencer campaign constantly and adequately to ensure sure it
+                  achieves the desired performance.</p>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-3 col-md-4 col-md-6 col-12 text-center mb-4">
+              <div className="our-expert-content h-100 shadow-sm p-4 rounded">
+                <div className="our-exper-icon bg-warning">
+                  <img src="images/services/service-inner/Report-y.png" className="img-fluid" />
+                </div>
+                <h3 className="mt-3"> Report your Result!</h3>
+                <p>Our commitments to your product do not stop with controlling the success of a campaign. You will get from
+                  us a complete analysis of how well your campaign is performing in the digital world.</p>
               </div>
             </div>
 
           </div>
         </div>
-      </section >
+      </div>
 
       <div className="container mt-5">
         <div className="row">
@@ -735,6 +887,256 @@ export default function InfluencerMarketingAgency() {
           </div>
         </div>
       </div>
+
+      <section className="youtubers-sec">
+        <div className="container">
+          <div className="col-md-12">
+
+
+            <div className="portfolioContainer port-tabs">
+              <div className="tabbable" id="mygallery">
+                <ul className="nav nav-tabs influencer-tabs">
+                  <li className="active"><a href="#tab1" data-bs-toggle="tab">Youtubers</a></li>
+                  <li><a href="#tab2" data-bs-toggle="tab">Instagrammers</a></li>
+                </ul>
+              </div>
+              <div className="tab-content">
+                <div className="tab-pane active" id="tab1">
+
+
+                  <div className="row">
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/icon-22.png" />
+                      </div>
+
+                      <p className="influencer-text">Game Youtube Influencers</p>
+                    </div>
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-2-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Technology Youtube Influencers</p>
+                    </div>
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-3-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Fitness Youtube Influencer</p>
+                    </div>
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-7-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Fashion &amp; Lifestyle Influencer</p>
+                    </div>
+                  </div>
+
+
+                  <div className="row">
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-4-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Travel Youtube Influencers</p>
+                    </div>
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-5-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Comedy Youtube Influencers</p>
+                    </div>
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-6-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Motivation – Youtube Influencers</p>
+                    </div>
+
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-8-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Beauty Youtubers</p>
+                    </div>
+                  </div>
+
+
+                  <div className="row">
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-9-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Food Youtube Influencers</p>
+                    </div>
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-10-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Entertainment Youtube Influencers</p>
+                    </div>
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-11-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Education Youtube Influencers</p>
+                    </div>
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconn-12-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Vlogs – Youtube Influencers</p>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+
+                <div className="tab-pane" id="tab2">
+
+
+                  <div className="row">
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconnn-1-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Game Instagram Influencers</p>
+                    </div>
+
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconnn-2-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Beauty Instagram Influencers</p>
+                    </div>
+
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconnn-3-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Mom Instagram Influencer</p>
+                    </div>
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconnn-4-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Motivation Instagram Influencers</p>
+                    </div>
+                  </div>
+
+
+
+                  <div className="row">
+
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconnn-5.png" />
+                      </div>
+
+                      <p className="influencer-text">Fashion Instagram Influencers</p>
+                    </div>
+
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconnn-6-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Food Instagram Influencers</p>
+                    </div>
+
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconnn-7-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Entertainment Instagram Influencer</p>
+                    </div>
+
+
+
+                    <div className="col-md-3 text-center mt-3">
+
+                      <div className="our-exper-icon">
+                        <img className="youtubers-img" src="https://influencersmarketingindia.com/wp-content/uploads/2021/12/iconnn-8-1.png" />
+                      </div>
+
+                      <p className="influencer-text">Travel Instagram Influencers</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div className="container pb-5">
         <div className="col-md-12">
