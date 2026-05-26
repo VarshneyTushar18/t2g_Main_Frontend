@@ -1,193 +1,206 @@
 .carouselOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%); */
 }
 
 .carouselFixed {
-    height: 580px;
+  height: 600px;
 }
 
 .bannerImg {
-    height: 100%;
-    object-fit: cover;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
 }
 
 .carouselCaptionCustom {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0;
-    text-align: left;
-    color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  text-align: left;
+  color: white;
 }
 
 .carouselArrowCircle {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
 }
 
 .carouselArrowIcon {
-    filter: invert(1);
+  filter: invert(1);
 }
 
 .carouselHeading {
-    font-size: 54px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-    text-decoration: capitalize;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-decoration: capitalize;
 }
 
 .carouselDesc {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.5;
-    text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: capitalize;
 }
 
 .carouselContent {
-    width: 40%;
+  width: 45%;
+}
+
+.carouselContent h1 {
+  width: 90%;
+}
+
+.carouselContent p {
+  width: 90%;
+}
+
+.carouselContent .ecomm h1 {
+  width: 100%;
 }
 
 .carousel-control-next,
 .carousel-control-prev {
-    width: 10% !important;
+  width: 10% !important;
 }
 
 @media (max-width: 1400px) {
-    .carouselHeading {
-        font-size: 48px;
-    }
+  .carouselHeading {
+    font-size: 48px;
+  }
 
-    .carouselDesc {
-        font-size: 22px;
-    }
+  .carouselDesc {
+    font-size: 22px;
+  }
 
-    .carouselFixed {
-        height: 500px;
-    }
+  .carouselFixed {
+    height: 500px;
+  }
 }
 
 @media (max-width: 1200px) {
-    .carouselHeading {
-        font-size: 42px;
-    }
+  .carouselHeading {
+    font-size: 42px;
+  }
 
-    .carouselDesc {
-        font-size: 20px;
-    }
+  .carouselDesc {
+    font-size: 20px;
+  }
 
-    .carouselContent {
-        width: 60%;
-    }
+  .carouselContent {
+    width: 60%;
+  }
 
-    .carouselFixed {
-        height: 450px;
-    }
+  .carouselFixed {
+    height: 450px;
+  }
 
-    .carouselFixed img {
-        height: 100%;
-        object-fit: cover;
-        object-position: right;
-    }
+  .carouselFixed img {
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+  }
 
-    .carouselOverlay {
-        background: rgba(0, 0, 0, 0.5);
-    }
+  .carouselOverlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 @media (max-width: 991px) {
-    .carouselHeading {
-        font-size: 36px;
-    }
+  .carouselHeading {
+    font-size: 36px;
+  }
 
-    .carouselDesc {
-        font-size: 18px;
-    }
+  .carouselDesc {
+    font-size: 18px;
+  }
 
-    .carouselContent {
-        width: 75%;
-    }
+  .carouselContent {
+    width: 75%;
+  }
 
-    .carouselFixed {
-        height: 400px;
-    }
+  .carouselFixed {
+    height: 400px;
+  }
 
-    .carouselFixed img {
-        height: 100%;
-        object-fit: cover;
-        object-position: right;
-    }
+  .carouselFixed img {
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+  }
 }
 
 @media (max-width: 767px) {
-    .carouselHeading {
-        font-size: 28px;
-    }
+  .carouselHeading {
+    font-size: 28px;
+  }
 
-    .carouselDesc {
-        font-size: 16px;
-    }
+  .carouselDesc {
+    font-size: 16px;
+  }
 
-    .carouselContent {
-        width: 100%;
-    }
+  .carouselContent {
+    width: 100%;
+  }
 
-    .carouselFixed {
-        height: 350px;
-    }
+  .carouselFixed {
+    height: 350px;
+  }
 
-    .carouselOverlay {
-        background: rgba(0, 0, 0, 0.5);
-    }
+  .carouselOverlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 @media (max-width: 575px) {
-    .carouselHeading {
-        font-size: 28px;
-        margin-bottom: 0.5rem;
-        padding: 0 15px;
-    }
+  .carouselHeading {
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+    padding: 0 15px;
+  }
 
-    .carouselDesc {
-        font-size: 16px;
-        padding: 0 15px;
-    }
+  .carouselDesc {
+    font-size: 16px;
+    padding: 0 15px;
+  }
 
-    .btnblock {
-        padding: 0px 15px;
-    }
+  .btnblock {
+    padding: 0px 15px;
+  }
 
 
-    .carouselArrowCircle {
-        width: 30px;
-        height: 30px;
-    }
+  .carouselArrowCircle {
+    width: 30px;
+    height: 30px;
+  }
 
-    .carouselFixed {
-        height: 300px;
-    }
+  .carouselFixed {
+    height: 300px;
+  }
 
-    .carouselFixed img {
-        height: 100%;
-        object-fit: cover;
-        object-position: right;
-    }
+  .carouselFixed img {
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+  }
 
-    .carousel-control-prev,
-    .carousel-control-next {
-        display: none;
-    }
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
 }

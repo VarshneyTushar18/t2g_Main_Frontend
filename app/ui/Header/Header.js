@@ -1782,9 +1782,9 @@ export default function Header() {
                                           Milemakers </a>
                                        </li>
                                        <li><a href="/our-team">Our Team </a></li>
-                                       {/* <li><a href="/life-at-tech2globe">Life at
+                                       <li><a href="/life-at-tech2globe">Life at
                                           Tech2Globe </a>
-                                       </li> */}
+                                       </li>
                                        <li><a href="/career">Career </a></li>
                                     </ul>
                                  </div>
