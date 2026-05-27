@@ -24,28 +24,28 @@ import IndustryApplication from "@/app/components/ai-pages/IndustryApplication/I
 
 
 export const metadata = {
-  title: "AI SEO Automation",
+  title: "AI SEO Automation Services for Better Search Rankings",
   description:
-    "Transform Your Digital Growth with AI SEO Automation. Intelligent, scalable, and search-optimized online experiences.",
+    "Automate keyword research, content optimization, and SEO workflows with AI SEO automation services designed to improve online visibility.",
   keywords: "AI SEO automation, SEO automation, search engine optimization, AI-powered SEO",
 
   openGraph: {
-    title: "AI SEO Automation",
+    title: "AI SEO Automation Services for Better Search Rankings",
     description:
-      "Transform Your Digital Growth with AI SEO Automation. Intelligent, scalable, and search-optimized online experiences.",
-    url: "/service/ai-seo-automation",
+      "Automate keyword research, content optimization, and SEO workflows with AI SEO automation services designed to improve online visibility.",
+    url: "https://www.tech2globe.com/ai-seo-automation",
     siteName: "Tech2Globe",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "AI SEO Automation",
+    title: "AI SEO Automation Services for Better Search Rankings",
     description:
-      "Transform Your Digital Growth with AI SEO Automation. Intelligent, scalable, and search-optimized online experiences.",
+      "Automate keyword research, content optimization, and SEO workflows with AI SEO automation services designed to improve online visibility.",
   },
 
   alternates: {
-    canonical: "/service/ai-seo-automation",
+    canonical: "https://www.tech2globe.com/ai-seo-automation",
   },
 };
 
@@ -211,9 +211,9 @@ export default function AiSeoAutomation() {
               <p>Track ranking movements, user engagement metrics, competitor performance, and traffic patterns to guide data-backed optimization decisions.</p>
             </div>
             <div className="mb-3">
-                <h6 >Real-Time SEO Adjustments</h6>
-                <p>Continuously adapt to algorithm updates, shifting search trends, and changing user intent to maintain consistent visibility and competitive advantage.</p>
-              </div>
+              <h6 >Real-Time SEO Adjustments</h6>
+              <p>Continuously adapt to algorithm updates, shifting search trends, and changing user intent to maintain consistent visibility and competitive advantage.</p>
+            </div>
           </div>
         </div>
 

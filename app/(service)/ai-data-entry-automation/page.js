@@ -23,28 +23,28 @@ import {
 
 
 export const metadata = {
-    title: "AI Data Entry Automation",
+    title: "AI Data Entry Automation Services for Faster Processing",
     description:
-        "Streamline operations with AI data entry automation. Enhance accuracy, efficiency, and scalable business processes using intelligent automation and AI.",
+        "Automate repetitive data entry tasks with AI-powered solutions that improve accuracy, reduce manual work, and save operational time.",
     keywords: "AI data entry automation, data entry automation, intelligent automation, data processing, business automation",
 
     openGraph: {
-        title: "AI Data Entry Automation",
+        title: "AI Data Entry Automation Services for Faster Processing",
         description:
-            "Streamline operations with AI data entry automation.",
-        url: "/service/ai-data-entry-automation",
+            "Automate repetitive data entry tasks with AI-powered solutions that improve accuracy, reduce manual work, and save operational time.",
+        url: "https://www.tech2globe.com/ai-data-entry-automation",
         siteName: "Tech2Globe",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "AI Data Entry Automation",
+        title: "AI Data Entry Automation Services for Faster Processing",
         description:
-            "Streamline operations with AI data entry automation.",
+            "Automate repetitive data entry tasks with AI-powered solutions that improve accuracy, reduce manual work, and save operational time.",
     },
 
     alternates: {
-        canonical: "/service/ai-data-entry-automation",
+        canonical: "https://www.tech2globe.com/ai-data-entry-automation",
     },
 };
 

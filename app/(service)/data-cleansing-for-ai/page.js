@@ -24,28 +24,28 @@ import IndustryApplication from "@/app/components/ai-pages/IndustryApplication/I
 
 
 export const metadata = {
-    title: "Data Cleansing for AI",
+    title: "Data Cleansing for AI Models & Machine Learning",
     description:
-        "Transform Raw Data into Reliable Intelligence",
+        "Improve AI model performance with professional data cleansing services designed for machine learning accuracy and reliable business insights.",
     keywords: "data cleansing, AI, data quality, data integrity",
 
     openGraph: {
-        title: "Data Cleansing for AI",
+        title: "Data Cleansing for AI Models & Machine Learning",
         description:
-            "Transform Raw Data into Reliable Intelligence",
-        url: "/service/data-cleansing-for-ai",
+            "Improve AI model performance with professional data cleansing services designed for machine learning accuracy and reliable business insights.",
+        url: "https://www.tech2globe.com/data-cleansing-for-ai",
         siteName: "Tech2Globe",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Data Cleansing for AI",
+        title: "Data Cleansing for AI Models & Machine Learning",
         description:
-            "Transform Raw Data into Reliable Intelligence",
+            "Improve AI model performance with professional data cleansing services designed for machine learning accuracy and reliable business insights.",
     },
 
     alternates: {
-        canonical: "/service/data-cleansing-for-ai",
+        canonical: "https://www.tech2globe.com/data-cleansing-for-ai",
     },
 };
 
@@ -362,9 +362,9 @@ export default function DataCleansingForAi() {
                             </div>
                         </div>
                     </div>
-                </div>              
+                </div>
 
-                
+
                 <div className="row pt-5 pb-5 invest-section">
                     <div className="col-md-12">
                         <h2>How Data Cleansing Enhances AI Capabilities</h2>
