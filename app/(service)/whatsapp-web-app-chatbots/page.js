@@ -23,28 +23,28 @@ import {
 
 
 export const metadata = {
-  title: "WhatsApp / Web / App Chatbots",
+  title: "WhatsApp & Web App Chatbot Development Services",
   description:
-    "Seamless Support with WhatsApp, Web & App Chatbots",
+    "Develop AI-powered WhatsApp and web app chatbots to automate conversations, generate leads, and improve customer engagement.",
   keywords: "WhatsApp chatbots, web chatbots, app chatbots, AI chatbots",
 
   openGraph: {
-    title: "WhatsApp / Web / App Chatbots",
+    title: "WhatsApp & Web App Chatbot Development Services",
     description:
-      "Seamless Support with WhatsApp, Web & App Chatbots",
-    url: "/service/whatsapp-web-app-chatbots",
+      "Develop AI-powered WhatsApp and web app chatbots to automate conversations, generate leads, and improve customer engagement.",
+    url: "https://www.tech2globe.com/whatsapp-web-app-chatbots",
     siteName: "Tech2Globe",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "WhatsApp / Web / App Chatbots",
+    title: "WhatsApp & Web App Chatbot Development Services",
     description:
-      "Seamless Support with WhatsApp, Web & App Chatbots",
+      "Develop AI-powered WhatsApp and web app chatbots to automate conversations, generate leads, and improve customer engagement.",
   },
 
   alternates: {
-    canonical: "/service/whatsapp-web-app-chatbots",
+    canonical: "https://www.tech2globe.com/whatsapp-web-app-chatbots",
   },
 };
 
@@ -339,7 +339,7 @@ export default function WhatsappWebAppChatbots() {
             <div class="p-4 bg-success-subtle shadow-sm rounded h-100">
               <h5 class="fw-semibold">Optimized Conversation Flow</h5>
               <p class="text-muted mb-0">
-                 Improve intent recognition and ensure smooth, hands-free interactions across multiple devices.
+                Improve intent recognition and ensure smooth, hands-free interactions across multiple devices.
               </p>
             </div>
           </div>

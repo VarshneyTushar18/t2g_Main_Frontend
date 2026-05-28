@@ -22,24 +22,24 @@ import {
 import IndustryApplication from "@/app/components/ai-pages/IndustryApplication/IndustryApplication";
 
 export const metadata = {
-  title: "Multilingual NLP Chatbots",
+  title: "Multilingual NLP Chatbots for Global Customer Support",
   description:
-    "Deliver global customer support with multilingual NLP chatbots. Real time, intelligent assistance across languages for seamless, inclusive interactions.",
+    "Build multilingual NLP chatbots that understand multiple languages and deliver personalized customer interactions powered by AI.",
   keywords: "multilingual NLP chatbots, global chatbot support, NLP chatbots, conversational AI",
 
   openGraph: {
-    title: "Multilingual NLP Chatbots",
+    title: "Multilingual NLP Chatbots for Global Customer Support",
     description:
-      "Deliver global customer support with multilingual NLP chatbots.",
+      "Build multilingual NLP chatbots that understand multiple languages and deliver personalized customer interactions powered by AI.",
     url: "/service/multilingual-nlp-chatbots",
     siteName: "Tech2Globe",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Multilingual NLP Chatbots",
+    title: "Multilingual NLP Chatbots for Global Customer Support",
     description:
-      "Deliver global customer support with multilingual NLP chatbots.",
+      "Build multilingual NLP chatbots that understand multiple languages and deliver personalized customer interactions powered by AI.",
   },
 
   alternates: {
@@ -203,9 +203,9 @@ export default function MultilingualNlpChatbots() {
               <p>Detect tone, emotion, and satisfaction across languages to adapt responses and optimize user experience.</p>
             </div>
             <div className="mb-3">
-                <h6 >Dynamic Knowledge Integration</h6>
-                <p>Access multilingual knowledge bases and internal resources to deliver consistent, accurate, and reliable answers globally.</p>
-              </div>
+              <h6 >Dynamic Knowledge Integration</h6>
+              <p>Access multilingual knowledge bases and internal resources to deliver consistent, accurate, and reliable answers globally.</p>
+            </div>
           </div>
         </div>
 
