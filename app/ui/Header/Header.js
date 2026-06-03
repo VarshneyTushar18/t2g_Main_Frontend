@@ -1639,7 +1639,7 @@ export default function Header() {
                                     <div className="menu-container">
                                        <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
                                        <h5 className="menu-header">
-                                          <a href="/ai-powered-catalog-optimization" className="text-decoration-none">AI-Powered Digital Marketing</a>
+                                          <a href="/ai-powered-digital-marketing" className="text-decoration-none">AI-Powered Digital Marketing</a>
                                        </h5>
                                     </div>
                                     <ul className="list-unstyled ps-2 menu-items">

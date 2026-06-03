@@ -25,28 +25,28 @@ import FutureSlider from "@/app/components/ai-pages/FutureSlider/FutureSlider";
 
 
 export const metadata = {
-  title: "",
+  title: "Custom AI Development Services | AI Solutions Company",
   description:
-    "",
+    "Build scalable AI-powered solutions tailored to your business needs with our custom AI development services. Improve automation, productivity, and customer experience.",
   keywords: "",
 
   openGraph: {
-    title: "",
+    title: "Custom AI Development Services | AI Solutions Company",
     description:
-      "",
-    url: "",
+      "Build scalable AI-powered solutions tailored to your business needs with our custom AI development services. Improve automation, productivity, and customer experience.",
+    url: "https://www.tech2globe.com/custom-ai-development",
     siteName: "Tech2Globe",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "",
+    title: "Custom AI Development Services | AI Solutions Company",
     description:
-      "",
+      "Build scalable AI-powered solutions tailored to your business needs with our custom AI development services. Improve automation, productivity, and customer experience.",
   },
 
   alternates: {
-    canonical: "",
+    canonical: "https://www.tech2globe.com/custom-ai-development",
   },
 };
 

@@ -9,27 +9,27 @@ import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 
 export const metadata = {
-    title: "",
+    title: "eCommerce Marketplace Management | AI-Powered Amazon, Flipkart & eBay Growth",
     description:
-        "",
+        "Manage and scale your presence across Amazon, Flipkart, and eBay with Tech2Globe's AI-powered marketplace management. From smart inventory control to automated listing optimization, we handle it all for measurable growth.",
     keywords: [
         ""
     ],
     openGraph: {
-        title: "",
+        title: "eCommerce Marketplace Management | AI-Powered Amazon, Flipkart & eBay Growth",
         siteName: "Tech2Globe Web Solutions LLP",
         description:
-            "",
-        url: ""
+            "Manage and scale your presence across Amazon, Flipkart, and eBay with Tech2Globe's AI-powered marketplace management. From smart inventory control to automated listing optimization, we handle it all for measurable growth.",
+        url: "https://www.tech2globe.com/ebay-marketplace-management"
     },
     twitter: {
         card: "summary_large_image",
-        title: "",
+        title: "eCommerce Marketplace Management | AI-Powered Amazon, Flipkart & eBay Growth",
         description:
-            ""
+            "Manage and scale your presence across Amazon, Flipkart, and eBay with Tech2Globe's AI-powered marketplace management. From smart inventory control to automated listing optimization, we handle it all for measurable growth."
     },
     alternates: {
-        canonical: ""
+        canonical: "https://www.tech2globe.com/ebay-marketplace-management"
     }
 };
 
