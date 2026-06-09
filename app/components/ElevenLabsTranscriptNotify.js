@@ -4,13 +4,19 @@ import { useEffect, useRef } from "react";
 
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 const DEFAULT_AGENT_ID = "agent_0901k7egwwhhejatq2wv0gf0k1ax";
+const WIDGET_CALL_EVENT = "elevenlabs-convai:call";
 
-function extractConversationId(detail) {
-  if (!detail) return null;
+function extractConversationId(source) {
+  if (!source) return null;
+
+  if (typeof source === "string" && source.startsWith("conv_")) {
+    return source;
+  }
+
   return (
-    detail.conversation_id ??
-    detail.conversationId ??
-    detail.conversation_initiation_metadata_event?.conversation_id ??
+    source.conversationId ??
+    source.conversation_id ??
+    source.conversation_initiation_metadata_event?.conversation_id ??
     null
   );
 }
@@ -19,22 +25,55 @@ async function notifyConversationEnded(conversationId, agentId) {
   if (!conversationId) return;
 
   try {
-    const res = await fetch(`${API}/api/elevenlabs/fallback/notify-ended`, {
+    await fetch(`${API}/api/elevenlabs/fallback/notify-ended`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ conversationId, agentId }),
     });
-
-    if (!res.ok) {
-      console.warn(
-        "[elevenlabs-fallback] notify-ended failed:",
-        res.status,
-        await res.text(),
-      );
-    }
-  } catch (err) {
-    console.warn("[elevenlabs-fallback] notify-ended error:", err.message);
+  } catch {
+    // Fail silently — no client-side logging (privacy).
   }
+}
+
+function chainCallback(existing, handler) {
+  if (typeof existing !== "function") return handler;
+  return (...args) => {
+    handler(...args);
+    existing(...args);
+  };
+}
+
+function hookWidgetSessionCallbacks(widget, conversationIdRef, agentIdRef) {
+  const onCall = (event) => {
+    const config = event?.detail?.config;
+    if (!config || typeof config !== "object") return;
+
+    config.onConnect = chainCallback(config.onConnect, (props) => {
+      const id = extractConversationId(props);
+      if (id) {
+        conversationIdRef.current = id;
+      }
+    });
+
+    config.onConversationMetadata = chainCallback(
+      config.onConversationMetadata,
+      (metadata) => {
+        const id = extractConversationId(metadata);
+        if (id) {
+          conversationIdRef.current = id;
+        }
+      },
+    );
+
+    config.onDisconnect = chainCallback(config.onDisconnect, () => {
+      const conversationId = conversationIdRef.current;
+      notifyConversationEnded(conversationId, agentIdRef.current);
+      conversationIdRef.current = null;
+    });
+  };
+
+  widget.addEventListener(WIDGET_CALL_EVENT, onCall);
+  return () => widget.removeEventListener(WIDGET_CALL_EVENT, onCall);
 }
 
 export default function ElevenLabsTranscriptNotify() {
@@ -53,26 +92,16 @@ export default function ElevenLabsTranscriptNotify() {
         agentIdRef.current = agentFromDom;
       }
 
-      const onStarted = (event) => {
-        const id = extractConversationId(event.detail);
-        if (id) {
-          conversationIdRef.current = id;
-        }
-      };
+      const unhookCall = hookWidgetSessionCallbacks(
+        widget,
+        conversationIdRef,
+        agentIdRef,
+      );
 
-      const onEnded = () => {
-        const conversationId = conversationIdRef.current;
-        notifyConversationEnded(conversationId, agentIdRef.current);
-        conversationIdRef.current = null;
-      };
-
-      widget.addEventListener("conversationStarted", onStarted);
-      widget.addEventListener("conversationEnded", onEnded);
       boundWidgetRef.current = widget;
 
       return () => {
-        widget.removeEventListener("conversationStarted", onStarted);
-        widget.removeEventListener("conversationEnded", onEnded);
+        unhookCall();
         if (boundWidgetRef.current === widget) {
           boundWidgetRef.current = null;
         }
