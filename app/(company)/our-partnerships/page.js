@@ -135,18 +135,18 @@ const cards = [
     experts together to agree on the best way of doing things – for anything
     from making a product to managing a process.`,
   },
-  {
-    badgeLabel: "Certification",
-    badgeType: "type2",
-    image: "images/our-partnerships/best-msme-partnership.png",
-    alt: "INDIA 5000 BEST MSME AWARDS",
-    category: "Software",
-    title: "INDIA 5000 BEST MSME AWARDS",
-    desc: `Tech2Globe is honored to receive the India 5000 Best MSME Award, celebrating
-    excellence and innovation. This prestigious recognition reflects our
-    commitment to quality, customer satisfaction, and global service delivery,
-    empowering businesses with reliable IT and digital solutions.`,
-  },
+  // {
+  //   badgeLabel: "Certification",
+  //   badgeType: "type2",
+  //   image: "images/our-partnerships/best-msme-partnership.png",
+  //   alt: "INDIA 5000 BEST MSME AWARDS",
+  //   category: "Software",
+  //   title: "INDIA 5000 BEST MSME AWARDS",
+  //   desc: `Tech2Globe is honored to receive the India 5000 Best MSME Award, celebrating
+  //   excellence and innovation. This prestigious recognition reflects our
+  //   commitment to quality, customer satisfaction, and global service delivery,
+  //   empowering businesses with reliable IT and digital solutions.`,
+  // },
   {
     badgeLabel: "Certification",
     badgeType: "type2",
