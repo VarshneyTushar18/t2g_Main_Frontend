@@ -93,20 +93,26 @@ const testimonials = [
     {
         id: 1,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "I am really impressed and satisfied with Tech2globe's customized amazon consulting services. It's amazing how they are so dedicated to their work.",
-        name: "Sarah Johnson, Marketing Manager",
+        text: "Tech2Globe transformed our Amazon strategy with data-driven insights. Our sales grew by 78% within 3 months of engaging their consulting team. Their AI-powered approach to account growth is unmatched.",
+        name: "James R. Whitfield, BluePeak Outdoors",
+        location: "USA",
+        rating: 5,
     },
     {
         id: 2,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "I had a very positive experience with Tech2globe's amazon service as they helped me to boost sales.",
-        name: "Michael Smith, E-commerce Specialist",
+        text: "Exceptional Amazon consulting! Tech2Globe audited our entire account, restructured our PPC, and optimized our listings. Our organic ranking improved drastically and ACOS dropped by 35%.",
+        name: "Sophie Brennan, Nordic Home Essentials ",
+        location: "UK",
+        rating: 5,
     },
     {
         id: 3,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "The staff at Tech2globe are fulfilling their duties really well. I am pleased that they understood my goals and considered my suggestions.",
-        name: "Emily Brown, Business Owner",
+        text: "We were struggling to scale on Amazon.it and Amazon.de. Tech2Globe's consultants provided a clear roadmap and implemented strategies that doubled our revenue in under 6 months.",
+        name: "Luca Martini, ItalCraft Furniture ",
+        location: "Italy",
+        rating: 5,
     },
     {
         id: 4,
@@ -167,6 +173,7 @@ const faqs = [
       `,
     },
 ];
+
 
 export default function AmazonConsulting() {
     return (
@@ -878,6 +885,9 @@ export default function AmazonConsulting() {
             </div>
 
             <CaseStudiesService caseStudies={caseStudies} />
+
+
+
             <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />
             <div className="container">
