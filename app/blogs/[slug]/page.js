@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import BlogSidebar from "@/app/components/blog/BlogSidebar";
+import BlogPostImage from "@/app/components/blog/BlogPostImage";
 import {
   fetchBlogPostBySlug,
   fetchBlogSidebarData,
@@ -9,12 +9,10 @@ import {
   blogCategoryHref,
   stripHtml,
   formatBlogListDate,
-  resolvePostImage,
 } from "@/lib/blogApi";
 import { rewriteBlogContentImages } from "@/lib/blogUtils";
 import Style from "../blogs.module.css";
 
-export const dynamic = "force-dynamic";
 export const revalidate = 60;
 
 export async function generateMetadata({ params }) {
@@ -97,7 +95,6 @@ export default async function BlogPostPage({ params }) {
       titlePlain,
     ),
   );
-  const featured = resolvePostImage(post);
   const date = formatBlogListDate(post.date);
   const author = post.author || "Tech2globe";
   const categoryNames = post.category_names || [];
@@ -126,14 +123,11 @@ export default async function BlogPostPage({ params }) {
                   className="position-relative mb-4"
                   style={{ minHeight: 240 }}
                 >
-                  <Image
-                    src={featured}
-                    alt={titlePlain}
-                    width={1200}
-                    height={630}
-                    className={Style.featuredHero}
+                  <BlogPostImage
+                    post={post}
+                    variant="hero"
                     priority
-                    unoptimized
+                    className={Style.featuredHero}
                   />
                 </div>
 

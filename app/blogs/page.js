@@ -42,7 +42,7 @@ export default async function BlogsPage({ searchParams }) {
 
   try {
     const [listResult, cats] = await Promise.all([
-      fetchBlogPosts({ perPage: 100, page, search, category, month }),
+      fetchBlogPosts({ perPage: 24, page, search, category, month }),
       fetchBlogCategories().catch(async () => {
         const fallback = await fetchBlogPosts({ perPage: 50 });
         const map = new Map();
@@ -112,9 +112,9 @@ export default async function BlogsPage({ searchParams }) {
             <div
               className={`row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 ${Style.cardGrid}`}
             >
-              {posts.map((post) => (
+              {posts.map((post, index) => (
                 <div key={post.id} className="col d-flex">
-                  <BlogCard post={post} />
+                  <BlogCard post={post} priority={index < 3} />
                 </div>
               ))}
             </div>

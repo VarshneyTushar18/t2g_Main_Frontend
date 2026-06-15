@@ -11,6 +11,11 @@
     background-position: center;
     height: 200px;
     position: relative;
+    overflow: hidden;
+}
+
+.blogImageMedia {
+    object-fit: cover;
 }
 
 .blogImage::before {

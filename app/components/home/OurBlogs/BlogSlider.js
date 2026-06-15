@@ -5,7 +5,8 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Style from "./OurBlogs.module.css";
-import { blogPostHref, stripHtml, resolvePostImage } from "@/lib/blogUtils";
+import { blogPostHref, stripHtml } from "@/lib/blogUtils";
+import BlogPostImage from "@/app/components/blog/BlogPostImage";
 
 export default function BlogSlider({ posts }) {
     if (!posts || posts.length === 0) {
@@ -31,11 +32,10 @@ export default function BlogSlider({ posts }) {
             }}
             className={Style.recentBlogsContainer}
         >
-            {posts.map((post) => {
+            {posts.map((post, index) => {
                 const href = blogPostHref(post);
                 const titleHtml = post.title?.rendered || "";
                 const excerpt = stripHtml(post.excerpt?.rendered || "");
-                const image = resolvePostImage(post);
                 const readMoreLabel = `Read more about ${stripHtml(titleHtml)}`;
 
                 return (
@@ -43,12 +43,13 @@ export default function BlogSlider({ posts }) {
                         <div className={Style.blogCard}>
                             <div
                                 className={`${Style.blogImage} d-flex justify-content-center align-items-center`}
-                                style={{
-                                    backgroundImage: `url(${image})`,
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
-                                }}
                             >
+                                <BlogPostImage
+                                    post={post}
+                                    variant="slider"
+                                    priority={index === 0}
+                                    className={Style.blogImageMedia}
+                                />
                                 <div
                                     className={Style.blogTitle}
                                     dangerouslySetInnerHTML={{ __html: titleHtml }}
