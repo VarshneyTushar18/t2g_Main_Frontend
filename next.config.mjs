@@ -11,14 +11,6 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.tech2globe.com",
       },
-      {
-        protocol: "https",
-        hostname: "blog.tech2globe.com",
-      },
-      {
-        protocol: "https",
-        hostname: "i0.wp.com",
-      },
     ],
   },
 };
