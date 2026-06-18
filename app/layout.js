@@ -7,6 +7,7 @@ import Header from "./ui/Header/Header";
 import Footer from "./ui/Footer/Footer";
 import NextTopLoader from "nextjs-toploader";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import HideOnStandaloneRoute from "./components/HideOnStandaloneRoute";
 import { fixRelativeLinks } from "@/app/utilities/fixRelativeLinks";
 import FixLinksWrapper from "@/app/utilities/FixLinksWrapper";
 import Script from "next/script";
@@ -79,11 +80,15 @@ export default function RootLayout({ children }) {
             showSpinner={false}
             speed={200}
           />
-          <Header />
+          <HideOnStandaloneRoute>
+            <Header />
+          </HideOnStandaloneRoute>
           {children}
           <LightboxInitializer />
           <BootstrapClient />
-          <Footer />
+          <HideOnStandaloneRoute>
+            <Footer />
+          </HideOnStandaloneRoute>
         </div>
       </body>
     </html>
