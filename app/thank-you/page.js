@@ -34,7 +34,7 @@ export default function ThankYouPage() {
             <p className="text-center pb-0 mb-1">
               Our team will get back to you within 1 business day.
             </p>
-            <p className="text-center">
+            <p className="text-center text-black">
               Please check your junk e-mail folder and your voicemail box to
               ensure our communication is not blocked.
             </p>
