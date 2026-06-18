@@ -389,7 +389,7 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="image-blocktab">
-                                            <img src="assets/images/Low-Organic-Rank (1).webp" alt="Low Organic Rank"
+                                            <img src="assets/images/Low-Organic-Rank.webp" alt="Low Organic Rank"
                                                 class="img-fluid rounded-3" />
                                         </div>
                                     </div>
