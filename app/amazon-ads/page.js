@@ -4,6 +4,7 @@ import Image from "next/image";
 import TestimonialSlider from "../components/landingpage/TestimonialSlider";
 import AmazonForm from "../components/landingpage/amazonform";
 import PpcTabsSection from "../components/landingpage/PpcTabsSection";
+import VideoTestimonialModal from "../components/landingpage/VideoTestimonialModal";
 
 
 const testimonials = [
@@ -72,75 +73,75 @@ export default function AmazonAds() {
     return (
         <>
 
-            <header class="d2c_navbar sticky-top">
-                <div class="container">
+            <header className="d2c_navbar sticky-top">
+                <div className="container">
 
-                    <nav class="navbar navbar-expand-lg px-0 py-0" id="d2c_main_nav">
+                    <nav className="navbar navbar-expand-lg px-0 py-0" id="d2c_main_nav">
 
-                        <a class="navbar-brand"><img src="/images/landingpage/logo.png" class="w-100" alt="Logo" /></a>
+                        <a className="navbar-brand"><img src="/images/landingpage/logo.png" className="w-100" alt="Logo" /></a>
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span><i class="fas fa-bars"></i></span>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span><i className="fas fa-bars"></i></span>
                         </button>
 
-                        <div class="collapse navbar-collapse js-clone-nav justify-content-end">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#home">home</a>
+                        <div className="collapse navbar-collapse js-clone-nav justify-content-end">
+                            <ul className="navbar-nav">
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#home">home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#about">about</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#about">about</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#service">service</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#service">service</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#whychooseus">Why Choose Us</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#whychooseus">Why Choose Us</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#casestudies">Case Studies</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#casestudies">Case Studies</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#testimonial">testimonial</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#testimonial">testimonial</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#contact" class="btn d-block d-lg-none">Get Free PPC Audit</a>
+                                <li className="nav-item">
+                                    <a href="#contact" className="btn d-block d-lg-none">Get Free PPC Audit</a>
                                 </li>
                             </ul>
                         </div>
 
                     </nav>
 
-                    <div class="collapse navbar-collapse d2c_mobile_view" id="navbarSupportedContent">
-                        <div class="show_width container">
-                            <div class="text-right">
-                                <button class="navbar-toggler d2c_cross_btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span><i class="fa fa-times"></i></span>
+                    <div className="collapse navbar-collapse d2c_mobile_view" id="navbarSupportedContent">
+                        <div className="show_width container">
+                            <div className="text-right">
+                                <button className="navbar-toggler d2c_cross_btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span><i className="fa fa-times"></i></span>
                                 </button>
                             </div>
 
-                            <div class="navbar px-0 d2c_mobile_view_body"><div class="navbar-nav ml-auto">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="#home">home</a>
+                            <div className="navbar px-0 d2c_mobile_view_body"><div className="navbar-nav ml-auto">
+                                <ul className="navbar-nav">
+                                    <li className="nav-item">
+                                        <a className="nav-link active" href="#home">home</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#about">about</a>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#about">about</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#service">service</a>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#service">service</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#whychooseus">Why Choose Us</a>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#whychooseus">Why Choose Us</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#casestudies">Case Studies</a>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#casestudies">Case Studies</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#testimonial">testimonial</a>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="#testimonial">testimonial</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="#contact" class="btn d-block d-lg-none">Get Free PPC Audit</a>
+                                    <li className="nav-item">
+                                        <a href="#contact" className="btn d-block d-lg-none">Get Free PPC Audit</a>
                                     </li>
                                 </ul>
                             </div></div>
@@ -237,10 +238,16 @@ export default function AmazonAds() {
                                 <div className="video-item" data-="zoom-in" data--duration="800">
                                     <div className="card h-100">
                                         <div className="card-img">
-                                            <a className="" data-bs-toggle="modal" href="#vidreviewOne" role="button" aria-label="View video testimonial for Strategic Account Management service">
-                                                <img className="img-fluid w-100" loading="lazy" src="/images/landingpage/strategic-account-management-video-testimonial.webp" alt="Client video testimonial for Strategic Account Management service" />
-                                            </a>
-
+                                            <VideoTestimonialModal
+                                                trigger={
+                                                    <img
+                                                        className="img-fluid w-100"
+                                                        loading="lazy"
+                                                        src="/images/landingpage/strategic-account-management-video-testimonial.webp"
+                                                        alt="Client video testimonial for Strategic Account Management service"
+                                                    />
+                                                }
+                                            />
                                         </div>
                                         <div className="card-title">
                                             <h5>"Strategic Account Management"</h5>
@@ -307,7 +314,7 @@ export default function AmazonAds() {
 
                 </div>
             </section>
-            <div class="d2c_blog_bg_wrapper">
+            <div className="d2c_blog_bg_wrapper">
                 <section className="d2c_blog_wrapper" id="casestudies">
                     <div className="container">
                         <h3 className="d2c_sub_title text_start text-md-center position-relative">Case <span>Studies</span></h3>
@@ -360,7 +367,7 @@ export default function AmazonAds() {
             </div>
 
 
-            <div class="d2c_shade_bg_wrapper">
+            <div className="d2c_shade_bg_wrapper">
                 <section className="d2c_service_wrapper oldservice" id="service">
                     <div className="container">
                         <div className="row align-items-center justify-content-center">
@@ -511,7 +518,7 @@ export default function AmazonAds() {
 
             </div>
 
-            <div class="d2c_team_bg_wrapper">
+            <div className="d2c_team_bg_wrapper">
 
                 <section className="d2c_team_wrapper whychooseus" id="whychooseus">
                     <div className="container">

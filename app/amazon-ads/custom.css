@@ -1452,6 +1452,22 @@ body .d2c_mobile_view {
     background-color: #ccc;
 }
 
+.video-testimonial-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.iframevidcontainer.show {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    overflow-y: auto;
+}
+
 .modal-content {
     margin-top: 120px;
 }
