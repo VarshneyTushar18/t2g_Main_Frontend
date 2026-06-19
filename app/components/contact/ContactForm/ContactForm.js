@@ -6,117 +6,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Style from "./ContactForm.module.css";
 import Select from "react-select";
+import { countries } from "@/data/countries";
 
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
-
-const countryOptions = [
-  { value: "+1", label: "United States (+1)" },
-  { value: "+1", label: "Canada (+1)" },
-  { value: "+7", label: "Russia (+7)" },
-  { value: "+20", label: "Egypt (+20)" },
-  { value: "+27", label: "South Africa (+27)" },
-  { value: "+30", label: "Greece (+30)" },
-  { value: "+31", label: "Netherlands (+31)" },
-  { value: "+32", label: "Belgium (+32)" },
-  { value: "+33", label: "France (+33)" },
-  { value: "+34", label: "Spain (+34)" },
-  { value: "+36", label: "Hungary (+36)" },
-  { value: "+39", label: "Italy (+39)" },
-  { value: "+40", label: "Romania (+40)" },
-  { value: "+41", label: "Switzerland (+41)" },
-  { value: "+43", label: "Austria (+43)" },
-  { value: "+44", label: "United Kingdom (+44)" },
-  { value: "+45", label: "Denmark (+45)" },
-  { value: "+46", label: "Sweden (+46)" },
-  { value: "+47", label: "Norway (+47)" },
-  { value: "+48", label: "Poland (+48)" },
-  { value: "+49", label: "Germany (+49)" },
-  { value: "+52", label: "Mexico (+52)" },
-  { value: "+53", label: "Cuba (+53)" },
-  { value: "+54", label: "Argentina (+54)" },
-  { value: "+55", label: "Brazil (+55)" },
-  { value: "+56", label: "Chile (+56)" },
-  { value: "+57", label: "Colombia (+57)" },
-  { value: "+58", label: "Venezuela (+58)" },
-  { value: "+60", label: "Malaysia (+60)" },
-  { value: "+61", label: "Australia (+61)" },
-  { value: "+62", label: "Indonesia (+62)" },
-  { value: "+63", label: "Philippines (+63)" },
-  { value: "+64", label: "New Zealand (+64)" },
-  { value: "+65", label: "Singapore (+65)" },
-  { value: "+66", label: "Thailand (+66)" },
-  { value: "+81", label: "Japan (+81)" },
-  { value: "+82", label: "South Korea (+82)" },
-  { value: "+84", label: "Vietnam (+84)" },
-  { value: "+86", label: "China (+86)" },
-  { value: "+90", label: "Turkey (+90)" },
-  { value: "+91", label: "India (+91)" },
-  { value: "+92", label: "Pakistan (+92)" },
-  { value: "+93", label: "Afghanistan (+93)" },
-  { value: "+94", label: "Sri Lanka (+94)" },
-  { value: "+95", label: "Myanmar (+95)" },
-  { value: "+98", label: "Iran (+98)" },
-  { value: "+211", label: "South Sudan (+211)" },
-  { value: "+212", label: "Morocco (+212)" },
-  { value: "+213", label: "Algeria (+213)" },
-  { value: "+216", label: "Tunisia (+216)" },
-  { value: "+218", label: "Libya (+218)" },
-  { value: "+220", label: "Gambia (+220)" },
-  { value: "+221", label: "Senegal (+221)" },
-  { value: "+222", label: "Mauritania (+222)" },
-  { value: "+223", label: "Mali (+223)" },
-  { value: "+224", label: "Guinea (+224)" },
-  { value: "+225", label: "Ivory Coast (+225)" },
-  { value: "+226", label: "Burkina Faso (+226)" },
-  { value: "+227", label: "Niger (+227)" },
-  { value: "+228", label: "Togo (+228)" },
-  { value: "+229", label: "Benin (+229)" },
-  { value: "+230", label: "Mauritius (+230)" },
-  { value: "+231", label: "Liberia (+231)" },
-  { value: "+232", label: "Sierra Leone (+232)" },
-  { value: "+233", label: "Ghana (+233)" },
-  { value: "+234", label: "Nigeria (+234)" },
-  { value: "+235", label: "Chad (+235)" },
-  { value: "+236", label: "Central African Republic (+236)" },
-  { value: "+237", label: "Cameroon (+237)" },
-  { value: "+238", label: "Cape Verde (+238)" },
-  { value: "+239", label: "Sao Tome and Principe (+239)" },
-  { value: "+240", label: "Equatorial Guinea (+240)" },
-  { value: "+241", label: "Gabon (+241)" },
-  { value: "+242", label: "Congo (+242)" },
-  { value: "+243", label: "DR Congo (+243)" },
-  { value: "+244", label: "Angola (+244)" },
-  { value: "+245", label: "Guinea-Bissau (+245)" },
-  { value: "+248", label: "Seychelles (+248)" },
-  { value: "+249", label: "Sudan (+249)" },
-  { value: "+250", label: "Rwanda (+250)" },
-  { value: "+251", label: "Ethiopia (+251)" },
-  { value: "+252", label: "Somalia (+252)" },
-  { value: "+253", label: "Djibouti (+253)" },
-  { value: "+254", label: "Kenya (+254)" },
-  { value: "+255", label: "Tanzania (+255)" },
-  { value: "+256", label: "Uganda (+256)" },
-  { value: "+257", label: "Burundi (+257)" },
-  { value: "+258", label: "Mozambique (+258)" },
-  { value: "+260", label: "Zambia (+260)" },
-  { value: "+261", label: "Madagascar (+261)" },
-  { value: "+262", label: "Reunion (+262)" },
-  { value: "+263", label: "Zimbabwe (+263)" },
-  { value: "+264", label: "Namibia (+264)" },
-  { value: "+265", label: "Malawi (+265)" },
-  { value: "+266", label: "Lesotho (+266)" },
-  { value: "+267", label: "Botswana (+267)" },
-  { value: "+268", label: "Eswatini (+268)" },
-  { value: "+269", label: "Comoros (+269)" },
-  { value: "+971", label: "United Arab Emirates (+971)" },
-  { value: "+972", label: "Israel (+972)" },
-  { value: "+973", label: "Bahrain (+973)" },
-  { value: "+974", label: "Qatar (+974)" },
-  { value: "+975", label: "Bhutan (+975)" },
-  { value: "+976", label: "Mongolia (+976)" },
-  { value: "+977", label: "Nepal (+977)" },
-  { value: "+880", label: "Bangladesh (+880)" },
-];
 
 export default function ContactForm() {
   const router = useRouter();
@@ -458,15 +350,15 @@ export default function ContactForm() {
 
               <div className="mb-3">
                 <Select
-                  options={countryOptions}
+                  options={countries}
                   placeholder="Select Country"
-                  value={countryOptions.find(
-                    (opt) => opt.label === formData.countrycode,
+                  value={countries.find(
+                    (opt) => opt.value === formData.countrycode,
                   )}
                   onChange={(selectedOption) => {
                     setFormData({
                       ...formData,
-                      countrycode: selectedOption?.label || "",
+                      countrycode: selectedOption?.value || "",
                     });
 
                     if (errors.countrycode) {
