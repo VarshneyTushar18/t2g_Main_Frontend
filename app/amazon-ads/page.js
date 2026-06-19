@@ -51,6 +51,24 @@ const testimonials = [
     },
 ];
 
+const clientLogos = [
+    { src: "/images/landingpage/clients/abrams.png", alt: "Abrams" },
+    { src: "/images/landingpage/clients/aniise.png", alt: "Aniise" },
+    { src: "/images/landingpage/clients/ankit-toys-games.png", alt: "Ankit Toys Games" },
+    { src: "/images/landingpage/clients/arar.png", alt: "Arar" },
+    { src: "/images/landingpage/clients/bluebird.png", alt: "Bluebird" },
+    { src: "/images/landingpage/clients/frontier.png", alt: "Frontier" },
+    { src: "/images/landingpage/clients/in-season-jewelry.png", alt: "In Season Jewelry" },
+    { src: "/images/landingpage/clients/liberty-house-toys.png", alt: "Liberty House Toys" },
+    { src: "/images/landingpage/clients/lifetree.png", alt: "Lifetree" },
+    { src: "/images/landingpage/clients/ms-glamour.png", alt: "MS Glamour" },
+    { src: "/images/landingpage/clients/swiss-arabian.png", alt: "Swiss Arabian" },
+    { src: "/images/landingpage/clients/the-good-pea.png", alt: "The Good Pea" },
+    { src: "/images/landingpage/clients/ugreen.png", alt: "Ugreen" },
+    { src: "/images/landingpage/clients/vanshveda.png", alt: "Vanshveda" },
+    { src: "/images/landingpage/clients/wooden-street.png", alt: "Wooden Street" },
+];
+
 const faqData = [
     {
         id: "faq1",
@@ -79,7 +97,7 @@ export default function AmazonAds() {
 
                     <nav className="navbar navbar-expand-lg px-0 py-0" id="d2c_main_nav">
 
-                        <a className="navbar-brand"><img src="/images/landingpage/logo.png" className="w-100" alt="Logo" /></a>
+                        <a className="navbar-brand"><Image src="/images/landingpage/logo.png" width={180} height={53} className="img-fluid" alt="Logo" priority /></a>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span><i className="fas fa-bars"></i></span>
@@ -241,22 +259,11 @@ export default function AmazonAds() {
 
                                 <div className="clients_wrapper_body">
                                     <ul>
-                                        <li><img src="./images/landingpage/clients/abrams.png" alt="Abrams" /></li>
-                                        <li><img src="./images/landingpage/clients/aniise.png" alt="Aniise" />
-                                        </li><li><img src="./images/landingpage/clients/ankit-toys-games.png" alt="Ankit Toys Games" />
-                                        </li>
-                                        <li><img src="./images/landingpage/clients/arar.png" alt="Arar" /></li>
-                                        <li><img src="./images/landingpage/clients/bluebird.png" alt="Bluebird" /></li>
-                                        <li><img src="./images/landingpage/clients/frontier.png" alt="Frontier" /></li>
-                                        <li><img src="./images/landingpage/clients/in-season-jewelry.png" alt="In Season Jewelry" /></li>
-                                        <li><img src="./images/landingpage/clients/liberty-house-toys.png" alt="Liberty House Toys" /></li>
-                                        <li><img src="./images/landingpage/clients/lifetree.png" alt="Lifetree" /></li>
-                                        <li><img src="./images/landingpage/clients/ms-glamour.png" alt="MS Glamour" /></li>
-                                        <li><img src="./images/landingpage/clients/swiss-arabian.png" alt="Swiss Arabian" /></li>
-                                        <li><img src="./images/landingpage/clients/the-good-pea.png" alt="The Good Pea" /></li>
-                                        <li><img src="./images/landingpage/clients/ugreen.png" alt="Ugreen" /></li>
-                                        <li><img src="./images/landingpage/clients/vanshveda.png" alt="Vanshveda" /></li>
-                                        <li><img src="./images/landingpage/clients/wooden-street.png" alt="Wooden Street" /></li>
+                                        {clientLogos.map((logo) => (
+                                            <li key={logo.alt}>
+                                                <Image src={logo.src} width={300} height={150} alt={logo.alt} className="img-fluid" />
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
 
@@ -277,7 +284,7 @@ export default function AmazonAds() {
                         <div className="row justify-content-center">
                             <div className="col-lg-8 mb-4 mb-lg-0">
                                 <div className="d2c_card_wrapper d2c_blog_card mb-4">
-                                    <img src="./images/landingpage/amazon-map-pricing-surveillance.webp" className="img-fluid w-100" alt="Case Study" />
+                                    <Image src="/images/landingpage/amazon-map-pricing-surveillance.webp" width={1438} height={718} className="img-fluid w-100" alt="Case Study" />
                                     <div className="d2c_card_body">
 
                                         <h4 className=" text-white text-center">How We Increased Sales by 51% While Reducing ACOS by 63% </h4>
@@ -288,8 +295,8 @@ export default function AmazonAds() {
                             </div>
                             <div className="col-lg-8">
                                 <div className="d2c_card_wrapper d2c_blog_card mb-4">
-                                    <a href="./images/landingpage/case-study-2.webp">
-                                        <img src="./images/landingpage/case-study-2.webp" className="img-fluid w-100" alt="Case Study" />
+                                    <a href="/images/landingpage/case-study-2.webp">
+                                        <Image src="/images/landingpage/case-study-2.webp" width={1438} height={718} className="img-fluid w-100" alt="Case Study" />
                                     </a>
                                     <div className="d2c_card_body">
 
@@ -301,8 +308,8 @@ export default function AmazonAds() {
                             </div>
                             <div className="col-lg-8">
                                 <div className="d2c_card_wrapper d2c_blog_card ">
-                                    <a href="./images/landingpage/case-study-3.webp">
-                                        <img src="./images/landingpage/case-study-3.webp" className="img-fluid w-100" alt="Case Study" />
+                                    <a href="/images/landingpage/case-study-3.webp">
+                                        <Image src="/images/landingpage/case-study-3.webp" width={1438} height={718} className="img-fluid w-100" alt="Case Study" />
                                     </a>
                                     <div className="d2c_card_body">
 
@@ -353,7 +360,7 @@ export default function AmazonAds() {
 
                             <div className="col-xl-6">
 
-                                <img src="/images/landingpage/amazon-dsp-image.webp" alt="AmazonDSP" className="img-fluid rounded-3 bwlight" />
+                                <Image src="/images/landingpage/amazon-dsp-image.webp" width={2560} height={1625} alt="AmazonDSP" className="img-fluid rounded-3 bwlight" />
 
                             </div>
 
@@ -367,7 +374,7 @@ export default function AmazonAds() {
                                 </a>
                             </div>
                             <div className="cmt text-center">
-                                <img src="/images/landingpage/Stars.webp" alt="Stars" className="img-fluid" />
+                                <Image src="/images/landingpage/Stars.webp" width={1157} height={217} alt="Stars" className="img-fluid" />
                                 <p>Trusted by <strong>2000+ Amazon Sellers</strong></p>
                             </div>
                         </div>
@@ -530,30 +537,30 @@ export default function AmazonAds() {
                             <div className="col-md-6">
                                 <div className="row justify-content-center featured-on">
                                     <div className="col-md-4 text-center">
-                                        <img src="/images/landingpage/g2.webp" alt="G2" className="img-fluid p-3 width80" />
+                                        <Image src="/images/landingpage/g2.webp" width={300} height={320} alt="G2" className="img-fluid p-3 width80" />
                                     </div>
                                     <div className="col-md-4 text-center">
-                                        <img src="/images/landingpage/clutch_2024.webp" alt="Clutch" className="img-fluid p-3 width80" />
+                                        <Image src="/images/landingpage/clutch_2024.webp" width={300} height={320} alt="Clutch" className="img-fluid p-3 width80" />
                                     </div>
                                     <div className="col-md-4 text-center">
-                                        <img src="/images/landingpage/trustpilot.webp" alt="Trustpilot" className="img-fluid p-3 width80"  />
+                                        <Image src="/images/landingpage/trustpilot.webp" width={300} height={320} alt="Trustpilot" className="img-fluid p-3 width80" />
                                     </div>
 
                                     <div className="col-md-4">
                                         <div className="award-block text-center">
-                                            <img src="images/landingpage/advanced-partner.webp" alt="advanced-partner" className="img-fluid" />
+                                            <Image src="/images/landingpage/advanced-partner.webp" width={131} height={109} alt="advanced-partner" className="img-fluid" />
                                         </div>
                                     </div>
 
                                     <div className="col-md-4">
                                         <div className="award-block text-center">
-                                            <img src="images/landingpage/verified-partner.webp" alt="verified-partner" className="img-fluid" />
+                                            <Image src="/images/landingpage/verified-partner.webp" width={133} height={109} alt="verified-partner" className="img-fluid" />
                                         </div>
                                     </div>
 
                                     <div className="col-md-4">
                                         <div className="award-block text-center">
-                                            <img src="images/landingpage/spn-verified-partner.webp" alt="spn-verified-partner" className="img-fluid" />
+                                            <Image src="/images/landingpage/spn-verified-partner.webp" width={133} height={109} alt="spn-verified-partner" className="img-fluid" />
                                         </div>
                                     </div>
 
@@ -584,7 +591,7 @@ export default function AmazonAds() {
                                 <div className="compare-row">
                                     <div className="compare-left">Competitor <i className="fas fa-times-circle"></i></div>
                                     <div className="compare-right">
-                                        <img src="/images/landingpage/logo-t2g.png" alt="tech2globe" />
+                                        <Image src="/images/landingpage/logo-t2g.png" width={180} height={53} alt="tech2globe" className="img-fluid" />
                                     </div>
                                 </div>
 
@@ -652,7 +659,7 @@ export default function AmazonAds() {
                                     </a>
                                 </div>
                                 <div className="cmt text-center">
-                                    <img src="/images/landingpage/Stars.webp" alt="Stars" className="img-fluid" />
+                                    <Image src="/images/landingpage/Stars.webp" width={1157} height={217} alt="Stars" className="img-fluid" />
                                     <p>Trusted by <strong>2000+ Amazon Sellers</strong></p>
                                 </div>
                             </div>
@@ -667,12 +674,12 @@ export default function AmazonAds() {
                         <div className="col-lg-6 mb-4 mb-lg-0">
                             <div className="d2c_img_container position-relative me-0 me-lg-5">
                                 <div className="d2c_img_wrapper">
-                                    <img src="./images/landingpage/about_one.jpg" className="img-fluid w-100 rounded-3" alt="About Upper Image" />
+                                    <Image src="/images/landingpage/about_one.jpg" width={392} height={441} className="img-fluid w-100 rounded-3" alt="About Upper Image" />
                                 </div>
                                 <div className="d2c_img_wrapper">
-                                    <img src="./images/landingpage/about_two.jpg" className="img-fluid w-100 rounded-3" alt="About Down Image" />
+                                    <Image src="/images/landingpage/about_two.jpg" width={371} height={419} className="img-fluid w-100 rounded-3" alt="About Down Image" />
                                 </div>
-                                <img src="./images/landingpage/about_shade.png" alt="About Background Image" />
+                                <Image src="/images/landingpage/about_shade.png" width={582} height={513} alt="About Background Image" />
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -722,7 +729,7 @@ export default function AmazonAds() {
                             </div>
                         </div>
                         <div className="col-xl-5">
-                            <img src="/images/landingpage/ppc-health-image.webp" alt="PPC Health Check" className="img-fluid bwlight" />
+                            <Image src="/images/landingpage/ppc-health-image.webp" width={2560} height={1625} alt="PPC Health Check" className="img-fluid bwlight" />
                         </div>
                     </div>
                     <div className="row justify-content-center">
@@ -788,20 +795,20 @@ export default function AmazonAds() {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-md-8 col-lg-8 mb-5 mb-lg-0 text-center">
-                            <img src="./images/landingpage/footer_logo.png" className="d2c_footer_logo img-fluid w-100 mb-4"
+                            <Image src="/images/landingpage/footer_logo.png" width={300} height={89} className="d2c_footer_logo img-fluid mb-4"
                                 alt="Footer Logo" />
                             <p>Tech2Globe Web Solutions is a renowned solution-provider that was established in 2014 with
                                 superior quality of our services, we have managed to carve out a coveted position for
                                 ourselves in this fiercely competitive sector.</p>
                             <div className="award_wrapper d-flex justify-content-center gap-2">
                                 <div className="award-block">
-                                    <img src="images/landingpage/advanced-partner.webp" alt="advanced-partner" className="img-fluid" />
+                                    <Image src="/images/landingpage/advanced-partner.webp" width={131} height={109} alt="advanced-partner" className="img-fluid" />
                                 </div>
                                 <div className="award-block">
-                                    <img src="images/landingpage/verified-partner.webp" alt="verified-partner" className="img-fluid" />
+                                    <Image src="/images/landingpage/verified-partner.webp" width={133} height={109} alt="verified-partner" className="img-fluid" />
                                 </div>
                                 <div className="award-block">
-                                    <img src="images/landingpage/spn-verified-partner.webp" alt="spn-verified-partner"
+                                    <Image src="/images/landingpage/spn-verified-partner.webp" width={133} height={109} alt="spn-verified-partner"
                                         className="img-fluid" />
                                 </div>
                             </div>
@@ -821,7 +828,7 @@ export default function AmazonAds() {
                     🔥 Get Free PPC Audit
                 </a>
                 <div className="cmt text-center">
-                    <img src="/images/landingpage/Stars.webp" alt="Stars" className="img-fluid" />
+                    <Image src="/images/landingpage/Stars.webp" width={1157} height={217} alt="Stars" className="img-fluid" />
                     <p>Trusted by <strong>2000+ Amazon Sellers</strong></p>
                 </div>
             </div>

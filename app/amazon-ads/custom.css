@@ -241,6 +241,14 @@ header.scrolled {
     max-width: 180px;
 }
 
+.navbar-brand img,
+.d2c_footer_logo,
+.compare-row:nth-child(1) .compare-right img,
+.clients_wrapper .clients_wrapper_body ul li img {
+    width: 100%;
+    height: auto;
+}
+
 .d2c_navbar {
     padding: 22px 0px;
     background: var(--secondary_color);
@@ -1385,7 +1393,6 @@ body .d2c_mobile_view {
 
 .clients_wrapper .clients_wrapper_body ul li img {
     filter: brightness(0.7);
-    width: 100%;
     padding: 12px;
 }
 
@@ -2278,6 +2285,13 @@ textarea {
 .width80{
     width: 75%;
     margin: auto;
+}
+
+@media (max-width:767px) {
+.width80{
+    width: 85%;
+    margin: auto;
+}
 }
 
 .sticky_button {
