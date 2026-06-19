@@ -2,9 +2,10 @@ import { FaAmazon, FaChartLine, FaCheck, FaCheckCircle, FaFireAlt, FaHandPointRi
 import "./custom.css";
 import Image from "next/image";
 import TestimonialSlider from "../components/landingpage/TestimonialSlider";
+import HeroReviewSlider from "../components/landingpage/HeroReviewSlider";
 import AmazonForm from "../components/landingpage/amazonform";
 import PpcTabsSection from "../components/landingpage/PpcTabsSection";
-import VideoTestimonialModal from "../components/landingpage/VideoTestimonialModal";
+import VideoTestimonialSlider from "../components/landingpage/VideoTestimonialSlider";
 
 
 const testimonials = [
@@ -41,9 +42,9 @@ const testimonials = [
             "They do an excellent job closely monitoring our campaign performance to ensure we stay on track and optimize everything fully.",
     },
     {
-        name: "John Doe",
+        name: "Mackenzie Thomas",
         role: "Marketing Manager",
-        initials: "JD",
+        initials: "MT",
         color: "#4dabf7",
         review:
             "Their PPC services boosted our online sales significantly, providing clear reports and excellent results through their skilled team.",
@@ -176,34 +177,19 @@ export default function AmazonAds() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="review-wrapper mt-3">
-                                    <div className="d2c_card_wrapper">
-                                        <img src="images/landingpage/Stars.webp" alt="reviews" className="starimg" />
-                                        <h5>Within 3 months our Amazon revenue increased by <span>62%</span> thanks to their
-                                            PPC and
-                                            listing optimization strategy.</h5>
-                                        <div className="detail">
-                                            <img src="./images/landingpage/profile-2.webp" className="img-fluid" alt="Testimonial One" />
-                                            <div className="name-block">
-                                                <h3 className="mb-0"><span> Sarah Johnson</span></h3>
-                                                <p className="mb-0">Founder. Organic Glow</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <HeroReviewSlider />
                                 <div className="highlight-points">
                                     <ul>
-                                        <li><small>⭐</small> Trusted by <span>300+</span> Amazon Brands </li>
-                                        <li><small>💰</small> Managed <span>$50M+</span> Amazon Revenue</li>
-                                        <li><small>📈</small> Average <span>38%</span> Sales Growth in 90 Days</li>
+                                        <li><small>⭐</small> Trusted by <span>2000+</span> Amazon Brands </li>
+                                        <li><small>💰</small> Managed <span>$1B+</span> Amazon Revenue</li>
+                                        <li><small>📈</small> Average <span>63%</span> Sales Growth in 90 Days</li>
                                     </ul>
                                 </div>
 
                             </div>
                             <div className="col-lg-5 mb-4 mb-lg-0">
                                 <div className="formblock" id="home">
-                                    <h2 className="d2c_title position-relative mb-3">Get Your Free <span> Amazon Growth</span>
-                                        Audit</h2>
+                                    <h2 className="d2c_title position-relative mb-3">Get Your Free <span> Amazon Growth</span> Audit</h2>
 
                                     <AmazonForm />
 
@@ -235,41 +221,7 @@ export default function AmazonAds() {
                         <div className="col-lg-3">
                             <div className="row justify-content-center">
 
-                                <div className="video-item" data-="zoom-in" data--duration="800">
-                                    <div className="card h-100">
-                                        <div className="card-img">
-                                            <VideoTestimonialModal
-                                                trigger={
-                                                    <img
-                                                        className="img-fluid w-100"
-                                                        loading="lazy"
-                                                        src="/images/landingpage/strategic-account-management-video-testimonial.webp"
-                                                        alt="Client video testimonial for Strategic Account Management service"
-                                                    />
-                                                }
-                                            />
-                                        </div>
-                                        <div className="card-title">
-                                            <h5>"Strategic Account Management"</h5>
-                                        </div>
-                                        <div className="card-description text-center">
-                                            <div className="stats">
-                                                <div className="stat">
-                                                    <p className="stat-value text-danger">+105%</p>
-                                                    <p className="stat-label">Orders</p>
-                                                </div>
-                                                <div className="divider"></div>
-
-                                                <div className="stat">
-                                                    <p className="stat-value text-danger">+213%</p>
-                                                    <p className="stat-label">Sales</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
+                            <VideoTestimonialSlider />
                             </div>
                         </div>
 
@@ -318,8 +270,7 @@ export default function AmazonAds() {
                 <section className="d2c_blog_wrapper" id="casestudies">
                     <div className="container">
                         <h3 className="d2c_sub_title text_start text-md-center position-relative">Case <span>Studies</span></h3>
-                        <h2 className="d2c_title text_start text-md-center position-relative">Real Client
-                            <span>Results</span>
+                        <h2 className="d2c_title text_start text-md-center position-relative">Real Client <span>Results</span>
                         </h2>
                         <p className="text_start text-md-center mb-4">See how we've skyrocketed revenue for our clients on Amazon.
                         </p>
@@ -417,7 +368,7 @@ export default function AmazonAds() {
                             </div>
                             <div className="cmt text-center">
                                 <img src="/images/landingpage/Stars.webp" alt="Stars" className="img-fluid" />
-                                <p>Trusted by <strong>300+ Amazon Sellers</strong></p>
+                                <p>Trusted by <strong>2000+ Amazon Sellers</strong></p>
                             </div>
                         </div>
 
@@ -525,8 +476,7 @@ export default function AmazonAds() {
 
                         <div className="row">
                             <div className="col-md-6">
-                                <h2 className="d2c_title  position-relative">Why Choose
-                                    <span>Tech2Globe</span>
+                                <h2 className="d2c_title  position-relative">Why Choose <span>Tech2Globe</span>
                                 </h2>
                             </div>
                             <div className="col-md-6">
@@ -571,7 +521,7 @@ export default function AmazonAds() {
                                         </div>
                                         <div className="d2c_detail">
                                             <h3>Full-Spectrum Strategies</h3>
-                                            <p>Customized solutions for <span>PPC, SEO,</span> &amp; growth</p>
+                                            <p>Customized solutions for <span>PPC, SEO &amp; growth</span> </p>
                                         </div>
                                     </div>
                                 </div>
@@ -579,15 +529,35 @@ export default function AmazonAds() {
                             </div>
                             <div className="col-md-6">
                                 <div className="row justify-content-center featured-on">
-                                    <div className="col-md-4">
-                                        <img src="/images/landingpage/g2.webp" alt="G2" className="img-fluid p-3" />
+                                    <div className="col-md-4 text-center">
+                                        <img src="/images/landingpage/g2.webp" alt="G2" className="img-fluid p-3 width80" />
                                     </div>
-                                    <div className="col-md-4">
-                                        <img src="/images/landingpage/clutch_2024.webp" alt="Clutch" className="img-fluid p-3" />
+                                    <div className="col-md-4 text-center">
+                                        <img src="/images/landingpage/clutch_2024.webp" alt="Clutch" className="img-fluid p-3 width80" />
                                     </div>
-                                    <div className="col-md-4">
-                                        <img src="/images/landingpage/trustpilot.webp" alt="Trustpilot" className="img-fluid p-3" />
+                                    <div className="col-md-4 text-center">
+                                        <img src="/images/landingpage/trustpilot.webp" alt="Trustpilot" className="img-fluid p-3 width80"  />
                                     </div>
+
+                                    <div className="col-md-4">
+                                        <div className="award-block text-center">
+                                            <img src="images/landingpage/advanced-partner.webp" alt="advanced-partner" className="img-fluid" />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-4">
+                                        <div className="award-block text-center">
+                                            <img src="images/landingpage/verified-partner.webp" alt="verified-partner" className="img-fluid" />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-4">
+                                        <div className="award-block text-center">
+                                            <img src="images/landingpage/spn-verified-partner.webp" alt="spn-verified-partner" className="img-fluid" />
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
@@ -602,11 +572,9 @@ export default function AmazonAds() {
                         <div className="col-lg-10">
                             <div className="row">
                                 <div className="col-lg-6 offset-0 offset-lg-3 px-2 px-md-5">
-                                    <h3 className="d2c_sub_title text-start text-md-center position-relative">Why Tech2Globe
-                                        <span>Wins</span>
+                                    <h3 className="d2c_sub_title text-start text-md-center position-relative">Why Tech2Globe <span>Wins</span>
                                     </h3>
-                                    <h2 className="d2c_title text-start text-md-center position-relative">Superior Strategies
-                                        <span>Proven Results</span>
+                                    <h2 className="d2c_title text-start text-md-center position-relative">Superior Strategies <span>Proven Results</span>
                                     </h2>
                                 </div>
                             </div>
@@ -659,7 +627,7 @@ export default function AmazonAds() {
                                     <div className="compare-left">No proven results</div>
                                     <div className="compare-right">
                                         <strong>Proven Results With Global Brands</strong>
-                                        <span>Helping 300+ Amazon sellers scale revenue with optimized PPC
+                                        <span>Helping 2000+ Amazon sellers scale revenue with optimized PPC
                                             strategies.</span>
                                     </div>
                                 </div>
@@ -685,7 +653,7 @@ export default function AmazonAds() {
                                 </div>
                                 <div className="cmt text-center">
                                     <img src="/images/landingpage/Stars.webp" alt="Stars" className="img-fluid" />
-                                    <p>Trusted by <strong>300+ Amazon Sellers</strong></p>
+                                    <p>Trusted by <strong>2000+ Amazon Sellers</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -712,11 +680,11 @@ export default function AmazonAds() {
                             <h2 className="d2c_title position-relative">Leaders in Amazon Growth &amp; Global <span>E-Commerce
                                 Solutions</span> </h2>
                             <p className="mb-3">Tech2Globe is a leading Amazon managed services agency. For over a decade, we've
-                                helped 300+ Amazon brands skyrocket their sales and profitability. We combine innovative
+                                helped 2000+ Amazon brands skyrocket their sales and profitability. We combine innovative
                                 growth strategies with transparent communication &amp; data-driven insights to deliver
                                 exceptional results.</p>
                             <ul>
-                                <li><FaHandPointRight /> 300+ Satisfied Clients Worldwide</li>
+                                <li><FaHandPointRight /> 2000+ Satisfied Clients Worldwide</li>
                                 <li><FaHandPointRight /> 12+ Years of Experience</li>
                                 <li><FaHandPointRight /> $250M+ Amazon Sales Managed</li>
                             </ul>
@@ -853,8 +821,8 @@ export default function AmazonAds() {
                     🔥 Get Free PPC Audit
                 </a>
                 <div className="cmt text-center">
-                    <img src="/images/landingpage/Stars.webp" alt="Stars" className="img-fluid"/>
-                        <p>Trusted by <strong>300+ Amazon Sellers</strong></p>
+                    <img src="/images/landingpage/Stars.webp" alt="Stars" className="img-fluid" />
+                    <p>Trusted by <strong>2000+ Amazon Sellers</strong></p>
                 </div>
             </div>
         </>

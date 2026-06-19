@@ -1334,6 +1334,10 @@ body .d2c_mobile_view {
     text-align: left;
 }
 
+.profile-block-name h3{
+    margin-bottom: 0;
+}
+
 .d2c_testimonial_wrapper .d2c_card_wrapper .starimg {
     width: 130px;
     border-radius: 0;
@@ -1452,6 +1456,24 @@ body .d2c_mobile_view {
     background-color: #ccc;
 }
 
+.video-item .video-testimonial-swiper {
+    overflow: hidden;
+}
+
+.video-item .video-testimonial-swiper .swiper-pagination {
+    position: relative;
+    margin-top: 12px;
+}
+
+.video-item .video-testimonial-swiper .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.video-item .video-testimonial-swiper .swiper-pagination-bullet-active {
+    background: var(--primary_color);
+}
+
 .video-testimonial-trigger {
     display: block;
     width: 100%;
@@ -1466,10 +1488,18 @@ body .d2c_mobile_view {
     inset: 0;
     z-index: 10000;
     overflow-y: auto;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-    margin-top: 120px;
+.iframevidcontainer.show .modal-dialog {
+    margin: 1.75rem auto;
+}
+
+.iframevidcontainer.show .modal-content {
+    margin-top: 0;
 }
 
 @media (min-width:768px) and (max-width:1024px) {
@@ -1825,9 +1855,14 @@ textarea {
     margin-bottom: 16px;
 }
 
-.review-wrapper .detail img {
+.review-wrapper .detail img,
+.review-wrapper .profile-avatar {
     width: 60px;
     height: 60px;
+    flex-shrink: 0;
+}
+
+.review-wrapper .detail img {
     border-radius: 60px;
 }
 
@@ -1835,6 +1870,7 @@ textarea {
     text-align: left;
 }
 
+.review-wrapper .name-block h3,
 .review-wrapper .name-block h3 span {
     font-size: 18px;
     font-weight: 600;
@@ -1843,6 +1879,24 @@ textarea {
 
 .review-wrapper .name-block p {
     font-size: 12px;
+}
+
+.review-wrapper .hero-review-swiper {
+    overflow: hidden;
+}
+
+.review-wrapper .hero-review-swiper .swiper-pagination {
+    position: relative;
+    margin-top: 16px;
+}
+
+.review-wrapper .hero-review-swiper .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.review-wrapper .hero-review-swiper .swiper-pagination-bullet-active {
+    background: var(--primary_color);
 }
 
 .highlight-points ul {
@@ -1961,9 +2015,9 @@ textarea {
 }
 
 
-.bwlight {
+/* .bwlight {
     filter: grayscale(100);
-}
+} */
 
 #whychooseus .d2c_card_wrapper {
     background: none;
@@ -2220,6 +2274,11 @@ textarea {
     transition: all ease 0.4s;
 }
 
+
+.width80{
+    width: 75%;
+    margin: auto;
+}
 
 .sticky_button {
     position: fixed;
