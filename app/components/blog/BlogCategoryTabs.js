@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { buildMainBlogFilterCategories } from "@/lib/blogUtils";
 import Style from "./BlogCategoryTabs.module.css";
 
 function tabHref({ category, search, month }) {
@@ -16,11 +17,7 @@ export default function BlogCategoryTabs({
   search = "",
   month = "",
 }) {
-  if (categories.length === 0) return null;
-
-  const sorted = [...categories].sort(
-    (a, b) => (b.post_count || 0) - (a.post_count || 0),
-  );
+  const visibleCategories = buildMainBlogFilterCategories(categories);
 
   const isAllActive = !activeCategory;
 
@@ -34,7 +31,7 @@ export default function BlogCategoryTabs({
         >
           All
         </Link>
-        {sorted.map((cat) => {
+        {visibleCategories.map((cat) => {
           const isActive =
             activeCategory === cat.slug ||
             activeCategory === cat.name?.toLowerCase();
