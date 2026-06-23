@@ -6,6 +6,9 @@ import HeroReviewSlider from "../components/landingpage/HeroReviewSlider";
 import AmazonForm from "../components/landingpage/amazonform";
 import PpcTabsSection from "../components/landingpage/PpcTabsSection";
 import VideoTestimonialSlider from "../components/landingpage/VideoTestimonialSlider";
+import Script from "next/script";
+
+/* Create a headtag and keywords for the page */
 
 
 const testimonials = [
@@ -91,6 +94,19 @@ export default function AmazonAds() {
 
     return (
         <>
+         <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-353956860"
+        strategy="afterInteractive"
+      />
+
+      <Script id="google-ads-contact" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-353956860');
+        `}
+      </Script>
 
             <header className="d2c_navbar sticky-top">
                 <div className="container">
