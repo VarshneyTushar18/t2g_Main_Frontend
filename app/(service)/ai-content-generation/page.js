@@ -33,7 +33,7 @@ export const metadata = {
     title: "AI Content Generation Services for Scalable Marketing",
     description:
       "Create high-quality blogs, ads, and marketing content faster with AI content generation services tailored for modern businesses.",
-    url: "https://www.tech2globe.com/ai-content-generation",
+    url: "",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/ai-content-generation",
+    canonical: "",
   },
 };
 

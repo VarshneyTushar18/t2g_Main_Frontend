@@ -25,14 +25,14 @@ import {
 export const metadata = {
   title: "WhatsApp & Web App Chatbot Development Services",
   description:
-    "Develop AI-powered WhatsApp and web app chatbots to automate conversations, generate leads, and improve customer engagement.",
+    "Develop AI-powered WhatsApp and web app chatbots to automate conversations, generate leads, and improve customer engagement",
   keywords: "WhatsApp chatbots, web chatbots, app chatbots, AI chatbots",
 
   openGraph: {
     title: "WhatsApp & Web App Chatbot Development Services",
     description:
-      "Develop AI-powered WhatsApp and web app chatbots to automate conversations, generate leads, and improve customer engagement.",
-    url: "https://www.tech2globe.com/whatsapp-web-app-chatbots",
+      "Develop AI-powered WhatsApp and web app chatbots to automate conversations, generate leads, and improve customer engagement",
+    url: "/service/whatsapp-web-app-chatbots",
     siteName: "Tech2Globe",
   },
 
@@ -40,11 +40,11 @@ export const metadata = {
     card: "summary_large_image",
     title: "WhatsApp & Web App Chatbot Development Services",
     description:
-      "Develop AI-powered WhatsApp and web app chatbots to automate conversations, generate leads, and improve customer engagement.",
+      "Develop AI-powered WhatsApp and web app chatbots to automate conversations, generate leads, and improve customer engagement",
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/whatsapp-web-app-chatbots",
+    canonical: "/service/whatsapp-web-app-chatbots",
   },
 };
 

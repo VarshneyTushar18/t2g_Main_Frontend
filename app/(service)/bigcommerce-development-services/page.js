@@ -8,6 +8,8 @@ import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import { FaHandPointRight } from "react-icons/fa";
 import Link from "next/link";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
   title: "BigCommerce App Development | Custom App Solutions - Tech2Globe",
@@ -23,14 +25,14 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.tech2globe.com/bigcommerce-development-services",
+    canonical: "https://stagenew.tech2globe.tech/bigcommerce-development-services",
   },
 
   openGraph: {
     title: "BigCommerce App Development | Custom App Solutions - Tech2Globe",
     description:
       "Get expert BigCommerce development services to build, optimize, and enhance your online store for improved performance and sustained sales growth.",
-    url: "https://www.tech2globe.com/bigcommerce-development-services",
+    url: "https://stagenew.tech2globe.tech/bigcommerce-development-services",
     siteName: "Tech2Globe",
     type: "website",
   },
@@ -344,6 +346,94 @@ const portfolio = [
   },
 ]
 
+const testimonials = [
+  {
+    id: 1,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe migrated our large catalog from Magento to BigCommerce and the results exceeded all expectations. They built a custom Stencil theme, integrated our ERP, and implemented advanced faceted search. Page load speed improved by 60% and our monthly revenue on the platform increased by 44% within six months. Truly exceptional work.",
+    name: "Sarah Mitchell | Mitchell Home Furnishings",
+    location: "United States",
+  },
+  {
+    id: 2,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe developed our BigCommerce store with a stunning Scandinavian-inspired theme, multi-currency support, and seamless integration with our Klarna and Swish payment processors. The checkout funnel is buttery smooth and our conversion rate has improved significantly. Their BigCommerce expertise is genuinely impressive.",
+    name: "Natalie Johansson | Nordic Style Living AB",
+    location: "Sweden",
+  },
+  {
+    id: 3,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "We chose Tech2Globe to build our BigCommerce store for our specialty food export business. They handled everything including custom product options, bulk pricing tiers, and B2B buyer portal development. The platform integrates perfectly with our logistics partners. Sales from international buyers have grown by 52% since launch.",
+    name: "Marco Bianchi | Bianchi Fine Foods",
+    location: "Italy",
+  },
+  {
+    id: 4,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe built a sophisticated BigCommerce storefront for our multi-brand fashion group. The headless commerce architecture they recommended allows us to deliver blazing-fast page loads while maintaining full design flexibility. The team's technical knowledge is outstanding and their project management kept us on track at every milestone.",
+    name: "Catherine Bouchard | Bouchard Fashion Group",
+    location: "Canada",
+  },
+];
+
+const portfolioClients = [
+  {
+    initials: "MH",
+    gradient: "#0b2e58",
+    client: "Mitchell Home Furnishings",
+    country: "USA",
+    project: "Magento to BigCommerce Migration & Custom Stencil Theme",
+    desc: "Migrated 18,000 products to BigCommerce with a custom Stencil theme, advanced search functionality, and seamless ERP integration.",
+    category: "BigCommerce Development",
+    result: "44% Increase",
+    resultSub: "Monthly Revenue",
+  },
+  {
+    initials: "NS",
+    gradient: "#0b2e58",
+    client: "Nordic Style Living AB",
+    country: "Sweden",
+    project: "BigCommerce Custom Store with Scandinavian Design & Payment Integration",
+    desc: "Custom BigCommerce storefront featuring Scandinavian-inspired design, multi-currency support, and localized payment integrations for European customers.",
+    category: "BigCommerce Development",
+    result: "37% Improvement",
+    resultSub: "Conversion Rate",
+  },
+  {
+    initials: "BF",
+    gradient: "#0b2e58",
+    client: "Bianchi Fine Foods",
+    country: "Italy",
+    project: "BigCommerce B2B Portal for Specialty Food Exports",
+    desc: "Built a BigCommerce B2B portal with bulk pricing, buyer-specific access controls, freight integrations, and multi-currency checkout capabilities.",
+    category: "BigCommerce Development",
+    result: "52% Growth",
+    resultSub: "B2B Orders",
+  },
+  {
+    initials: "BG",
+    gradient: "#0b2e58",
+    client: "Bouchard Fashion Group",
+    country: "Canada",
+    project: "Headless BigCommerce Architecture for Multi-Brand Fashion",
+    desc: "Delivered a headless BigCommerce solution with Next.js storefronts, shared inventory management, and centralized content administration.",
+    category: "BigCommerce Development",
+    result: "48% Increase",
+    resultSub: "Organic Traffic",
+  },
+  {
+    initials: "AF",
+    gradient: "#0b2e58",
+    client: "Atlas Fitness Equipment",
+    country: "UK",
+    project: "BigCommerce Store Launch & Wholesale Channel Setup",
+    desc: "Launched a dual-channel BigCommerce store with wholesale portals, POS integration, and synchronized inventory across retail locations.",
+    category: "BigCommerce Development",
+    result: "18 Days",
+    resultSub: "Store Launch",
+  },
+];
 
 export default function bigcommercedevelopment() {
   return (
@@ -473,9 +563,13 @@ export default function bigcommercedevelopment() {
       </section>
 
 
-      <div className="StoreCreationTabs">
+      {/* <div className="StoreCreationTabs">
         <PortfolioTabs data={portfolio} />
-      </div>
+      </div> */}
+
+      <ClientPortfolio clients={portfolioClients} />
+
+      <ClientSlider testimonials={testimonials} />
     </>
   )
 };

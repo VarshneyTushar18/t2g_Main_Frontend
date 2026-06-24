@@ -33,7 +33,7 @@ export const metadata = {
     title: "AI Sales Forecasting Solutions for Smarter Decisions",
     description:
       "Leverage AI sales forecasting tools to predict demand, optimize inventory, and improve business planning with data-driven insights.",
-    url: "https://www.tech2globe.com/service/ai-sales-forecasting",
+    url: "/service/ai-sales-forecasting",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/ai-sales-forecasting",
+    canonical: "/service/ai-sales-forecasting",
   },
 };
 

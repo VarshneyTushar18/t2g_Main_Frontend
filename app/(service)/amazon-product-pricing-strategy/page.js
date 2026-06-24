@@ -8,6 +8,8 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import { FaChartBar, FaChartLine, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaHandshake, FaLightbulb, FaSearch, FaShieldAlt, FaTag, FaTimesCircle, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
     title: "Amazon Seller Pricing Strategies | Amazon Seller Pricing",
@@ -16,14 +18,14 @@ export const metadata = {
     keywords:
         "Amazon Seller Pricing Strategies, Amazon Product & Pricing Strategy, Amazon Product Strategy, Amazon Pricing Strategy, Amazon Seller Strategies",
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-product-pricing-strategy",
+        canonical: "https://stagenew.tech2globe.tech/amazon-product-pricing-strategy",
     },
     openGraph: {
         title: "Amazon Seller Pricing Strategies | Amazon Seller Pricing",
         description:
             "An optimized amazon seller pricing strategies is key to growing your sales on the marketplace. Learn about amazons dynamic pricing, guidelines.",
         siteName: "Tech2Globe",
-        url: "https://www.tech2globe.com/amazon-product-pricing-strategy",
+        url: "https://stagenew.tech2globe.tech/amazon-product-pricing-strategy",
         type: "website",
     },
     twitter: {
@@ -213,79 +215,160 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
+
+
+const portfolioClients = [
+    {
+        initials: "IS",
+        gradient: "#0b2e58",
+        client: "IrishCraft Spirits",
+        country: "Ireland",
+        project: "Pricing Audit & Repricing Strategy",
+        desc: "Irish spirits brand that improved Buy Box win rate from 45% to 88% after repricing strategy corrected overpricing across 30% of its catalog.",
+        category: "Pricing Strategy",
+        result: "Buy Box: 45% → 88%",
+        resultSub: "Buy Box Growth",
+    },
+    {
+        initials: "SH",
+        gradient: "#0b2e58",
+        client: "SwedenStyle Home",
+        country: "Sweden",
+        project: "Dynamic Pricing Automation",
+        desc: "Swedish home brand that adopted automated 24/7 dynamic repricing, remaining competitive on Amazon without sacrificing profit margins.",
+        category: "Pricing Strategy",
+        result: "Margins protected 24/7",
+        resultSub: "Margin Protection",
+    },
+    {
+        initials: "SE",
+        gradient: "#0b2e58",
+        client: "SpiceRoute Exports",
+        country: "India",
+        project: "Competitive Pricing Analysis",
+        desc: "India-based export brand that found the ideal balance between market competitiveness and profitability through a structured pricing audit strategy.",
+        category: "Pricing Strategy",
+        result: "+35% profit margin",
+        resultSub: "Profit Growth",
+    },
+    {
+        initials: "TP",
+        gradient: "#0b2e58",
+        client: "TechAccessories Pro",
+        country: "USA",
+        project: "Bundle Pricing Strategy",
+        category: "Pricing Strategy",
+        result: "+50% average order value",
+        resultSub: "AOV Growth",
+    },
+    {
+        initials: "WC",
+        gradient: "#0b2e58",
+        client: "WinterWear Canada",
+        country: "Canada",
+        project: "Seasonal Pricing Calendar",
+        category: "Pricing Strategy",
+        result: "+90% Q4 revenue",
+        resultSub: "Revenue Growth",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's competitive pricing analysis revealed we were overpriced on 30% of our catalog. After their repricing strategy, our Buy Box win rate jumped from 45% to 88% within a month.",
+        name: "Kevin O'Sullivan | IrishCraft Spirits",
+        location: "Ireland",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Dynamic pricing on Amazon was something we had no expertise in. Tech2Globe set up an automated repricing tool and strategy that keeps us competitive 24/7 without sacrificing margins.",
+        name: "Nina Larsson | SwedenStyle Home",
+        location: "Sweden",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's pricing audit and competitive strategy helped us find the sweet spot between being competitive and protecting our profit margins. Best pricing consultants we've worked with.",
+        name: "Amit Sharma | SpiceRoute Exports",
+        location: "India",
+    },
+];
 
 
 export default function AmazonProductPricingStrategy() {
@@ -378,7 +461,7 @@ export default function AmazonProductPricingStrategy() {
                                 </div>
                             </div>
 
-                             <div className={Style.ContentDiv}>
+                            <div className={Style.ContentDiv}>
                                 <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/question.png" alt="" className={Style.InnerIcon} /> Why Do You Need Pricing Strategies?</h5>
                                 <p>Pricing isn&apos;t just a component in consumer purchases; it is also a factor in Amazon&apos;s ranking. If this is correct, you will win the &apos;Buy Box,&apos; but you will lose sales to the competitors if you do it wrong. In other words, if you make your pricing too high, people will be hesitant to click on your listings. It also implies that you are in danger of losing your Buy Box to competitors selling the same item. Setting a product&apos;s pricing too low brings its own set of issues.</p>
                                 <p>After all, a cheap product price may help you sell more, but if your margins are too narrow, it won&apos;t be profitable. In other words, establishing an <strong>Amazon Product & Pricing Strategy</strong> will aid in determining the profit margins connected with each product. It will also help you in determining whether that price is reasonable for selling on Amazon.</p>
@@ -402,11 +485,15 @@ export default function AmazonProductPricingStrategy() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
-            </div>
+            </div> */}
 
+            
+
+            <ClientPortfolio clients={portfolioClients} />
             <CaseStudiesService caseStudies={caseStudies} />
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

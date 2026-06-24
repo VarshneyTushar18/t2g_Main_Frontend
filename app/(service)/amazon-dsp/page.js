@@ -8,30 +8,32 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import { FaChartBar, FaChartLine, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaHandshake, FaLightbulb, FaSearch, FaShieldAlt, FaTag, FaTimesCircle, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
-  title: "Amazon Delivery Service Partner | Amazon DSP Services",
-  description:
-    "With our Amazon Delivery Service Partner agency, you can use a full-funnel approach to keep your brand messaging consistent. Tech2Globe.",
-  keywords:
-    "amazon dsp agency, Amazon DSP services, Amazon DSP, Amazon DSP service in india, Amazon DSP service in USA",
-  alternates: {
-    canonical: "https://www.tech2globe.com/amazon-dsp",
-  },
-  openGraph: {
     title: "Amazon Delivery Service Partner | Amazon DSP Services",
     description:
-      "With our Amazon Delivery Service Partner agency, you can use a full-funnel approach to keep your brand messaging consistent. Tech2Globe.",
-    siteName: "Tech2Globe web Solutions LLP",
-    url: "https://www.tech2globe.com/amazon-dsp",
-    type: "website",
-  },
-  twitter: {
-    card: "Amazon Delivery Service Partner | Amazon DSP Services",
-    title: "amazon dsp agency | Amazon DSP services - Tech2Globe",
-    description:
-      "With our Amazon Delivery Service Partner agency, you can use a full-funnel approach to keep your brand messaging consistent. Tech2Globe.",
-  },
+        "With our Amazon Delivery Service Partner agency, you can use a full-funnel approach to keep your brand messaging consistent. Tech2Globe.",
+    keywords:
+        "amazon dsp agency, Amazon DSP services, Amazon DSP, Amazon DSP service in india, Amazon DSP service in USA",
+    alternates: {
+        canonical: "https://stagenew.tech2globe.tech/amazon-dsp",
+    },
+    openGraph: {
+        title: "Amazon Delivery Service Partner | Amazon DSP Services",
+        description:
+            "With our Amazon Delivery Service Partner agency, you can use a full-funnel approach to keep your brand messaging consistent. Tech2Globe.",
+        siteName: "Tech2Globe web Solutions LLP",
+        url: "https://stagenew.tech2globe.tech/amazon-dsp",
+        type: "website",
+    },
+    twitter: {
+        card: "Amazon Delivery Service Partner | Amazon DSP Services",
+        title: "amazon dsp agency | Amazon DSP services - Tech2Globe",
+        description:
+            "With our Amazon Delivery Service Partner agency, you can use a full-funnel approach to keep your brand messaging consistent. Tech2Globe.",
+    },
 };
 
 const pageHeaderData = {
@@ -214,80 +216,159 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
 
+const portfolioClients = [
+    {
+        initials: "UC",
+        gradient: "#0b2e58",
+        client: "UrbanGlow Cosmetics",
+        country: "USA",
+        project: "Programmatic DSP Campaign Launch",
+        desc: "US cosmetics brand that achieved a 95% lift in detail page views through DSP campaigns running across Fire TV, Twitch, and premium publishers.",
+        category: "Amazon DSP",
+        result: "+95% detail page views",
+        resultSub: "Engagement Growth",
+    },
+    {
+        initials: "AA",
+        gradient: "#1e3a8a",
+        client: "AlpineStyle Austria",
+        country: "Austria",
+        project: "Retargeting DSP Strategy",
+        desc: "Austrian fashion brand that entered programmatic advertising for the first time, generating a 40% purchase rate lift through DSP retargeting campaigns.",
+        category: "Amazon DSP",
+        result: "+40% purchase rate lift",
+        resultSub: "Conversion Growth",
+    },
+    {
+        initials: "VW",
+        gradient: "#2563eb",
+        client: "VedaLife Wellness",
+        country: "India",
+        project: "OTT + Display DSP Campaign",
+        desc: "India-based wellness brand that re-engaged lapsed buyers via OTT and display ads, consistently maintaining a 5x ROAS across DSP campaigns.",
+        category: "Amazon DSP",
+        result: "5x+ ROAS consistently",
+        resultSub: "ROAS Growth",
+    },
+    {
+        initials: "NB",
+        gradient: "#0f766e",
+        client: "NaturaCare Beauty",
+        country: "UK",
+        project: "Audience Segment Building",
+        category: "Amazon DSP",
+        result: "3 custom audiences created",
+        resultSub: "Audience Expansion",
+    },
+    {
+        initials: "SP",
+        gradient: "#7c3aed",
+        client: "SportMax Pro",
+        country: "Canada",
+        project: "DSP + Sponsored Ads Integration",
+        category: "Amazon DSP",
+        result: "+180% attributed sales",
+        resultSub: "Sales Growth",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's DSP campaigns reached our target audience beyond Amazon — on premium publisher sites, Fire TV, and Twitch. Our brand awareness skyrocketed and we saw a 95% lift in detail page views.",
+        name: "Sarah Connors | UrbanGlow Cosmetics",
+        location: "USA",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We had never used Amazon DSP before. Tech2Globe built our entire programmatic strategy, created the audience segments, and managed the campaigns end to end. Retargeting alone drove a 40% purchase rate lift.",
+        name: "Felix Gruber | AlpineStyle Austria",
+        location: "Austria",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's Amazon DSP expertise helped us re-engage lapsed buyers and reach new audiences across OTT and display. Our ROAS from DSP campaigns is consistently 5x or higher.",
+        name: "Priya Kapoor | VedaLife Wellness",
+        location: "India",
+    },
+];
 
 export default function AmazonDSP() {
     return (
@@ -310,7 +391,7 @@ export default function AmazonDSP() {
                                 <p><strong>Amazon DSP</strong> is a platform that helps marketers to plan campaigns, manage audience data, produce creatives, find and buy inventory, and optimize and monitor campaigns. Tech2Globe, as a leading Amazon DSP agency, has the resources to assist you in launching your items and growing your business on Amazon. We use audience targeting and dynamic advertisements to increase earnings and save time.</p>
                             </div>
 
-                             <div className={Style.ContentDiv}>
+                            <div className={Style.ContentDiv}>
                                 <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/control.png" alt="" className={Style.InnerIcon} /> How Do I Use Amazon DSP?</h5>
                                 <p>Tech2Globe takes an all-encompassing approach to build your eCommerce marketing strategies with our complete Amazon consulting solution. We recognize that your items are distinctive to your business and should be handled as such. Our professional retail marketing team focuses on co-operation, competitive research, and marketing strategy to understand your unique client base and what motivates their purchase decisions. We will help you with <strong>Amazon DSP Certification</strong> and help your sales grow to the maximum value.</p>
                             </div>
@@ -513,11 +594,18 @@ export default function AmazonDSP() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
-            </div>
+            </div> */}
+
+            
+
+
+            <ClientPortfolio clients={portfolioClients} />
 
             <CaseStudiesService caseStudies={caseStudies} />
+
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

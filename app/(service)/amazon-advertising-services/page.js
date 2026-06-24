@@ -8,30 +8,32 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import { FaChartBar, FaChartLine, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaHandshake, FaLightbulb, FaSearch, FaShieldAlt, FaTag, FaTimesCircle, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
-  title: "Amazon Advertising Services | Amazon Advertising Agency",
-  description:
-    "Our Amazon advertising services help you to boost your Amazon sales. We are one spot solution for Amazon advertising agencies with various ads experts.",
-  keywords:
-    "Amazon Advertising Services, Amazon Advertising Agency, Amazon Marketing Experts, amazon ppc management agency",
-  alternates: {
-    canonical: "https://www.tech2globe.com/amazon-advertising-services",
-  },
-  openGraph: {
     title: "Amazon Advertising Services | Amazon Advertising Agency",
     description:
-      "Our Amazon advertising services help you to boost your Amazon sales. We are one spot solution for Amazon advertising agencies with various ads experts.",
-    siteName: "Tech2Globe web Solutions LLP",
-    url: "https://www.tech2globe.com/amazon-advertising-services",
-    type: "website",
-  },
-  twitter: {
-    card: "Tech2Globe",
-    title: "Amazon Advertising Services | Amazon Advertising Agency",
-    description:
-      "Our Amazon advertising services help you to boost your Amazon sales. We are one spot solution for Amazon advertising agencies with various ads experts.",
-  },
+        "Our Amazon advertising services help you to boost your Amazon sales. We are one spot solution for Amazon advertising agencies with various ads experts.",
+    keywords:
+        "Amazon Advertising Services, Amazon Advertising Agency, Amazon Marketing Experts, amazon ppc management agency",
+    alternates: {
+        canonical: "https://stagenew.tech2globe.tech/amazon-advertising-services",
+    },
+    openGraph: {
+        title: "Amazon Advertising Services | Amazon Advertising Agency",
+        description:
+            "Our Amazon advertising services help you to boost your Amazon sales. We are one spot solution for Amazon advertising agencies with various ads experts.",
+        siteName: "Tech2Globe web Solutions LLP",
+        url: "https://stagenew.tech2globe.tech/amazon-advertising-services",
+        type: "website",
+    },
+    twitter: {
+        card: "Tech2Globe",
+        title: "Amazon Advertising Services | Amazon Advertising Agency",
+        description:
+            "Our Amazon advertising services help you to boost your Amazon sales. We are one spot solution for Amazon advertising agencies with various ads experts.",
+    },
 };
 
 const schemaData = {
@@ -308,80 +310,160 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
 
+
+const portfolioClients = [
+    {
+        initials: "BU",
+        gradient: "#0b2e58",
+        client: "BoldFit USA",
+        country: "USA",
+        project: "Campaign Restructure & Optimization",
+        desc: "US fitness brand that reduced ACOS from 52% to 18% while tripling ad-attributed revenue through granular campaign restructuring and keyword strategies.",
+        category: "Advertising",
+        result: "ACOS: 52% → 18%",
+        resultSub: "Cost Efficiency",
+    },
+    {
+        initials: "PA",
+        gradient: "#0b2e58",
+        client: "ParisChic Accessories",
+        country: "France",
+        project: "Full Ad Type Launch (SP+SB+SD)",
+        desc: "French accessories brand that transformed wasted ad spend into profitable results by rebuilding campaigns with Sponsored Brand and Display ads.",
+        category: "Advertising",
+        result: "+300% ad ROI",
+        resultSub: "ROI Growth",
+    },
+    {
+        initials: "AC",
+        gradient: "#0b2e58",
+        client: "AfriLux Clothing",
+        country: "Nigeria",
+        project: "Multi-Marketplace Ad Management",
+        desc: "Nigerian fashion brand that achieved a consistent 6x ROAS across simultaneous ad campaigns on US, UK, and German Amazon marketplaces.",
+        category: "Advertising",
+        result: "6x ROAS across 3 markets",
+        resultSub: "International Growth",
+    },
+    {
+        initials: "FH",
+        gradient: "#0b2e58",
+        client: "FreshNest Home",
+        country: "UK",
+        project: "Video Ad Campaign Launch",
+        category: "Advertising",
+        result: "+80% video CTR",
+        resultSub: "Engagement Growth",
+    },
+    {
+        initials: "SG",
+        gradient: "#0b2e58",
+        client: "SnowGlow Gifts",
+        country: "Canada",
+        project: "Holiday Season Ad Strategy",
+        category: "Advertising",
+        result: "Best-ever holiday ROAS: 8x",
+        resultSub: "Seasonal Success",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's advertising specialists reduced our ACOS from 52% to 18% while tripling our ad-attributed revenue. Their granular campaign structures and negative keyword strategies are truly best-in-class.",
+        name: "Marcus Allen | BoldFit USA",
+        location: "USA",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We were burning money on unoptimized Sponsored Product campaigns. Tech2Globe rebuilt our advertising architecture, added Sponsored Brand and Display campaigns, and our ROI improved dramatically within weeks.",
+        name: "Claire Dupont | ParisChic Accessories",
+        location: "France",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's Amazon advertising team are true experts. They launched our international ad campaigns across US, UK, and DE simultaneously. Consistent ROAS of 6x across all marketplaces.",
+        name: "James Okafor | AfriLux Clothing",
+        location: "Nigeria",
+    },
+];
 
 export default function AmazonAdvertising() {
     return (
@@ -575,11 +657,15 @@ export default function AmazonAdvertising() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
-            </div>
+            </div> */}
 
+            
+
+            <ClientPortfolio clients={portfolioClients} />
             <CaseStudiesService caseStudies={caseStudies} />
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

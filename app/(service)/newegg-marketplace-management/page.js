@@ -7,6 +7,8 @@ import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSide
 import FaqSection from "@/app/components/services/faqs/faqs";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "",
@@ -344,7 +346,87 @@ const portfolio = [
     },
 ]
 
+const portfolioClients = [
+    {
+        initials: "CC",
+        gradient: "#0b2e58",
+        client: "Circuitline Components",
+        country: "USA",
+        project: "Account Setup & Catalog Upload",
+        desc: "Set up seller account and uploaded a full electronics components catalog.",
+        category: "Account Setup & Catalog Upload",
+        result: "Catalog Live Early",
+        resultSub: "Ahead of Schedule",
+    },
+    {
+        initials: "VT",
+        gradient: "#0b2e58",
+        client: "Vector Tech Supply",
+        country: "USA",
+        project: "Listing SEO & Advertising",
+        desc: "Optimized product listings and managed promotional ad campaigns.",
+        category: "Listing SEO & Advertising",
+        result: "Increased Ad Traffic",
+        resultSub: "Higher Listing Visibility",
+    },
+    {
+        initials: "PE",
+        gradient: "#0b2e58",
+        client: "Pulsegrid Electronics",
+        country: "Canada",
+        project: "Inventory & Pricing Management",
+        desc: "Aligned pricing and stock data across the seller's active catalog.",
+        category: "Inventory & Pricing Management",
+        result: "Fewer Pricing Errors",
+        resultSub: "Improved Catalog Accuracy",
+    },
+    {
+        initials: "NC",
+        gradient: "#0b2e58",
+        client: "Northbeam Computing",
+        country: "USA",
+        project: "Order Fulfillment Support",
+        desc: "Coordinated order processing and shipment tracking for a PC parts seller.",
+        category: "Order Fulfillment Support",
+        result: "Higher On-Time Shipping",
+        resultSub: "Fulfillment Performance Growth",
+    },
+    {
+        initials: "QR",
+        gradient: "#0b2e58",
+        client: "Quanta Robotics Co.",
+        country: "UK",
+        project: "Marketplace Expansion",
+        desc: "Managed account expansion and localized listings for a new market.",
+        category: "Marketplace Expansion",
+        result: "Successful Regional Launch",
+        resultSub: "Expanded Market Presence",
+    },
+];
 
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Newegg's buyer base is technically savvy and expects detailed spec sheets in every listing. Tech2Globe's team built out our entire catalog with accurate technical specifications and category-specific keywords, and our click-through rate improved within the first month.",
+        name: "Kevin Zhao | CircuitTech Components",
+        location: "United States",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We needed someone who actually understood electronics merchandising, not just generic listing templates. Tech2Globe's Newegg specialists got our product attributes and comparison charts right, and our return rate dropped because customers finally had accurate expectations.",
+        name: "David Park | NexByte Electronics",
+        location: "Canada",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe manages our Newegg promotions calendar and pricing strategy alongside our other channels. Having that coordination has meant our Newegg storefront no longer feels disconnected from our broader marketplace strategy.",
+        name: "Oliver Schmidt | GigaParts GmbH",
+        location: "Germany",
+    },
+];
 
 export default function NeweggMarketplaceManagement() {
     return (
@@ -453,9 +535,13 @@ export default function NeweggMarketplaceManagement() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} />
-            </div>
+            </div> */}
+
+            <ClientPortfolio clients={portfolioClients} />
+
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

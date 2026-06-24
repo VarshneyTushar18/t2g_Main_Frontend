@@ -8,6 +8,8 @@ import FaqSection from "@/app/components/services/faqs/faqs";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import { FaHeadset, FaBullseye, FaUserTie } from "react-icons/fa";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "",
@@ -345,8 +347,88 @@ const portfolio = [
     },
 ]
 
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Overstock's buyer base skews heavily toward home and furniture, which fits our catalog perfectly, but our listings weren't optimized for it. Tech2Globe rebuilt our product descriptions and imagery for that audience, and our average order value on the platform increased noticeably.",
+        name: "Patricia Long | CozyNest Furniture",
+        location: "United States",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We had years of outdated listings sitting on Overstock that nobody had touched. Tech2Globe audited the entire catalog, removed discontinued items, and refreshed pricing to match current cost structures. It felt like starting the channel over, but properly this time.",
+        name: "Brian Foster | Hearthstone Decor",
+        location: "United States",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's team manages our Overstock order processing and customer service responses in addition to listings. Response times to buyer questions improved immediately, which has helped our seller rating recover.",
+        name: "Nicole Adams | Willow & Oak Home",
+        location: "Canada",
+    },
+];
 
 
+const portfolioClients = [
+    {
+        initials: "RF",
+        gradient: "#0b2e58",
+        client: "Ridgeline Furniture Co.",
+        country: "USA",
+        project: "Catalog Upload & Account Setup",
+        desc: "Set up seller account and uploaded a large furniture product catalog.",
+        category: "Catalog Upload & Account Setup",
+        result: "Catalog Live On Time",
+        resultSub: "Successful Marketplace Onboarding",
+    },
+    {
+        initials: "BR",
+        gradient: "#0b2e58",
+        client: "Brookhaven Rugs & Decor",
+        country: "USA",
+        project: "Listing Optimization & SEO",
+        desc: "Rewrote listing content and tags to boost on-site search ranking.",
+        category: "Listing Optimization & SEO",
+        result: "Improved Search Placement",
+        resultSub: "Higher Organic Visibility",
+    },
+    {
+        initials: "SO",
+        gradient: "#0b2e58",
+        client: "Saltmarsh Outdoor Living",
+        country: "Canada",
+        project: "Inventory & Order Management",
+        desc: "Synced inventory and streamlined order handling for outdoor furniture lines.",
+        category: "Inventory & Order Management",
+        result: "Fewer Fulfillment Delays",
+        resultSub: "Improved Order Efficiency",
+    },
+    {
+        initials: "WL",
+        gradient: "#0b2e58",
+        client: "Wickfield Lighting Co.",
+        country: "USA",
+        project: "Account Management & Promotions",
+        desc: "Managed account health and promotional listing placement.",
+        category: "Account Management & Promotions",
+        result: "Increased Event Sales",
+        resultSub: "Promotional Campaign Success",
+    },
+    {
+        initials: "AB",
+        gradient: "#0b2e58",
+        client: "Almara Bedding Co.",
+        country: "USA",
+        project: "Catalog Expansion",
+        desc: "Added new bedding product lines with SEO-optimized listings.",
+        category: "Catalog Expansion",
+        result: "Expanded Product Catalog",
+        resultSub: "Optimized SKU Growth",
+    },
+];
 export default function OverstockMarketplaceManagement() {
     return (
         <>
@@ -474,9 +556,13 @@ export default function OverstockMarketplaceManagement() {
             </section >
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} />
-            </div>
+            </div> */}
+
+            <ClientPortfolio clients={portfolioClients} />
+
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

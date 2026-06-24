@@ -8,6 +8,8 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import { FaChartBar, FaChartLine, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaHandshake, FaLightbulb, FaSearch, FaShieldAlt, FaTag, FaTimesCircle, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
     title: "Amazon Listing Translation | Amazon Listing Translation",
@@ -20,7 +22,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Expand your global reach with expertly translated Amazon listings. Our professional translators localize product details to captivate international shoppers.",
-        url: "https://www.tech2globe.com/amazon-product-translation",
+        url: "https://stagenew.tech2globe.tech/amazon-product-translation",
         type: "website",
     },
     twitter: {
@@ -31,7 +33,7 @@ export const metadata = {
             "Expand your global reach with expertly translated Amazon listings. Our professional translators localize product details to captivate international shoppers.",
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-product-translation",
+        canonical: "https://stagenew.tech2globe.tech/amazon-product-translation",
     },
 };
 
@@ -216,79 +218,160 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
-]
+];
+
+const portfolioClients = [
+    {
+        initials: "VM",
+        gradient: "#0b2e58",
+        client: "VivaSport Mexico",
+        country: "Mexico",
+        project: "EN to Spanish Catalog Translation",
+        desc: "Mexican sports brand that connected with local Amazon buyers through culturally accurate, SEO-optimized Spanish translations for Amazon.com.mx.",
+        category: "Translation",
+        result: "Local buyer connection",
+        resultSub: "Localization",
+    },
+    {
+        initials: "JL",
+        gradient: "#0b2e58",
+        client: "JapanStyle Living",
+        country: "Japan",
+        project: "English to Japanese Amazon Copy",
+        desc: "Japanese lifestyle brand that doubled sales on Amazon.co.jp after culturally attuned translations resonated deeply with local Japanese shoppers.",
+        category: "Translation",
+        result: "2x sales post-translation",
+        resultSub: "Revenue Growth",
+    },
+    {
+        initials: "BI",
+        gradient: "#0b2e58",
+        client: "BellaModa Italia",
+        country: "Italy",
+        project: "EU Multi-Language Translation",
+        desc: "Italian fashion brand that grew EU sales by 80% through high-quality, keyword-rich translations into German, French, and Spanish for Amazon EU.",
+        category: "Translation",
+        result: "+80% EU sales",
+        resultSub: "Market Expansion",
+    },
+    {
+        initials: "GF",
+        gradient: "#0b2e58",
+        client: "GulfStyle Fashion",
+        country: "UAE",
+        project: "Arabic Amazon Listing Translation",
+        category: "Translation",
+        result: "ME marketplace launch",
+        resultSub: "New Market Entry",
+    },
+    {
+        initials: "SC",
+        gradient: "#0b2e58",
+        client: "SambaCraft Goods",
+        country: "Brazil",
+        project: "Portuguese Brazil Translation",
+        category: "Translation",
+        result: "Amazon.com.br launched",
+        resultSub: "Platform Expansion",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe translated our entire Amazon catalog from English to Spanish for Amazon.com.mx. The translations are culturally accurate, SEO-optimized, and genuinely convert. Local buyers immediately connected with our listings.",
+        name: "Carlos Mendez | VivaSport Mexico",
+        location: "Mexico",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Translating product listings to Japanese requires cultural understanding, not just language skills. Tech2Globe's translations for Amazon.co.jp resonated perfectly with Japanese shoppers. Sales doubled post-translation.",
+        name: "Yoko Nakamura | JapanStyle Living",
+        location: "Japan",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe translated our fashion catalog into German, French, and Spanish for European Amazon marketplaces. The quality is exceptional — natural, persuasive, and keyword-rich. Our EU sales grew by 80%.",
+        name: "Francesca Moretti | BellaModa Italia",
+        location: "Italy",
+    },
+];
+
 
 
 export default function AmazonProductTranslation() {
@@ -522,11 +605,15 @@ export default function AmazonProductTranslation() {
             </section>
 
 
-            <div className="StoreCreationTabs">
-                <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'}/>
-            </div>
+            {/* <div className="StoreCreationTabs">
+                <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
+            </div> */}
 
+            
+
+            <ClientPortfolio clients={portfolioClients} />
             <CaseStudiesService caseStudies={caseStudies} />
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

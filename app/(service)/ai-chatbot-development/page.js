@@ -20,7 +20,7 @@ export const metadata = {
     description:
       "Create intelligent AI chatbots for websites, apps, and businesses to automate support, increase engagement, and deliver faster customer responses.",
     siteName: "Tech2Globe web Solutions LLP",
-    url: "https://www.tech2globe.com/ai-chatbot-development",
+    url: "https://stagenew.tech2globe.tech/ai-chatbot-development",
   },
 
   twitter: {
@@ -31,7 +31,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/ai-chatbot-development",
+    canonical: "https://stagenew.tech2globe.tech/ai-chatbot-development",
   },
 };
 
@@ -280,3 +280,4 @@ export default function AwsDevelopment() {
     </>
   )
 };
+

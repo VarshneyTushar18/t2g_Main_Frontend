@@ -29,6 +29,7 @@
     word-break: break-word;
 }
 
+
 @media (max-width:767px) {
     .BreadcrumbBg {
         margin-bottom: 30px;

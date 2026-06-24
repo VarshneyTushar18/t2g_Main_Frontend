@@ -8,6 +8,7 @@ import FaqSection from "@/app/components/services/faqs/faqs";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/ServiceCaseStudy";
 import Link from "next/link";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "Amazon PPC Services | AI-Optimized Ad Management for Maximum ROAS",
@@ -17,7 +18,7 @@ export const metadata = {
         title: "Amazon PPC Services | AI-Optimized Ad Management for Maximum ROAS",
         description:
             "Tech2Globe's Amazon PPC services are powered by AI-driven bid optimization and real-time performance data. We reduce wasted ad spend and intelligently scale campaigns to deliver the highest possible return on ad spend.",
-        url: "https://www.tech2globe.com/amazon-ppc-services",
+        url: "https://stagenew.tech2globe.tech/amazon-ppc-services",
     },
     twitter: {
         card: "summary_large_image",
@@ -26,7 +27,7 @@ export const metadata = {
             "Tech2Globe's Amazon PPC services are powered by AI-driven bid optimization and real-time performance data. We reduce wasted ad spend and intelligently scale campaigns to deliver the highest possible return on ad spend.",
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-ppc-services",
+        canonical: "https://stagenew.tech2globe.tech/amazon-ppc-services",
     },
 };
 
@@ -40,38 +41,6 @@ const pageHeaderData = {
 };
 
 
-const testimonials = [
-    {
-        id: 1,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Tech2Globe's PPC services boosted our online sales significantly. They have great team that provides clear reports, as well as excellent results.",
-        name: "John Doe - Marketing Manager",
-    },
-    {
-        id: 2,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Having PPC expertise, they offer professional service. They helped us increase our leads and conversions.",
-        name: "Jane Smith - Digital Marketing Director",
-    },
-    {
-        id: 3,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "With their PPC services we were able to improve our ad performance and receive detailed insights. We are happy with the results!",
-        name: "Mike Johnson - E-commerce Specialist",
-    },
-    {
-        id: 4,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "They are extremely knowledgeable on all matters PPC. Everyone I have come in contact with is friendly and willing to assist.",
-        name: "Emily Brown - Business Owner",
-    },
-    {
-        id: 5,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "They do an excellent job of closely monitoring our campaign to ensure we stay on track. They optimize our campaign’s performance to its full potential.",
-        name: "David Wilson - Online Retail Manager",
-    },
-];
 
 
 const faqs = [
@@ -133,7 +102,7 @@ const caseStudies = [
         image: "/images/services/service-inner/amazon-ppc.png",
         description:
             "Clients came to us with a range of Amazon PPC management difficulties. Among them were poor search term management, bids, insufficient...",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Amazon%20PPC-converted.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon%20PPC-converted.pdf",
     },
     {
         id: 2,
@@ -141,7 +110,87 @@ const caseStudies = [
         image: "/images/services/service-inner/amazon-sale-boost.jpg",
         description:
             "Clients often approach us with challenges in managing their Amazon PPC campaigns effectively....",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/amazon-ppc-case-study.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-ppc-case-study.pdf",
+    },
+];
+
+const portfolioClients = [
+    {
+        initials: "GS",
+        gradient: "#0b2e58",
+        client: "GreenShield Supplements",
+        country: "Ireland",
+        project: "Full PPC Campaign Rebuild",
+        desc: "Irish supplements brand that cut ACOS from 45% to 14% and doubled sales within 8 weeks through a complete PPC architecture rebuild.",
+        category: "PPC Services",
+        result: "ACOS: 45% → 14%",
+        resultSub: "Efficiency Growth",
+    },
+    {
+        initials: "JP",
+        gradient: "#0b2e58",
+        client: "JapanCraft Premium",
+        country: "Japan",
+        project: "Japanese Market PPC Strategy",
+        desc: "Japanese premium goods seller that improved ROAS from 1.8x to 6.2x through culturally relevant keyword targeting on Amazon.co.jp campaigns.",
+        category: "PPC Services",
+        result: "ROAS: 1.8x → 6.2x",
+        resultSub: "Performance Growth",
+    },
+    {
+        initials: "CB",
+        gradient: "#0b2e58",
+        client: "CoralBay Beauty",
+        country: "Australia",
+        project: "Multi-Market PPC Management",
+        desc: "Australian beauty brand that grew revenue 80% year-over-year while maintaining a 9% TACOS across AU, US, and UK marketplace PPC campaigns.",
+        category: "PPC Services",
+        result: "TACOS: 9% | +80% revenue",
+        resultSub: "Profitability Growth",
+    },
+    {
+        initials: "SF",
+        gradient: "#0b2e58",
+        client: "StartFit Gear",
+        country: "USA",
+        project: "Launch PPC Strategy (New Brand)",
+        category: "PPC Services",
+        result: "#1 sponsored position",
+        resultSub: "Market Position",
+    },
+    {
+        initials: "LH",
+        gradient: "#0b2e58",
+        client: "LuxeHome UK",
+        country: "UK",
+        project: "PPC + Sponsored Brands Video",
+        category: "PPC Services",
+        result: "+250% video impressions",
+        resultSub: "Visibility Growth",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's PPC team is phenomenal. They rebuilt our entire campaign architecture with laser-focused keyword targeting. ACOS dropped from 45% to 14% and our sales doubled within 8 weeks.",
+        name: "Liam O'Connor | GreenShield Supplements",
+        location: "Ireland",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Our Amazon.co.jp PPC was completely inefficient with Japanese keyword targeting. Tech2Globe's specialists rebuilt our campaigns with culturally relevant keywords. ROAS improved from 1.8x to 6.2x.",
+        name: "Akira Watanabe | JapanCraft Premium",
+        location: "Japan",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe manages all our PPC across AU, US, and UK marketplaces. Their cross-marketplace PPC expertise is outstanding. Combined TACOS maintained at 9% while revenue grew 80% year-over-year.",
+        name: "Amelia Roberts | CoralBay Beauty",
+        location: "Australia",
     },
 ];
 
@@ -540,8 +589,10 @@ export default function AmazonPPCServices() {
                 </div>
 
             </section>
-            <CaseStudiesService caseStudies={caseStudies} />
+            
 
+            <ClientPortfolio clients={portfolioClients} />
+            <CaseStudiesService caseStudies={caseStudies} />
             <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />
         </>

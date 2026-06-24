@@ -32,7 +32,7 @@ export const metadata = {
         title: "Process Automation Consulting Services with AI Solutions",
         description:
             "Optimize business operations with process automation consulting services powered by AI, workflow automation, and intelligent systems.",
-        url: "https://www.tech2globe.com/process-automation-consulting",
+        url: "/service/process-automation-consulting",
         siteName: "Tech2Globe",
     },
 
@@ -44,7 +44,7 @@ export const metadata = {
     },
 
     alternates: {
-        canonical: "https://www.tech2globe.com/process-automation-consulting",
+        canonical: "/service/process-automation-consulting",
     },
 };
 

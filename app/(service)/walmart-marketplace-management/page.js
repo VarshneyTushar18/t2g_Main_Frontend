@@ -9,6 +9,7 @@ import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 import FaqSection from "@/app/components/services/faqs/faqs";
 import { FaArrowRight, FaChartBar, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaLightbulb, FaSearch, FaShieldAlt, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "Best Walmart Advertising Agency | Walmart PPC Service",
@@ -21,7 +22,7 @@ export const metadata = {
         siteName: "Tech2Globe Web Solutions LLP",
         description:
             "Drive more sales on Walmart with Tech2Globe's Walmart PPC advertising. Trusted as the best Walmart advertising agency for professional, results-driven campaigns.",
-        url: "https://www.tech2globe.com/walmart-advertisement",
+        url: "https://stagenew.tech2globe.tech/walmart-advertisement",
     },
     twitter: {
         card: "Best Walmart Advertising Agency | Walmart PPC Service",
@@ -30,7 +31,7 @@ export const metadata = {
             "Drive more sales on Walmart with Tech2Globe's Walmart PPC advertising. Trusted as the best Walmart advertising agency for professional, results-driven campaigns.",
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/walmart-advertisement",
+        canonical: "https://stagenew.tech2globe.tech/walmart-advertisement",
     },
 };
 
@@ -68,26 +69,88 @@ const sidebarSections = [
 ];
 
 
+const portfolioClients = [
+    {
+        initials: "CH",
+        gradient: "#0b2e58",
+        client: "Cobalt Home Essentials",
+        country: "USA",
+        project: "Marketplace Onboarding & Listings",
+        desc: "Managed Walmart seller onboarding and initial bulk catalog upload.",
+        category: "Marketplace Onboarding & Listings",
+        result: "Approved & Live",
+        resultSub: "Successful Onboarding",
+    },
+    {
+        initials: "FB",
+        gradient: "#0b2e58",
+        client: "Ferncroft Baby Co.",
+        country: "USA",
+        project: "Listing SEO & Advertising",
+        desc: "Optimized listings and managed sponsored ad placements for a baby brand.",
+        category: "Listing SEO & Advertising",
+        result: "Improved Organic Rankings",
+        resultSub: "Core Keyword Growth",
+    },
+    {
+        initials: "PF",
+        gradient: "#0b2e58",
+        client: "Pinegrove Furnishings",
+        country: "Canada",
+        project: "Catalog & Inventory Sync",
+        desc: "Synced inventory feeds and corrected catalog mismatches across SKUs.",
+        category: "Catalog & Inventory Sync",
+        result: "Fewer Stock Errors",
+        resultSub: "Improved Inventory Accuracy",
+    },
+    {
+        initials: "ST",
+        gradient: "#0b2e58",
+        client: "Stonebridge Tools",
+        country: "USA",
+        project: "Account Management & Compliance",
+        desc: "Ongoing account monitoring and policy compliance for a tools retailer.",
+        category: "Account Management & Compliance",
+        result: "Consistent Performance",
+        resultSub: "Maintained Compliance Standing",
+    },
+    {
+        initials: "WO",
+        gradient: "#0b2e58",
+        client: "Wrenfield Outdoor Living",
+        country: "USA",
+        project: "Store Management & Promotions",
+        desc: "Managed seasonal promotions and storefront merchandising on Walmart.",
+        category: "Store Management & Promotions",
+        result: "Increased Visibility",
+        resultSub: "Promotional Campaign Success",
+    },
+];
+
 const testimonials = [
     {
         id: 1,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "Tech2Globe's marketplace management team helped us optimize our Walmart product listings and streamline order management. Their expertise in compliance and platform policies saved us a lot of time and errors.",
-        name: "Daniel Foster",
+        text: "Tech2Globe manages our Walmart marketplace presence from end to end. Their team handles listing updates, order management, customer service, and performance monitoring. Our seller metrics are perfect and sales have grown consistently month over month.",
+        name: "Robert J. Callahan | SunShine Nutrition",
+        location: "USA",
     },
     {
         id: 2,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "We partnered with Tech2Globe for Walmart Marketplace Management and saw instant improvements in our catalog accuracy, shipping performance, and seller rating. Their support is proactive and dependable.",
-        name: "Fatima Noor",
+        text: "Entering the Walmart marketplace was intimidating. Tech2Globe handled our entire onboarding, catalog setup, and ongoing management. We went from zero to 500+ active SKUs in under 6 weeks, and our store is already profitable.",
+        name: "Ana Gutierrez | VivaCasa Home ",
+        location: "Mexico",
     },
     {
         id: 3,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "Managing Walmart Marketplace was overwhelming until Tech2Globe stepped in. Their full coverage—inventory sync, dispute handling, and backend operations—helped us focus on scaling our brand.",
-        name: "Christopher Allen",
+        text: "Our Walmart marketplace was stagnant for months. Tech2Globe completely revamped our approach — optimizing our catalog, improving our seller score, and implementing a systematic review strategy. Sales jumped by 120% in the first quarter.",
+        name: "Priya Kapoor | IndoStyle Fashion ",
+        location: "India",
     },
 ];
+
 
 const faqs = [
     {
@@ -286,7 +349,7 @@ export default function WalmartMarketplaceManagement() {
                     </div>
                 </div>
             </section>
-
+            <ClientPortfolio clients={portfolioClients} />
             <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />
         </>

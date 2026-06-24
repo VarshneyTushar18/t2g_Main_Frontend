@@ -11,6 +11,7 @@ import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import Link from "next/link";
 import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 import FaqSection from "@/app/components/services/faqs/faqs";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title:
@@ -27,7 +28,7 @@ export const metadata = {
     ],
 
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-review-rating",
+        canonical: "https://stagenew.tech2globe.tech/amazon-review-rating",
     },
 
     openGraph: {
@@ -35,7 +36,7 @@ export const metadata = {
             "Amazon Review and Rating Management Guide",
         description:
             "How to Effectively Manage your Amazon Reviews & Rating to Accelerate Sales with Tech2Globe",
-        url: "https://www.tech2globe.com/amazon-review-rating",
+        url: "https://stagenew.tech2globe.tech/amazon-review-rating",
         siteName: "Tech2Globe",
         type: "website",
     },
@@ -116,45 +117,7 @@ const faqs = [
       `,
     },
 ];
-const testimonials = [
-    {
-        id: 1,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Tech2Globe's team is easy to work with. They made my amazon reviews better by providing genuine reviews.",
-        name: "Michael Johnson, Sales Director",
 
-    },
-    {
-        id: 2,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "We have seen a noticeable improvement in our overall ratings. Their dedication to our success is truly commendable.",
-        name: "Emily Johnson, Small Business Owner",
-
-    },
-    {
-        id: 3,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Our products now have a solid rating on Amazon. I am glad how they got me genuine reviews on Amazon",
-        name: "Raj Patel, E-commerce Entrepreneur",
-
-    },
-    {
-        id: 4,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Previously, there were some shotcomings in our reviews, but thanks to their services, we've seen significant improvement.",
-        name: "Olivia Smith, Online Retailer",
-
-    },
-    {
-        id: 5,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "heir way to address the negative feedback and encouraging positive reviews has truly impressed us. Thanks to their efforts.",
-        name: "Aarav Gupta, Marketing Manager",
-
-    },
-
-
-];
 
 const portfolio = [
     {
@@ -299,6 +262,88 @@ const portfolio = [
     }
 ]
 
+
+const portfolioClients = [
+    {
+        initials: "BB",
+        gradient: "#0b2e58",
+        client: "BritBotanicals",
+        country: "UK",
+        project: "Review Recovery Strategy",
+        desc: "UK botanicals brand that improved overall product rating from 3.4 to 4.6 stars in 90 days through compliant ethical review management strategies.",
+        category: "Review & Rating",
+        result: "3.4 → 4.6 stars in 90 days",
+        resultSub: "Rating Improvement",
+    },
+    {
+        initials: "GP",
+        gradient: "#0b2e58",
+        client: "GermanPure Health",
+        country: "Germany",
+        project: "Negative Review Crisis Response",
+        desc: "German health brand that fully recovered its rating after Tech2Globe professionally managed a surge of negative reviews caused by a logistics issue.",
+        category: "Review & Rating",
+        result: "Rating fully restored",
+        resultSub: "Crisis Recovery",
+    },
+    {
+        initials: "PM",
+        gradient: "#0b2e58",
+        client: "PureMaple Canada",
+        country: "Canada",
+        project: "Review Generation Program",
+        desc: "Canadian maple brand that doubled its review count in four months using Amazon's Request a Review feature and compliant post-purchase communication sequences.",
+        category: "Review & Rating",
+        result: "2x review count in 4 months",
+        resultSub: "Review Growth",
+    },
+    {
+        initials: "ZO",
+        gradient: "#0b2e58",
+        client: "ZenOrganics USA",
+        country: "USA",
+        project: "Review Monitoring + Response",
+        category: "Review & Rating",
+        result: "100% review response rate",
+        resultSub: "Engagement Coverage",
+    },
+    {
+        initials: "KF",
+        gradient: "#0b2e58",
+        client: "KidsFirst Toys",
+        country: "Australia",
+        project: "Multi-ASIN Review Strategy",
+        category: "Review & Rating",
+        result: "+500 verified reviews added",
+        resultSub: "Review Expansion",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe implemented ethical review management strategies that significantly improved our overall rating from 3.4 to 4.6 stars in just 90 days. Their approach is fully compliant with Amazon's policies. Outstanding results.",
+        name: "Emma Watson | BritBotanicals",
+        location: "UK",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We had a flood of negative reviews due to a logistics issue. Tech2Globe helped us manage the situation — responding professionally, resolving customer issues, and deploying compliant review recovery strategies. Rating fully restored.",
+        name: "Lucas Weber | GermanPure Health",
+        location: "Germany",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's review management program doubled our review count within 4 months using Amazon's Request a Review feature and post-purchase communication sequences. Completely policy-compliant and highly effective.",
+        name: "Michelle Tremblay | PureMaple Canada",
+        location: "Canada",
+    },
+];
+
+
 export default function AmazonReviewRating() {
     return (
 
@@ -431,12 +476,13 @@ export default function AmazonReviewRating() {
             </section >
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
-            </div>
-            <div className="EmailMarketingTestimonials">
-                <ClientSlider testimonials={testimonials} />
-            </div>
+            </div> */}
+
+            <ClientPortfolio clients={portfolioClients} />
+            <ClientSlider testimonials={testimonials} />
+
             <FaqSection faqs={faqs} />
 
         </>

@@ -6,6 +6,8 @@ import ServiceBanner from "@/app/components/services/ServiceBanner/ServiceBanner
 import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSidebar";
 import FaqSection from "@/app/components/services/faqs/faqs";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "Amazon Virtual Assistant Services | Best Amazon VA services",
@@ -14,14 +16,14 @@ export const metadata = {
     keywords:
         "Amazon Virtual Assistance, Amazon Virtual Assistance Services, Outsourcing Your Amazon Virtual Assistant, Amazon VA services",
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-virtual-assistance",
+        canonical: "https://stagenew.tech2globe.tech/amazon-virtual-assistance",
     },
     openGraph: {
         title: "Amazon Virtual Assistant Services | Best Amazon VA services",
         description:
             "Our Amazon virtual assistants are extremely adaptable, frequently addressing account performance and sharing notes about logistical delays with Experience 14 Years.",
         siteName: "Tech2Globe web Solutions LLP",
-        url: "https://www.tech2globe.com/amazon-virtual-assistance",
+        url: "https://stagenew.tech2globe.tech/amazon-virtual-assistance",
         type: "website",
     },
     twitter: {
@@ -33,34 +35,34 @@ export const metadata = {
 };
 
 export const schemaData = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Can a virtual assistant access my personal information?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A virtual assistant can access some of your personal information, such as your calendar and contact list, but they are not able to access sensitive information like your credit card number."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What Is The Cost Of An Amazon Virtual Assistant?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The cost of hiring an Amazon expert is determined by your needs. The final cost will be determined by the task’s complexity and level of specialty, as well as the period for which you intend to engage Amazon VA services."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What Are The Duties Of Amazon Virtual Assistants?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Listing administration, order processing, image and title editing, SEO, PPC ad management, metric tracking, customer support services and feedback management, product data entry, and inventory management are among the most prevalent. It will also undertake other related functions as and when they are required."
-      }
-    }
-  ]
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Can a virtual assistant access my personal information?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A virtual assistant can access some of your personal information, such as your calendar and contact list, but they are not able to access sensitive information like your credit card number."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What Is The Cost Of An Amazon Virtual Assistant?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The cost of hiring an Amazon expert is determined by your needs. The final cost will be determined by the task’s complexity and level of specialty, as well as the period for which you intend to engage Amazon VA services."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What Are The Duties Of Amazon Virtual Assistants?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Listing administration, order processing, image and title editing, SEO, PPC ad management, metric tracking, customer support services and feedback management, product data entry, and inventory management are among the most prevalent. It will also undertake other related functions as and when they are required."
+            }
+        }
+    ]
 };
 
 const pageHeaderData = {
@@ -118,6 +120,87 @@ const faqs = [
         The cost of hiring an Amazon expert is determined by your needs. The final cost will be determined by the task's complexity and level of specialty, as well as the period for which you intend to engage Amazon VA services.
       `,
     }
+];
+
+const portfolioClients = [
+    {
+        initials: "SA",
+        gradient: "#0b2e58",
+        client: "SilverLine Apparel",
+        country: "USA",
+        project: "Dedicated VA Account Management",
+        desc: "US apparel seller that outsourced full Amazon backend operations to a dedicated VA, covering listings, FBA, and customer messages daily.",
+        category: "Virtual Assistance",
+        result: "Full Backend Managed",
+        resultSub: "6 Days/Week",
+    },
+    {
+        initials: "PS",
+        gradient: "#0b2e58",
+        client: "PetPal Supplies",
+        country: "Australia",
+        project: "VA for Customer Service",
+        desc: "Australian pet supplies brand that improved seller feedback from 3.2 to 4.7 stars through dedicated VA support aligned to local business hours.",
+        category: "Virtual Assistance",
+        result: "98% Response Rate",
+        resultSub: "Maintained",
+    },
+    {
+        initials: "DO",
+        gradient: "#0b2e58",
+        client: "Desi Organics USA",
+        desc: "US organic products seller that handed off full Amazon store management — 300+ SKUs, reviews, and support — to a skilled dedicated VA.",
+        country: "USA",
+        project: "Multi-ASIN Listing VA",
+        category: "Virtual Assistance",
+        result: "300+ SKUs",
+        resultSub: "Managed",
+    },
+    {
+        initials: "FB",
+        gradient: "#0b2e58",
+        client: "FreshBrew Coffee",
+        country: "Canada",
+        project: "VA + FBA Shipment Creation",
+        category: "Virtual Assistance",
+        result: "Zero Errors",
+        resultSub: "Shipments",
+    },
+    {
+        initials: "GB",
+        gradient: "#0b2e58",
+        client: "GlowStyle Beauty",
+        country: "UK",
+        project: "VA for Account Health Monitoring",
+        category: "Virtual Assistance",
+        result: "Account Health",
+        resultSub: "Score 100%",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Our dedicated Tech2Globe VA handles everything from listing updates to customer messages to FBA shipment creation. It's like having a full-time Amazon employee at a fraction of the cost.",
+        name: "Nathan Brooks | SilverLine Apparel",
+        location: "USA",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's VA team is incredibly professional and reliable. They manage our entire Amazon backend — 8 hours a day, 6 days a week. Response accuracy and turnaround times are exceptional.",
+        name: "Olivia Harrison | PetPal Supplies",
+        location: "Australia",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "I was overwhelmed managing my Amazon store alone. Tech2Globe assigned a VA who became fluent in my entire catalog in days. Order handling, reviews, and seller support — all handled flawlessly.",
+        name: "Raj Patel | Desi Organics USA",
+        location: "USA",
+    },
+
 ];
 
 export default function AmazonVirtualAssistance() {
@@ -247,6 +330,9 @@ export default function AmazonVirtualAssistance() {
                 </div>
             </section>
 
+            <ClientPortfolio clients={portfolioClients} />
+
+            <ClientSlider testimonials={testimonials} />
 
             <FaqSection faqs={faqs} />
         </>

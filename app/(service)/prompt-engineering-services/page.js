@@ -33,7 +33,7 @@ export const metadata = {
     title: "Prompt Engineering Services for Advanced AI Models",
     description:
       "Optimize AI performance with expert prompt engineering services designed for ChatGPT, LLMs, automation workflows, and AI-driven business applications.",
-    url: "https://www.tech2globe.com/prompt-engineering-services",
+    url: "/service/prompt-engineering-services",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/prompt-engineering-services",
+    canonical: "https://stagenew.tech2globe.tech/prompt-engineering-services",
   },
 };
 

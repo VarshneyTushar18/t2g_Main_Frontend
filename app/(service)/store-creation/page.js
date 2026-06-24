@@ -8,6 +8,8 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import FaqSection from "@/app/components/services/faqs/faqs";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "Amazon Store Creation Services | AI-Enhanced Storefront Design & Brand Setup",
@@ -24,7 +26,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Launch a high-converting Amazon storefront with Tech2Globe's AI-enhanced store creation services. We design branded, data-informed storefronts that attract shoppers, communicate trust, and turn browsers into buyers.",
-        url: "https://www.tech2globe.com/store-creation"
+        url: "https://stagenew.tech2globe.tech/store-creation"
     },
     twitter: {
         card: "summary_large_image",
@@ -33,7 +35,7 @@ export const metadata = {
             "Launch a high-converting Amazon storefront with Tech2Globe's AI-enhanced store creation services. We design branded, data-informed storefronts that attract shoppers, communicate trust, and turn browsers into buyers."
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/store-creation"
+        canonical: "https://stagenew.tech2globe.tech/store-creation"
     }
 };
 
@@ -215,7 +217,7 @@ const caseStudies = [
         image: "/images/services/service-inner/untitled-design-20.png",
         description:
             "The client has been in the lighting business since 2011, specializing...",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Case%20Study%202%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%202%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
     },
     {
         id: 2,
@@ -223,7 +225,7 @@ const caseStudies = [
         image: "/images/services/service-inner/ebca.png",
         description:
             "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Case%20Study%203%20-%20EBC%20and%20Storefront-converted.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%203%20-%20EBC%20and%20Storefront-converted.pdf",
     },
     {
         id: 3,
@@ -231,7 +233,7 @@ const caseStudies = [
         image: "/images/services/service-inner/amazon-ppc.png",
         description:
             "Clients came to us with a range of Amazon PPC management difficulties....",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Amazon%20PPC-converted.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon%20PPC-converted.pdf",
     },
     {
         id: 4,
@@ -239,7 +241,7 @@ const caseStudies = [
         image: "/images/services/service-inner/untitled-design-18.png",
         description:
             "Client has been in the business of selling fine grooming products for over 15 years......",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Case%20Study%201%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%201%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
     },
     {
         id: 5,
@@ -247,7 +249,7 @@ const caseStudies = [
         image: "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         description:
             "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/E-Commerce%20Store%20for%20Luxury%20Goods-converted.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce%20Store%20for%20Luxury%20Goods-converted.pdf",
     },
     {
         id: 6,
@@ -255,7 +257,7 @@ const caseStudies = [
         image: "/images/services/service-inner/amazon-sale-boost.jpg",
         description:
             "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf",
     },
     {
         id: 7,
@@ -263,7 +265,7 @@ const caseStudies = [
         image: "/images/services/service-inner/about-drop-shipping.jpg",
         description:
             "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Case%20Study%202%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%202%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
     },
     {
         id: 8,
@@ -271,7 +273,7 @@ const caseStudies = [
         image: "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         description:
             "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/E-Commerce%20Store%20for%20Luxury%20Goods-converted.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce%20Store%20for%20Luxury%20Goods-converted.pdf",
     },
     {
         id: 9,
@@ -279,7 +281,7 @@ const caseStudies = [
         image: "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         description:
             "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/E-commerce%20version%20upgrade%20(1).pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce%20version%20upgrade%20(1).pdf",
     },
     {
         id: 10,
@@ -287,7 +289,7 @@ const caseStudies = [
         image: "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         description:
             "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        docLink: "https://www.tech2globe.com/casestudies-docs/E-commerce%20version%20upgrade.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce%20version%20upgrade.pdf",
     },
     {
         id: 11,
@@ -295,7 +297,7 @@ const caseStudies = [
         image: "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         description:
             "In 2.5 periods of month projects handling, we've generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Promotion%20of%202%20x%20Shopify%20Stores-converted.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion%20of%202%20x%20Shopify%20Stores-converted.pdf",
     }
 ];
 
@@ -305,38 +307,6 @@ const sidebarSections = [
 ];
 
 
-const testimonials = [
-    {
-        id: 1,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "They have excellent service and management, this is honest review after a month of experience with them, team is hardworking, knowledgeable and do every task on time. I hope they continue to deliver me same output.",
-        name: "Roxel- Account Management India",
-    },
-    {
-        id: 2,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Excellent Team, good results in sales",
-        name: "Andriana- Amazon Sponsored Ads USA",
-    },
-    {
-        id: 3,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Excellent service by Tech2globe, brilliant service and hardworking",
-        name: "Neo Global- Vendor Account Management UK",
-    },
-    {
-        id: 4,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Courteous, professional, quality work, best bang for your buck",
-        name: " Medi Hub- Amazon Store Creations USA",
-    },
-    {
-        id: 5,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Very professional and creative team. They patiently worked on changes I asked for and delivered on time. Thank you.",
-        name: "Teliamed- Amazon Enhance Brand Content USA",
-    },
-];
 
 const faqs = [
     {
@@ -375,6 +345,87 @@ const faqs = [
       `,
     },
 ];
+
+const portfolioClients = [
+    {
+        initials: "LB",
+        gradient: "#0b2e58",
+        client: "LuminaBrand UK",
+        country: "UK",
+        project: "Multi-Page Amazon Brand Store",
+        desc: "UK brand that saw a 3x increase in Amazon Store visits within the first month after a full storefront build with rich media and brand story.",
+        category: "Store Creation",
+        result: "3x store visits month 1",
+        resultSub: "Traffic Growth",
+    },
+    {
+        initials: "IE",
+        gradient: "#0b2e58",
+        client: "ItalianEssence Brand",
+        country: "Italy",
+        project: "Premium Lifestyle Storefront",
+        desc: "Italian premium brand that doubled sales from store visits after Tech2Globe delivered a world-class Amazon storefront with lifestyle imagery.",
+        category: "Store Creation",
+        result: "2x sales from store visits",
+        resultSub: "Conversion Growth",
+    },
+    {
+        initials: "SS",
+        gradient: "#0b2e58",
+        client: "SeoulStyle Fashion",
+        country: "South Korea",
+        project: "K-Fashion Category Store",
+        desc: "Korean fashion brand that reduced bounce rates significantly with a custom category-specific Amazon Store layout that drives higher shopper engagement.",
+        category: "Store Creation",
+        result: "Bounce rate -40%",
+        resultSub: "UX Improvement",
+    },
+    {
+        initials: "NA",
+        gradient: "#0b2e58",
+        client: "NordPeak Athletics",
+        country: "Sweden",
+        project: "Sports Brand Storefront",
+        category: "Store Creation",
+        result: "+5K monthly store visitors",
+        resultSub: "Traffic Growth",
+    },
+    {
+        initials: "TT",
+        gradient: "#0b2e58",
+        client: "TinyTales UK",
+        country: "UK",
+        project: "Baby & Kids Brand Store",
+        category: "Store Creation",
+        result: "4-page store, full brand story",
+        resultSub: "Brand Building",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe designed our Amazon Store from scratch and it looks absolutely stunning. The modular layout, brand story integration, and product categorization are perfect. Store visits increased 3x in the first month.",
+        name: "Diana Faulkner | LuminaBrand UK",
+        location: "UK",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We needed an Amazon Store that reflected our premium brand identity. Tech2Globe delivered a world-class storefront with rich media, lifestyle imagery, and excellent navigation. Sales from store visits doubled.",
+        name: "Marco Bianchi | ItalianEssence Brand",
+        location: "Italy",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Our Amazon Store built by Tech2Globe is our best brand asset on the platform. The custom page layout for each product category drives higher engagement and our bounce rate dropped dramatically.",
+        name: "Rachel Kim | SeoulStyle Fashion",
+        location: "South Korea",
+    },
+];
+
 
 export default function StoreCreation() {
     return (
@@ -467,7 +518,7 @@ export default function StoreCreation() {
                                         </h2>
                                         <div id="collapseFive" className="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                             <div className={`${Style.AccordionBody} accordion-body`}>
-                                                <p className="para-text">Your Amazon shop serves as a website for your business. You&apos;ll get a unique URL as well as a place to promote your business and products. <i>Even better</i>, your Amazon Store can also include social network connections. As a consequence, you may see an increase in interaction across all of your <a href="https://www.tech2globe.com/social-media-marketing-services">social media</a> channels. It may also increase these customers&apos; loyalty. When you debut a new product, for example, you may inform your social media followers about it and include a link to your Amazon listing.</p>
+                                                <p className="para-text">Your Amazon shop serves as a website for your business. You&apos;ll get a unique URL as well as a place to promote your business and products. <i>Even better</i>, your Amazon Store can also include social network connections. As a consequence, you may see an increase in interaction across all of your <a href="https://stagenew.tech2globe.tech/social-media-marketing-services">social media</a> channels. It may also increase these customers&apos; loyalty. When you debut a new product, for example, you may inform your social media followers about it and include a link to your Amazon listing.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -504,11 +555,14 @@ export default function StoreCreation() {
                 </div>
             </section>
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} description="With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others." />
-            </div>
+            </div> */}
 
+            
+            <ClientPortfolio clients={portfolioClients} />
             <CaseStudiesService caseStudies={caseStudies} />
+            <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />
         </>
     )

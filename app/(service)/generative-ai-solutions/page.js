@@ -34,7 +34,7 @@ export const metadata = {
     title: "Generative AI Solutions for Business Growth & Automation",
     description:
       "Unlock the power of generative AI solutions for content creation, workflow automation, customer engagement, and smarter business decision-making.",
-    url: "https://www.tech2globe.com/generative-ai-solutions",
+    url: "https://stagenew.tech2globe.tech/generative-ai-solutions",
     siteName: "Tech2Globe",
   },
 
@@ -46,7 +46,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/generative-ai-solutions",
+    canonical: "https://stagenew.tech2globe.tech/generative-ai-solutions",
   },
 };
 

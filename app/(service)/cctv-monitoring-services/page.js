@@ -24,7 +24,7 @@ export const metadata = {
         siteName: "Tech2Globe Web Solutions LLP",
         description:
             "Protect your premises round the clock with Tech2Globe's AI-enhanced CCTV monitoring services. Our intelligent surveillance system combines real-time video analysis with expert human monitoring to detect threats before they escalate.",
-        url: "https://www.tech2globe.com/cctv-monitoring-services"
+        url: "https://stagenew.tech2globe.tech/cctv-monitoring-services"
     },
     twitter: {
         card: "summary_large_image",
@@ -33,7 +33,7 @@ export const metadata = {
             "Protect your premises round the clock with Tech2Globe's AI-enhanced CCTV monitoring services. Our intelligent surveillance system combines real-time video analysis with expert human monitoring to detect threats before they escalate."
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/cctv-monitoring-services"
+        canonical: "https://stagenew.tech2globe.tech/cctv-monitoring-services"
     }
 };
 

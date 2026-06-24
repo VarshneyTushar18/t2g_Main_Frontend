@@ -31,7 +31,7 @@ export const metadata = {
     title: "AI Ad Campaign Optimization for Higher ROI",
     description:
       "Maximize campaign performance with AI-powered ad optimization services for Google Ads, Meta Ads, and digital marketing campaigns.",
-    url: "https://www.tech2globe.com/ai-ad-campaign-optimization",
+    url: "https://stagenew.tech2globe.tech/service/ai-ad-campaign-optimization",
     siteName: "Tech2Globe",
   },
 
@@ -43,7 +43,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/ai-ad-campaign-optimization",
+    canonical: "https://stagenew.tech2globe.tech/service/ai-ad-campaign-optimization",
   },
 };
 

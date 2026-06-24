@@ -10,7 +10,6 @@ import {
   stripHtml,
   formatBlogListDate,
 } from "@/lib/blogApi";
-import { buildMainBlogFilterCategories } from "@/lib/blogUtils";
 import Style from "./BlogSidebar.module.css";
 
 function formatViews(count) {
@@ -78,7 +77,6 @@ export default function BlogSidebar({
 
   const visibleMostViewed = mostViewed.filter((p) => p.slug !== currentSlug);
   const visibleRecent = recent.filter((p) => p.slug !== currentSlug);
-  const visibleCategories = buildMainBlogFilterCategories(categories);
 
   return (
     <aside className={Style.sidebar}>
@@ -99,10 +97,10 @@ export default function BlogSidebar({
       {/* 2. Categories — visible without long scroll */}
       <div className={Style.widget}>
         <h3 className={Style.widgetTitle}>Categories</h3>
-        {visibleCategories.length > 0 ? (
+        {categories.length > 0 ? (
           <>
             <ul className={Style.categoryList}>
-              {visibleCategories.map((cat) => {
+              {categories.map((cat) => {
                 const href = blogCategoryHref(cat.slug);
                 const isActive =
                   activeCategory === cat.slug ||

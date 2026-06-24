@@ -6,6 +6,7 @@ import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 import FaqSection from "@/app/components/services/faqs/faqs";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import "./custom.css";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "AI-Powered Amazon Consulting Services | Smart PPC, SEO & Account Growth",
@@ -25,9 +26,9 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Grow faster on Amazon with Tech2Globe's AI-powered consulting services. We use intelligent data analysis to optimize your PPC campaigns, product listings, and seller account — driving higher rankings and consistent revenue growth.",
-        url: "https://tech2globe.com/amazon-consulting-services",
+        url: "https://stagenew.tech2globe.tech/amazon-consulting-services",
         images: [
-            "https://tech2globe.com/images/tech2globe-consulting-banner-2.jpg",
+            "https://stagenew.tech2globe.tech/images/tech2globe-consulting-banner-2.jpg",
         ],
     },
     twitter: {
@@ -36,11 +37,11 @@ export const metadata = {
         description:
             "Grow faster on Amazon with Tech2Globe's AI-powered consulting services. We use intelligent data analysis to optimize your PPC campaigns, product listings, and seller account — driving higher rankings and consistent revenue growth.",
         images: [
-            "https://tech2globe.com/images/tech2globe-consulting-banner-2.jpg",
+            "https://stagenew.tech2globe.tech/images/tech2globe-consulting-banner-2.jpg",
         ],
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-consulting-services",
+        canonical: "https://stagenew.tech2globe.tech/amazon-consulting-services",
     },
 };
 
@@ -72,60 +73,165 @@ const clients = [
 ];
 
 
-const caseStudies = [
+const portfolioClients = [
     {
-        "id": 1,
-        "title": "Customer Business and Delivered",
-        "image": "/images/services/service-inner/untitled-design-20.png",
-        "description": "How Well We Understand Customer Business and Delivered Fruitful Results...",
-        "docLink": "https://www.tech2globe.com/casestudies-docs1/Case%20Study%20-%20Ecommerce%20Consulting%20Services.pdf"
+        initials: "BP",
+        gradient: "#0b2e58",
+        client: "BluePeak Outdoors",
+        country: "USA",
+        project: "Full Account Audit & Growth Plan",
+        desc: "Outdoor gear brand that transformed Amazon performance through data-driven consulting, achieving 78% revenue growth within just 90 days.",
+        category: "Consulting",
+        result: "+78% Revenue",
+        resultSub: "in 90 days",
     },
     {
-        "id": 2,
-        "title": "Online Promotion Strategies",
-        "image": "/images/services/service-inner/online-promotion-strategies.jpg",
-        "description": "The client is USA based and he is a Neuroscientist by profession with over 15 years of basic and applied research experience in the same field...",
-        "docLink": "https://www.tech2globe.com/casestudies-docs1/Case%20Study%20-%20showGlamour%20&%20LeMirch%20(1).pdf"
+        initials: "NH",
+        gradient: "#0b2e58",
+        client: "Nordic Home Essentials",
+        country: "UK",
+        project: "PPC + SEO Consulting Package",
+        desc: "UK home essentials retailer that reduced ACOS by 35% and improved organic rankings after a complete Amazon account audit and PPC restructure.",
+        category: "Consulting",
+        result: "ACOS −35%",
+        resultSub: "reduced spend",
     },
-]
+    {
+        initials: "IC",
+        gradient: "#0b2e58",
+        client: "ItalCraft Furniture",
+        country: "Italy",
+        project: "Amazon EU Expansion Strategy",
+        desc: "Italian furniture brand that doubled Amazon EU revenue within six months using a structured cross-marketplace growth roadmap.",
+        category: "Consulting",
+        result: "2× Revenue",
+        resultSub: "in 6 months",
+    },
+    {
+        initials: "CG",
+        gradient: "#0b2e58",
+        client: "CleanGear Pro",
+        country: "Canada",
+        project: "Competitive Analysis & Repricing",
+        category: "Consulting",
+        result: "+40% Buy Box",
+        resultSub: "win rate",
+    },
+    {
+        initials: "SW",
+        gradient: "#0b2e58",
+        client: "SunRise Wellness",
+        country: "Australia",
+        project: "Seller Account Health Recovery",
+        category: "Consulting",
+        result: "Reinstated",
+        resultSub: "in 7 days",
+    },
+];
 
 const testimonials = [
     {
         id: 1,
         quote: "/images/services/service-inner/quote-icon.png",
         text: "Tech2Globe transformed our Amazon strategy with data-driven insights. Our sales grew by 78% within 3 months of engaging their consulting team. Their AI-powered approach to account growth is unmatched.",
-        name: "James R. Whitfield, BluePeak Outdoors",
+        name: "James R. Whitfield | BluePeak Outdoors ",
         location: "USA",
-        rating: 5,
     },
     {
         id: 2,
         quote: "/images/services/service-inner/quote-icon.png",
         text: "Exceptional Amazon consulting! Tech2Globe audited our entire account, restructured our PPC, and optimized our listings. Our organic ranking improved drastically and ACOS dropped by 35%.",
-        name: "Sophie Brennan, Nordic Home Essentials ",
+        name: "Sophie Brennan | Nordic Home Essentials ",
         location: "UK",
-        rating: 5,
     },
     {
         id: 3,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "We were struggling to scale on Amazon.it and Amazon.de. Tech2Globe's consultants provided a clear roadmap and implemented strategies that doubled our revenue in under 6 months.",
-        name: "Luca Martini, ItalCraft Furniture ",
+        text: "We were struggling to scale on Amazon.it and Amazon.de.Tech2Globe's consultants provided a clear roadmap and implemented strategies that doubled our revenue in under 6 months.",
+        name: "Luca Martini | ItalCraft Furniture ",
         location: "Italy",
-        rating: 5,
+    },
+
+];
+
+const caseStudies = [
+    {
+        "id": 1,
+        "title": "Product Visibility & Drive Sales 0.1",
+        "image": "/images/services/service-inner/untitled-design-20.png",
+        "description": "The client has been in the lighting business since 2011, specializing...",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
-        id: 4,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Having patience with your clients is a great quality, and I feel their team knows this very well. Highly recommended to others.",
-        name: "David Martinez, Sales Directors",
+        "id": 2,
+        "title": "EBC and Storefront",
+        "image": "/images/services/service-inner/ebca.png",
+        "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
-        id: 5,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "I am grateful to partner with Tech2Globe's services that brought clarity to my business strategy and Kudos to their dedicated team!",
-        name: "Jennifer Wilson, CEO",
+        "id": 3,
+        "title": "Amazon PPC",
+        "image": "/images/services/service-inner/amazon-ppc.png",
+        "description": "Clients came to us with a range of Amazon PPC management difficulties....",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
+    {
+        "id": 4,
+        "title": "Product Visibility & Drive Sales",
+        "image": "/images/services/service-inner/untitled-design-18.png",
+        "description": "Client has been in the business of selling fine grooming products for over 15 years......",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+    },
+    {
+        "id": 5,
+        "title": "e-Commerce Store for Luxury Goods",
+        "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
+        "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+    },
+    {
+        "id": 6,
+        "title": "Amazon Sale Boost",
+        "image": "/images/services/service-inner/amazon-sale-boost.jpg",
+        "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
+    },
+    {
+        "id": 7,
+        "title": "About Drop shipping",
+        "image": "/images/services/service-inner/about-drop-shipping.jpg",
+        "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+    },
+    {
+        "id": 8,
+        "title": "Migration from Sooq to Amazon.ae",
+        "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
+        "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+    },
+    {
+        "id": 9,
+        "title": "e-Commerce Multivendor Store 1.0",
+        "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
+        "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
+    },
+    {
+        "id": 10,
+        "title": "e-Commerce Store Version Upgrade",
+        "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
+        "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
+    },
+    {
+        "id": 11,
+        "title": "Promotion of 2 x Shopify Stores",
+        "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
+        "description": "In 2.5 periods of month projects handling, we've generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+    }
 ];
 
 const faqs = [
@@ -173,7 +279,6 @@ const faqs = [
       `,
     },
 ];
-
 
 export default function AmazonConsulting() {
     return (
@@ -884,9 +989,9 @@ export default function AmazonConsulting() {
                 </div>
             </div>
 
+            <ClientPortfolio clients={portfolioClients} />
+
             <CaseStudiesService caseStudies={caseStudies} />
-
-
 
             <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />

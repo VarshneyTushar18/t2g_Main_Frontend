@@ -6,35 +6,37 @@ import ServiceBanner from "@/app/components/services/ServiceBanner/ServiceBanner
 import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSidebar";
 import FaqSection from "@/app/components/services/faqs/faqs";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
-  title: "eCommerce Marketplace Management | Amazon, Flipkart & eBay Experts",
-  description:
-    "eCommerce Marketplace Management services for Amazon, Flipkart, eBay & more. Tech2Globe helps sellers with cataloging, listing, SEO & global growth.",
-  keywords: [
-    "Bulk Upload Products",
-    "Bulk Upload Products to Amazon",
-    "Amazon Product Uploading Services",
-    "Amazon Product Uploading",
-    "Product Uploading Services",
-    "Product Uploading"
-  ],
-  openGraph: {
-    title: "eCommerce Marketplace Management | Amazon, Flipkart & eBay Experts",
-    siteName: "Tech2Globe Web Solutions LLP",
+    title: "eCommerce Marketplace Management | AI-Powered Amazon, Flipkart & eBay Growth",
     description:
-      "eCommerce Marketplace Management services for Amazon, Flipkart, eBay & more. Tech2Globe helps sellers with cataloging, listing, SEO & global growth.",
-    url: "https://www.tech2globe.com/ecommerce-marketplace-management"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "eCommerce Marketplace Management | Amazon, Flipkart & eBay Experts",
-    description:
-      "eCommerce Marketplace Management services for Amazon, Flipkart, eBay & more. Tech2Globe helps sellers with cataloging, listing, SEO & global growth."
-  },
-  alternates: {
-    canonical: "https://www.tech2globe.com/ecommerce-marketplace-management"
-  }
+        "Manage and scale your presence across Amazon, Flipkart, and eBay with Tech2Globe's AI-powered marketplace management. From smart inventory control to automated listing optimization, we handle it all for measurable growth.",
+    keywords: [
+        "Bulk Upload Products",
+        "Bulk Upload Products to Amazon",
+        "Amazon Product Uploading Services",
+        "Amazon Product Uploading",
+        "Product Uploading Services",
+        "Product Uploading"
+    ],
+    openGraph: {
+        title: "eCommerce Marketplace Management | AI-Powered Amazon, Flipkart & eBay Growth",
+        siteName: "Tech2Globe Web Solutions LLP",
+        description:
+            "Manage and scale your presence across Amazon, Flipkart, and eBay with Tech2Globe's AI-powered marketplace management. From smart inventory control to automated listing optimization, we handle it all for measurable growth.",
+        url: "https://stagenew.tech2globe.tech/ecommerce-marketplace-management"
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "eCommerce Marketplace Management | AI-Powered Amazon, Flipkart & eBay Growth",
+        description:
+            "Manage and scale your presence across Amazon, Flipkart, and eBay with Tech2Globe's AI-powered marketplace management. From smart inventory control to automated listing optimization, we handle it all for measurable growth."
+    },
+    alternates: {
+        canonical: "https://stagenew.tech2globe.tech/ecommerce-marketplace-management"
+    }
 };
 
 const pageHeaderData = {
@@ -120,6 +122,90 @@ const faqs = [
       across multiple online platforms.
     `,
     },
+];
+
+
+const portfolioClients = [
+    {
+        initials: "CH",
+        gradient: "#0b2e58",
+        client: "Coastal Home Goods",
+        country: "USA",
+        project: "Multi-Marketplace Cataloging & Listing",
+        desc: "Unified cataloging and listing management across three marketplaces for a home goods brand.",
+        category: "Multi-Marketplace Cataloging & Listing",
+        result: "Revenue: +38%",
+        resultSub: "Growth in 4 Months",
+    },
+    {
+        initials: "EO",
+        gradient: "#0b2e58",
+        client: "Emerald Outdoor Co.",
+        country: "Ireland",
+        project: "Listing Optimization & Account Setup",
+        desc: "Streamlined multi-platform cataloging and fixed underperforming product listings.",
+        category: "Listing Optimization & Account Setup",
+        result: "Fewer Listing Errors",
+        resultSub: "Steadier Order Flow",
+    },
+    {
+        initials: "NL",
+        gradient: "#0b2e58",
+        client: "Nordic Living Supply",
+        country: "Sweden",
+        project: "Multi-Channel Marketplace Strategy",
+        desc: "Optimized titles, images, and pricing logic across every active sales channel.",
+        category: "Multi-Channel Marketplace Strategy",
+        result: "Improved Order Consistency",
+        resultSub: "Across All Channels",
+    },
+    {
+        initials: "MC",
+        gradient: "#0b2e58",
+        client: "Maple & Co. Living",
+        country: "Canada",
+        project: "Account Setup & Product Cataloging",
+        desc: "End-to-end account setup and bulk cataloging for a furniture and decor retailer.",
+        category: "Account Setup & Product Cataloging",
+        result: "4 New Marketplaces",
+        resultSub: "Faster Onboarding",
+    },
+    {
+        initials: "AW",
+        gradient: "#0b2e58",
+        client: "Aurora Wellness Group",
+        country: "Australia",
+        project: "Catalog & Advertising Management",
+        desc: "Combined catalog cleanup with targeted advertising for a wellness products brand.",
+        category: "Catalog & Advertising Management",
+        result: "Improved Visibility",
+        resultSub: "Regional Storefront Growth",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe took over cataloging and listing management across three marketplaces for us and the difference was night and day. Within four months our combined marketplace revenue was up 38%, and we finally had one team accountable for consistency across every channel.",
+        name: "Sarah Mitchell | Coastal Home Goods",
+        location: "United States",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We were stretched thin trying to manage listings on our own across multiple platforms. Tech2Globe's marketplace team streamlined our cataloging, fixed our underperforming listings, and gave us a single dashboard view of performance. Our operations are far less chaotic now.",
+        name: "James O'Connor | Emerald Outdoor Co.",
+        location: "Ireland",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "What stood out was how quickly Tech2Globe understood our multi-channel strategy. They didn't just upload products, they actively optimized titles, images, and pricing logic across every marketplace we sell on, which translated directly into a steadier order flow.",
+        name: "Marcus Lindgren | Nordic Living Supply",
+        location: "Sweden",
+    },
+
 ];
 
 
@@ -257,6 +343,9 @@ export default function EcommerceMarketplaceManagement() {
                     </div>
                 </div>
             </section>
+
+            <ClientPortfolio clients={portfolioClients} />
+            <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />
         </>
     )

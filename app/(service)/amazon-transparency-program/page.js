@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FaqSection from "@/app/components/services/faqs/faqs";
 import { FaAngleRight, FaBroom, FaCircleNotch, FaCrop, FaDesktop, FaLaptop, FaNewspaper, FaSmile, FaStar, FaTable } from "react-icons/fa";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 
 export const metadata = {
@@ -25,14 +26,14 @@ export const metadata = {
     ],
 
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-transparency-program",
+        canonical: "https://stagenew.tech2globe.tech/amazon-transparency-program",
     },
 
     openGraph: {
         title: "Amazon Transparency Program | Transparency Program Amazon",
         description:
             "Ensure trust and authenticity on Amazon with Tech2Globe’s expert assistance in the Transparency Program. Safeguard your brand with our Amazon Transparency Program services.",
-        url: "https://www.tech2globe.com/amazon-transparency-program",
+        url: "https://stagenew.tech2globe.tech/amazon-transparency-program",
         siteName: "Tech2Globe web Solutions LLP",
         type: "website",
     },
@@ -83,6 +84,87 @@ const pageHeaderData = {
     backgroundImage: "/images/skyscraper.jpg",
     shortBanner: true
 };
+
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe enrolled all 80 of our ASINs into the Transparency Program and eliminated counterfeit sellers overnight. Our brand is now protected and customer trust has skyrocketed.",
+        name: "George Mitchell | PrimeGuard Electronics",
+        location: "USA",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Counterfeit copies of our perfumes were destroying our reputation on Amazon. Tech2Globe guided us through the entire Transparency enrollment and serialization process. Zero fakes now.",
+        name: "Isabella Rossi | LuxeScent Italia",
+        location: "Italy",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We had no idea the Transparency Program existed. Tech2Globe educated us, enrolled our products, and handled all label coordination with our manufacturer. Our brand is now 100% protected.",
+        name: "Tom Nguyen | VietBeauty Global",
+        location: "Vietnam",
+    },
+];
+
+const portfolioClients = [
+    {
+        initials: "PG",
+        gradient: "#0b2e58",
+        client: "PrimeGuard Electronics",
+        country: "USA",
+        project: "80-ASIN Transparency Enrollment",
+        desc: "US electronics brand that enrolled 80 ASINs in the Transparency Program, eliminating counterfeit sellers and boosting customer trust significantly.",
+        category: "Transparency",
+        result: "Counterfeiters Eliminated",
+        resultSub: "Brand Secured",
+    },
+    {
+        initials: "LS",
+        gradient: "#0b2e58",
+        client: "LuxeScent Italia",
+        country: "Italy",
+        project: "Luxury Goods Serialization",
+        desc: "Italian luxury perfume brand that protected its entire catalog through Amazon Transparency serialization, achieving zero counterfeit complaints.",
+        category: "Transparency",
+        result: "Zero Complaints",
+        resultSub: "Counterfeit-Free",
+    },
+    {
+        initials: "VB",
+        gradient: "#0b2e58",
+        client: "VietBeauty Global",
+        country: "Vietnam",
+        project: "Manufacturer Label Coordination",
+        desc: "Vietnamese beauty brand that enrolled in Transparency with full manufacturer label coordination, achieving complete catalog brand protection.",
+        category: "Transparency",
+        result: "Full Catalog Protected",
+        resultSub: "Secure Listings",
+    },
+    {
+        initials: "KT",
+        gradient: "#0b2e58",
+        client: "KidSafe Toys",
+        country: "Germany",
+        project: "Transparency + Brand Registry",
+        category: "Transparency",
+        result: "2,000+ Units/Month",
+        resultSub: "Serialized",
+    },
+    {
+        initials: "SC",
+        gradient: "#0b2e58",
+        client: "SportCore USA",
+        country: "USA",
+        project: "End-to-End Enrollment Support",
+        category: "Transparency",
+        result: "100% Authentication",
+        resultSub: "Rate Achieved",
+    },
+];
 
 export default function AmazonTransparencyProgram() {
 
@@ -300,6 +382,10 @@ export default function AmazonTransparencyProgram() {
 
 
             </div >
+
+            <ClientPortfolio clients={portfolioClients} />
+
+            <ClientSlider testimonials={testimonials} />
 
             <FaqSection faqs={faqs} />
 

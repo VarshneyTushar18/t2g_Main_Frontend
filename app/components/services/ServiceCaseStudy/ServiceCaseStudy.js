@@ -1,6 +1,7 @@
 // app/components/CaseStudiesSection.jsx
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 import Style from "./ServiceCaseStudy.module.css";
 
 export default function CaseStudiesService({ caseStudies }) {
@@ -24,22 +25,27 @@ export default function CaseStudiesService({ caseStudies }) {
             key={study.id}
             className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-4"
           >
-            <div className={`${Style.CaseStudyCard} p-3 h-100 d-flex flex-column align-items-center text-center border rounded-4 shadow-sm bg-white`}>
-              <Image
-                src={study.image}
-                alt={study.title}
-                width={400}
-                height={250}
-                className="img-fluid rounded casestudies-img mb-3"
-              />
-              <h4 className={Style.CaseStudyCardTitle}>{study.title}</h4>
-              <p className={Style.CaseStudyCardDesc}>{study.description}</p>
+            <div className={Style.CaseStudyCard}>
               <Link
                 href={study.docLink}
-                className={Style.CaseStudyCardBtn}
+                className={Style.cardArrowLink}
+                aria-label={`Read case study: ${study.title}`}
               >
-                Read More
+                <FaArrowRight className={Style.cardArrowIcon} />
               </Link>
+              <div className={Style.cardContent}>
+                <h4 className={Style.CaseStudyCardTitle}>{study.title}</h4>
+                <div className={Style.imageWrapper}>
+                  <Image
+                    src={study.image}
+                    alt={study.title}
+                    width={400}
+                    height={250}
+                    className={Style.cardImage}
+                  />
+                </div>
+                <p className={Style.CaseStudyCardDesc}>{study.description}</p>
+              </div>
             </div>
           </div>
         ))}

@@ -7,29 +7,31 @@ import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSide
 import FaqSection from "@/app/components/services/faqs/faqs";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
-    title: "eCommerce Marketplace Management | AI-Powered Amazon, Flipkart & eBay Growth",
+    title: "",
     description:
-        "Manage and scale your presence across Amazon, Flipkart, and eBay with Tech2Globe's AI-powered marketplace management. From smart inventory control to automated listing optimization, we handle it all for measurable growth.",
+        "",
     keywords: [
         ""
     ],
     openGraph: {
-        title: "eCommerce Marketplace Management | AI-Powered Amazon, Flipkart & eBay Growth",
+        title: "",
         siteName: "Tech2Globe Web Solutions LLP",
         description:
-            "Manage and scale your presence across Amazon, Flipkart, and eBay with Tech2Globe's AI-powered marketplace management. From smart inventory control to automated listing optimization, we handle it all for measurable growth.",
-        url: "https://www.tech2globe.com/ebay-marketplace-management"
+            "",
+        url: ""
     },
     twitter: {
         card: "summary_large_image",
-        title: "eCommerce Marketplace Management | AI-Powered Amazon, Flipkart & eBay Growth",
+        title: "",
         description:
-            "Manage and scale your presence across Amazon, Flipkart, and eBay with Tech2Globe's AI-powered marketplace management. From smart inventory control to automated listing optimization, we handle it all for measurable growth."
+            ""
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/ebay-marketplace-management"
+        canonical: ""
     }
 };
 
@@ -397,6 +399,88 @@ const faqs = [
     },
 ];
 
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Our eBay store had been neglected for years with outdated listings and inconsistent shipping policies. Tech2Globe rebuilt our store template, refreshed every listing, and tightened our return policy language. Our seller rating climbed back to Top Rated within three months.",
+        name: "Robert Hayes | Vintage Motor Parts Co.",
+        location: "United States",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We sell collectible items that need very specific descriptions and condition grading. Tech2Globe's team took the time to understand our niche and wrote listings that actually reflect how serious collectors search and buy. Our case closure rate dropped significantly as a result.",
+        name: "Emma Walsh | Collectible Crafts Ltd.",
+        location: "United Kingdom",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe manages our eBay promotions, item specifics, and customer messaging queue daily. It's the first time our eBay channel has felt properly managed rather than an afterthought next to our main website.",
+        name: "Liam O'Brien | Dublin Trading Post",
+        location: "Ireland",
+    },
+];
+
+
+const portfolioClients = [
+    {
+        initials: "RA",
+        gradient: "#0b2e58",
+        client: "Royston Auto Parts",
+        country: "USA",
+        project: "Listing Management & Store Design",
+        desc: "Rebuilt eBay storefront and optimized listings for an auto parts seller.",
+        category: "Listing Management & Store Design",
+        result: "Increased Store Traffic",
+        resultSub: "Post-Redesign Growth",
+    },
+    {
+        initials: "CV",
+        gradient: "#0b2e58",
+        client: "Camden Vintage Goods",
+        country: "UK",
+        project: "Catalog Management & SEO",
+        desc: "Improved listing titles and item specifics to boost organic visibility.",
+        category: "Catalog Management & SEO",
+        result: "Higher Search Rankings",
+        resultSub: "Core Category Visibility",
+    },
+    {
+        initials: "OT",
+        gradient: "#0b2e58",
+        client: "Outback Trading Post",
+        country: "Australia",
+        project: "Account Management & Order Fulfillment",
+        desc: "Streamlined order processing and buyer communication for an eBay seller.",
+        category: "Account Management & Order Fulfillment",
+        result: "Faster Order Turnaround",
+        resultSub: "Reduced Buyer Disputes",
+    },
+    {
+        initials: "AS",
+        gradient: "#0b2e58",
+        client: "Alpine Sports Exchange",
+        country: "CH",
+        project: "Listing Optimization & Pricing",
+        desc: "Refined pricing strategy and listing quality for sporting goods inventory.",
+        category: "Listing Optimization & Pricing",
+        result: "Improved Sell-Through Rate",
+        resultSub: "Key Item Performance",
+    },
+    {
+        initials: "DM",
+        gradient: "#0b2e58",
+        client: "Driftwood Marine Supply",
+        country: "Canada",
+        project: "Multi-Category Catalog Expansion",
+        desc: "Added optimized listings across additional eBay product categories.",
+        category: "Multi-Category Catalog Expansion",
+        result: "Expanded Catalog Reach",
+        resultSub: "New Category Growth",
+    },
+];
 
 export default function EbayMarketplaceManagement() {
     return (
@@ -506,9 +590,13 @@ export default function EbayMarketplaceManagement() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} />
-            </div>
+            </div> */}
+
+            <ClientPortfolio clients={portfolioClients} />
+
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

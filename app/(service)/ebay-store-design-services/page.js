@@ -6,6 +6,8 @@ import ServiceBanner from "@/app/components/services/ServiceBanner/ServiceBanner
 import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSidebar";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
   title: "EBay Store Design | EBay Store Designer Services - Tech2Globe",
@@ -17,14 +19,14 @@ export const metadata = {
     "Professional EBay Store Design services"
   ],
   alternates: {
-    canonical: "https://www.tech2globe.com/ebay-store-design-services"
+    canonical: "https://stagenew.tech2globe.tech/ebay-store-design-services"
   },
   openGraph: {
     title: "EBay Store Design | EBay Store Designer Services - Tech2Globe",
     description:
       "We have professional ebay store designs to transform the look of your ebay shop. Visually appealing ebay store design grow your business with ebay design!",
     siteName: "Tech2Globe",
-    url: "https://www.tech2globe.com/ebay-store-design-services",
+    url: "https://stagenew.tech2globe.tech/ebay-store-design-services",
     type: "website"
   },
   twitter: {
@@ -336,6 +338,94 @@ const portfolio = [
   },
 ]
 
+const testimonials = [
+  {
+    id: 1,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe redesigned our eBay store and created professional listing templates that truly reflect our brand. The new store layout is clean, mobile-friendly, and highly conversion-focused. Since the redesign, our click-through rate improved by 48% and buyer trust has visibly increased based on our feedback metrics. Outstanding design work.",
+    name: "Brian Callahan | Callahan Auto Parts USA",
+    location: "United States",
+  },
+  {
+    id: 2,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Our eBay store was bland and inconsistent before Tech2Globe stepped in. They created a stunning, branded storefront with custom category banners, a professional logo, and consistent listing templates across all 2,000+ of our products. Buyer inquiries went up by 35% and our eBay store feedback score improved remarkably.",
+    name: "Harriet Thompson | Thompson Vintage Collectibles",
+    location: "United Kingdom",
+  },
+  {
+    id: 3,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe delivered an outstanding eBay store design that reflects our premium brand positioning. They designed custom HTML listing templates that are both visually appealing and SEO-optimized. Our eBay sales increased by 29% in the first month. The team was professional, timely, and exceeded every expectation we had.",
+    name: "Hans van der Berg | Dutch Design Wholesale BV",
+    location: "Netherlands",
+  },
+  {
+    id: 4,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "We needed a cohesive eBay store that matched our brand identity across global markets. Tech2Globe created a beautiful store design with custom banners, category pages, and listing templates in English and Japanese. The professionalism and attention to brand guidelines were exceptional. We have seen a measurable lift in buyer confidence and sales.",
+    name: "Aiko Tanaka | Tanaka Lifestyle Brands",
+    location: "Japan",
+  },
+];
+
+const portfolioClients = [
+  {
+    initials: "CA",
+    gradient: "#0b2e58",
+    client: "Callahan Auto Parts USA",
+    country: "USA",
+    project: "eBay Store Redesign & Branded Listing Template Creation",
+    desc: "Branded eBay storefront redesign with custom listing templates, category banners, and mobile-optimized layouts to improve buyer trust and engagement.",
+    category: "eBay Store Design",
+    result: "48% Increase",
+    resultSub: "Click-Through Rate",
+  },
+  {
+    initials: "TV",
+    gradient: "#0b2e58",
+    client: "Thompson Vintage Collectibles",
+    country: "UK",
+    project: "eBay Branded Store & SEO-Optimized Listing Templates",
+    desc: "Custom eBay store design with branded visuals, SEO-optimized listing templates, and enhanced category structure for improved visibility.",
+    category: "eBay Store Design",
+    result: "63% Increase",
+    resultSub: "Store Page Views",
+  },
+  {
+    initials: "DD",
+    gradient: "#0b2e58",
+    client: "Dutch Design Wholesale BV",
+    country: "Netherlands",
+    project: "eBay Store Design for International Wholesale Brand",
+    desc: "Premium eBay storefront with mobile-friendly templates, category pages, and trust-building elements for international wholesale buyers.",
+    category: "eBay Store Design",
+    result: "29% Increase",
+    resultSub: "eBay Sales",
+  },
+  {
+    initials: "TL",
+    gradient: "#0b2e58",
+    client: "Tanaka Lifestyle Brands",
+    country: "Japan",
+    project: "eBay Bilingual Store Design (English & Japanese)",
+    desc: "Bilingual eBay store design featuring dual-language templates, optimized content, and localized branding for global and domestic audiences.",
+    category: "eBay Store Design",
+    result: "71% Increase",
+    resultSub: "Store Impressions",
+  },
+  {
+    initials: "KK",
+    gradient: "#0b2e58",
+    client: "Kiwi Kids Emporium",
+    country: "NZ",
+    project: "eBay Store Launch & Complete Listing Template System",
+    desc: "Complete eBay store setup with branded templates, SEO-focused product listings, and consistent visual identity across all products.",
+    category: "eBay Store Design",
+    result: "Top Rated Seller",
+    resultSub: "Within 90 Days",
+  },
+];
 
 export default function EbayStoreDesign() {
   return (
@@ -413,9 +503,13 @@ export default function EbayStoreDesign() {
       </section>
 
 
-      <div className="StoreCreationTabs">
+      {/* <div className="StoreCreationTabs">
         <PortfolioTabs data={portfolio} />
-      </div>
+      </div> */}
+
+      <ClientPortfolio clients={portfolioClients} />
+
+      <ClientSlider testimonials={testimonials} />
     </>
   )
 };

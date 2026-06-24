@@ -33,7 +33,7 @@ export const metadata = {
     title: "Customer Support AI Chatbots for 24/7 Assistance",
     description:
       "Deploy AI-powered customer support chatbots to reduce response time, automate queries, and improve customer satisfaction across channels.",
-    url: "https://www.tech2globe.com/customer-support-ai-chatbots",
+    url: "https://stagenew.tech2globe.tech/customer-support-ai-chatbots",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/customer-support-ai-chatbots",
+    canonical: "https://stagenew.tech2globe.tech/customer-support-ai-chatbots",
   },
 };
 

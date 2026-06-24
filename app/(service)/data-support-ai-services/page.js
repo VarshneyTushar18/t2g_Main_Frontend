@@ -26,7 +26,7 @@ export const metadata = {
     siteName: "Tech2Globe Web Solutions LLP",
     description:
       "Tech2Globe's AI-based data support services combine artificial intelligence with expert human oversight to deliver intelligent data processing, annotation, validation, and management — built for businesses that run on clean, reliable data.",
-    url: "https://www.tech2globe.com/data-support-ai-services"
+    url: "https://stagenew.tech2globe.tech/data-support-ai-services"
   },
   twitter: {
     card: "summary_large_image",
@@ -35,7 +35,7 @@ export const metadata = {
       "Tech2Globe's AI-based data support services combine artificial intelligence with expert human oversight to deliver intelligent data processing, annotation, validation, and management — built for businesses that run on clean, reliable data."
   },
   alternates: {
-    canonical: "https://www.tech2globe.com/data-support-ai-services"
+    canonical: "https://stagenew.tech2globe.tech/data-support-ai-services"
   }
 };
 

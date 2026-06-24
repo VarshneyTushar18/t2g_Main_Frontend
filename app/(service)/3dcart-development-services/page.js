@@ -6,6 +6,8 @@ import ServiceBanner from "@/app/components/services/ServiceBanner/ServiceBanner
 import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSidebar";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "3dcart Development Services | 3dcart Store Development",
@@ -22,7 +24,7 @@ export const metadata = {
         title: "3dcart Development Services | 3dcart Store Development",
         description:
             "Professional 3dcart development services to build and enhance your online store. Get best solutions and support for seamless 3dcart store development.",
-        url: "https://www.tech2globe.com/3dcart-development-services",
+        url: "https://stagenew.tech2globe.tech/3dcart-development-services",
         siteName: "Tech2Globe",
         type: "website"
     },
@@ -33,7 +35,7 @@ export const metadata = {
             "Professional 3dcart development services to build and enhance your online store. Get best solutions and support for seamless 3dcart store development."
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/3dcart-development-services"
+        canonical: "https://stagenew.tech2globe.tech/3dcart-development-services"
     }
 };
 
@@ -339,6 +341,94 @@ const portfolio = [
   },
 ]
 
+const testimonials = [
+  {
+    id: 1,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe built our 3dcart store with a custom theme that highlights our supplement brand beautifully. They integrated our preferred payment processors, subscription order system, and automated email marketing workflows. The project was delivered on time and within budget. Our online revenue has grown by 39% since switching to the new store.",
+    name: "Michael O'Connor | O'Connor Sports Nutrition",
+    location: "United States",
+  },
+  {
+    id: 2,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "We engaged Tech2Globe to redesign and optimize our 3dcart store. They redesigned our product pages, improved internal linking, and configured all SEO settings within 3dcart's backend. The improvements led to a 28% increase in organic traffic within 90 days. Their team is knowledgeable about the 3dcart platform inside and out.",
+    name: "Charlotte Davies | Davies Home Décor Ltd.",
+    location: "United Kingdom",
+  },
+  {
+    id: 3,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe migrated our store to 3dcart from a legacy platform and the experience was seamless. They transferred all product data, customer records, and order history without any loss. The new storefront is fast, modern, and fully mobile-responsive. Our repeat purchase rate has increased and customer satisfaction scores are at an all-time high.",
+    name: "Stefan Kowalski | Kowalski Auto Accessories",
+    location: "Poland",
+  },
+  {
+    id: 4,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "As a growing natural skincare brand targeting the European and North American markets, we needed a professional 3dcart store that conveyed trust and quality. Tech2Globe delivered exactly that — a clean design, optimized checkout, and seamless integration with our shipping partners. Our international orders have increased by 47% since launch.",
+    name: "Amara Osei | Osei Naturals Co.",
+    location: "Ghana",
+  },
+];
+
+const portfolioClients = [
+  {
+    initials: "OS",
+    gradient: "#0b2e58",
+    client: "O'Connor Sports Nutrition",
+    country: "USA",
+    project: "3dcart Custom Store with Subscription & Email Automation",
+    desc: "Custom 3dcart store with subscription ordering, automated email workflows, and conversion-focused product pages to drive recurring revenue growth.",
+    category: "3dcart Development",
+    result: "39% Growth",
+    resultSub: "Online Revenue",
+  },
+  {
+    initials: "DH",
+    gradient: "#0b2e58",
+    client: "Davies Home Décor Ltd.",
+    country: "UK",
+    project: "3dcart Store Redesign & On-Page SEO Optimization",
+    desc: "Redesigned 3dcart storefront with SEO optimization, improved site structure, and enhanced product pages to increase visibility and conversions.",
+    category: "3dcart Development",
+    result: "28% Increase",
+    resultSub: "Organic Traffic",
+  },
+  {
+    initials: "KA",
+    gradient: "#0b2e58",
+    client: "Kowalski Auto Accessories",
+    country: "PL",
+    project: "Legacy Platform to 3dcart Migration & Store Launch",
+    desc: "Migrated legacy ecommerce platform to 3dcart with multilingual support, multi-currency functionality, and a fully responsive storefront.",
+    category: "3dcart Development",
+    result: "27% Increase",
+    resultSub: "Repeat Purchases",
+  },
+  {
+    initials: "ON",
+    gradient: "#0b2e58",
+    client: "Osei Naturals Co.",
+    country: "Ghana",
+    project: "3dcart Store Launch for International D2C Beauty Brand",
+    desc: "Built an international 3dcart storefront with shipping integrations, SEO-focused content, and trust-building features for global customers.",
+    category: "3dcart Development",
+    result: "47% Increase",
+    resultSub: "International Orders",
+  },
+  {
+    initials: "BK",
+    gradient: "#0b2e58",
+    client: "Beaumont Kitchenware",
+    country: "France",
+    project: "3dcart Custom Theme & B2B Wholesale Channel",
+    desc: "Custom 3dcart theme with B2B wholesale portal, automated pricing rules, and streamlined order management for professional buyers.",
+    category: "3dcart Development",
+    result: "60 Clients",
+    resultSub: "Onboarded in 60 Days",
+  },
+];
 
 export default function CartDevelopment() {
     return (
@@ -411,9 +501,13 @@ export default function CartDevelopment() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} />
-            </div>
+            </div> */}
+
+            <ClientPortfolio clients={portfolioClients} />
+
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

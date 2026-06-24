@@ -33,7 +33,7 @@ export const metadata = {
     title: "Marketing Automation with AI for Smarter Campaigns",
     description:
       "Scale your marketing efforts with AI-powered automation solutions for lead nurturing, customer engagement, and campaign optimization.",
-    url: "https://tech2globe.com/marketing-automation-with-ai",
+    url: "/service/marketing-automation-with-ai",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://tech2globe.com/marketing-automation-with-ai",
+    canonical: "/service/marketing-automation-with-ai",
   },
 };
 

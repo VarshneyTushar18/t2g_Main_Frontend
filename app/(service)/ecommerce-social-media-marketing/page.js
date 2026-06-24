@@ -8,6 +8,8 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import { FaChartBar, FaChartLine, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaHandshake, FaLightbulb, FaSearch, FaShieldAlt, FaTag, FaTimesCircle, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
  title:
@@ -25,7 +27,7 @@ export const metadata = {
 
   alternates: {
     canonical:
-      "https://www.tech2globe.com/ecommerce-social-media-marketing",
+      "https://stagenew.tech2globe.tech/ecommerce-social-media-marketing",
   },
 
   openGraph: {
@@ -33,7 +35,7 @@ export const metadata = {
       "ECommerce Social Media Marketing Service | Best ECommerce SEO agency",
     description:
       "Want to drive more Ecommerce conversions from paid social ads? Our Social Media Marketing specializes in connecting brands with their target consumers online. Watch your business grow with the help of our E-commerce social media marketing agency.",
-    url: "https://www.tech2globe.com/ecommerce-social-media-marketing",
+    url: "https://stagenew.tech2globe.tech/ecommerce-social-media-marketing",
     siteName: "Tech2Globe web Solutions LLP",
     type: "website",
   },
@@ -227,80 +229,171 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
 
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's social media marketing team completely revamped our Instagram and Facebook presence. They developed scroll-stopping creative content, ran highly targeted ad campaigns, and grew our following by 15,000 in just three months. More importantly, our social-driven revenue went up by 140%. They really understand ecommerce brand storytelling.",
+        name: "Mia Thompson | Brand Director, LuxeCloset",
+        location: "United States",
+      },
+      {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "From strategy to execution, Tech2Globe handled our entire social media marketing operation. Their creative team produced native-feel content that resonated with our audience, and their ad targeting was laser-precise. We saw a 3.8x return on ad spend from our social campaigns within the first quarter. Absolutely worth every penny.",
+        name: "Carlos Rivera | Founder, UrbanThreads",
+        location: "Mexico",
+      },
+      {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe helped us build a consistent brand voice across all our social channels and also coordinated an influencer campaign that generated massive visibility for our new product launch. The engagement rates on our posts improved significantly and our conversion from social media ads doubled compared to our previous agency. Very professional team.",
+        name: "Emma Johansson | E-commerce Manager, NordicNest",
+        location: "Sweden",
+      },
+      {
+        id: 4,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We needed a team that could manage our social media marketing while we focused on operations — Tech2Globe delivered beyond our expectations. Their community management kept our audience engaged, their video content saw strong organic reach, and their paid campaigns produced measurable sales lifts. Highly responsive and results-focused.",
+        name: "Daniel Okafor | CMO, AfriShop",
+        location: "South Africa",
+      },
+      {
+        id: 5,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe managed our ecommerce social media marketing with a level of strategic thinking I hadn't seen from agencies before. They ran A/B tests on creatives, segmented our retargeting audiences smartly, and built a content calendar that kept our engagement metrics consistently high. Our cost-per-purchase dropped by 38% within two months.",
+        name: "Isabella Rossi | Marketing Lead, Bellezza Store",
+        location: "Italy",
+      },
+];
+
+
+const portfolioClients = [
+    {
+        initials: "LC",
+        gradient: "#0b2e58",
+        client: "LuxeCloset Fashion",
+        country: "USA",
+        project: "Social Media Marketing — Luxury Fashion",
+        desc: "Built unified social strategy across platforms with content calendars, influencer campaigns, and paid ads, driving strong engagement and revenue growth.",
+        category: "Social Media Marketing",
+        result: "Instagram grew to 62K followers",
+      },
+      {
+        initials: "AS",
+        gradient: "#0b2e58",
+        client: "AfriShop Marketplace",
+        country: "ZA",
+        project: "Social Media Marketing — Ecommerce Marketplace",
+        desc: "Developed multi-platform social strategy with creators and localized campaigns, boosting engagement, lowering lead costs, and increasing social-driven sales.",
+        category: "Social Media Marketing",
+        result: "175% increase in social orders",
+      },
+      {
+        initials: "NI",
+        gradient: "#0b2e58",
+        client: "NordicNest Interiors",
+        country: "Sweden",
+        project: "Social Media Marketing — Home & Interior Design",
+        desc: "Created visual-first social engine with Reels, Pinterest boards, and ads, driving strong traffic, pre-orders, and improved paid ROAS.",
+        category: "Social Media Marketing",
+        result: "430% increase in Pinterest traffic",
+      },
+      {
+        initials: "PW",
+        gradient: "#0b2e58",
+        client: "PetWorld Australia",
+        country: "Australia",
+        project: "Social Media Marketing — Pet Care & Supplies",
+        desc: "Launched UGC-driven community strategy with campaigns and paid ads, significantly increasing engagement, conversions, and reducing acquisition costs.",
+        category: "Social Media Marketing",
+        result: "Social revenue tripled in 6 months",
+      },
+      {
+        initials: "BC",
+        gradient: "#0b2e58",
+        client: "Bellezza Cosmetica",
+        country: "Italy",
+        project: "Social Media Marketing — Beauty & Cosmetics",
+        desc: "Executed cross-border social strategy with influencers, TikTok content, and paid ads, boosting reach, engagement, and international expansion.",
+        category: "Social Media Marketing",
+        result: "5x Instagram reach growth",
+      },
+];
 
 export default function EcommerceSocialMediaMarketing() {
     return (
@@ -418,11 +511,15 @@ export default function EcommerceSocialMediaMarketing() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
-            </div>
+            </div> */}
+
+            <ClientPortfolio clients={portfolioClients} />
 
             <CaseStudiesService caseStudies={caseStudies} />
+
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

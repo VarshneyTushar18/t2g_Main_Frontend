@@ -8,6 +8,8 @@ import FaqSection from "@/app/components/services/faqs/faqs";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import { FaHeadset, FaBullseye, FaUserTie } from "react-icons/fa";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "",
@@ -345,7 +347,87 @@ const portfolio = [
     },
 ]
 
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Breaking into Rakuten felt intimidating given how different its merchandising and loyalty point system is from other marketplaces. Tech2Globe walked us through account setup and listing localization, and our storefront now performs steadily without us having to second guess every update.",
+        name: "Anna Kowalski | Lumina Beauty Co.",
+        location: "United States",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe handled our Rakuten catalog structure and pricing strategy from day one. Their understanding of how Rakuten's point reward system affects buyer behavior helped us price competitively without cutting into margin.",
+        name: "Mark Ferreira | TerraFit Wellness",
+        location: "Australia",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We appreciated that Tech2Globe didn't treat Rakuten as an afterthought compared to bigger marketplaces. Our listings were properly translated and merchandised, and our repeat purchase rate on the platform has been encouraging.",
+        name: "Claire Dubois | Maison Belle Cosmetics",
+        location: "France",
+    },
+];
 
+const portfolioClients = [
+    {
+        initials: "SH",
+        gradient: "#0b2e58",
+        client: "Sakura Home Imports",
+        country: "USA",
+        project: "Marketplace Account Management",
+        desc: "Managed full Rakuten account operations for a home imports brand.",
+        category: "Marketplace Account Management",
+        result: "Consistent Order Growth",
+        resultSub: "Quarter-over-Quarter Improvement",
+    },
+    {
+        initials: "MB",
+        gradient: "#0b2e58",
+        client: "Meridian Beauty Co.",
+        country: "UK",
+        project: "Listing Localization & SEO",
+        desc: "Localized product content and optimized listings for regional buyers.",
+        category: "Listing Localization & SEO",
+        result: "Improved Search Visibility",
+        resultSub: "Localized Market Growth",
+    },
+    {
+        initials: "LA",
+        gradient: "#0b2e58",
+        client: "Lakeside Apparel Group",
+        country: "Canada",
+        project: "Catalog Upload & Pricing",
+        desc: "Uploaded full apparel catalog with region-appropriate pricing structure.",
+        category: "Catalog Upload & Pricing",
+        result: "Error-Free Catalog Launch",
+        resultSub: "Accurate Regional Pricing",
+    },
+    {
+        initials: "FL",
+        gradient: "#0b2e58",
+        client: "Forsythe Lifestyle Brands",
+        country: "Australia",
+        project: "Account Setup & Compliance",
+        desc: "Handled documentation and setup for a new Rakuten seller account.",
+        category: "Account Setup & Compliance",
+        result: "Approved Without Delays",
+        resultSub: "Smooth Seller Onboarding",
+    },
+    {
+        initials: "OS",
+        gradient: "#0b2e58",
+        client: "Origami Stationery Co.",
+        country: "USA",
+        project: "Listing Optimization",
+        desc: "Refined product descriptions and images to improve page conversion.",
+        category: "Listing Optimization",
+        result: "Higher Conversion Rate",
+        resultSub: "Optimized Product Pages",
+    },
+];
 
 export default function RakutenMarketplaceManagement() {
     return (
@@ -617,9 +699,13 @@ export default function RakutenMarketplaceManagement() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} />
-            </div>
+            </div> */}
+
+            <ClientPortfolio clients={portfolioClients} />
+
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

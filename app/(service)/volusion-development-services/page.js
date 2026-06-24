@@ -7,6 +7,7 @@ import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSide
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import { FaHandPointRight } from "react-icons/fa";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
   title: "Volusion Development Services | Volusion development company",
@@ -23,7 +24,7 @@ export const metadata = {
     description:
       "Expert Volusion development services to build and optimize your online store. Partner with a leading Volusion development company for tailored solutions and support.",
     siteName: "Tech2Globe",
-    url: "https://www.tech2globe.com/volusion-development-services"
+    url: "https://stagenew.tech2globe.tech/volusion-development-services"
   },
   twitter: {
     card: "summary",
@@ -32,7 +33,7 @@ export const metadata = {
       "Expert Volusion development services to build and optimize your online store. Partner with a leading Volusion development company for tailored solutions and support."
   },
   alternates: {
-    canonical: "https://www.tech2globe.com/volusion-development-services"
+    canonical: "https://stagenew.tech2globe.tech/volusion-development-services"
   }
 };
 
@@ -337,6 +338,36 @@ const portfolio = [
   },
 ]
 
+const testimonials = [
+  {
+    id: 1,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe revamped our Volusion store and it has been a game-changer for our industrial supply business. They created a custom template, improved navigation for our 5,000-product catalog, and integrated our inventory management software. The new store is faster, cleaner, and far easier for our customers to use. Sales increased by 33%.",
+    name: "Tyler Brooks | Brooks Industrial Supply Co.",
+    location: "United States",
+  },
+  {
+    id: 2,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "We were struggling with our Volusion store's outdated design and slow performance. Tech2Globe delivered a beautiful redesign with improved site speed, a new mobile-responsive template, and better product category organization. Our bounce rate dropped by 25% and average session duration increased significantly. Highly professional team.",
+    name: "Linda Fairbanks | Fairbanks Craft Studio",
+    location: "Australia",
+  },
+  {
+    id: 3,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe helped us migrate our Volusion store and rebuild it with a fresh, modern design tailored to our European clientele. They handled multi-currency pricing, VAT compliance, and language localization with great care. The transition was smooth and our store performance metrics have been climbing steadily since launch.",
+    name: "Jonas Weber | Weber Outdoor Solutions",
+    location: "Switzerland",
+  },
+  {
+    id: 4,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe built a polished Volusion storefront for our art supply export business. They developed custom product options for bulk buyers, integrated PayPal and local Asian payment gateways, and optimized the store for SEO across our key international markets. Our international orders have grown by 41% since the launch of the new store.",
+    name: "Mei Lin Chen | ChenArt International",
+    location: "Singapore",
+  },
+];
 
 export default function VolusionDevelopment() {
   return (
@@ -448,6 +479,8 @@ export default function VolusionDevelopment() {
       <div className="StoreCreationTabs">
         <PortfolioTabs data={portfolio} />
       </div>
+
+      <ClientSlider testimonials={testimonials} />
     </>
   )
 };
