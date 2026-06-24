@@ -9,7 +9,15 @@ import VideoTestimonialSlider from "../components/landingpage/VideoTestimonialSl
 import Script from "next/script";
 
 /* Create a headtag and keywords for the page */
-
+export const metadata = {
+    title: "Amazon Ads Management Agency India | Free Audit | Tech2Globe",
+    description:
+      "",
+  
+    keywords: [
+      "",
+    ],
+}
 
 const testimonials = [
     {
@@ -94,19 +102,19 @@ export default function AmazonAds() {
 
     return (
         <>
-         <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-353956860"
-        strategy="afterInteractive"
-      />
+            <Script
+                src="https://www.googletagmanager.com/gtag/js?id=AW-353956860"
+                strategy="afterInteractive"
+            />
 
-      <Script id="google-ads-contact" strategy="afterInteractive">
-        {`
+            <Script id="google-ads-contact" strategy="afterInteractive">
+                {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'AW-353956860');
         `}
-      </Script>
+            </Script>
 
             <header className="d2c_navbar sticky-top">
                 <div className="container">
@@ -255,7 +263,7 @@ export default function AmazonAds() {
                         <div className="col-lg-3">
                             <div className="row justify-content-center">
 
-                            <VideoTestimonialSlider />
+                                <VideoTestimonialSlider />
                             </div>
                         </div>
 
@@ -847,6 +855,12 @@ export default function AmazonAds() {
                     <Image src="/images/landingpage/Stars.webp" width={1157} height={217} alt="Stars" className="img-fluid" />
                     <p>Trusted by <strong>2000+ Amazon Sellers</strong></p>
                 </div>
+            </div>
+
+            <div className="whatsapp-icon-wrapper">
+                <a href="https://wa.me/919899675039?text=Hi, I want a free Amazon audit for my store." target="_blank">
+                    <Image src="/images/landingpage/whatsapp-icon.png" width={40} height={40} alt="Whatsapp" className="img-fluid whatsapp-icon" />
+                </a>
             </div>
         </>
     )
