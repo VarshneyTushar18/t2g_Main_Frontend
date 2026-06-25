@@ -38,7 +38,7 @@ const INITIAL_FORM = {
   notes: "",
 };
 
-export default function ShopifyIntakeForm({ embedded = false }) {
+export default function ShopifyIntakeForm({ embedded = false, inModal = false, hideTitle = false }) {
   const router = useRouter();
   const [formData, setFormData] = useState(INITIAL_FORM);
   const [loading, setLoading] = useState(false);
@@ -169,10 +169,14 @@ export default function ShopifyIntakeForm({ embedded = false }) {
 
   return (
     <div
-      id="shopify-intake-form"
-      className={`${styles.wrapper} ${embedded ? styles.embedded : ""}`}
+      id={inModal ? undefined : "shopify-intake-form"}
+      className={`${styles.wrapper} ${embedded ? styles.embedded : ""} ${inModal ? styles.modal : ""}`}
     >
-      <h2 className={styles.title}>Shopify AI Store Builder Questionnaire</h2>
+      {!hideTitle ? (
+        <h2 id="shopify-intake-title" className={styles.title}>
+          Shopify AI Store Builder Questionnaire
+        </h2>
+      ) : null}
 
       <form onSubmit={handleSubmit}>
         {formError ? (

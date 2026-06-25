@@ -70,3 +70,35 @@
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
+.modal {
+  box-shadow: 0 8px 32px rgba(13, 27, 56, 0.08);
+  border: 1px solid #e8ecf2;
+  border-radius: 16px;
+  padding: 32px 36px 40px;
+  background: #fff;
+}
+
+.modal .section h3 {
+  color: #0d1b38;
+  font-weight: 700;
+}
+
+.modal .submitBtn {
+  background: #c01f29;
+  min-width: 220px;
+  padding: 14px 28px;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.modal .submitBtn:hover:not(:disabled) {
+  background: #a01822;
+}
+
+@media (max-width: 767px) {
+  .modal {
+    padding: 22px 18px 30px;
+    border-radius: 12px;
+  }
+}
