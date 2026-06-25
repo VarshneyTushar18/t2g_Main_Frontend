@@ -11,48 +11,13 @@ import "./custom.css";
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
-/** Main section heading — e.g. "Events" → "Events Collection" */
-function formatSectionTitle(title) {
-  const t = String(title ?? "").trim();
-  if (!t) return "";
-  if (/ collection$/i.test(t)) return t;
-  return `${t} Collection`;
-}
-
-/** Short label for top tab icons */
-function formatTabTitle(title) {
-  return String(title ?? "")
-    .trim()
-    .replace(/ Collection$/i, "");
-}
-
-/** Card overlay text — always from Description; append year if missing for consistency */
-function formatEventCardTitle(item) {
-  const year = String(item?.year ?? "").trim();
-  let text = String(item?.description ?? "").trim();
-
-  if (!text) {
-    text = String(item?.category_title ?? "")
-      .replace(/ Collection$/i, "")
-      .trim();
-  }
-
-  if (!text) return year || "Event";
-
-  if (year && !new RegExp(`\\b${year}\\b`).test(text)) {
-    return `${text} ${year}`;
-  }
-
-  return text;
-}
-
 export default function EventTabs() {
   const [categories, setCategories] = useState([]);
   const [activeTab, setActiveTab] = useState(null);
   const [years, setYears] = useState([]);
   const [activeYear, setActiveYear] = useState(null);
-  const [galleryItems, setGalleryItems] = useState([]);
-  const [openGalleryId, setOpenGalleryId] = useState(null);
+  const [galleryData, setGalleryData] = useState(null); // single row { banner, gallery[], description }
+  const [openGallery, setOpenGallery] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -77,7 +42,7 @@ export default function EventTabs() {
 
     setYears([]);
     setActiveYear(null);
-    setGalleryItems([]);
+    setGalleryData(null);
 
     fetch(`${BASE_URL}/api/life/years/${activeTab.category}`)
       .then((res) => {
@@ -95,7 +60,7 @@ export default function EventTabs() {
   useEffect(() => {
     if (!activeTab || !activeYear) return;
 
-    setGalleryItems([]);
+    setGalleryData(null);
 
     fetch(`${BASE_URL}/api/life/gallery/${activeTab.category}/${activeYear}`)
       .then((res) => {
@@ -103,20 +68,24 @@ export default function EventTabs() {
         return res.json();
       })
       .then(({ data }) => {
-        setGalleryItems(Array.isArray(data) ? data : []);
+        // data is an array — take first row which has banner + gallery[]
+        setGalleryData(data[0] || null);
       })
       .catch((err) => setError(err.message));
   }, [activeTab, activeYear]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    setOpenGalleryId(null);
+    setOpenGallery(false);
   };
 
   if (loading) return <p className="text-center py-5">Loading...</p>;
   if (error) return <p className="text-center text-danger py-5">{error}</p>;
   if (!categories.length)
     return <p className="text-center py-5">No data found.</p>;
+  const cleanTitle = activeTab?.category
+    ?.replace(/-/g, " ")
+    ?.replace(/\b\w/g, (c) => c.toUpperCase());
 
   return (
     <>
@@ -146,7 +115,9 @@ export default function EventTabs() {
                   height={41}
                 />
               </div>
-              <p className="title">{formatTabTitle(item.category_title)}</p>
+              <p className="title">
+                {item.category_title?.replace(/ Collection$/i, "")}
+              </p>
             </div>
           </SwiperSlide>
         ))}
@@ -154,17 +125,14 @@ export default function EventTabs() {
 
       {/* ── Tab Content ── */}
       <div className="contentBox pt-5">
-        <h2>{formatSectionTitle(activeTab?.category_title)}</h2>
+        <h2>{activeTab?.category_title?.replace(/ Collection$/i, "")}</h2>
         {/* ── Year Buttons ── */}
         <div className="yearTabs pb-4">
           {years.length > 0 ? (
             years.map((year) => (
               <button
                 key={year}
-                onClick={() => {
-                  setActiveYear(year);
-                  setOpenGalleryId(null);
-                }}
+                onClick={() => setActiveYear(year)}
                 className={`yearBtn ${activeYear === year ? "active" : ""}`}
               >
                 {year}
@@ -175,45 +143,40 @@ export default function EventTabs() {
           )}
         </div>
 
-        {/* ── Event cards (one per gallery row) ── */}
-        <div className="row g-4 events-cards-row">
-          {galleryItems.length > 0 ? (
-            galleryItems.map((item) => (
-              <div key={item.id} className="col-md-6">
-                <div className="bannerBlock">
-                  <Image
-                    src={item.banner}
-                    alt={formatEventCardTitle(item)}
-                    width={628}
-                    height={350}
-                    className="rounded-4 object-fit-cover imgBanner w-100"
+        {/* ── Banner + Gallery ── */}
+        <div className="row">
+          <div className="col-md-6">
+            {galleryData ? (
+              <div className="bannerBlock">
+                <Image
+                  src={galleryData.banner}
+                  alt={activeTab?.category_title}
+                  width={628}
+                  height={350}
+                  className="rounded-4 object-fit-cover imgBanner"
+                />
+                <div className="bannerContentBlock">
+                  <h4>{galleryData?.description}</h4>
+                  <button
+                    className="btn bg-danger"
+                    disabled={!galleryData.gallery?.length}
+                    onClick={() => {
+                      if (galleryData.gallery?.length) setOpenGallery(true);
+                    }}
+                  >
+                    Explore More
+                  </button>
+                  <FancyGallery
+                    images={galleryData.gallery || []}
+                    open={openGallery}
+                    setOpen={setOpenGallery}
                   />
-                  <div className="bannerContentBlock">
-                    <h4>{formatEventCardTitle(item)}</h4>
-                    <button
-                      type="button"
-                      className="btn bg-danger"
-                      disabled={!item.gallery?.length}
-                      onClick={() => {
-                        if (item.gallery?.length) setOpenGalleryId(item.id);
-                      }}
-                    >
-                      Explore More
-                    </button>
-                    <FancyGallery
-                      images={item.gallery || []}
-                      open={openGalleryId === item.id}
-                      setOpen={() => setOpenGalleryId(null)}
-                    />
-                  </div>
                 </div>
               </div>
-            ))
-          ) : (
-            <div className="col-12">
+            ) : (
               <p className="text-muted">No content for this selection.</p>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </>

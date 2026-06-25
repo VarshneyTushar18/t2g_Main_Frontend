@@ -11,6 +11,7 @@ import { FaChartBar, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaLightbul
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import ShopifySlider from "@/app/components/services/shopifypageslider/shopifypageslider";
 import ShopifyIntakeForm from "@/app/components/landingpage/ShopifyIntakeForm";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "Shopify Development Company | AI-Ready Stores Built for Performance & Scale",
@@ -32,7 +33,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Build a high-performance Shopify store with Tech2Globe, a leading AI-ready Shopify development company in the USA. We design conversion-optimized, scalable Shopify stores integrated with smart automation tools for long-term ecommerce success.",
-        url: "https://www.tech2globe.com/shopify-development-company"
+        url: "https://stagenew.tech2globe.tech/shopify-development-company"
     },
     twitter: {
         card: "summary_large_image",
@@ -41,7 +42,7 @@ export const metadata = {
             "Build a high-performance Shopify store with Tech2Globe, a leading AI-ready Shopify development company in the USA. We design conversion-optimized, scalable Shopify stores integrated with smart automation tools for long-term ecommerce success."
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/shopify-development-company"
+        canonical: "https://stagenew.tech2globe.tech/shopify-development-company"
     }
 };
 
@@ -85,7 +86,7 @@ const caseStudies = [
         image: "/images/services/service-inner/buxaz-case-study.png",
         description:
             "We believe amazing products should be sold in amazing stores. We are accredited Shopify Experts with a proven track....",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Buxaz%20case%20study.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Buxaz%20case%20study.pdf",
     },
     {
         id: 2,
@@ -93,7 +94,7 @@ const caseStudies = [
         image: "/images/services/service-inner/nopcommerce-development.jpg",
         description:
             "Besteleasy.nl based on Netherlands and offers best quality electronic gadgets in the entire location of Europe, especially wireless speakers, data cables & headphones.....",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Case%20Study%20-%20Besteleasy.nl%20(FINAL%20CASE%20STUDY).pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%20-%20Besteleasy.nl%20(FINAL%20CASE%20STUDY).pdf",
     },
     {
         id: 3,
@@ -101,7 +102,7 @@ const caseStudies = [
         image: "/images/services/service-inner/workshop-internal-employees-400x300.png",
         description:
             "Vichitra Collection based on New Delhi, India and offers best quality traditional textiles and arts outlet. Company established in 1996 and running their business offline.....",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Case%20Study%20-%20VichitraCollection.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%20-%20VichitraCollection.pdf",
     },
     {
         id: 4,
@@ -109,7 +110,7 @@ const caseStudies = [
         image: "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         description:
             "This website is a well-established brand in the USA, and they are dealing into women beauty & grooming products. They owned 100% women-oriented products....",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Case%20Study_%20Shopify%20Multi%20Currency%20Checkout%20.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study_%20Shopify%20Multi%20Currency%20Checkout%20.pdf",
     },
     {
         id: 5,
@@ -117,7 +118,7 @@ const caseStudies = [
         image: "/images/services/service-inner/OnlineBusinessGrowth.png",
         description:
             "Ellie Bianca is a proudly Canadian, all-natural, environmentally sustainable, socially conscious, luxury skin care....",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/ellie%20bianca.pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/ellie%20bianca.pdf",
     },
 ];
 
@@ -125,33 +126,31 @@ const testimonials = [
     {
         id: 1,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "Tech2Globe took my online store idea and turned it into reality. Their team is friendly and knowledgeable, guiding me through the process and making everything user-friendly. My store looks great and runs smoothly.!",
-        name: "Sarah Jones, Boutique Owner",
-    },
-    {
+        text: "Tech2Globe built our Shopify store from the ground up and the results have been phenomenal. Their team customized a premium theme, integrated our inventory system, and set up automated email flows. Within 60 days of launch, our conversion rate doubled. Their Shopify developers truly understand what drives ecommerce performance.",
+        name: "Emily Hartmann | PureLeaf Organics",
+        location: "Australia",
+      },
+      {
         id: 2,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "We needed a revamp for our Shopify store, but didn't have the time or expertise. Tech2Globe stepped in and saved the day! They updated the design, optimized for mobile, and even integrated new features to boost sales. Now our store is converting like crazy. Thanks to their team!",
-        name: "David Kim, Ecommerce Manager",
-    },
-    {
+        text: "We needed a Shopify Plus store capable of handling flash sales with thousands of concurrent users. Tech2Globe delivered a rock-solid solution with custom checkout scripts, advanced discount logic, and multi-language support. The platform handled our biggest sale event without a single hiccup. Incredibly talented development team.",
+        name: "Carlos Mendez | Vivo Sports International",
+        location: "Mexico",
+      },
+      {
         id: 3,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "They understand the platform inside and out, customizing our store to meet our exact needs. They helped us streamline the checkout process and even set up automated marketing campaigns.",
-        name: "Dr. Lee Garcia, CEO",
-    },
-    {
+        text: "Tech2Globe migrated our WooCommerce store to Shopify seamlessly, with zero data loss and minimal downtime. They redesigned the entire customer journey and integrated our local courier APIs. Sales increased by 38% in the first quarter post-migration. The team was professional, patient, and always available for questions.",
+        name: "Rachel O'Brien | Celtic Craft House",
+        location: "Ireland",
+      },
+      {
         id: 4,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "Tech2Globe's experts impressed us with their ability to handle complex functionalities for our Shopify store. Their communication was clear throughout the project, and they were always available to answer our questions. A reliable partner for our online business!",
-        name: " Michael Hernandez, Marketing Director",
-    },
-    {
-        id: 5,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Their team is reliable and keeps our store running smoothly. They handle everything from design updates to technical issues. Now, we have more time to focus on growing our business!",
-        name: "Emily Garcia, Store Owner",
-    },
+        text: "Tech2Globe developed a custom Shopify storefront for our furniture brand with 3D product visualization and a room builder tool. The bespoke Shopify app they built to connect with our ERP system was flawless. Our average order value increased by 27% after launch. We are extremely satisfied with their technical capabilities and creative approach.",
+        name: "Kenji Nakamura | Nakamura Home Living",
+        location: "Japan",
+      },
 ];
 
 const faqs = [
@@ -190,6 +189,64 @@ const faqs = [
         Yes, a Development Company for Shopify helps you customize the look and feel of your online store. Our <strong>shopify development company in USA</strong> offers a comprehensive set of solutions, which help you in shopify development services including shopify store design, store optimization and SEO implementation.
       `,
     },
+];
+
+const portfolioClients = [
+    {
+        initials: "PO",
+        gradient: "#0b2e58",
+        client: "PureLeaf Organics",
+        country: "Australia",
+        project: "Custom Shopify Store Development & Conversion Optimization",
+        desc: "Custom Shopify storefront with Klaviyo automation and Shopify Markets setup for international sales.",
+        category: "Shopify Development",
+        result: "2X Conversion Rate",
+        resultSub: "Within 60 Days",
+      },
+      {
+        initials: "VS",
+        gradient: "#0b2e58",
+        client: "Vivo Sports International",
+        country: "Mexico",
+        project: "Shopify Plus Flash Sale Infrastructure & Custom Checkout",
+        desc: "Shopify Plus implementation with custom checkout scripts and multilingual storefront deployment.",
+        category: "Shopify Development",
+        result: "$480K Revenue",
+        resultSub: "In 6 Hours",
+      },
+      {
+        initials: "CC",
+        gradient: "#0b2e58",
+        client: "Celtic Craft House",
+        country: "Ireland",
+        project: "WooCommerce to Shopify Migration & UX Redesign",
+        desc: "Complete migration to Shopify with storefront redesign and courier API integrations.",
+        category: "Shopify Development",
+        result: "38% Increase",
+        resultSub: "Sales Growth",
+      },
+      {
+        initials: "NH",
+        gradient: "#0b2e58",
+        client: "Nakamura Home Living",
+        country: "Japan",
+        project: "Custom Shopify App Development & 3D Product Visualization",
+        desc: "Built a 3D product viewer and custom ERP sync app for seamless inventory and order management.",
+        category: "Shopify Development",
+        result: "27% Increase",
+        resultSub: "Average Order Value",
+      },
+      {
+        initials: "BP",
+        gradient: "#0b2e58",
+        client: "Bloom & Petal Co.",
+        country: "USA",
+        project: "Shopify Subscription Commerce & Retention Automation",
+        desc: "Subscription commerce setup with Recharge Payments and automated retention workflows.",
+        category: "Shopify Development",
+        result: "3.2X Growth",
+        resultSub: "Customer LTV",
+      },
 ];
 
 export default function ShopifyDevelopment() {
@@ -288,7 +345,7 @@ export default function ShopifyDevelopment() {
                                             <div className={Style.CardContent}>
                                                 <div className={Style.IconBox}><FaStore /></div>
                                                 <h5> <strong>Shopify Store Development</strong></h5>
-                                                <p>Get started with your online business with our <a href="https://www.tech2globe.com/e-commerce-development">eCommerce website design and development services</a> for the Shopify platform in a fast and simple way. We plan our development according to your eCommerce goals and provide the ideal eStore. You can count on us to set up your store and make it market-ready without missing a beat.</p>
+                                                <p>Get started with your online business with our <a href="https://stagenew.tech2globe.tech/e-commerce-development">eCommerce website design and development services</a> for the Shopify platform in a fast and simple way. We plan our development according to your eCommerce goals and provide the ideal eStore. You can count on us to set up your store and make it market-ready without missing a beat.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -321,7 +378,7 @@ export default function ShopifyDevelopment() {
                                             <div className={Style.CardContent}>
                                                 <div className={Style.IconBox}><FaSearch /></div>
                                                 <h5> <strong>Shopify SEO Implementation</strong></h5>
-                                                <p>Shopify&apos;s value lies in its quick but robust offering of features. Implementing SEO (<a href="https://www.tech2globe.com/seo-services">Search Engine Optimization</a>) is essential for growing visibility in search engine results for a Shopify site. With our Shopify SEO implementation solution, you can grab the limelight, rise above the crowd, and attract an infinite stream of clients.</p>
+                                                <p>Shopify&apos;s value lies in its quick but robust offering of features. Implementing SEO (<a href="https://stagenew.tech2globe.tech/seo-services">Search Engine Optimization</a>) is essential for growing visibility in search engine results for a Shopify site. With our Shopify SEO implementation solution, you can grab the limelight, rise above the crowd, and attract an infinite stream of clients.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -377,6 +434,8 @@ export default function ShopifyDevelopment() {
                     </div>
                 </div>
             </section>
+
+            <ClientPortfolio clients={portfolioClients} />
 
             <CaseStudiesService caseStudies={caseStudies} />
             <ClientSlider testimonials={testimonials} />

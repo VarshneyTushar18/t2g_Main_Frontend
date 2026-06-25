@@ -6,6 +6,8 @@ import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import BrandSection from "@/app/components/home/BrandSection/BrandSection";
 import { FaAddressCard, FaAmazon, FaArrowsAltH, FaArrowUp, FaBox, FaBoxes, FaBoxOpen, FaBroom, FaBuilding, FaChartLine, FaCog, FaCogs, FaCommentDots, FaComments, FaConnectdevelop, FaDatabase, FaDesktop, FaFingerprint, FaGlobe, FaHandshake, FaHeadset, FaLaptop, FaMedal, FaNewspaper, FaPaste, FaRegBuilding, FaSmile, FaStar, FaStore, FaTag, FaTruck, FaTruckMoving, FaUserCheck, FaUserCircle, FaWarehouse } from "react-icons/fa";
 import "./custom.css";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
   title: "Amazon Dropshipping Services India - Tech2Globe",
@@ -17,14 +19,14 @@ export const metadata = {
     "Amazon Dropshipping services",
   ],
   alternates: {
-    canonical: "https://www.tech2globe.com/amazon-dropshipping",
+    canonical: "https://stagenew.tech2globe.tech/amazon-dropshipping",
   },
   openGraph: {
     title: "Amazon Dropshipping Services India - Tech2Globe",
     description:
       "Tech2Globe offers comprehensive Amazon Dropshipping automation solutions.",
     siteName: "Tech2Globe Web Solutions LLP",
-    url: "https://www.tech2globe.com/amazon-dropshipping",
+    url: "https://stagenew.tech2globe.tech/amazon-dropshipping",
     type: "website",
   },
   twitter: {
@@ -34,6 +36,88 @@ export const metadata = {
       "Tech2Globe provides automated Amazon dropshipping solutions.",
   },
 };
+
+const portfolioClients = [
+  {
+    initials: "DV",
+    gradient: "#0b2e58",
+    client: "DropVault Co.",
+    country: "USA",
+    project: "Full Dropship Store Setup",
+    desc: "US-based dropshipping store that scaled from 20 to 200+ daily orders through full automation of supplier integration and order fulfillment.",
+    category: "Dropshipping",
+    result: "200 Orders/Day",
+    resultSub: "Automated",
+  },
+  {
+    initials: "TN",
+    gradient: "#0b2e58",
+    client: "TrendNest UK",
+    country: "UK",
+    project: "Supplier Integration & Sync",
+    desc: "UK fashion dropshipping business that achieved six months of zero stockouts through expert sourcing, inventory sync, and returns management.",
+    category: "Dropshipping",
+    result: "Zero Stockouts",
+    resultSub: "In 6 Months",
+  },
+  {
+    initials: "ND",
+    gradient: "#0b2e58",
+    client: "NipponDrop Store",
+    country: "Japan",
+    project: "Amazon JP Dropship Launch",
+    desc: "Japan-based Amazon seller that launched a fully automated dropshipping store with 500+ SKUs and 99.8% inventory accuracy.",
+    category: "Dropshipping",
+    result: "500+ SKUs",
+    resultSub: "Listed",
+  },
+  {
+    initials: "ES",
+    gradient: "#0b2e58",
+    client: "EasyShip Hub",
+    country: "Canada",
+    project: "Multi-Supplier Automation",
+    category: "Dropshipping",
+    result: "3× Order Volume",
+    resultSub: "Increase",
+  },
+  {
+    initials: "HQ",
+    gradient: "#0b2e58",
+    client: "HomeQuick Deals",
+    country: "Germany",
+    project: "Returns & Refund Management",
+    category: "Dropshipping",
+    result: "98% Positive",
+    resultSub: "Feedback",
+  },
+
+];
+
+const testimonials = [
+  {
+    id: 1,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe's dropshipping automation saved us countless hours. They set up seamless supplier integrations and automated order fulfillment. Our store went from 20 to 200 orders per day with zero operational headaches.",
+    name: "Ethan Clarke | DropVault Co.  ",
+    location: "USA",
+  },
+  {
+    id: 2,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "We had no idea how to manage dropshipping at scale. Tech2Globe handled everything — product sourcing, listing, inventory sync, and returns. Truly a hands-off profit machine.",
+    name: "Ava Thompson | TrendNest UK  ",
+    location: "UK",
+  },
+  {
+    id: 3,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Outstanding dropshipping management service! Tech2Globe helped us launch a fully automated Amazon store in Japan with 500+ products. Inventory accuracy is at 99.8%.",
+    name: "Hiroshi Tanaka | NipponDrop Store ",
+    location: "Japan",
+  },
+
+];
 
 const pageHeaderData = {
   title: "Amazon Dropshipping Services",
@@ -820,6 +904,10 @@ export default function AmazonDropshipping() {
           </div>
 
         </div>
+
+        <ClientPortfolio clients={portfolioClients} />
+
+        <ClientSlider testimonials={testimonials} />
 
 
 

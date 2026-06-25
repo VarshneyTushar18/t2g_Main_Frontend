@@ -8,6 +8,8 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import FaqSection from "@/app/components/services/faqs/faqs";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
     title: "Amazon Image Editing services | Photo Editing Experts",
@@ -25,7 +27,7 @@ export const metadata = {
         description:
             "Tech2Globe offer an amazon product image editing service. We have been providing Amazon image editing service for seller to our customers for over 8 years",
         siteName: "Tech2Globe web Solutions LLP",
-        url: "https://www.tech2globe.com/image-editing-services",
+        url: "https://stagenew.tech2globe.tech/image-editing-services",
         type: "website",
     },
     twitter: {
@@ -35,7 +37,7 @@ export const metadata = {
             "Tech2Globe offer an amazon product image editing service. We have been providing Amazon image editing service for seller to our customers for over 8 years",
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/image-editing-services",
+        canonical: "https://stagenew.tech2globe.tech/image-editing-services",
     },
 };
 
@@ -219,77 +221,77 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
 
@@ -329,6 +331,86 @@ const faqs = [
         answer: `
         You can contact <a href="/customer-support">customer support</a> through online chat. Simply visit the official site of Amazon and select "Something else" followed by "I need more help." This will open a chat window where you can speak with a representative.
       `,
+    },
+];
+
+const portfolioClients = [
+    {
+        initials: "VF",
+        gradient: "#0b2e58",
+        client: "VivaFashion Miami",
+        country: "USA",
+        project: "500-Image Batch Editing",
+        desc: "US fashion brand that improved search CTR by 35% after professional editing of 500+ product images, including lifestyle composites and background removal.",
+        category: "Image Editing",
+        result: "+35% CTR improvement",
+        resultSub: "CTR Growth",
+    },
+    {
+        initials: "DD",
+        gradient: "#0b2e58",
+        client: "DutchDesign Studio",
+        country: "Netherlands",
+        project: "White Background + Shadow",
+        desc: "Netherlands design studio that relies on Tech2Globe for all Amazon post-production — retouching, shadow creation, and compliant white-background images.",
+        category: "Image Editing",
+        result: "Amazon compliance 100%",
+        resultSub: "Compliance",
+    },
+    {
+        initials: "SL",
+        gradient: "#0b2e58",
+        client: "ShanghaiLux Fashion",
+        country: "China",
+        project: "Lifestyle Composite Creation",
+        desc: "Chinese fashion brand that receives studio-quality, marketplace-ready product images at a fraction of professional photography studio costs.",
+        category: "Image Editing",
+        result: "Studio quality, fast TAT",
+        resultSub: "Production Speed",
+    },
+    {
+        initials: "NB",
+        gradient: "#0b2e58",
+        client: "NutriBoost Canada",
+        country: "Canada",
+        project: "Infographic Image Creation",
+        category: "Image Editing",
+        result: "8-image set per ASIN",
+        resultSub: "Content Scaling",
+    },
+    {
+        initials: "AP",
+        gradient: "#0b2e58",
+        client: "AutoParts UK",
+        country: "UK",
+        project: "360-View Image Editing",
+        category: "Image Editing",
+        result: "360 spin shots for 200 SKUs",
+        resultSub: "Catalog Expansion",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe edited 500+ product images for our fashion line within 48 hours. Background removal, color correction, and lifestyle composite creation — all perfect. Our CTR on search results improved by 35%.",
+        name: "Samantha Torres | VivaFashion Miami",
+        location: "USA",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Professional, fast, and flawless image editing. Tech2Globe handles all our product photography post-production — retouching, shadow creation, and Amazon-compliant white backgrounds. Consistent quality every time.",
+        name: "Hugo Vermeer | DutchDesign Studio",
+        location: "Netherlands",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We send raw product images and Tech2Globe returns stunning, marketplace-ready photos. The editing quality matches high-end photography studios at a fraction of the cost. Highly recommended.",
+        name: "Mei Chen | ShanghaiLux Fashion",
+        location: "China",
     },
 ];
 
@@ -457,11 +539,15 @@ export default function ImageEditingServices() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} />
-            </div>
+            </div> */}
 
+            
+
+            <ClientPortfolio clients={portfolioClients} />
             <CaseStudiesService caseStudies={caseStudies} />
+            <ClientSlider testimonials={testimonials} />
 
             <FaqSection faqs={faqs} />
         </>

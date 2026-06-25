@@ -33,7 +33,7 @@ export const metadata = {
     title: "AI SEO Automation Services for Better Search Rankings",
     description:
       "Automate keyword research, content optimization, and SEO workflows with AI SEO automation services designed to improve online visibility.",
-    url: "https://www.tech2globe.com/ai-seo-automation",
+    url: "/service/ai-seo-automation",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/ai-seo-automation",
+    canonical: "/service/ai-seo-automation",
   },
 };
 

@@ -33,7 +33,7 @@ export const metadata = {
     title: "AI Product Recommendation Engine for eCommerce",
     description:
       "Increase conversions with AI-powered product recommendation solutions that deliver personalized shopping experiences and smarter upselling.",
-    url: "https://www.tech2globe.com/ai-product-recommendations",
+    url: "/service/ai-product-recommendations",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/ai-product-recommendations",
+    canonical: "/service/ai-product-recommendations",
   },
 };
 

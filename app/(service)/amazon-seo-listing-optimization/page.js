@@ -8,6 +8,8 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import { FaChartBar, FaChartLine, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaHandshake, FaLightbulb, FaSearch, FaShieldAlt, FaTag, FaTimesCircle, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
     title: "Amazon SEO Optimization & Listing Optimization Services",
@@ -20,7 +22,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Get Amazon product listing and amazon SEO consulting services. Convert Your Visitors To Customers & Increase Your Products Visibility.",
-        url: "https://www.tech2globe.com/amazon-seo-listing-optimization",
+        url: "https://stagenew.tech2globe.tech/amazon-seo-listing-optimization",
         type: "website",
     },
     twitter: {
@@ -31,7 +33,7 @@ export const metadata = {
             "Get Amazon product listing and amazon SEO consulting services. Convert Your Visitors To Customers & Increase Your Products Visibility.",
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-seo-listing-optimization",
+        canonical: "https://stagenew.tech2globe.tech/amazon-seo-listing-optimization",
     },
 };
 
@@ -215,79 +217,160 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
+
+const portfolioClients = [
+    {
+        initials: "CS",
+        gradient: "#0b2e58",
+        client: "CopperSmith USA",
+        country: "USA",
+        project: "Full SEO Listing Optimization",
+        desc: "US copper goods brand that ranked 25 of 30 target keywords on Page 1 within 6 weeks, driving a 120% increase in organic sales without extra ad spend.",
+        category: "SEO & Optimization",
+        result: "+120% organic sales",
+        resultSub: "Organic Growth",
+    },
+    {
+        initials: "NN",
+        gradient: "#0b2e58",
+        client: "NordicNaturals Denmark",
+        country: "Denmark",
+        project: "Page 8 to Page 1 in 45 Days",
+        desc: "Danish natural products brand that jumped from Page 8 to Page 1 in 45 days through deep keyword research and comprehensive listing optimization.",
+        category: "SEO & Optimization",
+        result: "Page 1 for 20 keywords",
+        resultSub: "Ranking Growth",
+    },
+    {
+        initials: "SS",
+        gradient: "#0b2e58",
+        client: "SakuraSkin Japan",
+        country: "Japan",
+        project: "Japan Marketplace SEO",
+        desc: "Japanese skincare brand that consistently ranks in the top 5 for main keywords after expert local SEO optimization tailored to Japanese search behavior.",
+        category: "SEO & Optimization",
+        result: "Top 5 ranking for main KWs",
+        resultSub: "Search Visibility",
+    },
+    {
+        initials: "GH",
+        gradient: "#0b2e58",
+        client: "GoldLeaf Herbal UK",
+        country: "UK",
+        project: "Backend Search Term Optimization",
+        category: "SEO & Optimization",
+        result: "+60% indexed keywords",
+        resultSub: "Indexing Growth",
+    },
+    {
+        initials: "SB",
+        gradient: "#0b2e58",
+        client: "StartBright Kids",
+        country: "Australia",
+        project: "Launch + SEO Combined Strategy",
+        category: "SEO & Optimization",
+        result: "Page 1 in 30 days post-launch",
+        resultSub: "Launch Success",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe implemented ethical review management strategies that significantly improved our overall rating from 3.4 to 4.6 stars in just 90 days. Their approach is fully compliant with Amazon's policies. Outstanding results.",
+        name: "Emma Watson | BritBotanicals",
+        location: "UK",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We had a flood of negative reviews due to a logistics issue. Tech2Globe helped us manage the situation — responding professionally, resolving customer issues, and deploying compliant review recovery strategies. Rating fully restored.",
+        name: "Lucas Weber | GermanPure Health",
+        location: "Germany",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's review management program doubled our review count within 4 months using Amazon's Request a Review feature and post-purchase communication sequences. Completely policy-compliant and highly effective.",
+        name: "Michelle Tremblay | PureMaple Canada",
+        location: "Canada",
+    },
+];
+
 
 
 export default function AmazonSeoListingOptimization() {
@@ -556,11 +639,15 @@ export default function AmazonSeoListingOptimization() {
             </section>
 
 
-            <div className="StoreCreationTabs">
-                <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'}/>
-            </div>
+            {/* <div className="StoreCreationTabs">
+                <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
+            </div> */}
 
+            
+
+            <ClientPortfolio clients={portfolioClients} />
             <CaseStudiesService caseStudies={caseStudies} />
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

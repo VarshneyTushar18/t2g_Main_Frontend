@@ -8,30 +8,32 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import FaqSection from "@/app/components/services/faqs/faqs";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
-  title: "Amazon FBA Consulting | Amazon Seller Services | Tech2Globe",
-  description:
-    "Working with an experienced Amazon FBA consultancy service agency will help you navigate the various complexities of Amazon FBA. Explore our Amazon FBA services.",
-  keywords:
-    "fulfillment by amazon-3, amazon fba consulting, amazon seller services, amazon fba services, Amazon FBA Agency, Amazon seller central consultants",
-  alternates: {
-    canonical: "https://www.tech2globe.com/amazon-fba-consulting",
-  },
-  openGraph: {
     title: "Amazon FBA Consulting | Amazon Seller Services | Tech2Globe",
     description:
-      "Working with an experienced Amazon FBA consultancy service agency will help you navigate the various complexities of Amazon FBA. Explore our Amazon FBA services.",
-    siteName: "Tech2Globe web Solutions LLP",
-    url: "https://www.tech2globe.com/amazon-fba-consulting",
-    type: "website",
-  },
-  twitter: {
-    card: "Tech2Globe",
-    title: "Amazon FBA Consulting | Amazon Seller Services | Tech2Globe",
-    description:
-      "Working with an experienced Amazon FBA consultancy service agency will help you navigate the various complexities of Amazon FBA. Explore our Amazon FBA services.",
-  },
+        "Working with an experienced Amazon FBA consultancy service agency will help you navigate the various complexities of Amazon FBA. Explore our Amazon FBA services.",
+    keywords:
+        "fulfillment by amazon-3, amazon fba consulting, amazon seller services, amazon fba services, Amazon FBA Agency, Amazon seller central consultants",
+    alternates: {
+        canonical: "https://stagenew.tech2globe.tech/amazon-fba-consulting",
+    },
+    openGraph: {
+        title: "Amazon FBA Consulting | Amazon Seller Services | Tech2Globe",
+        description:
+            "Working with an experienced Amazon FBA consultancy service agency will help you navigate the various complexities of Amazon FBA. Explore our Amazon FBA services.",
+        siteName: "Tech2Globe web Solutions LLP",
+        url: "https://stagenew.tech2globe.tech/amazon-fba-consulting",
+        type: "website",
+    },
+    twitter: {
+        card: "Tech2Globe",
+        title: "Amazon FBA Consulting | Amazon Seller Services | Tech2Globe",
+        description:
+            "Working with an experienced Amazon FBA consultancy service agency will help you navigate the various complexities of Amazon FBA. Explore our Amazon FBA services.",
+    },
 };
 const pageHeaderData = {
     title: "Amazon FBA Consulting",
@@ -213,77 +215,77 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
 
@@ -324,6 +326,88 @@ const faqs = [
         There may be extra fees you need to pay, like long-term storage fees. FBA consultants will show you how to manage your FBA inventory well, which can help you lower the costs of being an FBA seller.
       `,
     },
+];
+
+const portfolioClients = [
+    {
+        initials: "FN",
+        gradient: "#0b2e58",
+        client: "FitFuel Nutrition",
+        country: "Ireland",
+        project: "FBA Launch Strategy",
+        desc: "Irish nutrition brand that successfully launched 15 FBA SKUs in its first shipment, selling out completely within three weeks.",
+        category: "FBA Consulting",
+        result: "15 SKUs Sold Out",
+        resultSub: "In 21 Days",
+    },
+    {
+        initials: "LK",
+        gradient: "#0b2e58",
+        client: "LuxeKids Co.",
+        country: "UK",
+        project: "FBA Fee Audit & Optimization",
+        desc: "UK children's products brand that saved $12,000 annually in FBA fees after a comprehensive fee audit and inventory strategy overhaul.",
+        category: "FBA Consulting",
+        result: "$12K Annual",
+        resultSub: "Savings",
+    },
+    {
+        initials: "VM",
+        gradient: "#0b2e58",
+        client: "VivaMart Global",
+        country: "Mexico",
+        project: "FBM to FBA Migration",
+        desc: "Mexican marketplace seller that transitioned from FBM to FBA with expert guidance, boosting conversion rate by 45% post-migration.",
+        category: "FBA Consulting",
+        result: "+45% Conversion",
+        resultSub: "Rate",
+    },
+    {
+        initials: "GL",
+        gradient: "#0b2e58",
+        client: "GreenLeaf Goods",
+        country: "Canada",
+        project: "Multi-Warehouse Inventory Plan",
+        category: "FBA Consulting",
+        result: "IPI Score",
+        resultSub: "Improved to 780",
+    },
+    {
+        initials: "TG",
+        gradient: "#0b2e58",
+        client: "TechGadget Hub",
+        country: "Germany",
+        project: "FBA Product Prep Setup",
+        category: "FBA Consulting",
+        result: "Zero Rejected",
+        resultSub: "Shipments",
+    },
+
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe guided us through our entire FBA setup — from product prep to labeling to fee optimization. We launched 15 SKUs in our first FBA shipment and sold out in under 3 weeks!",
+        name: "Michael O'Brien | FitFuel Nutrition",
+        location: "Ireland",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Their FBA consulting saved us thousands in avoidable fees. They audited our shipment plans, corrected our prep requirements, and restructured our inventory strategy. Absolute pros.",
+        name: "Charlotte Davies | LuxeKids Co.",
+        location: "UK",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "We expanded from FBM to FBA with Tech2Globe's complete support. They managed the entire transition and our delivery speed improved, boosting our conversion rate by 45%.",
+        name: "Carlos Reyes | VivaMart Global",
+        location: "Mexico",
+    },
+
 ];
 
 export default function AmazonFbaConsulting() {
@@ -443,7 +527,7 @@ export default function AmazonFbaConsulting() {
                                 </div>
                             </div>
 
-                             <div className={Style.ContentDiv}>
+                            <div className={Style.ContentDiv}>
                                 <h3 className="pt-3 pb-2">Boost Your Sales with Expert Amazon Seller Central Consultants</h3>
                                 <p>Increasing sales and optimizing presence on the biggest online marketplace need partnering with <strong>Amazon Seller Central Consultants</strong>, such as those at Amazon.</p>
                                 <p>Our Amazon Consultants work to maximize product visibility by means of improved listings and focused advertising campaigns. Additionally, our staff knows a great deal about Amazon&apos;s algorithms and good SEO techniques, which can increase the product&apos;s visibility and generate significant sales. We have expertise in writing engaging product descriptions to carefully arrange pertinent keywords.</p>
@@ -460,7 +544,7 @@ export default function AmazonFbaConsulting() {
                             <div className={Style.ContentDiv}>
                                 <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/customer-acatalog.png" alt="" className={Style.InnerIcon} /> How Can We Help?</h5>
 
-                                <p>While the e-commerce environment has evolved since Amazon began, engaging with a consulting firm, offering <a href="https://www.tech2globe.com/amazon-consulting-services" className="fw-bold text-decoration-underline">Amazon seller services</a>, with substantial e-commerce expertise, such as Tech2Globe, may offer various benefits for your organization.</p>
+                                <p>While the e-commerce environment has evolved since Amazon began, engaging with a consulting firm, offering <a href="https://stagenew.tech2globe.tech/amazon-consulting-services" className="fw-bold text-decoration-underline">Amazon seller services</a>, with substantial e-commerce expertise, such as Tech2Globe, may offer various benefits for your organization.</p>
 
                                 <div className="row">
                                     <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-3">
@@ -522,11 +606,17 @@ export default function AmazonFbaConsulting() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
-            </div>
+            </div> */}
+
+            <ClientPortfolio clients={portfolioClients} />
 
             <CaseStudiesService caseStudies={caseStudies} />
+
+
+
+            <ClientSlider testimonials={testimonials} />
 
             <FaqSection faqs={faqs} />
         </>

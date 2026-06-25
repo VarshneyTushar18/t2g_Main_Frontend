@@ -8,6 +8,8 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import { FaChartBar, FaChartLine, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaHandshake, FaLightbulb, FaSearch, FaShieldAlt, FaTag, FaTimesCircle, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
     title: "Copywriting for Amazon | Amazon Copywriting Service",
@@ -20,7 +22,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Crafting compelling product descriptions that boost sales. Our Amazon copywriting experts optimize listings with SEO-rich copy that captivates shoppers.",
-        url: "https://www.tech2globe.com/amazon-copywriting",
+        url: "https://stagenew.tech2globe.tech/amazon-copywriting",
         type: "website",
     },
     twitter: {
@@ -31,7 +33,7 @@ export const metadata = {
             "Crafting compelling product descriptions that boost sales. Our Amazon copywriting experts optimize listings with SEO-rich copy that captivates shoppers.",
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-copywriting",
+        canonical: "https://stagenew.tech2globe.tech/amazon-copywriting",
     },
 };
 
@@ -215,80 +217,158 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
 
+const portfolioClients = [
+    {
+        initials: "BB",
+        gradient: "#0b2e58",
+        client: "BlossomBath USA",
+        country: "USA",
+        project: "Full Catalog Copywriting (100 ASINs)",
+        desc: "US bath products brand that saw a 32% conversion rate increase within the first month after SEO-optimized titles, bullets, and descriptions were rewritten.",
+        category: "Copywriting",
+        result: "+32% conversion rate",
+        resultSub: "Conversion Growth",
+    },
+    {
+        initials: "PI",
+        gradient: "#0b2e58",
+        client: "ParisDesign Interiors",
+        country: "France",
+        project: "Premium Brand Copy in French",
+        desc: "French interior design brand that received perfectly crafted Amazon copy balancing keyword optimization with compelling brand storytelling that genuinely converts.",
+        category: "Copywriting",
+        result: "Authentic brand voice",
+        resultSub: "Brand Voice",
+    },
+    {
+        initials: "NF",
+        gradient: "#0b2e58",
+        client: "NatureFine Germany",
+        country: "Germany",
+        project: "German Amazon Copy Creation",
+        desc: "German natural products brand that improved CTR by 28% through culturally resonant, algorithm-optimized German-language Amazon content.",
+        result: "+28% CTR improvement",
+        resultSub: "CTR Growth",
+    },
+    {
+        initials: "FS",
+        gradient: "#0b2e58",
+        client: "FreshStart UK",
+        country: "UK",
+        project: "Launch Copy for New Brand",
+        category: "Copywriting",
+        result: "Ranked Page 1 in 30 days",
+        resultSub: "Ranking Growth",
+    },
+    {
+        initials: "SW",
+        gradient: "#0b2e58",
+        client: "SpiceWorld Canada",
+        country: "Canada",
+        project: "Backend Search Term Optimization",
+        category: "Copywriting",
+        result: "+45% indexed keywords",
+        resultSub: "SEO Visibility",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe rewrote our entire product catalog's titles, bullets, and descriptions with SEO-optimized copy. Not only did our search rankings improve, but our conversion rate went up by 32% within the first month.",
+        name: "Sophia Collins | BlossomBath USA",
+        location: "USA",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Beautifully crafted Amazon copy that balances keyword optimization with compelling storytelling. Tech2Globe understood our brand voice perfectly and delivered copy that genuinely converts. Highly recommended.",
+        name: "Antoine Bernard | ParisDesign Interiors",
+        location: "France",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's copywriting team created German-language Amazon content that resonates with local buyers. Their understanding of cultural nuances and Amazon's algorithm is impressive. Our CTR improved by 28%.",
+        name: "Julia Hoffmann | NatureFine Germany",
+        location: "Germany",
+    },
+];
 
 export default function AmazonCopywriting() {
     return (
@@ -429,11 +509,15 @@ export default function AmazonCopywriting() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
-            </div>
+            </div> */}
 
+            
+
+            <ClientPortfolio clients={portfolioClients} />
             <CaseStudiesService caseStudies={caseStudies} />
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

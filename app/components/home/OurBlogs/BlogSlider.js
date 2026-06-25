@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Style from "./OurBlogs.module.css";
 import { blogPostHref, stripHtml } from "@/lib/blogUtils";
-import BlogPostImage from "@/app/components/blog/BlogPostImage";
 
 export default function BlogSlider({ posts }) {
     if (!posts || posts.length === 0) {
@@ -32,10 +31,11 @@ export default function BlogSlider({ posts }) {
             }}
             className={Style.recentBlogsContainer}
         >
-            {posts.map((post, index) => {
+            {posts.map((post) => {
                 const href = blogPostHref(post);
                 const titleHtml = post.title?.rendered || "";
                 const excerpt = stripHtml(post.excerpt?.rendered || "");
+                const image = post.featured_image || "";
                 const readMoreLabel = `Read more about ${stripHtml(titleHtml)}`;
 
                 return (
@@ -43,13 +43,16 @@ export default function BlogSlider({ posts }) {
                         <div className={Style.blogCard}>
                             <div
                                 className={`${Style.blogImage} d-flex justify-content-center align-items-center`}
+                                style={
+                                    image
+                                        ? {
+                                              backgroundImage: `url(${image})`,
+                                              backgroundSize: "cover",
+                                              backgroundPosition: "center",
+                                          }
+                                        : undefined
+                                }
                             >
-                                <BlogPostImage
-                                    post={post}
-                                    variant="slider"
-                                    priority={index === 0}
-                                    className={Style.blogImageMedia}
-                                />
                                 <div
                                     className={Style.blogTitle}
                                     dangerouslySetInnerHTML={{ __html: titleHtml }}

@@ -33,7 +33,7 @@ export const metadata = {
     title: "AI Application Development Services for Smart Businesses",
     description:
       "Develop intelligent AI applications with advanced automation, machine learning, and predictive analytics to streamline operations and drive business growth.",
-    url: "https://www.tech2globe.com/ai-application-development",
+    url: "/service/ai-application-development",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/ai-application-development",
+    canonical: "/service/ai-application-development",
   },
 };
 

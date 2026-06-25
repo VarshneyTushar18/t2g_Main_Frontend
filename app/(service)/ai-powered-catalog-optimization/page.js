@@ -33,7 +33,7 @@ export const metadata = {
     title: "AI-Powered Catalog Optimization Services for eCommerce",
     description:
       "Optimize product catalogs with AI-driven automation to improve search visibility, product accuracy, and customer shopping experiences.",
-    url: "https://www.tech2globe.com/ai-powered-catalog-optimization",
+    url: "/service/ai-powered-catalog-optimization",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/ai-powered-catalog-optimization",
+    canonical: "/service/ai-powered-catalog-optimization",
   },
 };
 

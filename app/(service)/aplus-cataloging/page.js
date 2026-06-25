@@ -8,32 +8,34 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import FaqSection from "@/app/components/services/faqs/faqs";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
-  title: "Amazon A+ Cataloging Services | Amazon Aplus Cataloging",
-  description:
-    "Amazon A+ Content is a unique feature in Seller Central that enables brand owners to generate visually appealing Amazon product descriptions for their listings.",
-  keywords:
-    "Amazon A+ cataloging services-6, Amazon enhanced brand content design-5, Amazon A+ catalog-4",
-
-  openGraph: {
     title: "Amazon A+ Cataloging Services | Amazon Aplus Cataloging",
     description:
-      "Amazon A+ Content is a unique feature in Seller Central that enables brand owners to generate visually appealing Amazon product descriptions for their listings.",
-    siteName: "Tech2Globe web Solutions LLP",
-    url: "https://www.tech2globe.com/aplus-cataloging",
-  },
+        "Amazon A+ Content is a unique feature in Seller Central that enables brand owners to generate visually appealing Amazon product descriptions for their listings.",
+    keywords:
+        "Amazon A+ cataloging services-6, Amazon enhanced brand content design-5, Amazon A+ catalog-4",
 
-  twitter: {
-    card: "summary_large_image",
-    title: "Amazon A+ Cataloging Services | Amazon Aplus Cataloging",
-    description:
-      "Amazon A+ Content is a unique feature in Seller Central that enables brand owners to generate visually appealing Amazon product descriptions for their listings.",
-  },
+    openGraph: {
+        title: "Amazon A+ Cataloging Services | Amazon Aplus Cataloging",
+        description:
+            "Amazon A+ Content is a unique feature in Seller Central that enables brand owners to generate visually appealing Amazon product descriptions for their listings.",
+        siteName: "Tech2Globe web Solutions LLP",
+        url: "https://stagenew.tech2globe.tech/aplus-cataloging",
+    },
 
-  alternates: {
-    canonical: "https://www.tech2globe.com/aplus-cataloging",
-  },
+    twitter: {
+        card: "summary_large_image",
+        title: "Amazon A+ Cataloging Services | Amazon Aplus Cataloging",
+        description:
+            "Amazon A+ Content is a unique feature in Seller Central that enables brand owners to generate visually appealing Amazon product descriptions for their listings.",
+    },
+
+    alternates: {
+        canonical: "https://stagenew.tech2globe.tech/aplus-cataloging",
+    },
 };
 
 const pageHeaderData = {
@@ -216,77 +218,77 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
 
@@ -342,6 +344,88 @@ const faqs = [
       `,
     },
 ];
+
+
+const portfolioClients = [
+    {
+        initials: "BH",
+        gradient: "#0b2e58",
+        client: "BritishCraft Hardware",
+        country: "UK",
+        project: "150-ASIN A+ Cataloging",
+        desc: "UK hardware brand that had 150 ASINs cataloged with consistent A+ formatting, accurate specifications, and professional visuals across all products.",
+        category: "A+ Cataloging",
+        result: "Full catalog in 2 weeks",
+        resultSub: "Speed & Scale",
+    },
+    {
+        initials: "GG",
+        gradient: "#0b2e58",
+        client: "GardenGrow Germany",
+        country: "Germany",
+        project: "200-ASIN Catalog + A+",
+        desc: "German garden brand that completed A+ content for 200 ASINs in just three weeks with 100% accuracy in categorization and content quality.",
+        category: "A+ Cataloging",
+        result: "100% accuracy, 3 weeks",
+        resultSub: "Data Accuracy",
+    },
+    {
+        initials: "HG",
+        gradient: "#0b2e58",
+        client: "HighlandGear Scotland",
+        country: "UK",
+        project: "Category Tree + Variation Setup",
+        desc: "Scottish outdoor gear brand that now has a world-class catalog with structured parent-child variations and rich A+ content for every product family.",
+        category: "A+ Cataloging",
+        result: "Perfect parent-child structure",
+        resultSub: "Catalog Structure",
+    },
+    {
+        initials: "FF",
+        gradient: "#0b2e58",
+        client: "FashionFusion France",
+        country: "France",
+        project: "ASIN Bulk Upload + A+ Content",
+        category: "A+ Cataloging",
+        result: "300 ASINs uploaded",
+        resultSub: "Bulk Operations",
+    },
+    {
+        initials: "MC",
+        gradient: "#0b2e58",
+        client: "MexiCraft Goods",
+        country: "Mexico",
+        project: "Full Catalog Rebuild + A+",
+        category: "A+ Cataloging",
+        result: "Zero suppressed listings",
+        resultSub: "Catalog Health",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe cataloged and created A+ content for our 150-product hardware range simultaneously. Consistent formatting, accurate specifications, and excellent visuals across every ASIN. Flawless execution.",
+        name: "Oliver Bennett | BritishCraft Hardware",
+        location: "UK",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Managing a large catalog with A+ content requirements is daunting. Tech2Globe handled our entire cataloging project — 200 ASINs with A+ content — in just 3 weeks. Accuracy was 100%.",
+        name: "Patricia Müller | GardenGrow Germany",
+        location: "Germany",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's A+ cataloging service is outstanding. They structured our category tree, built detailed parent-child variations, and created rich A+ content for each product family. Our catalog is now world-class.",
+        name: "William Fraser | HighlandGear Scotland",
+        location: "UK",
+    },
+];
+
 
 export default function AmazonDSP() {
     return (
@@ -446,11 +530,15 @@ export default function AmazonDSP() {
 
             <FaqSection faqs={faqs} />
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
-            </div>
+            </div> */}
 
+            
+
+            <ClientPortfolio clients={portfolioClients} />
             <CaseStudiesService caseStudies={caseStudies} />
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

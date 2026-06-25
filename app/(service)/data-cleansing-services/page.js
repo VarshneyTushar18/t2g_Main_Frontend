@@ -11,7 +11,7 @@ import { FaChartBar, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaLightbul
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 
 export const metadata = {
-    title: "Outsource Data Cleansing Services",
+    title: "Data Cleansing Services | AI-Powered Data Quality & Deduplication Solutions",
     description:
         "Eliminate errors, duplicates, and inconsistencies with Tech2Globe's AI-powered data cleansing services. Our intelligent data quality engine identifies and corrects bad data automatically — giving you a clean, reliable dataset ready for analysis.",
     keywords: [
@@ -28,7 +28,7 @@ export const metadata = {
         siteName: "Tech2Globe Web Solutions LLP",
         description:
             "Eliminate errors, duplicates, and inconsistencies with Tech2Globe's AI-powered data cleansing services. Our intelligent data quality engine identifies and corrects bad data automatically — giving you a clean, reliable dataset ready for analysis.",
-        url: "https://www.tech2globe.com/data-cleansing-services"
+        url: "https://stagenew.tech2globe.tech/data-cleansing-services"
     },
     twitter: {
         card: "summary_large_image",
@@ -37,7 +37,7 @@ export const metadata = {
             "Eliminate errors, duplicates, and inconsistencies with Tech2Globe's AI-powered data cleansing services. Our intelligent data quality engine identifies and corrects bad data automatically — giving you a clean, reliable dataset ready for analysis."
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/data-cleansing-services"
+        canonical: "https://stagenew.tech2globe.tech/data-cleansing-services"
     }
 };
 

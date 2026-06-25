@@ -6,6 +6,8 @@ import ServiceBanner from "@/app/components/services/ServiceBanner/ServiceBanner
 import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSidebar";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
   title: "OpenCart Development Services | Opencart Web development",
@@ -18,14 +20,14 @@ export const metadata = {
     "OpenCart Theme Design and Development"
   ],
   alternates: {
-    canonical: "https://www.tech2globe.com/open-cart-development-services"
+    canonical: "https://stagenew.tech2globe.tech/open-cart-development-services"
   },
   openGraph: {
     title: "OpenCart Development Services | Opencart Web development",
     description:
       "Professional services for OpenCart development to create and enhance your online store. Join forces with us for customized OpenCart web development solutions.",
     siteName: "Tech2Globe",
-    url: "https://www.tech2globe.com/open-cart-development-services",
+    url: "https://stagenew.tech2globe.tech/open-cart-development-services",
     type: "website"
   },
   twitter: {
@@ -338,6 +340,94 @@ const portfolio = [
   },
 ]
 
+const testimonials = [
+  {
+    id: 1,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe built a powerful OpenCart store for our consumer electronics brand with custom extensions for product comparison, advanced search filters, and warranty registration.",
+    name: "Andreas Schneider | Schneider Electronics GmbH",
+    location: "Germany ",
+  },
+  {
+    id: 2,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "We needed an OpenCart store with full RTL Arabic support, local payment gateways, and a custom loyalty rewards module.",
+    name: "Fatima Al-Rashid | Al-Rashid Fashion House",
+    location: "Kuwait",
+  },
+  {
+    id: 3,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe developed our OpenCart B2B portal with custom pricing tiers, quote request functionality, and a bulk order module.",
+    name: "Pablo Herrera | Herrera Furniture Exports",
+    location: "Spain",
+  },
+  {
+    id: 4,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe created a multi-vendor OpenCart marketplace for our retail group with local payment integration, real-time shipping calculations, and a seller dashboard.",
+    name: "Grace Adeyemi | Adeyemi Retail Group",
+    location: "Nigeria",
+  }
+];
+
+const portfolioClients = [
+  {
+    initials: "SE",
+    gradient: "#0b2e58",
+    client: "Schneider Electronics GmbH",
+    country: "Germany",
+    project: "OpenCart Multi-Store Setup with Custom Extensions",
+    desc: "Developed an OpenCart multi-store solution with localized storefronts, advanced search capabilities, and custom extensions for DACH markets.",
+    category: "OpenCart Development",
+    result: "99.98% Uptime",
+    resultSub: "Over 12 Months",
+  },
+  {
+    initials: "AR",
+    gradient: "#0b2e58",
+    client: "Al-Rashid Fashion House",
+    country: "KW",
+    project: "OpenCart Arabic RTL Store with Custom Loyalty Module",
+    desc: "Built a bilingual OpenCart store with Arabic RTL support, loyalty rewards functionality, and localized payment gateway integrations.",
+    category: "OpenCart Development",
+    result: "54% Increase",
+    resultSub: "Mobile Conversion Rate",
+  },
+  {
+    initials: "HF",
+    gradient: "#0b2e58",
+    client: "Herrera Furniture Exports",
+    country: "ES",
+    project: "OpenCart B2B Portal with ERP Integration & Bulk Ordering",
+    desc: "Created an OpenCart B2B portal featuring ERP integration, bulk ordering tools, quote requests, and buyer-specific catalogs.",
+    category: "OpenCart Development",
+    result: "3X Growth",
+    resultSub: "B2B Online Orders",
+  },
+  {
+    initials: "AG",
+    gradient: "#0b2e58",
+    client: "Adeyemi Retail Group",
+    country: "Nigeria",
+    project: "OpenCart Multi-Vendor Marketplace with Seller Dashboard",
+    desc: "Developed a multi-vendor OpenCart marketplace with seller analytics, inventory management tools, and integrated local payment solutions.",
+    category: "OpenCart Development",
+    result: "150+ Sellers",
+    resultSub: "Onboarded First Month",
+  },
+  {
+    initials: "BP",
+    gradient: "#0b2e58",
+    client: "Beaumont Pharmacy Group",
+    country: "Ireland",
+    project: "OpenCart Healthcare eCommerce with Compliance & Prescription Module",
+    desc: "Built a compliant OpenCart healthcare store with prescription verification, GDPR-ready workflows, and category-based product organization.",
+    category: "OpenCart Development",
+    result: "30% Increase",
+    resultSub: "OTC Product Sales",
+  },
+];
 
 export default function OpenCartDevelopment() {
   return (
@@ -392,9 +482,13 @@ export default function OpenCartDevelopment() {
       </section>
 
 
-      <div className="StoreCreationTabs">
+      {/* <div className="StoreCreationTabs">
         <PortfolioTabs data={portfolio} />
-      </div>
+      </div> */}
+
+      <ClientPortfolio clients={portfolioClients} />
+
+      <ClientSlider testimonials={testimonials} />
     </>
   )
 };

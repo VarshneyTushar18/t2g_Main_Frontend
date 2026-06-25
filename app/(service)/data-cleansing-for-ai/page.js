@@ -33,7 +33,7 @@ export const metadata = {
         title: "Data Cleansing for AI Models & Machine Learning",
         description:
             "Improve AI model performance with professional data cleansing services designed for machine learning accuracy and reliable business insights.",
-        url: "https://www.tech2globe.com/data-cleansing-for-ai",
+        url: "/service/data-cleansing-for-ai",
         siteName: "Tech2Globe",
     },
 
@@ -45,7 +45,7 @@ export const metadata = {
     },
 
     alternates: {
-        canonical: "https://www.tech2globe.com/data-cleansing-for-ai",
+        canonical: "/service/data-cleansing-for-ai",
     },
 };
 

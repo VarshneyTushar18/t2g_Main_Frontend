@@ -26,7 +26,7 @@ export const metadata = {
         siteName: "Tech2Globe Web Solutions LLP",
         description:
             "Extract high-value data at scale with Tech2Globe's AI-powered web data extraction services. We use intelligent scraping technology to gather, clean, and structure web data — delivering actionable insights that fuel smarter business decisions.",
-        url: "https://www.tech2globe.com/data-extraction-services"
+        url: "https://stagenew.tech2globe.tech/data-extraction-services"
     },
     twitter: {
         card: "summary_large_image",
@@ -35,7 +35,7 @@ export const metadata = {
             "Extract high-value data at scale with Tech2Globe's AI-powered web data extraction services. We use intelligent scraping technology to gather, clean, and structure web data — delivering actionable insights that fuel smarter business decisions."
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/data-extraction-services"
+        canonical: "https://stagenew.tech2globe.tech/data-extraction-services"
     }
 };
 
@@ -79,7 +79,7 @@ const caseStudies = [
         image: "/images/services/service-inner/data-extraction-services-bn-1.jpg",
         description:
             "Reviewing the customer account and classified the data....",
-        docLink: "https://www.tech2globe.com/casestudies-docs1/Data%20Extraction%20services-converted%20(1).pdf",
+        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Data%20Extraction%20services-converted%20(1).pdf",
     },
 ];
 

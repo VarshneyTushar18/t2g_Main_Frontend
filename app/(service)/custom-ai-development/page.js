@@ -34,7 +34,7 @@ export const metadata = {
     title: "Custom AI Development Services | AI Solutions Company",
     description:
       "Build scalable AI-powered solutions tailored to your business needs with our custom AI development services. Improve automation, productivity, and customer experience.",
-    url: "https://www.tech2globe.com/custom-ai-development",
+    url: "https://stagenew.tech2globe.tech/custom-ai-development",
     siteName: "Tech2Globe",
   },
 
@@ -46,7 +46,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/custom-ai-development",
+    canonical: "",
   },
 };
 

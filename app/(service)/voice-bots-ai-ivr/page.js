@@ -33,7 +33,7 @@ export const metadata = {
     title: "AI Voice Bots & VR Solutions for Interactive Experiences",
     description:
       "Build AI voice bots and VR-powered solutions for automated conversations, immersive experiences, and next-generation customer engagement.",
-    url: "https://www.tech2globe.com/voice-bots-ai-ivr",
+    url: "https://stagenew.tech2globe.tech/voice-bots-ai-ivr",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/voice-bots-ai-ivr",
+    canonical: "https://stagenew.tech2globe.tech/voice-bots-ai-ivr",
   },
 };
 

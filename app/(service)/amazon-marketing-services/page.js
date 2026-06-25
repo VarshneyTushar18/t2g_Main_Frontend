@@ -12,6 +12,7 @@ import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import "./custom.css";
 import Link from "next/link";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
     title: "Amazon Marketing Services | AI-Driven PPC, SEO & Storefront Growth",
@@ -33,7 +34,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Supercharge your Amazon sales with Tech2Globe's AI-driven marketing services. From smart ad targeting and listing SEO to branded storefront design, we use machine learning insights to maximize your Amazon ROI.",
-        url: "https://www.tech2globe.com/amazon-marketing-services",
+        url: "https://stagenew.tech2globe.tech/amazon-marketing-services",
     },
     twitter: {
         card: "summary_large_image",
@@ -42,7 +43,7 @@ export const metadata = {
             "Supercharge your Amazon sales with Tech2Globe's AI-driven marketing services. From smart ad targeting and listing SEO to branded storefront design, we use machine learning insights to maximize your Amazon ROI.",
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-marketing-services",
+        canonical: "https://stagenew.tech2globe.tech/amazon-marketing-services",
     },
 };
 
@@ -377,61 +378,108 @@ const caseStudies = [
         "title": "Providing Favourable Results",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "Understand previous and existing marketing strategies adapted by client before Tech2Globe...",
-        "docLink": "https://www.tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 2,
         "title": "Store Creation",
         "image": "/images/services/service-inner/store-creation1.jpg",
         "description": "Client wanted to drive awareness and engagement about their newly launched products and its benefits....",
-        "docLink": "https://www.tech2globe.com/casestudies-docs1/Case%20Study%20%20-(Store%20Creation)%20(1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%20%20-(Store%20Creation)%20(1).pdf"
     },
     {
         "id": 3,
         "title": "Amazon Store Creation",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "A store which should contain his all good ranking ASINs of the Wise brand and for different product types e.g. Product for Skin Care, Hair Care etc....",
-        "docLink": "https://www.tech2globe.com/casestudies-docs1/Case%20Study%201%20(Store%20Creation)%20(1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%201%20(Store%20Creation)%20(1).pdf"
     },
     {
         "id": 4,
         "title": "Professional Amazon Store Front",
         "image": "/images/services/service-inner/New-Ecommerce-Store.jpg",
         "description": "Our core focus to create client&apos;s Amazon Store more effective by using trending layouts, visual appealing imagery and multimedia content...",
-        "docLink": "https://www.tech2globe.com/casestudies-docs1/case-study-professional-amazon-store-front.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/case-study-professional-amazon-store-front.pdf"
     },
 ]
+
+const portfolioClients = [
+    {
+        initials: "WB",
+        gradient: "#0b2e58",
+        client: "WildCraft Brewing",
+        country: "USA",
+        project: "Full Amazon Marketing Build-Out",
+        desc: "US craft brewing brand that built its full Amazon marketing engine from scratch, achieving a 90% conversion rate increase within three months.",
+        category: "Marketing Services",
+        result: "+90% conversion rate",
+        resultSub: "Conversion Growth",
+    },
+    {
+        initials: "ZU",
+        gradient: "#0b2e58",
+        client: "ZaraHome UK",
+        country: "UK",
+        project: "Sponsored Brands Video Strategy",
+        desc: "UK home brand that doubled year-over-year revenue through Sponsored Brands video ads, brand storytelling, and seasonal promotion management.",
+        category: "Marketing Services",
+        result: "2x YoY revenue",
+        resultSub: "Revenue Growth",
+    },
+    {
+        initials: "TJ",
+        gradient: "#0b2e58",
+        client: "TokyoTrails Japan",
+        country: "Japan",
+        project: "Japan Marketplace Marketing",
+        desc: "Japanese outdoor gear brand that gained a competitive edge through a comprehensive Amazon marketing strategy tailored for the local marketplace.",
+        category: "Marketing Services",
+        result: "#1 BSR in category",
+        resultSub: "Category Leadership",
+    },
+    {
+        initials: "GO",
+        gradient: "#0b2e58",
+        client: "GreenPath Organics",
+        country: "Canada",
+        project: "Amazon Posts + Brand Content",
+        category: "Marketing Services",
+        result: "+55% brand followers",
+        resultSub: "Audience Growth",
+    },
+    {
+        initials: "TL",
+        gradient: "#0b2e58",
+        client: "TechHome Living",
+        country: "Germany",
+        project: "Amazon Storefront + Posts Strategy",
+        category: "Marketing Services",
+        result: "+4K monthly store visits",
+        resultSub: "Traffic Growth",
+    },
+];
 
 const testimonials = [
     {
         id: 1,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "Tech2Globe's Amazon marketing services have been a godsend for our business. Their team really pulled through, giving our products the spotlight they truly deserve.",
-        name: "Samantha Lee, Small Business Owner",
+        text: "Tech2Globe built our entire Amazon marketing engine from scratch — Sponsored Ads, Stores, Posts, A+ content, and email follow-ups. We saw a 90% increase in our overall conversion rate in 3 months.",
+        name: "Connor Walsh | WildCraft Brewing",
+        location: "USA",
     },
     {
         id: 2,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "Tech2Globe gave us a glimpse of what our customers want, which is huge for driving sales. They make sure that our products are reaching the right customers.",
-        name: "Alex Thompson, Amazon Seller",
+        text: "A truly full-service Amazon marketing team. Tech2Globe managed our Sponsored Brands video ads, brand storytelling, and seasonal promotions with exceptional results. Revenue doubled year-over-year.",
+        name: "Zara Kadir | ZaraHome UK",
+        location: "UK",
     },
     {
         id: 3,
         quote: "/images/services/service-inner/quote-icon.png",
-        text: "I'm seriously impressed by how Tech2Globe navigated the maze of promotion for us. It's clear they know their stuff, but what's even better is how they genuinely care about our success.",
-        name: "Rahul Sharma, E-commerce Entrepreneur.",
-    },
-    {
-        id: 4,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "I do believe their team enables an easy way to have products ranked on. They excel in execution, problem solving, and getting the job done.",
-        name: "Priya Patel, Online Retailer",
-    },
-    {
-        id: 5,
-        quote: "/images/services/service-inner/quote-icon.png",
-        text: "Doing business on Amazon might be daunting. Tech2Globe and team understand the many complications involved and have done a fantastic job guiding our progress.",
-        name: "Jake Miller, Amazon Seller",
+        text: "Tech2Globe's Amazon marketing strategy for our outdoor gear brand was comprehensive and effective. Their understanding of the Japanese marketplace gave us a significant competitive edge.",
+        name: "Yuki Yamamoto | TokyoTrails Japan",
+        location: "Japan",
     },
 ];
 
@@ -1001,6 +1049,9 @@ export default function AmazonMarketing() {
                 </div>
             </div>
 
+            
+
+            <ClientPortfolio clients={portfolioClients} />
             <CaseStudiesService caseStudies={caseStudies} />
             <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />

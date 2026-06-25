@@ -31,7 +31,7 @@ export const metadata = {
     title: "Multilingual NLP Chatbots for Global Customer Support",
     description:
       "Build multilingual NLP chatbots that understand multiple languages and deliver personalized customer interactions powered by AI.",
-    url: "/service/multilingual-nlp-chatbots",
+    url: "https://stagenew.tech2globe.tech/multilingual-nlp-chatbots",
     siteName: "Tech2Globe",
   },
 
@@ -43,7 +43,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "/service/multilingual-nlp-chatbots",
+    canonical: "https://stagenew.tech2globe.tech/multilingual-nlp-chatbots",
   },
 };
 

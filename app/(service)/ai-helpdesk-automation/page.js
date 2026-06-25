@@ -32,7 +32,7 @@ export const metadata = {
     title: "AI Helpdesk Automation Services for Faster Support",
     description:
       "Automate ticket management and customer support operations with AI helpdesk automation solutions designed for efficiency and scalability.",
-    url: "https://www.tech2globe.com/ai-helpdesk-automation",
+    url: "/service/ai-helpdesk-automation",
     siteName: "Tech2Globe",
   },
 
@@ -44,7 +44,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/ai-helpdesk-automation",
+    canonical: "/service/ai-helpdesk-automation",
   },
 };
 

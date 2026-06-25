@@ -25,7 +25,7 @@ export const metadata = {
         siteName: "Tech2Globe Web Solutions LLP",
         description:
             "Turn raw data into revenue with Tech2Globe's AI-driven data analytics services. We apply machine learning models and advanced BI tools to help businesses uncover trends, predict outcomes, and make data-informed decisions with confidence.",
-        url: "https://www.tech2globe.com/data-analytics-services"
+        url: "https://stagenew.tech2globe.tech/data-analytics-services"
     },
     twitter: {
         card: "summary_large_image",
@@ -34,7 +34,7 @@ export const metadata = {
             "Turn raw data into revenue with Tech2Globe's AI-driven data analytics services. We apply machine learning models and advanced BI tools to help businesses uncover trends, predict outcomes, and make data-informed decisions with confidence."
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/data-analytics-services"
+        canonical: "https://stagenew.tech2globe.tech/data-analytics-services"
     }
 };
 

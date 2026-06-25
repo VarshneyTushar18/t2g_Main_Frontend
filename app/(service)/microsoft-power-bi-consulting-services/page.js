@@ -15,7 +15,7 @@ export const metadata = {
         title: "Microsoft Power BI Consulting Services | AI-Integrated Dashboards & BI Solutions",
         description:
             "Unlock the full power of your data with Tech2Globe's AI-integrated Power BI consulting services. We design intelligent dashboards, automated reports, and predictive visual analytics that empower leadership teams to make faster, smarter decisions.",
-        url: "https://www.tech2globe.com/microsoft-power-bi-consulting-services",
+        url: "https://stagenew.tech2globe.tech/microsoft-power-bi-consulting-services",
         siteName: "Tech2Globe Web Solutions LLP",
         type: "website",
     },
@@ -26,7 +26,7 @@ export const metadata = {
             "Unlock the full power of your data with Tech2Globe's AI-integrated Power BI consulting services. We design intelligent dashboards, automated reports, and predictive visual analytics that empower leadership teams to make faster, smarter decisions."
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/microsoft-power-bi-consulting-services",
+        canonical: "https://stagenew.tech2globe.tech/microsoft-power-bi-consulting-services",
     },
 };
 

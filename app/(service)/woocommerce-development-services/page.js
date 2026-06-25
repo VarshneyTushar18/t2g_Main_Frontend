@@ -7,6 +7,8 @@ import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSide
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import { FaHandPointRight } from "react-icons/fa";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
   title: "WooCommerce Development Services & Experts | Tech2Globe",
@@ -21,14 +23,14 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.tech2globe.com/woocommerce-development-services",
+    canonical: "https://stagenew.tech2globe.tech/woocommerce-development-services",
   },
 
   openGraph: {
     title: "WooCommerce Development Services & Experts | Tech2Globe",
     description:
       "Unlock the power of WooCommerce with our expert developers. Get custom eCommerce solutions, seamless integration, and top-notch WooCommerce development services.",
-    url: "https://www.tech2globe.com/woocommerce-development-services",
+    url: "https://stagenew.tech2globe.tech/woocommerce-development-services",
     siteName: "Tech2Globe Web Solutions LLP",
     type: "website",
   },
@@ -342,6 +344,94 @@ const portfolio = [
   },
 ]
 
+const testimonials = [
+  {
+    id: 1,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe developed a feature-rich WooCommerce store for our outdoor equipment brand. They built custom product configurators, integrated our local payment methods, and created a multilingual setup for the DACH market. The site performance is exceptional, and our team can manage it easily. Excellent work from start to finish.",
+    name: "David Müller | Müller Outdoor Gear GmbH",
+    location: "Germany",
+  },
+  {
+    id: 2,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "We engaged Tech2Globe to build a subscription-based WooCommerce store for our beauty brand. They custom-developed a subscription plugin, integrated Klarna for payments, and built a loyalty points system from scratch. Revenue from subscriptions now accounts for 65% of our total income. Their WooCommerce expertise is second to none.",
+    name: "Priya Nair | Botanica Beauty Ltd.",
+    location: "United Kingdom",
+  },
+  {
+    id: 3,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe redesigned our WooCommerce store with a new custom theme, advanced filtering for our 3,000+ product catalog, and B2B pricing tiers. The checkout process is now streamlined and our cart abandonment rate dropped by 31%. Their team was responsive, detail-oriented, and delivered exactly what we envisioned.",
+    name: "François Dupont | Dupont Gourmet Imports",
+    location: "France",
+  },
+  {
+    id: 4,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe built our WooCommerce marketplace with RTL Arabic support, local payment gateways, and a custom vendor management system. The project was complex but they handled every requirement with professionalism. Our platform now supports over 200 sellers and processes thousands of orders monthly. Exceptional team and outstanding result.",
+    name: "Omar Abdullah | Riyadh Digital Bazaar",
+    location: "Saudi Arabia",
+  },
+];
+
+const portfolioClients = [
+  {
+    initials: "MO",
+    gradient: "#0b2e58",
+    client: "Müller Outdoor Gear GmbH",
+    country: "Germany",
+    project: "Custom WooCommerce Store with Product Configurator",
+    desc: "WooCommerce store developed with multilingual DACH support, custom product configurator, and localized payment integrations to improve buying accuracy and reduce returns.",
+    category: "WooCommerce Development",
+    result: "36% Reduction",
+    resultSub: "Return Rate",
+  },
+  {
+    initials: "BB",
+    gradient: "#0b2e58",
+    client: "Botanica Beauty Ltd.",
+    country: "UK",
+    project: "WooCommerce Subscription Plugin & Loyalty System Development",
+    desc: "Custom WooCommerce subscription platform with flexible billing, loyalty rewards, and subscriber management features, helping drive recurring revenue growth.",
+    category: "WooCommerce Development",
+    result: "65% Revenue",
+    resultSub: "From Subscriptions",
+  },
+  {
+    initials: "DG",
+    gradient: "#0b2e58",
+    client: "Dupont Gourmet Imports",
+    country: "France",
+    project: "WooCommerce Catalog Redesign & B2B Pricing Tiers",
+    desc: "WooCommerce redesign featuring advanced catalog filtering, custom B2B pricing tiers, and streamlined checkout experience for wholesale and retail buyers.",
+    category: "WooCommerce Development",
+    result: "31% Reduction",
+    resultSub: "Cart Abandonment",
+  },
+  {
+    initials: "RB",
+    gradient: "#0b2e58",
+    client: "Riyadh Digital Bazaar",
+    country: "SA",
+    project: "WooCommerce Multi-Vendor Marketplace with Arabic RTL",
+    desc: "Multi-vendor WooCommerce marketplace with Arabic RTL support, bilingual storefront, seller dashboards, and local payment gateway integrations.",
+    category: "WooCommerce Development",
+    result: "200+ Sellers",
+    resultSub: "Onboarded",
+  },
+  {
+    initials: "SR",
+    gradient: "#0b2e58",
+    client: "SolarEdge Retail Group",
+    country: "Netherlands",
+    project: "WooCommerce B2B Portal with ERP & Logistics Integration",
+    desc: "Custom WooCommerce B2B portal with ERP integration, warehouse inventory synchronization, bulk ordering functionality, and automated order processing workflows.",
+    category: "WooCommerce Development",
+    result: "100% Automated",
+    resultSub: "Order Processing",
+  },
+];
 
 export default function WoocommerceDevelopmentServices() {
   return (
@@ -471,9 +561,13 @@ export default function WoocommerceDevelopmentServices() {
       </section>
 
 
-      <div className="StoreCreationTabs">
+      {/* <div className="StoreCreationTabs">
         <PortfolioTabs data={portfolio} />
-      </div>
+      </div> */}
+
+      <ClientPortfolio clients={portfolioClients} />
+
+      <ClientSlider testimonials={testimonials} />
     </>
   )
 };

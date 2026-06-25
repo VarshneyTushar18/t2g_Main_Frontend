@@ -34,7 +34,7 @@ export const metadata = {
         title: "Conversational AI Solutions for Smart Customer Interactions",
         description:
             "Enhance customer communication with conversational AI solutions powered by NLP, automation, and real-time intelligent virtual assistants.",
-        url: "https://www.tech2globe.com/conversational-ai-solutions",
+        url: "https://stagenew.tech2globe.tech/conversational-ai-solutions",
         siteName: "Tech2Globe",
     },
 
@@ -46,7 +46,7 @@ export const metadata = {
     },
 
     alternates: {
-        canonical: "https://www.tech2globe.com/conversational-ai-solutions",
+        canonical: "https://stagenew.tech2globe.tech/conversational-ai-solutions",
     },
 };
 

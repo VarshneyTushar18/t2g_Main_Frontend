@@ -21,7 +21,7 @@ export const metadata = {
         title: "3D Furniture Modeling & Rendering Services | AI-Enhanced Photorealistic Visuals",
         description:
             "Bring your furniture products to life with Tech2Globe's AI-enhanced 3D modeling and rendering services. We create photorealistic, detail-perfect 3D visuals that help ecommerce brands increase buyer confidence and reduce product returns.",
-        url: "https://www.tech2globe.com/3d-furniture-modeling-rendering-services",
+        url: "https://stagenew.tech2globe.tech/3d-furniture-modeling-rendering-services",
         siteName: "Tech2Globe Web Solutions LLP",
         type: "website",
     },
@@ -33,7 +33,7 @@ export const metadata = {
     },
     alternates: {
         canonical:
-            "https://www.tech2globe.com/3d-furniture-modeling-rendering-services",
+            "https://stagenew.tech2globe.tech/3d-furniture-modeling-rendering-services",
     },
 };
 

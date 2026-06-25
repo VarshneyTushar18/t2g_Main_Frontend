@@ -21,7 +21,7 @@ export const metadata = {
         title: "Bulk Product Upload Services | AI-Accelerated Ecommerce Catalogue Management",
         description:
             "Upload thousands of products faster and error-free with Tech2Globe's AI-accelerated bulk upload services. We use intelligent data mapping and automated validation to ensure your ecommerce catalogue is accurate, complete, and live quickly.",
-        url: "https://www.tech2globe.com/bulk-product-upload-services"
+        url: "https://stagenew.tech2globe.tech/bulk-product-upload-services"
     },
     twitter: {
         card: "summary_large_image",
@@ -30,7 +30,7 @@ export const metadata = {
             "Upload thousands of products faster and error-free with Tech2Globe's AI-accelerated bulk upload services. We use intelligent data mapping and automated validation to ensure your ecommerce catalogue is accurate, complete, and live quickly."
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/bulk-product-upload-services"
+        canonical: "https://stagenew.tech2globe.tech/bulk-product-upload-services"
     }
 };
 

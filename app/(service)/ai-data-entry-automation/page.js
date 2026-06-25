@@ -32,7 +32,7 @@ export const metadata = {
         title: "AI Data Entry Automation Services for Faster Processing",
         description:
             "Automate repetitive data entry tasks with AI-powered solutions that improve accuracy, reduce manual work, and save operational time.",
-        url: "https://www.tech2globe.com/ai-data-entry-automation",
+        url: "/service/ai-data-entry-automation",
         siteName: "Tech2Globe",
     },
 
@@ -44,7 +44,7 @@ export const metadata = {
     },
 
     alternates: {
-        canonical: "https://www.tech2globe.com/ai-data-entry-automation",
+        canonical: "/service/ai-data-entry-automation",
     },
 };
 

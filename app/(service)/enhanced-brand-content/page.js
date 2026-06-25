@@ -8,6 +8,8 @@ import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/Servi
 import { FaChartBar, FaChartLine, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaHandshake, FaLightbulb, FaSearch, FaShieldAlt, FaTag, FaTimesCircle, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
     title: "Amazon A+ Content | Enhanced Brand Content Services",
@@ -20,7 +22,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "#1 Amazon Enhanced Brand Content Services that produce content with captivating images to catch visitors attention, Amazon A+ Content service provider.",
-        url: "https://www.tech2globe.com/enhanced-brand-content",
+        url: "https://stagenew.tech2globe.tech/enhanced-brand-content",
         type: "website",
     },
     twitter: {
@@ -30,7 +32,7 @@ export const metadata = {
             "#1 Amazon Enhanced Brand Content Services that produce content with captivating images to catch visitors attention, Amazon A+ Content service provider.",
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/enhanced-brand-content",
+        canonical: "https://stagenew.tech2globe.tech/enhanced-brand-content",
     },
 };
 
@@ -214,79 +216,159 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
+
+const portfolioClients = [
+    {
+        initials: "PG",
+        gradient: "#0b2e58",
+        client: "PetalGlow Skincare",
+        country: "USA",
+        project: "30-ASIN A+ Content Creation",
+        desc: "US skincare brand that improved conversion rates by an average of 18% across 30 best-selling SKUs after professionally designed A+ content.",
+        category: "EBC / A+ Content",
+        result: "+18% avg conversion rate",
+        resultSub: "Conversion Growth",
+    },
+    {
+        initials: "SL",
+        gradient: "#0b2e58",
+        client: "ScandinavianLiving",
+        country: "Denmark",
+        project: "EBC with Lifestyle Imagery",
+        desc: "Danish home brand that reduced return rates by 22% and strengthened brand storytelling through EBC modules with lifestyle imagery and comparison charts.",
+        category: "EBC / A+ Content",
+        result: "Returns down 22%",
+        resultSub: "Return Reduction",
+    },
+    {
+        initials: "RJ",
+        gradient: "#0b2e58",
+        client: "RussianCraft Jewelry",
+        country: "Russia",
+        project: "Premium A+ for Jewelry Brand",
+        desc: "Russian handcrafted jewelry brand that elevated Amazon brand perception and boosted conversions by 25% through visually rich A+ content.",
+        category: "EBC / A+ Content",
+        result: "+25% conversions",
+        resultSub: "Conversion Growth",
+    },
+    {
+        initials: "TE",
+        gradient: "#0b2e58",
+        client: "TechFlow Electronics",
+        country: "Germany",
+        project: "A+ Comparison Chart Modules",
+        category: "EBC / A+ Content",
+        result: "Cross-sell rate +35%",
+        resultSub: "Revenue Growth",
+    },
+    {
+        initials: "WO",
+        gradient: "#0b2e58",
+        client: "WildRoots Organics",
+        country: "Canada",
+        project: "Premium A+ (Brand Story) Content",
+        category: "EBC / A+ Content",
+        result: "CTR improved 40%",
+        resultSub: "Engagement Growth",
+    },
+];
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe created A+ content for our 30 best-selling SKUs and the results were incredible. Conversion rates improved by an average of 18% across all updated listings. The design quality is exceptional.",
+        name: "Grace Williamson | PetalGlow Skincare",
+        location: "USA",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Our product pages had no brand story and minimal content. Tech2Globe built beautiful EBC modules with lifestyle imagery, feature icons, and comparison charts. Our return rate also dropped by 22%.",
+        name: "Lars Hansen | ScandinavianLiving",
+        location: "Denmark",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe's A+ content creation for our handcrafted jewelry line elevated our entire brand perception on Amazon. The content is visually rich and tells our story beautifully. Conversions jumped 25%.",
+        name: "Nadia Petrov | RussianCraft Jewelry",
+        location: "Russia",
+    },
+];
 
 
 export default function AmazonDSP() {
@@ -325,7 +407,7 @@ export default function AmazonDSP() {
                                     <li>High-quality content for publication.</li>
                                 </ul>
                             </div>
-                            
+
                             <div className={Style.ContentDiv}>
                                 <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/customer-acatalog.png" alt="" className={Style.InnerIcon} /> Services Included</h5>
 
@@ -453,11 +535,15 @@ export default function AmazonDSP() {
             </section>
 
 
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} />
-            </div>
+            </div> */}
 
+            
+
+            <ClientPortfolio clients={portfolioClients} />
             <CaseStudiesService caseStudies={caseStudies} />
+            <ClientSlider testimonials={testimonials} />
         </>
     )
 };

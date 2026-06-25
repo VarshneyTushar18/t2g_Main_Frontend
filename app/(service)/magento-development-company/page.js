@@ -7,6 +7,8 @@ import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSide
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import { FaHandPointRight } from "react-icons/fa";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
   title: "Magento Development Services | Magento Development Company",
@@ -21,14 +23,14 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.tech2globe.com/magento-development-company",
+    canonical: "https://stagenew.tech2globe.tech/magento-development-company",
   },
 
   openGraph: {
     title: "Magento Development Services | Magento Development Company",
     description:
       "Hire expert Magento developers for eCommerce solutions. Our Magento development company offers reliable services for website design and development.",
-    url: "https://www.tech2globe.com/magento-development-company",
+    url: "https://stagenew.tech2globe.tech/magento-development-company",
     siteName: "Tech2Globe Web Solutions LLP",
     type: "website",
   },
@@ -343,8 +345,97 @@ const portfolio = [
   },
 ]
 
+const testimonials = [
 
-export default function VolusionDevelopment() {
+  {
+    id: 1,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe transformed our outdated B2B portal into a fully functional Magento 2 store. Their team handled complex custom module development, multi-currency setup, and bulk product uploads with exceptional precision. We saw a 42% increase in online orders within the first three months post-launch. Truly world-class Magento developers.",
+    name: "James Whitfield | NovaBuild Supplies Ltd.",
+    location: "United Kingdom",
+  },
+  {
+    id: 2,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "We hired Tech2Globe for a full Magento store redesign and custom theme development for our luxury fashion brand. They delivered a stunning, mobile-optimized storefront with seamless payment gateway integration. The team's communication was excellent throughout, and the project was delivered ahead of schedule. Highly recommend their Magento expertise.",
+    name: "Sophie Leclerc | Maison Éclat Boutique",
+    location: "Canada",
+  },
+  {
+    id: 3,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "Tech2Globe built our Magento multi-vendor marketplace from scratch, handling everything from custom extension development to Magento security audit and speed optimization. The site now loads in under 2 seconds even with 50,000+ products. Their post-launch support has been outstanding. We will continue to use them for all our Magento needs.",
+    name: "Luca Ferrante | Ferrante Electronics Group",
+    location: "Italy",
+  },
+  {
+    id: 4,
+    quote: "/images/services/service-inner/quote-icon.png",
+    text: "After struggling with a poorly configured Magento store, we engaged Tech2Globe for a complete overhaul. They migrated us to Magento 2, implemented Arabic language support, and built custom pricing rules for our regional promotions. The integrated analytics dashboard has been invaluable. Professional, responsive, and highly skilled team.",
+    name: "Aisha Al-Mansoori | Gulf Retail Connect",
+    location: "United Arab Emirates",
+  },
+];
+
+const portfolioClients = [
+  {
+    initials: "NB",
+    gradient: "#0b2e58",
+    client: "NovaBuild Supplies Ltd.",
+    country: "UK",
+    project: "Magento 2 B2B Store Development & Custom Module Integration",
+    desc: "Magento 1 to Magento 2 migration with custom B2B modules, SAP ERP integration, and multi-warehouse inventory synchronization.",
+    category: "Magento Development",
+    result: "42% Increase",
+    resultSub: "Online Orders",
+  },
+  {
+    initials: "ME",
+    gradient: "#0b2e58",
+    client: "Maison Éclat Boutique",
+    country: "Canada",
+    project: "Magento Custom Theme Design & Payment Gateway Integration",
+    desc: "Custom Magento theme development with advanced product filtering, Instagram Shopping sync, and four payment gateway integrations.",
+    category: "Magento Development",
+    result: "38% Uplift",
+    resultSub: "Mobile Conversion Rate",
+  },
+  {
+    initials: "FE",
+    gradient: "#0b2e58",
+    client: "Ferrante Electronics Group",
+    country: "Italy",
+    project: "Magento Multi-Vendor Marketplace Development",
+    desc: "Built a scalable Magento marketplace with vendor dashboards, commission management, and Elasticsearch-powered search.",
+    category: "Magento Development",
+    result: "52% Revenue Growth",
+    resultSub: "First 6 Months",
+  },
+  {
+    initials: "GR",
+    gradient: "#0b2e58",
+    client: "Gulf Retail Connect",
+    country: "UAE",
+    project: "Magento 2 Migration, Arabic Localization & SEO",
+    desc: "Magento 2 migration with Arabic RTL support, localized pricing, and bilingual storefront for GCC markets.",
+    category: "Magento Development",
+    result: "61% Increase",
+    resultSub: "Organic Traffic",
+  },
+  {
+    initials: "TH",
+    gradient: "#0b2e58",
+    client: "TerraNova Home Goods",
+    country: "Australia",
+    project: "Magento Performance Optimization & Extension Development",
+    desc: "Performance optimization, checkout improvements, and custom loyalty extension development for Magento.",
+    category: "Magento Development",
+    result: "87 Score",
+    resultSub: "Core Web Vitals",
+  },
+];
+
+export default function MagentoDevelopmentCompany() {
   return (
 
     <>
@@ -532,9 +623,13 @@ export default function VolusionDevelopment() {
       </section >
 
 
-      <div className="StoreCreationTabs">
+      {/* <div className="StoreCreationTabs">
         <PortfolioTabs data={portfolio} />
-      </div>
+      </div> */}
+
+      <ClientPortfolio clients={portfolioClients} />
+
+      <ClientSlider testimonials={testimonials} />
     </>
   )
 };

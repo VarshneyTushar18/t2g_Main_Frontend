@@ -7,6 +7,8 @@ import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import CaseStudiesService from "@/app/components/services/ServiceCaseStudy/ServiceCaseStudy";
 import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import Link from "next/link";
+import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
+import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 
 export const metadata = {
     title: "Amazon Product Cataloging Services | Amazon Listing Optimization",
@@ -25,7 +27,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Get professional Amazon product cataloging services with Tech2Globe. Optimize listings, SKUs, images and descriptions to boost visibility, sales and ROI.",
-        url: "https://www.tech2globe.com/amazon-product-catalog"
+        url: "https://stagenew.tech2globe.tech/amazon-product-catalog"
     },
     twitter: {
         card: "summary_large_image",
@@ -34,7 +36,7 @@ export const metadata = {
             "Get professional Amazon product cataloging services with Tech2Globe. Optimize listings, SKUs, images and descriptions to boost visibility, sales and ROI."
     },
     alternates: {
-        canonical: "https://www.tech2globe.com/amazon-product-catalog"
+        canonical: "https://stagenew.tech2globe.tech/amazon-product-catalog"
     }
 };
 
@@ -250,79 +252,165 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
         "title": "e-Commerce Store Version Upgrade",
         "image": "/images/services/service-inner/e-commerce-store-version-upgrade.jpg",
         "description": "The previous version had issues with accepting payments via credit cards, so one of the improvement areas was to set …",
-        "docLink": "https://tech2globe.com/casestudies-docs/E-commerce version upgrade.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs/E-commerce version upgrade.pdf"
     },
     {
         "id": 11,
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we’ve generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ]
+
+
+
+const testimonials = [
+    {
+        id: 1,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Managing a Vendor Central account is completely different from Seller Central. Tech2Globe handled our POs, chargebacks, catalog setup, and A+ content for our CPG brand. Revenue up 55% in Q4.",
+        name: "Robert Kingsley | KingsleyFoods Inc.",
+        location: "USA",
+    },
+    {
+        id: 2,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Tech2Globe navigated the complexity of Amazon Vendor Central with precision. They managed our pricing negotiations, dispute resolution, and co-op fees. Outstanding vendor management expertise.",
+        name: "Mei Lin | AsiaGourmet Brands",
+        location: "Singapore",
+    },
+    {
+        id: 3,
+        quote: "/images/services/service-inner/quote-icon.png",
+        text: "Our vendor account was suffering from high chargebacks and non-compliance fees. Tech2Globe audited our ASN processes and purchase order workflows. Chargebacks reduced by 90% in 60 days.",
+        name: "Pieter van der Berg | DutchCraft Furniture",
+        location: "Netherlands",
+    },
+];
+
+
+
+const portfolioClients = [
+    {
+        initials: "WA",
+        gradient: "#0b2e58",
+        client: "Westfield Appliances",
+        country: "USA",
+        project: "Vendor Central Account Operations",
+        desc: "Managed purchase orders, chargebacks, and vendor scorecard performance.",
+        category: "Vendor Central Account Operations",
+        result: "Fewer Chargebacks",
+        resultSub: "Improved Operational Efficiency",
+    },
+    {
+        initials: "LO",
+        gradient: "#0b2e58",
+        client: "Linden & Oak Furniture",
+        country: "UK",
+        project: "PO Management & Content Optimization",
+        desc: "Coordinated purchase order fulfillment alongside enhanced product content.",
+        category: "PO Management & Content Optimization",
+        result: "Improved PO Fill Rate",
+        resultSub: "Consistent Order Fulfillment",
+    },
+    {
+        initials: "TO",
+        gradient: "#0b2e58",
+        client: "Tundra Outfitters",
+        country: "Canada",
+        project: "Vendor Scorecard Improvement",
+        desc: "Addressed operational gaps affecting on-time delivery and fill rate.",
+        category: "Vendor Scorecard Improvement",
+        result: "Scorecard Upgraded",
+        resultSub: "Higher Vendor Rating",
+    },
+    {
+        initials: "MH",
+        gradient: "#0b2e58",
+        client: "Marbella Home Co.",
+        country: "ES",
+        project: "Catalog & A+ Content Management",
+        desc: "Upgraded product content and A+ pages for key vendor catalog items.",
+        category: "Catalog & A+ Content Management",
+        result: "Stronger Conversions",
+        resultSub: "Flagship Listing Growth",
+    },
+    {
+        initials: "HG",
+        gradient: "#0b2e58",
+        client: "Highland Gourmet Foods",
+        country: "Ireland",
+        project: "Vendor Onboarding & Operations",
+        desc: "Managed full vendor account setup and early purchase order cycles.",
+        category: "Vendor Onboarding & Operations",
+        result: "Zero PO Delays",
+        resultSub: "Smooth Vendor Onboarding",
+    },
+];
 
 
 export default function AmazonVendorCentralManagement() {
@@ -519,9 +607,17 @@ export default function AmazonVendorCentralManagement() {
                     </div>
                 </div>
             </section>
-            <div className="StoreCreationTabs">
+            {/* <div className="StoreCreationTabs">
                 <PortfolioTabs data={portfolio} title={'Our Amazon Portfolio'} description={'With over 500+ clients across the world, Tech2globe has delivered hundreds of cost effective and high-quality solutions for a wide range of industries and domains including consumer and business development, e-Commerce, retail, manufacturing & many others.'} />
-            </div>
+            </div> */}
+
+            <ClientPortfolio clients={portfolioClients} />
+
+            <ClientSlider testimonials={testimonials} />
+
+
+
+
             <CaseStudiesService caseStudies={caseStudies} />
 
         </>

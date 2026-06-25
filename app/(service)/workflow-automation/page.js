@@ -32,7 +32,7 @@ export const metadata = {
         title: "Workflow Automation Services with AI Integration",
         description:
             "Simplify business processes with workflow automation services powered by AI, smart integrations, and intelligent task management.",
-        url: "https://www.tech2globe.com/workflow-automation",
+        url: "/service/workflow-automation",
         siteName: "Tech2Globe",
     },
 
@@ -44,7 +44,7 @@ export const metadata = {
     },
 
     alternates: {
-        canonical: "https://www.tech2globe.com/workflow-automation",
+        canonical: "/service/workflow-automation",
     },
 };
 

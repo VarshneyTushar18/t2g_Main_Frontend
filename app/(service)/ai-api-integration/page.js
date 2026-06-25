@@ -33,7 +33,7 @@ export const metadata = {
     title: "AI API Integration Services for Seamless Automation",
     description:
       "Integrate AI APIs into your existing systems to automate workflows, improve efficiency, and enhance customer experiences with intelligent automation.",
-    url: "https://www.tech2globe.com/ai-api-integration",
+    url: "https://stagenew.tech2globe.tech/ai-api-integration",
     siteName: "Tech2Globe",
   },
 
@@ -45,7 +45,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://www.tech2globe.com/ai-api-integration",
+    canonical: "https://stagenew.tech2globe.tech/ai-api-integration",
   },
 };
 
