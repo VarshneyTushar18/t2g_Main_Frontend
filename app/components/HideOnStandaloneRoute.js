@@ -2,7 +2,10 @@
 
 import { usePathname } from "next/navigation";
 
-const STANDALONE_ROUTES = ["/amazon-ads"];
+const STANDALONE_ROUTES = [
+  "/amazon-ads",
+  "/shopify-development-company/questionnaire",
+];
 
 function isStandaloneRoute(pathname) {
   return STANDALONE_ROUTES.some(

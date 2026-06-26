@@ -10,7 +10,8 @@ import FaqSection from "@/app/components/services/faqs/faqs";
 import { FaChartBar, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaLightbulb, FaPaintBrush, FaPalette, FaPalfed, FaScrewdriver, FaSearch, FaShieldAlt, FaStore, FaUsers, FaUsersCog, FaVial } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import ShopifySlider from "@/app/components/services/shopifypageslider/shopifypageslider";
-import ShopifyIntakePopup from "@/app/components/landingpage/ShopifyIntakePopup";
+import ShopifyQuoteFab from "@/app/components/landingpage/ShopifyQuoteFab";
+import ShopifyIntakeHashRedirect from "@/app/components/landingpage/ShopifyIntakeHashRedirect";
 import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
 
 export const metadata = {
@@ -51,7 +52,7 @@ const pageHeaderData = {
     description:
         "Tech2Globe is a trusted Shopify Development Services Company in the market with a successful track record of providing services to international customers. ",
     buttonText: "Get a quote",
-    buttonLink: "#shopify-intake-form",
+    buttonLink: "/shopify-development-company/questionnaire",
     backgroundImage: "/images/services/data-mining-services-banner.jpg", // your banner image
 };
 
@@ -439,7 +440,8 @@ export default function ShopifyDevelopment() {
             <CaseStudiesService caseStudies={caseStudies} />
             <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />
-            <ShopifyIntakePopup />
+            <ShopifyIntakeHashRedirect />
+            <ShopifyQuoteFab />
         </>
     )
 };
