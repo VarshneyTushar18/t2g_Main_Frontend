@@ -4007,8 +4007,6 @@ export default function Header() {
                   <form className="d-flex mt-2" role="search">
                      <a href="/contact-us" className="button-red" type="submit">GET A
                         PROPOSAL</a>
-
-                        <a href="/contact-us" className="button-red" type="submit">Let's Talk AI</a>
                   </form>
                   <div className="row align-items-center mt-3 sidebar-contact-details-container">
                      <div className="col-md-12 col-sm-6 py-2 d-flex align-items-center indian-data-text">
