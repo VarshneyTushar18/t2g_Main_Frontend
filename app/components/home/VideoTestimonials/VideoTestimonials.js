@@ -40,14 +40,25 @@ const videos = [
   },
   {
     id: "vidreviewFour",
-    title: "Digital Marketing Services",
-    src: "https://www.youtube-nocookie.com/embed/eHTCSN5jngI",
-    thumbnail: "/images/testimonials/digital-marketing-services-video-testimonial.jpg",
+    title: "Performance Marketing",
+    type: "self-hosted",
+    src: "/images/testimonials/1782551856990-9857572a-0fea-4fad-b89c-9b7499da9484.webm",
+    thumbnail: "/images/testimonials/performance-marketing-services-video-testimonial-image001.webp",
     stats: [
-      { value: "+315%", label: "Organic Traffic" },
-      { value: "+100%", label: "Leads" },
+      { value: "+90%", label: "Campaign Sales" },
+      { value: "+65%", label: "Daily Orders" },
     ],
   },
+  // {
+  //   id: "vidreviewFour",
+  //   title: "Digital Marketing Services",
+  //   src: "https://www.youtube-nocookie.com/embed/eHTCSN5jngI",
+  //   thumbnail: "/images/testimonials/digital-marketing-services-video-testimonial.jpg",
+  //   stats: [
+  //     { value: "+315%", label: "Organic Traffic" },
+  //     { value: "+100%", label: "Leads" },
+  //   ],
+  // },
 ];
 
 export default function VideoTestimonials() {
@@ -58,14 +69,17 @@ export default function VideoTestimonials() {
       {/* Modals */}
       {videos.map((video) => (
         <div
-          className={`modal fade ${activeVideo === video.id ? "show d-block" : ""}`}
+          className={`modal fade ${styles.videoModal} ${activeVideo === video.id ? "show d-block" : ""}`}
           id={video.id}
           key={video.id}
           tabIndex={-1}
           aria-hidden={activeVideo === video.id ? "false" : "true"}
-          style={{ background: activeVideo === video.id ? "rgba(0,0,0,0.5)" : "transparent" }}
+          onClick={() => setActiveVideo(null)}
         >
-          <div className="modal-dialog modal-sm">
+          <div
+            className="modal-dialog modal-sm"
+            onClick={(event) => event.stopPropagation()}
+          >
             <div className="modal-content">
               <div className="modal-header">
                 <button
@@ -77,19 +91,31 @@ export default function VideoTestimonials() {
               </div>
               <div className="modal-body">
                 <figure className="video-container m-0">
-                  {activeVideo === video.id && (
-                    <iframe
-                      width="100%"
-                      height="500px"
-                      src={video.src}
-                      title={video.title}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                      loading="lazy"
-                    ></iframe>
-                  )}
+                  {activeVideo === video.id &&
+                    (video.type === "self-hosted" ? (
+                      <video
+                        className={styles.selfHostedVideo}
+                        width="100%"
+                        height="500"
+                        controls
+                        autoPlay
+                        playsInline
+                        src={video.src}
+                        title={video.title}
+                      />
+                    ) : (
+                      <iframe
+                        width="100%"
+                        height="500px"
+                        src={video.src}
+                        title={video.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        loading="lazy"
+                      />
+                    ))}
                 </figure>
               </div>
             </div>

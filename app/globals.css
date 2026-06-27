@@ -1463,3 +1463,60 @@ h1 {
     background: #666;
   }
 }
+
+.ai-menu-item {
+  background: #234268!important;
+  border-top-left-radius: 10px!important;
+  border-top-right-radius: 10px!important;
+}
+
+.ai-menu-item > a {
+  color: #fff!important;
+}
+
+.aiservicetab{
+  background: #234268!important;
+  color: #fff!important;
+  border: none!important;
+  outline: none!important;
+  border-radius: 0!important;
+  padding: 10px 20px!important;
+  font-size: 14px!important;
+  font-weight: 500!important;
+  text-transform: uppercase!important;
+  letter-spacing: 0.5px!important;
+  transition: all 0.3s ease!important;
+  margin-top: 10px!important;
+}
+
+.aiservicetab:hover{
+  background: #c01f29!important;
+  color: #fff!important;
+  border: none!important;
+  outline: none!important;
+  border-radius: 0!important;
+  padding: 10px 20px!important;
+  font-size: 14px!important;
+  font-weight: 500!important;
+  text-transform: uppercase!important;
+  letter-spacing: 0.5px!important;
+  transition: all 0.3s ease!important;
+  margin-top: 10px!important;
+}
+
+.aiservicetab.active,
+.dropdown__services__for__mobile .nav-tabs button.aiservicetab.active {
+  background: #c01f29!important;
+  color: #fff!important;
+  border: none!important;
+  border-bottom: none!important;
+  outline: none!important;
+  border-radius: 0!important;
+  padding: 10px 20px!important;
+  font-size: 14px!important;
+  font-weight: 500!important;
+  text-transform: uppercase!important;
+  letter-spacing: 0.5px!important;
+  transition: all 0.3s ease!important;
+  margin-top: 10px!important;
+}

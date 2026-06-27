@@ -1570,7 +1570,7 @@ export default function Header() {
                         </div>
 
                      </li>
-                     <li className="HasMegaChild">
+                     <li className="HasMegaChild ai-menu-item">
                         <a href="#!">Lets Talk AI</a>
                         <div className="container-fluid megamenu">
                            <div className="h-100">
@@ -1741,7 +1741,7 @@ export default function Header() {
                         <button className="nav-link text-secondary" id="nav-technologies-tab" data-bs-toggle="tab"
                            data-bs-target="#nav-technologies" type="button" role="tab" aria-controls="nav-technologies"
                            aria-selected="false">Technologies</button>
-                        <button className="nav-link text-secondary" id="nav-aiservice-tab" data-bs-toggle="tab"
+                        <button className="nav-link text-secondary aiservicetab" id="nav-aiservice-tab" data-bs-toggle="tab"
                            data-bs-target="#nav-aiservice" type="button" role="tab" aria-controls="nav-aiservice"
                            aria-selected="false">Let's Talk AI</button>
                      </div>
@@ -4007,6 +4007,8 @@ export default function Header() {
                   <form className="d-flex mt-2" role="search">
                      <a href="/contact-us" className="button-red" type="submit">GET A
                         PROPOSAL</a>
+
+                        <a href="/contact-us" className="button-red" type="submit">Let's Talk AI</a>
                   </form>
                   <div className="row align-items-center mt-3 sidebar-contact-details-container">
                      <div className="col-md-12 col-sm-6 py-2 d-flex align-items-center indian-data-text">
