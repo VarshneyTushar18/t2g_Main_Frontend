@@ -13,7 +13,8 @@ import PortfolioTabs from "@/app/components/services/portfolio/portfolio";
 import "./custom.css";
 import Link from "next/link";
 import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPortfolio";
-import AmazonOnboardingPopup from "@/app/components/landingpage/AmazonOnboardingPopup";
+import AmazonQuoteFab from "@/app/components/landingpage/AmazonQuoteFab";
+import AmazonOnboardingHashRedirect from "@/app/components/landingpage/AmazonOnboardingHashRedirect";
 
 export const metadata = {
     title: "Amazon Marketing Services | AI-Driven PPC, SEO & Storefront Growth",
@@ -148,7 +149,7 @@ const pageHeaderData = {
     description:
         "Our Amazon marketing services agency specializes in driving sales, building brands, and engaging customers on the platform. Cost-per-click and cost-per-mile ad solutions can help you achieve your business goals.",
     buttonText: "Get a quote",
-    buttonLink: "#amazon-onboarding-form",
+    buttonLink: "/amazon-marketing-services/questionnaire",
     backgroundImage: "/images/services/amazon-marketing-services-desktop-banner.png", // your banner image
 };
 
@@ -1056,7 +1057,8 @@ export default function AmazonMarketing() {
             <CaseStudiesService caseStudies={caseStudies} />
             <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />
-            <AmazonOnboardingPopup />
+            <AmazonOnboardingHashRedirect />
+            <AmazonQuoteFab />
         </>
     )
 };
