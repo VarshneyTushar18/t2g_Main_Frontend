@@ -103,7 +103,7 @@ export default function AmazonAds() {
     return (
         <>
             <Script
-                src="https://www.googletagmanager.com/gtag/js?id=AW-353956860"
+                src="https://www.googletagmanager.com/gtag/js?id=AW-972611168"
                 strategy="afterInteractive"
             />
 
@@ -112,7 +112,7 @@ export default function AmazonAds() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'AW-353956860');
+          gtag('config', 'AW-972611168');
         `}
             </Script>
 
