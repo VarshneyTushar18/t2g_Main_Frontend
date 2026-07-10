@@ -1,4 +1,4 @@
-import ShopifyLandingPage from "@/components/shopify-landing/ShopifyLandingPage";
+import ShopifyLandingPage from "@/app/components/shopify-landing/ShopifyLandingPage";
 import "./shopify-landing.css";
 
 const PAGE_URL = "https://tech2globe.ca/Shopify-landing-page";

@@ -1,4 +1,4 @@
-import AIConsultingPage from "@/components/ai-consulting/AIConsultingPage";
+import AIConsultingPage from "@/app/components/ai-consulting/AIConsultingPage";
 import "./ai-consulting.css";
 
 const PAGE_URL = "https://tech2globe.ca/AI-Consulting";

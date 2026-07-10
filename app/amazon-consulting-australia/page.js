@@ -1,4 +1,4 @@
-import AmazonLandingPage from "@/components/amazon-landing/AmazonLandingPage";
+import AmazonLandingPage from "@/app/components/amazon-landing/AmazonLandingPage";
 import "./amz-landing.css";
 
 const PAGE_URL = "https://tech2globe.ca/Amazon-Marketplace-Management";

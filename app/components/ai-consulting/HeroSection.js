@@ -1,6 +1,6 @@
 "use client";
 
-import AnimatedCounter from "@/components/shopify-landing/AnimatedCounter";
+import AnimatedCounter from "@/app/components/shopify-landing/AnimatedCounter";
 import ScrollReveal from "./ScrollReveal";
 
 const STATS = [

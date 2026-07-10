@@ -1,6 +1,6 @@
 "use client";
 
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/app/components/contact/ContactForm/ContactForm";
 import ScrollReveal from "./ScrollReveal";
 
 export default function FinalCTASection() {
