@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Poppins } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import BootstrapClient from "./utilities/BootstrapClient";
 import LightboxInitializer from "./utilities/LightboxInitializer";
@@ -12,10 +12,11 @@ import { fixRelativeLinks } from "@/app/utilities/fixRelativeLinks";
 import FixLinksWrapper from "@/app/utilities/FixLinksWrapper";
 import Script from "next/script";
 
-const poppins = Poppins({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
 });
 
 export const metadata = {
@@ -25,7 +26,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={plusJakarta.variable}>
       {/* ✅ ADD THIS BLOCK */}
       <head>
         <base href="/" />

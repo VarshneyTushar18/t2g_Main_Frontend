@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  font-family: var(--font-plus-jakarta), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -177,7 +177,7 @@ header {
   text-decoration: none;
   font-weight: 500;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: var(--font-plus-jakarta), sans-serif !important;
   color: #111;
   font-size: 14px;
 }

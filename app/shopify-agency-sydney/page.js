@@ -1,13 +1,5 @@
-import { Plus_Jakarta_Sans } from "next/font/google";
 import ShopifyLandingPage from "@/components/shopify-landing/ShopifyLandingPage";
 import "./shopify-landing.css";
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-shopify-lp",
-  display: "swap",
-});
 
 const PAGE_URL = "https://tech2globe.ca/Shopify-landing-page";
 
@@ -156,7 +148,7 @@ const jsonLd = {
 
 export default function Page() {
   return (
-    <div className={`${plusJakarta.variable} ${plusJakarta.className}`}>
+    <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
