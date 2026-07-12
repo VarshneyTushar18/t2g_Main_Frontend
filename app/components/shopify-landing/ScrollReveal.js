@@ -29,11 +29,22 @@ export default function ScrollReveal({
           observer.unobserve(el);
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -20px 0px" }
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+
+    // Fallback: if still hidden after paint, show it (avoids stuck opacity:0)
+    const fallback = window.setTimeout(() => {
+      if (!el.classList.contains("is-visible")) {
+        el.classList.add("is-visible");
+      }
+    }, 1200);
+
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(fallback);
+    };
   }, []);
 
   const delayClass =

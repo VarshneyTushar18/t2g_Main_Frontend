@@ -1,78 +1,77 @@
 "use client";
 
-import { FiSearch, FiMap, FiEdit3, FiZap, FiBarChart2 } from "react-icons/fi";
+import {
+  FiSearch,
+  FiMap,
+  FiEdit3,
+  FiZap,
+  FiRefreshCw,
+} from "react-icons/fi";
 import ScrollReveal from "./ScrollReveal";
 
 const STEPS = [
   {
-    icon: FiSearch,
-    title: "Free Account & Listing Audit",
-    description:
-      "We review your current Amazon presence (or your launch plan) against local competitors and A10 ranking factors.",
+    num: "01",
+    Icon: FiSearch,
+    title: "Free Account Audit",
+    desc: "We analyse your current listings, ad spend, BSR, review profile and competitor gaps — no cost, no obligation.",
   },
   {
-    icon: FiMap,
+    num: "02",
+    Icon: FiMap,
     title: "Strategy & Keyword Mapping",
-    description:
-      "Local, high-intent search terms mapped to every listing, backed by category and competitor research.",
+    desc: "Category-specific keyword research, competitor reverse-engineering and a 90-day growth roadmap tailored to your products.",
   },
   {
-    icon: FiEdit3,
-    title: "Listing Build & Optimisation",
-    description:
-      "Titles, images, A+ Content and Brand Store built to convert local shoppers.",
+    num: "03",
+    Icon: FiEdit3,
+    title: "Listing Build & A+ Content",
+    desc: "Fully optimised titles, bullets, descriptions, backend terms and A+ content with lifestyle imagery and brand story modules.",
   },
   {
-    icon: FiZap,
+    num: "04",
+    Icon: FiZap,
     title: "Launch & PPC Activation",
-    description:
-      "Sponsored Ads campaigns launched with market-specific budget and ACOS targets.",
+    desc: "Campaign architecture across Sponsored Products, Brands and Display — with aggressive launch bids that dial back as organic rank improves.",
   },
   {
-    icon: FiBarChart2,
-    title: "Ongoing Management & Reporting",
-    description:
-      "Weekly performance tracking, monthly strategy reviews, and a dedicated account manager in your time zone.",
+    num: "05",
+    Icon: FiRefreshCw,
+    title: "Ongoing Management",
+    desc: "Weekly bid optimisation, monthly strategy reviews, inventory alerts and continuous listing iteration to compound your results over time.",
   },
 ];
 
 export default function ProcessSection() {
   return (
-    <section
-      id="process"
-      className="py-16 md:py-24 scroll-mt-24"
-      aria-labelledby="process-heading"
-    >
+    <section id="process" className="amz-process" aria-labelledby="process-heading">
       <div className="amz-container">
-        <ScrollReveal className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-[var(--amz-orange-dark)] font-semibold text-sm uppercase tracking-wide mb-3">
-            How We Work
-          </p>
-          <h2
-            id="process-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-black"
-          >
-            Our Amazon Growth Process
+        <ScrollReveal className="amz-section-head">
+          <p className="amz-label">How We Work</p>
+          <h2 id="process-heading" className="amz-title">
+            From Audit to Category Leadership in Five Steps
           </h2>
+          <p className="amz-sub">
+            A structured, repeatable process that removes guesswork and gives
+            your brand a compounding edge on Amazon AU.
+          </p>
         </ScrollReveal>
 
-        <div className="amz-timeline">
+        <div className="amz-process__track">
           {STEPS.map((step, i) => {
-            const Icon = step.icon;
+            const Icon = step.Icon;
             return (
-              <ScrollReveal key={step.title} delay={Math.min(i + 1, 4)}>
-                <article className="amz-step">
-                  <div className="amz-step-num" aria-hidden>
-                    {i + 1}
+              <ScrollReveal key={step.num} delay={Math.min(i + 1, 4)}>
+                <div className="amz-step">
+                  <div className="amz-step__num" aria-hidden="true">
+                    {step.num}
                   </div>
-                  <div className="mx-auto mb-3 w-10 h-10 rounded-xl bg-[var(--amz-orange-soft)] text-[var(--amz-orange-dark)] grid place-items-center">
+                  <div className="amz-step__icon">
                     <Icon size={18} aria-hidden />
                   </div>
-                  <h3 className="text-sm font-bold text-black leading-snug">{step.title}</h3>
-                  <p className="mt-2 text-xs text-[var(--amz-muted)] leading-relaxed">
-                    {step.description}
-                  </p>
-                </article>
+                  <h3 className="amz-step__title">{step.title}</h3>
+                  <p className="amz-step__desc">{step.desc}</p>
+                </div>
               </ScrollReveal>
             );
           })}

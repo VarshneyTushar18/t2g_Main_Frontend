@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 const STANDALONE_ROUTES = [
   "/amazon-ads",
   "/amazon-consulting-australia",
+  "/ai-consulting-australia",
+  "/shopify-agency-sydney",
   "/shopify-development-company/questionnaire",
 ];
 

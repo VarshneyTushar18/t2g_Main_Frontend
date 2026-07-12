@@ -5,7 +5,6 @@ import {
   FiActivity,
   FiDroplet,
   FiPackage,
-  FiArrowUpRight,
 } from "react-icons/fi";
 import ScrollReveal from "./ScrollReveal";
 
@@ -16,7 +15,7 @@ const ROWS = [
     result: "$100K+",
     resultLabel: "Monthly revenue in Q1",
     icon: FiHome,
-    accent: "#5E8E3E",
+    accent: "#2d5a27",
   },
   {
     brand: "Activewear Brand",
@@ -24,7 +23,7 @@ const ROWS = [
     result: "2.6x",
     resultLabel: "Mobile conversion rate",
     icon: FiActivity,
-    accent: "#95BF47",
+    accent: "#66b032",
   },
   {
     brand: "Beauty Brand",
@@ -32,7 +31,7 @@ const ROWS = [
     result: "3.1x",
     resultLabel: "Organic traffic growth",
     icon: FiDroplet,
-    accent: "#5E8E3E",
+    accent: "#2d5a27",
   },
   {
     brand: "B2B Wholesale Brand",
@@ -40,76 +39,46 @@ const ROWS = [
     result: "40%",
     resultLabel: "Reduction in page load time",
     icon: FiPackage,
-    accent: "#95BF47",
+    accent: "#66b032",
   },
 ];
 
 export default function PortfolioSection() {
   return (
-    <section
-      className="py-16 md:py-24 bg-[var(--sp-bg)]"
-      aria-labelledby="portfolio-heading"
-    >
+    <section className="sp-portfolio" aria-labelledby="portfolio-heading">
       <div className="sp-container">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <p className="text-[var(--sp-green)] font-semibold text-sm uppercase tracking-wide mb-3">
-            Client Portfolio
-          </p>
-          <h2
-            id="portfolio-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--sp-ink)]"
-          >
+        <ScrollReveal className="sp-section-head">
+          <p className="sp-label">Client Portfolio</p>
+          <h2 id="portfolio-heading" className="sp-title">
             Brands We&apos;ve Built on Shopify
           </h2>
-        </div>
+        </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="sp-portfolio__grid">
           {ROWS.map((row, i) => {
             const Icon = row.icon;
             return (
               <ScrollReveal key={row.brand} delay={Math.min(i + 1, 4)}>
-                <article className="sp-portfolio-card group h-full flex flex-col">
-                  <div className="flex items-start justify-between gap-3 mb-4">
-                    <span
-                      className="sp-portfolio-icon flex-shrink-0"
-                      style={{
-                        backgroundColor: `${row.accent}1a`,
-                        color: row.accent,
-                      }}
-                    >
-                      <Icon size={20} aria-hidden />
-                    </span>
-                    <FiArrowUpRight
-                      className="text-[var(--sp-muted)] opacity-40 group-hover:opacity-100 group-hover:text-[var(--sp-green-dark)] transition-all duration-300"
-                      size={18}
-                      aria-hidden
-                    />
-                  </div>
-
-                  <h3 className="font-bold text-[var(--sp-ink)] text-lg leading-snug">
-                    {row.brand}
-                  </h3>
-                  <p className="mt-1.5 text-sm text-[var(--sp-muted)] leading-snug">
-                    <span className="font-medium text-[var(--sp-ink)]/70">
-                      Service:{" "}
-                    </span>
-                    {row.service}
-                  </p>
-
-                  <div
-                    className="mt-auto pt-5 mt-5 border-t border-[var(--sp-border)]"
-                    style={{ borderTopColor: `${row.accent}40` }}
+                <article className="sp-portfolio-card">
+                  <span
+                    className="sp-portfolio-card__icon"
+                    style={{
+                      backgroundColor: `${row.accent}1a`,
+                      color: row.accent,
+                    }}
                   >
-                    <p className="text-xs font-semibold uppercase tracking-wider text-[var(--sp-muted)] mb-1">
-                      Result
-                    </p>
+                    <Icon size={20} aria-hidden />
+                  </span>
+                  <h3 className="sp-portfolio-card__brand">{row.brand}</h3>
+                  <p className="sp-portfolio-card__service">{row.service}</p>
+                  <div className="sp-portfolio-card__result">
                     <p
-                      className="text-3xl font-extrabold tracking-tight leading-none"
+                      className="sp-portfolio-card__result-num"
                       style={{ color: row.accent }}
                     >
                       {row.result}
                     </p>
-                    <p className="mt-1.5 text-sm text-[var(--sp-muted)]">
+                    <p className="sp-portfolio-card__result-label">
                       {row.resultLabel}
                     </p>
                   </div>

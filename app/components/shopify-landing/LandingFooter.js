@@ -22,22 +22,23 @@ const SOCIAL = [
 
 export default function LandingFooter() {
   return (
-    <footer className="bg-[var(--sp-ink)] text-white pt-12 pb-8">
+    <footer className="sp-footer">
       <div className="sp-container">
-        <div className="flex flex-col items-center text-center max-w-lg mx-auto">
+        <div className="sp-footer__inner">
           <Image
-            src="/images/landingpageimages/tech2globe-logo.webp"
+            src="/images/landingpage/footer_logo.png"
             alt="Tech2Globe"
-            width={180}
-            height={56}
-            className="h-10 w-auto brightness-0 invert"
+            width={220}
+            height={72}
+            className="sp-footer__logo"
           />
-          <p className="mt-4 text-sm text-white/65 leading-relaxed">
-            Premium Shopify development agency helping D2C, retail, wholesale, and
-            Shopify Plus brands build stores that convert.
+          <p className="sp-footer__tagline">
+            Tech2Globe designs, builds and scales Shopify and Shopify Plus
+            stores for growing brands — from custom themes to ongoing CRO
+            support.
           </p>
 
-          <div className="flex gap-3 mt-6">
+          <div className="sp-footer__social">
             {SOCIAL.map(({ Icon, href, label }) => (
               <a
                 key={label}
@@ -45,33 +46,20 @@ export default function LandingFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[var(--sp-green)] grid place-items-center transition-colors"
               >
                 <Icon size={14} />
               </a>
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-7 text-sm text-white/65">
-            <Link
-              href="/privacy-policy"
-              className="hover:text-white transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <span className="text-white/25" aria-hidden>
-              |
-            </span>
-            <Link
-              href="/terms-and-conditions"
-              className="hover:text-white transition-colors"
-            >
-              Terms &amp; Conditions
-            </Link>
+          <div className="sp-footer__links">
+            <Link href="/privacy-policy">Privacy Policy</Link>
+            <span aria-hidden>|</span>
+            <Link href="/terms-and-conditions">Terms &amp; Conditions</Link>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-white/10 text-center text-xs text-white/50">
+        <div className="sp-footer__copy">
           <p>© {new Date().getFullYear()} Tech2Globe. All rights reserved.</p>
         </div>
       </div>

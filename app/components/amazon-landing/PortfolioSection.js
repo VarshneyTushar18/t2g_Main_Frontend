@@ -1,71 +1,105 @@
 "use client";
 
+import {
+  FiHome,
+  FiDroplet,
+  FiHeart,
+  FiActivity,
+} from "react-icons/fi";
 import ScrollReveal from "./ScrollReveal";
 
-const ROWS = [
+const PROJECTS = [
   {
-    brand: "Home & Kitchenware Brand, Melbourne",
-    service: "Full account management + PPC",
-    result: "3.4x",
-    resultLabel: "Revenue in 5 months",
+    Icon: FiHome,
+    brand: "Home & Living Brand",
+    location: "Melbourne",
+    service: "Listing Optimisation · PPC · FBA Management",
+    resultNum: "3.4x",
+    resultLabel: "Revenue growth in 6 months",
+    iconBg: "#FFF4E0",
+    iconColor: "#E69500",
   },
   {
-    brand: "Natural Skincare Brand, Sydney",
-    service: "Listing optimisation + Brand Store",
-    result: "2.1x",
+    Icon: FiDroplet,
+    brand: "Skincare Brand",
+    location: "Sydney",
+    service: "A+ Content · Sponsored Brands · Brand Store",
+    resultNum: "2.1x",
     resultLabel: "Conversion rate uplift",
+    iconBg: "#FFF4E0",
+    iconColor: "#E69500",
   },
   {
-    brand: "Pet Care Brand, Brisbane",
-    service: "FBA inventory + Amazon PPC",
-    result: "19%",
-    resultLabel: "ACOS (from 48%)",
+    Icon: FiHeart,
+    brand: "Pet Accessories Brand",
+    location: "Brisbane",
+    service: "PPC Restructure · ACOS Optimisation",
+    resultNum: "19%",
+    resultLabel: "ACOS (down from 52%)",
+    iconBg: "#FFF4E0",
+    iconColor: "#E69500",
   },
   {
-    brand: "Activewear Brand, Perth",
-    service: "Amazon market entry",
-    result: "$1M+",
-    resultLabel: "Run rate in 12 months",
+    Icon: FiActivity,
+    brand: "Activewear Brand",
+    location: "Perth",
+    service: "Multi-SKU launch · Amazon's Choice strategy",
+    resultNum: "$1M+",
+    resultLabel: "Annual Amazon revenue milestone",
+    iconBg: "#FFF4E0",
+    iconColor: "#E69500",
   },
 ];
 
 export default function PortfolioSection() {
   return (
-    <section className="py-16 md:py-24" aria-labelledby="portfolio-heading">
+    <section
+      id="portfolio"
+      className="amz-portfolio"
+      aria-labelledby="portfolio-heading"
+    >
       <div className="amz-container">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <p className="text-[var(--amz-orange-dark)] font-semibold text-sm uppercase tracking-wide mb-3">
-            Client Portfolio
-          </p>
-          <h2
-            id="portfolio-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-black"
-          >
-            Brands We&apos;ve Helped Grow on Amazon
+        <ScrollReveal className="amz-section-head">
+          <p className="amz-label">Client Results</p>
+          <h2 id="portfolio-heading" className="amz-title">
+            Brands We&apos;ve Grown Across Australia
           </h2>
-        </div>
+          <p className="amz-sub">
+            Real results for real Australian businesses — across categories,
+            cities and account sizes.
+          </p>
+        </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {ROWS.map((row, i) => (
-            <ScrollReveal key={row.brand} delay={Math.min(i + 1, 4)}>
-              <article className="amz-portfolio-card flex flex-col">
-                <h3 className="font-bold text-black text-lg leading-snug">{row.brand}</h3>
-                <p className="mt-2 text-sm text-[var(--amz-muted)] leading-snug">
-                  <span className="font-medium text-black/70">Service: </span>
-                  {row.service}
-                </p>
-                <div className="mt-auto pt-5 mt-5 border-t border-[var(--amz-border)]">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[var(--amz-muted)] mb-1">
-                    Result
-                  </p>
-                  <p className="text-3xl font-extrabold text-[var(--amz-orange-dark)] tracking-tight">
-                    {row.result}
-                  </p>
-                  <p className="mt-1.5 text-sm text-[var(--amz-muted)]">{row.resultLabel}</p>
+        <div className="amz-portfolio__grid">
+          {PROJECTS.map((project, i) => {
+            const Icon = project.Icon;
+            return (
+              <ScrollReveal key={project.brand} delay={Math.min((i % 4) + 1, 4)}>
+                <div className="amz-portfolio-card">
+                  <div
+                    className="amz-portfolio-card__icon"
+                    style={{
+                      background: project.iconBg,
+                      color: project.iconColor,
+                    }}
+                  >
+                    <Icon size={20} aria-hidden />
+                  </div>
+                  <p className="amz-portfolio-card__brand">{project.brand}</p>
+                  <p className="amz-portfolio-card__location">{project.location}</p>
+                  <p className="amz-portfolio-card__service">{project.service}</p>
+                  <div className="amz-portfolio-card__result">
+                    <p className="amz-portfolio-card__result-num">
+                      {project.resultNum}
+                    </p>
+                    <p className="amz-portfolio-card__result-label">
+                      {project.resultLabel}
+                    </p>
+                  </div>
                 </div>
-              </article>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>

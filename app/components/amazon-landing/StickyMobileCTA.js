@@ -14,6 +14,7 @@ export default function StickyMobileCTA() {
         contact.getBoundingClientRect().top < window.innerHeight * 0.85;
       setShown(window.scrollY > heroH && !nearContact);
     };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -25,8 +26,8 @@ export default function StickyMobileCTA() {
       role="region"
       aria-label="Book free Amazon audit"
     >
-      <a href="#contact" className="amz-btn amz-btn-primary w-full">
-        Book a Free Amazon Account Audit
+      <a href="#contact" className="amz-btn amz-btn-primary">
+        Book Free Amazon Audit
       </a>
     </div>
   );

@@ -26,7 +26,7 @@ export default function StickyMobileCTA() {
       role="region"
       aria-label="Book free audit"
     >
-      <a href="#contact" className="sp-btn sp-btn-primary w-full">
+      <a href="#contact" className="sp-btn sp-btn-primary">
         Book a Free Shopify Store Audit
       </a>
     </div>

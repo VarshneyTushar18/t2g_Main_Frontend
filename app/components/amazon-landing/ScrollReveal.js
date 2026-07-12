@@ -13,6 +13,7 @@ export default function ScrollReveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
     const prefersReduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
@@ -20,6 +21,7 @@ export default function ScrollReveal({
       el.classList.add("is-visible");
       return;
     }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -27,10 +29,22 @@ export default function ScrollReveal({
           observer.unobserve(el);
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -20px 0px" }
     );
+
     observer.observe(el);
-    return () => observer.disconnect();
+
+    // Fallback: show after 1200ms to avoid stuck opacity:0
+    const fallback = window.setTimeout(() => {
+      if (!el.classList.contains("is-visible")) {
+        el.classList.add("is-visible");
+      }
+    }, 1200);
+
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(fallback);
+    };
   }, []);
 
   const delayClass =

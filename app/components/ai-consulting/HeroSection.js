@@ -17,29 +17,42 @@ const STATS = [
 
 function AIPanelMockup() {
   return (
-    <div className="ai-panel" aria-hidden="true">
-      <div className="flex items-center gap-2 mb-3 px-1">
-        <span className="w-2.5 h-2.5 rounded-full bg-[#B6A2BB]" />
-        <span className="w-2.5 h-2.5 rounded-full bg-white/35" />
-        <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
-        <span className="ml-2 text-[10px] text-white/55 font-medium tracking-wide">
+    <div className="ai-panel ai-float" aria-hidden="true">
+      <div className="ai-panel-header">
+        <div className="ai-panel-dots">
+          <span className="ai-panel-dot" style={{ backgroundColor: "#ef4444" }} />
+          <span className="ai-panel-dot" style={{ backgroundColor: "#f59e0b" }} />
+          <span className="ai-panel-dot" style={{ backgroundColor: "#10b981" }} />
+        </div>
+        <div className="ai-panel-title-bar">
           AI Ops Console · Live
-        </span>
+        </div>
+        <div className="ai-panel-badge-live">
+          <span className="ai-pulse-dot" /> AEST Operations
+        </div>
       </div>
 
       <div className="ai-panel-grid">
         <div className="ai-panel-card">
-          <p className="text-white/65 text-xs font-medium">Workflow automation</p>
-          <p className="text-white text-2xl font-bold mt-1">+3.4x</p>
-          <p className="text-[#B6A2BB] text-xs mt-1">Productivity uplift</p>
-          <div className="mt-4 space-y-2">
-            {["Email triage", "Order entry", "Reporting"].map((item, i) => (
-              <div key={item} className="flex items-center justify-between gap-2">
-                <span className="text-[11px] text-white/70">{item}</span>
-                <div className="flex-1 h-1.5 rounded-full bg-white/10 overflow-hidden mx-2">
+          <p className="ai-panel-card-title">Workflow Automation</p>
+          <p className="ai-panel-card-value">+3.4x</p>
+          <p className="ai-panel-card-subtitle">Productivity Uplift</p>
+          
+          <div className="ai-panel-bar-group">
+            {[
+              { name: "Email Triage", pct: 70 },
+              { name: "Order Entry", pct: 80 },
+              { name: "Reporting Automation", pct: 90 }
+            ].map((item) => (
+              <div key={item.name} className="ai-panel-bar-item">
+                <div className="ai-panel-bar-info">
+                  <span className="ai-panel-bar-label">{item.name}</span>
+                  <span className="ai-panel-bar-value">{item.pct}%</span>
+                </div>
+                <div className="ai-panel-bar-bg">
                   <div
-                    className="h-full rounded-full bg-[#B6A2BB]"
-                    style={{ width: `${70 + i * 10}%` }}
+                    className="ai-panel-bar-fill"
+                    style={{ width: `${item.pct}%` }}
                   />
                 </div>
               </div>
@@ -47,16 +60,21 @@ function AIPanelMockup() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3">
-          <div className="ai-panel-card flex-1">
-            <p className="text-white/65 text-xs">LLM assistants</p>
-            <p className="text-white text-sm font-semibold mt-1">Knowledge + Support</p>
-            <p className="text-[#B6A2BB] text-xs mt-1">Claude · OpenAI ready</p>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          <div className="ai-panel-card" style={{ flex: 1 }}>
+            <p className="ai-panel-card-title">LLM Assistants</p>
+            <p className="ai-panel-card-value" style={{ fontSize: "1.1rem", marginTop: "0.5rem" }}>
+              Knowledge & Support
+            </p>
+            <span className="ai-badge ai-badge-purple">Claude · OpenAI Ready</span>
           </div>
-          <div className="ai-panel-card flex-1">
-            <p className="text-white/65 text-xs">Compliance</p>
-            <p className="text-white text-sm font-semibold mt-1">Privacy Act aligned</p>
-            <p className="text-white/55 text-xs mt-1">APP · Data sovereignty</p>
+          
+          <div className="ai-panel-card" style={{ flex: 1 }}>
+            <p className="ai-panel-card-title">Compliance Guard</p>
+            <p className="ai-panel-card-value" style={{ fontSize: "1.1rem", marginTop: "0.5rem" }}>
+              Privacy Act Aligned
+            </p>
+            <span className="ai-badge ai-badge-green">APP Sovereign Data</span>
           </div>
         </div>
       </div>
@@ -67,35 +85,29 @@ function AIPanelMockup() {
 export default function HeroSection() {
   return (
     <section
-      className="relative pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-[#f3f1f6]"
+      className="hero-section pt-28 md:pt-36 pb-16 md:pb-24"
       aria-labelledby="hero-heading"
     >
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 70% 50% at 85% 15%, rgba(182,162,187,0.35), transparent 55%), radial-gradient(ellipse 50% 40% at 10% 80%, rgba(65,2,117,0.06), transparent 50%)",
-        }}
-        aria-hidden
-      />
+      <div className="hero-grid-overlay" aria-hidden />
 
       <div className="ai-container relative">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          <div>
+        <div className="row align-items-center g-5">
+          <div className="col-lg-6">
             <ScrollReveal>
-              <p className="text-[var(--ai-purple)] font-semibold tracking-wide text-sm uppercase mb-4">
-                Tech2Globe · AI Consulting Services
+              <p className="text-[var(--ai-cyan)] font-semibold tracking-wide text-sm uppercase mb-3">
+                Tech2Globe · AI Strategy & Delivery
               </p>
               <h1
                 id="hero-heading"
-                className="text-2xl sm:text-3xl lg:text-[2.15rem] xl:text-[2.4rem] font-bold leading-[1.2] tracking-tight text-[var(--ai-navy)]"
+                className="text-2xl sm:text-3xl lg:text-[2.15rem] xl:text-[2.6rem] font-bold leading-[1.2] tracking-tight text-white"
               >
-                The AI Consulting Team That Ships Working Systems, Not Slide Decks
+                The AI Consulting Team That Ships{" "}
+                <span className="ai-gradient-text">Working Systems</span>, Not Slide Decks
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delay={1}>
-              <p className="mt-5 text-base md:text-lg text-[var(--ai-muted)] leading-relaxed max-w-xl">
+              <p className="mt-4 text-base md:text-lg text-white/80 leading-relaxed max-w-xl">
                 Tech2Globe helps growing Australian businesses cut through the AI noise and
                 actually implement AI that pays for itself — AI readiness audits, custom AI
                 strategy, generative AI and LLM integration, workflow automation, and
@@ -106,31 +118,33 @@ export default function HeroSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={2}>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="ai-hero-ctas">
                 <a href="#contact" className="ai-btn ai-btn-primary">
                   Book a Free AI Opportunity Audit
                 </a>
-                <a href="#case-study" className="ai-btn ai-btn-secondary">
+                <a href="#case-study" className="ai-btn ai-btn-outline-white">
                   View Case Study
                 </a>
               </div>
             </ScrollReveal>
           </div>
 
-          <ScrollReveal delay={2}>
-            <AIPanelMockup />
-          </ScrollReveal>
+          <div className="col-lg-6">
+            <ScrollReveal delay={2}>
+              <AIPanelMockup />
+            </ScrollReveal>
+          </div>
         </div>
 
-        <div className="mt-14 md:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 items-stretch">
+        <div className="ai-stats-grid">
           {STATS.map((stat, i) => (
             <ScrollReveal
               key={stat.label}
               delay={Math.min(i + 1, 4)}
               className="h-full"
             >
-              <div className="h-full rounded-2xl border border-[var(--ai-border)] bg-[#ece8f0] p-5 text-center md:text-left flex flex-col">
-                <p className="text-2xl md:text-3xl font-bold text-[var(--ai-purple)]">
+              <div className="ai-stat-card stat-card-gradient">
+                <p className="ai-stat-value">
                   {stat.custom ? (
                     stat.custom
                   ) : (
@@ -141,7 +155,7 @@ export default function HeroSection() {
                     />
                   )}
                 </p>
-                <p className="mt-1 text-xs md:text-sm text-[var(--ai-muted)] leading-snug flex-1">
+                <p className="ai-stat-label">
                   {stat.label}
                 </p>
               </div>

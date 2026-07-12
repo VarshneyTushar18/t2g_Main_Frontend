@@ -7,31 +7,31 @@ import ScrollReveal from "./ScrollReveal";
 const FAQS = [
   {
     q: "Do you only work with local businesses?",
-    a: "No. We partner with D2C brands, retailers, wholesale businesses, and Shopify Plus enterprises across markets. Local timezone support (AEST) means fast communication—wherever your warehouse or HQ sits.",
+    a: "No — our team understands the local retail market and builds Shopify stores for brands nationally and internationally. Being local simply means we build with local payment methods, shipping expectations and compliance requirements in mind from day one.",
   },
   {
-    q: "How much does a Shopify store cost?",
-    a: "Investment depends on scope: theme complexity, migrations, apps, Shopify Plus features, and CRO. After your free store audit we provide a clear roadmap and transparent quote—no surprise fees.",
+    q: "How much does a custom Shopify store cost?",
+    a: "Pricing depends on scope — a custom theme build, app integrations, and migration complexity all factor in. We provide a fixed-scope quote after your free store audit so there are no surprise costs partway through the build.",
   },
   {
-    q: "Can you migrate without losing SEO?",
-    a: "Yes. Our Shopify store migration process includes URL mapping, redirects, metadata preservation, sitemap updates, and post-launch monitoring so organic rankings stay protected.",
+    q: "Can you migrate our existing store to Shopify without losing our SEO rankings?",
+    a: "Yes. Migration includes a full redirect map, metadata transfer and structured data rebuild so search rankings and historic order data carry across cleanly.",
   },
   {
-    q: "Do you support Shopify Plus?",
-    a: "Absolutely. We deliver Shopify Plus enterprise development including wholesale, multi-currency, B2B, checkout extensibility, and complex integrations.",
+    q: "Do you work with Shopify Plus for larger or wholesale brands?",
+    a: "Yes — we support Shopify Plus builds including multi-currency storefronts, B2B/wholesale channels and custom checkout scripting for scaling retailers.",
   },
   {
-    q: "How long does development take?",
-    a: "Typical custom builds run 6–12 weeks depending on features and content readiness. Migrations and Plus projects are scoped after the audit with a shared timeline and milestones.",
+    q: "How long does a typical Shopify build take?",
+    a: "A standard custom store typically takes 6-10 weeks from strategy to launch; Shopify Plus and headless builds can run 10-16 weeks depending on integration complexity.",
   },
   {
-    q: "Do you offer ongoing support?",
-    a: "Yes. Ongoing Shopify support covers theme maintenance, updates, performance monitoring, seasonal readiness (including Black Friday), and continuous CRO.",
+    q: "Do you offer ongoing support after launch?",
+    a: "Yes — our retainer clients get local AEST business-hours support, theme updates, and proactive load testing ahead of EOFY and Black Friday/Cyber Monday sale periods.",
   },
   {
-    q: "Do you provide free audits?",
-    a: "Yes. Book a free Shopify store audit and receive a tailored growth roadmap from our Shopify experts—no obligation.",
+    q: "Do you offer a free store audit before we commit?",
+    a: "Yes — every engagement starts with a free Shopify store and conversion audit so you can see exactly where the gaps are before deciding to work with us.",
   },
 ];
 
@@ -39,27 +39,22 @@ export default function FAQSection() {
   const [openId, setOpenId] = useState(0);
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-[var(--sp-bg)] scroll-mt-24" aria-labelledby="faq-heading">
-      <div className="sp-container max-w-3xl">
-        <ScrollReveal className="text-center mb-10">
-          <p className="text-[var(--sp-green)] font-semibold text-sm uppercase tracking-wide mb-3">
-            FAQ
-          </p>
-          <h2
-            id="faq-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--sp-ink)]"
-          >
-            Frequently Asked Questions
+    <section id="faq" className="sp-faq" aria-labelledby="faq-heading">
+      <div className="sp-container">
+        <ScrollReveal className="sp-section-head">
+          <p className="sp-label">Frequently Asked Questions</p>
+          <h2 id="faq-heading" className="sp-title">
+            Shopify Development FAQs
           </h2>
         </ScrollReveal>
 
-        <div className="space-y-3" role="list">
+        <div className="sp-faq__list" role="list">
           {FAQS.map((faq, i) => {
             const isOpen = openId === i;
             return (
               <ScrollReveal key={faq.q} delay={Math.min(i, 3)}>
                 <div
-                  className={`sp-faq-item ${isOpen ? "is-open" : ""}`}
+                  className={`sp-faq-item${isOpen ? " is-open" : ""}`}
                   role="listitem"
                 >
                   <h3>
@@ -72,12 +67,7 @@ export default function FAQSection() {
                       onClick={() => setOpenId(isOpen ? -1 : i)}
                     >
                       <span>{faq.q}</span>
-                      <FiChevronDown
-                        className={`flex-shrink-0 text-[var(--sp-green)] transition-transform duration-300 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                        aria-hidden
-                      />
+                      <FiChevronDown size={20} aria-hidden />
                     </button>
                   </h3>
                   <div
@@ -86,7 +76,7 @@ export default function FAQSection() {
                     aria-labelledby={`faq-btn-${i}`}
                     className="sp-faq-panel"
                   >
-                    <p className="text-sm leading-relaxed">{faq.a}</p>
+                    <p>{faq.a}</p>
                   </div>
                 </div>
               </ScrollReveal>

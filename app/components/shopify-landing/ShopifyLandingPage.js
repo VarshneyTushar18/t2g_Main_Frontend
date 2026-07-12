@@ -22,8 +22,8 @@ export default function ShopifyLandingPage() {
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        <WhyChooseSection />
         <ProcessSection />
+        <WhyChooseSection />
         <CaseStudySection />
         <PortfolioSection />
         <TestimonialsSection />

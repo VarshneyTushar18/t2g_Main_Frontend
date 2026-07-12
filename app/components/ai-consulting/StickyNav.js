@@ -36,10 +36,8 @@ export default function StickyNav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-[0_4px_24px_rgba(10,0,39,0.08)] border-b border-[var(--ai-border)]"
-          : "bg-transparent"
+      className={`glass-nav transition-all duration-300 ${
+        scrolled ? "scrolled" : "bg-transparent"
       }`}
     >
       <div className="ai-container flex items-center justify-between h-16 md:h-[4.5rem]">
@@ -49,7 +47,7 @@ export default function StickyNav() {
             alt="Tech2Globe"
             width={180}
             height={56}
-            className="h-9 md:h-11 w-auto"
+            className={`h-9 md:h-11 w-auto transition-all ${!scrolled ? "brightness-0 invert" : ""}`}
             priority
           />
         </Link>
@@ -59,7 +57,11 @@ export default function StickyNav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-[var(--ai-muted)] hover:text-[var(--ai-purple)] transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                scrolled
+                  ? "text-[var(--ai-muted)] hover:text-[var(--ai-purple)]"
+                  : "text-white/85 hover:text-white"
+              }`}
             >
               {link.label}
             </a>
@@ -67,14 +69,21 @@ export default function StickyNav() {
         </nav>
 
         <div className="hidden lg:block">
-          <a href="#contact" className="ai-btn ai-btn-primary text-sm !py-2.5 !px-5">
+          <a
+            href="#contact"
+            className={`ai-btn text-sm !py-2.5 !px-5 ${
+              scrolled ? "ai-btn-primary" : "ai-btn-white"
+            }`}
+          >
             Book Free Audit
           </a>
         </div>
 
         <button
           type="button"
-          className="lg:hidden relative z-10 p-2 rounded-lg text-[var(--ai-navy)] hover:bg-[var(--ai-purple-soft)]"
+          className={`lg:hidden relative z-10 p-2 rounded-lg transition-colors ${
+            scrolled ? "text-[var(--ai-navy)] hover:bg-[var(--ai-purple-soft)]" : "text-white hover:bg-white/10"
+          }`}
           aria-expanded={open}
           aria-controls="ai-mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}

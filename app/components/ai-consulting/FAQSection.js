@@ -45,11 +45,11 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="py-16 md:py-24 bg-[var(--ai-bg)] scroll-mt-24"
+      className="py-20 md:py-28 bg-[var(--ai-bg)] scroll-mt-24"
       aria-labelledby="faq-heading"
     >
-      <div className="ai-container max-w-3xl">
-        <ScrollReveal className="text-center mb-10">
+      <div className="ai-container max-w-3xl" style={{ maxWidth: "800px", margin: "0 auto" }}>
+        <ScrollReveal className="text-center mb-14">
           <p className="text-[var(--ai-purple)] font-semibold text-sm uppercase tracking-wide mb-3">
             Frequently Asked Questions
           </p>
@@ -57,11 +57,11 @@ export default function FAQSection() {
             id="faq-heading"
             className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--ai-ink)]"
           >
-            AI Consulting FAQs
+            AI Strategy & Consulting FAQs
           </h2>
         </ScrollReveal>
 
-        <div className="space-y-3" role="list">
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }} role="list">
           {FAQS.map((faq, i) => {
             const isOpen = openId === i;
             return (
@@ -70,7 +70,7 @@ export default function FAQSection() {
                   className={`ai-faq-item ${isOpen ? "is-open" : ""}`}
                   role="listitem"
                 >
-                  <h3>
+                  <h3 style={{ margin: 0 }}>
                     <button
                       type="button"
                       className="ai-faq-btn"
@@ -81,9 +81,12 @@ export default function FAQSection() {
                     >
                       <span>{faq.q}</span>
                       <FiChevronDown
-                        className={`flex-shrink-0 text-[var(--ai-purple)] transition-transform duration-300 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
+                        size={18}
+                        className="flex-shrink-0 text-[var(--ai-purple)]"
+                        style={{
+                          transition: "transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)",
+                          transform: isOpen ? "rotate(180deg)" : "none",
+                        }}
                         aria-hidden
                       />
                     </button>
@@ -94,7 +97,9 @@ export default function FAQSection() {
                     aria-labelledby={`ai-faq-btn-${i}`}
                     className="ai-faq-panel"
                   >
-                    <p className="text-sm leading-relaxed">{faq.a}</p>
+                    <p className="text-sm leading-relaxed m-0" style={{ paddingBottom: "1.25rem" }}>
+                      {faq.a}
+                    </p>
                   </div>
                 </div>
               </ScrollReveal>

@@ -38,9 +38,24 @@
     width: 100%;
 }
 
+.FormOnlyWrap {
+    width: 100%;
+}
+
+.FormboxOnly {
+    background: transparent;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
 .Formbox input:hover,
 .Formbox textarea:hover,
-.Formbox select:hover {
+.Formbox select:hover,
+.FormboxOnly input:hover,
+.FormboxOnly textarea:hover,
+.FormboxOnly select:hover {
     border-color: #C01F29;
     box-shadow: none;
     outline: none;
@@ -49,7 +64,10 @@
 
 .Formbox input:focus,
 .Formbox textarea:focus,
-.Formbox select:focus {
+.Formbox select:focus,
+.FormboxOnly input:focus,
+.FormboxOnly textarea:focus,
+.FormboxOnly select:focus {
     border-color: #C01F29;
     background: #dcdcdc;
     box-shadow: none;

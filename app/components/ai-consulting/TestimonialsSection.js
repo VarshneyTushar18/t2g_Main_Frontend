@@ -39,11 +39,11 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-16 md:py-24 scroll-mt-24"
+      className="py-20 md:py-28 bg-[var(--ai-bg)] scroll-mt-24"
       aria-labelledby="testimonials-heading"
     >
       <div className="ai-container">
-        <ScrollReveal className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
+        <ScrollReveal className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-[var(--ai-purple)] font-semibold text-sm uppercase tracking-wide mb-3">
             Client Testimonials
           </p>
@@ -56,14 +56,14 @@ export default function TestimonialsSection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="relative max-w-3xl mx-auto">
+          <div className="relative max-w-3xl mx-auto" style={{ paddingInline: "1rem" }}>
             <button
               type="button"
               className="ai-testimonial-nav ai-testimonial-prev"
               aria-label="Previous testimonial"
               onClick={() => swiper?.slidePrev()}
             >
-              <FiChevronLeft size={22} />
+              <FiChevronLeft size={20} />
             </button>
             <button
               type="button"
@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
               aria-label="Next testimonial"
               onClick={() => swiper?.slideNext()}
             >
-              <FiChevronRight size={22} />
+              <FiChevronRight size={20} />
             </button>
 
             <Swiper
@@ -85,15 +85,16 @@ export default function TestimonialsSection() {
               onSwiper={setSwiper}
               className="ai-testimonial-swiper"
             >
-              {TESTIMONIALS.map((t) => (
-                <SwiperSlide key={t.brand}>
-                  <article className="ai-testimonial-card">
+              {TESTIMONIALS.map((t, idx) => (
+                <SwiperSlide key={idx}>
+                  <article className="ai-testimonial-card ai-glow-border-light">
                     <div
-                      className="flex justify-center gap-1 mb-5 text-amber-500"
+                      style={{ display: "flex", justifyContent: "center", gap: "0.25rem" }}
+                      className="mb-4"
                       aria-label="5 star rating"
                     >
                       {Array.from({ length: 5 }).map((_, i) => (
-                        <FiStar key={i} size={16} fill="currentColor" />
+                        <FiStar key={i} size={16} fill="#f59e0b" stroke="#f59e0b" />
                       ))}
                     </div>
                     <blockquote>
@@ -103,11 +104,11 @@ export default function TestimonialsSection() {
                       <div className="ai-testimonial-avatar" aria-hidden>
                         {t.initials}
                       </div>
-                      <div className="text-left">
-                        <cite className="not-italic font-bold text-[var(--ai-ink)] block">
+                      <div className="text-start">
+                        <cite className="not-italic font-bold text-[var(--ai-ink)]" style={{ display: "block", fontSize: "0.95rem" }}>
                           {t.role}
                         </cite>
-                        <span className="text-sm text-[var(--ai-muted)]">{t.brand}</span>
+                        <span className="text-xs text-[var(--ai-muted)] font-medium">{t.brand}</span>
                       </div>
                     </div>
                   </article>

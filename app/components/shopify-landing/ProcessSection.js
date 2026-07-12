@@ -14,31 +14,31 @@ const STEPS = [
     icon: FiSearch,
     title: "Free Store & Conversion Audit",
     description:
-      "We review speed, UX, checkout friction, and SEO to uncover quick wins and growth blockers.",
+      "We review your current Shopify store (or your launch brief) against your competitors and Core Web Vitals benchmarks.",
   },
   {
     icon: FiMap,
     title: "UX & Local Market Strategy",
     description:
-      "We map journeys, payments, and messaging around how your customers actually buy.",
+      "Wireframes and information architecture built around how your shoppers browse and buy.",
   },
   {
     icon: FiCode,
-    title: "Theme Development & App Integration",
+    title: "Theme Build & App Integration",
     description:
-      "Custom theme builds plus AfterPay, Zip, ShipStation, ERP, and other critical integrations.",
+      "Custom Liquid development, checkout logic, and local payment/shipping integrations.",
   },
   {
     icon: FiSmartphone,
     title: "QA, Speed & Mobile Testing",
     description:
-      "Rigorous device testing, Core Web Vitals checks, and conversion path validation before launch.",
+      "Tested across real devices and mobile network conditions before launch.",
   },
   {
     icon: FiSend,
-    title: "Launch & Continuous Optimisation",
+    title: "Launch & Ongoing Optimisation",
     description:
-      "Go-live support, monitoring, CRO experiments, and ongoing Shopify performance care.",
+      "Post-launch CRO, monthly reporting, and a dedicated account manager.",
   },
 ];
 
@@ -46,43 +46,31 @@ export default function ProcessSection() {
   return (
     <section
       id="process"
-      className="py-16 md:py-24 bg-[var(--sp-bg)] scroll-mt-24"
+      className="sp-process"
       aria-labelledby="process-heading"
     >
       <div className="sp-container">
-        <ScrollReveal className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-[var(--sp-green)] font-semibold text-sm uppercase tracking-wide mb-3">
-            Process
-          </p>
-          <h2
-            id="process-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--sp-ink)]"
-          >
+        <ScrollReveal className="sp-section-head">
+          <p className="sp-label">How We Work</p>
+          <h2 id="process-heading" className="sp-title">
             Our Shopify Build Process
           </h2>
-          <p className="mt-4 text-[var(--sp-muted)]">
-            A clear path from audit to launch—built for speed, quality, and measurable results.
-          </p>
         </ScrollReveal>
 
-        <div className="sp-timeline">
+        <div className="sp-process__track">
           {STEPS.map((step, i) => {
             const Icon = step.icon;
             return (
               <ScrollReveal key={step.title} delay={Math.min(i + 1, 4)}>
-                <article className="sp-step h-full">
-                  <div className="sp-step-num" aria-hidden>
+                <article className="sp-step">
+                  <div className="sp-step__num" aria-hidden>
                     {i + 1}
                   </div>
-                  <div className="mx-auto mb-3 w-10 h-10 rounded-xl bg-[var(--sp-green-soft)] text-[var(--sp-green)] grid place-items-center">
+                  <div className="sp-step__icon">
                     <Icon size={18} aria-hidden />
                   </div>
-                  <h3 className="text-sm font-bold text-[var(--sp-ink)] leading-snug">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-xs text-[var(--sp-muted)] leading-relaxed">
-                    {step.description}
-                  </p>
+                  <h3 className="sp-step__title">{step.title}</h3>
+                  <p className="sp-step__desc">{step.description}</p>
                 </article>
               </ScrollReveal>
             );

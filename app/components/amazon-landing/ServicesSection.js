@@ -1,8 +1,8 @@
 "use client";
 
 import {
-  FiSettings,
-  FiSearch,
+  FiShoppingCart,
+  FiTrendingUp,
   FiTarget,
   FiLayout,
   FiPackage,
@@ -14,89 +14,74 @@ import ScrollReveal from "./ScrollReveal";
 
 const SERVICES = [
   {
-    icon: FiSettings,
-    title: "Amazon Seller Central & Vendor Central Account Management",
-    description:
-      "End-to-end operations, order management, and account health monitoring for Amazon.",
+    Icon: FiShoppingCart,
+    title: "Seller & Vendor Central Management",
+    desc: "End-to-end account management — health monitoring, case management, policy compliance and performance metrics for both Seller and Vendor Central.",
   },
   {
-    icon: FiSearch,
-    title: "Amazon Listing Optimisation & A10 SEO",
-    description:
-      "Keyword-mapped titles, bullet points, backend search terms and A+ Content built for how local shoppers actually search.",
+    Icon: FiTrendingUp,
+    title: "Listing Optimisation & A10 SEO",
+    desc: "Keyword research, title engineering, bullet points, backend search terms and A+ content built around the A10 algorithm signals that drive AU organic rank.",
   },
   {
-    icon: FiTarget,
+    Icon: FiTarget,
     title: "Amazon PPC Management",
-    description:
-      "Sponsored Products, Sponsored Brands & Sponsored Display campaigns tuned for local ACOS/TACOS targets.",
+    desc: "Sponsored Products, Sponsored Brands and Sponsored Display campaigns engineered for the lowest possible ACOS with consistent top-of-search positioning.",
   },
   {
-    icon: FiLayout,
-    title: "Amazon Storefront & Brand Store Design",
-    description:
-      "Conversion-focused storefronts that build trust with local shoppers.",
+    Icon: FiLayout,
+    title: "Brand Store & Storefront Design",
+    desc: "Custom Amazon Brand Stores designed to convert — product showcases, lifestyle imagery and store pages that build brand equity and repeat purchases.",
   },
   {
-    icon: FiPackage,
-    title: "Amazon FBA & Inventory Management",
-    description:
-      "Stock planning across local fulfilment centres to avoid restocking penalties.",
+    Icon: FiPackage,
+    title: "FBA & Inventory Management",
+    desc: "FBA inbound planning, reorder triggers, stranded inventory fixes and 3PL coordination so you never run out of stock or pay unnecessary storage fees.",
   },
   {
-    icon: FiFileText,
-    title: "GST, ABN & Compliance Support Guidance",
-    description:
-      "Help understanding your GST registration threshold (AUD $75,000), BAS lodgement touchpoints and local Consumer Law basics as they relate to your Amazon operations.",
+    Icon: FiFileText,
+    title: "GST & ABN Compliance Guidance",
+    desc: "We work alongside your accountant to help you understand GST thresholds, ABN obligations and Amazon tax collection settings for AU sellers.",
   },
   {
-    icon: FiStar,
-    title: "Amazon Review & Reputation Management",
-    description:
-      "Proactive feedback monitoring tailored to local review patterns.",
+    Icon: FiStar,
+    title: "Review & Reputation Management",
+    desc: "Ethical review acquisition strategies, automated follow-up sequences and reputation monitoring to protect your seller feedback score.",
   },
   {
-    icon: FiGlobe,
+    Icon: FiGlobe,
     title: "Multi-Marketplace Expansion",
-    description:
-      "Take your Amazon catalogue into the US, UK, Canada or EU once your local base is solid.",
+    desc: "Ready to expand beyond Amazon AU? We manage cross-border listings for Amazon US, UK and more — with localised content and currency/compliance support.",
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section
-      id="services"
-      className="py-16 md:py-24 scroll-mt-24 bg-[var(--amz-bg)]"
-      aria-labelledby="services-heading"
-    >
+    <section id="services" className="amz-services" aria-labelledby="services-heading">
       <div className="amz-container">
-        <ScrollReveal className="text-center max-w-3xl mx-auto mb-12">
-          <p className="text-[var(--amz-orange-dark)] font-semibold text-sm uppercase tracking-wide mb-3">
-            What We Do
-          </p>
-          <h2
-            id="services-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-black"
-          >
-            Full-Service Amazon Marketplace Management for Local Sellers
+        <ScrollReveal className="amz-section-head">
+          <p className="amz-label">What We Manage</p>
+          <h2 id="services-heading" className="amz-title">
+            Full-Service Amazon Management — Every Channel, Every Lever
           </h2>
+          <p className="amz-sub">
+            From account setup to category leadership, our team handles every
+            aspect of your Amazon presence so you can focus on your product.
+          </p>
         </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {SERVICES.map((s, i) => {
-            const Icon = s.icon;
+        <div className="amz-services__grid">
+          {SERVICES.map((svc, i) => {
+            const Icon = svc.Icon;
             return (
-              <ScrollReveal key={s.title} delay={Math.min((i % 4) + 1, 4)}>
-                <article className="amz-service-card">
-                  <div className="amz-icon-wrap">
-                    <Icon aria-hidden />
+              <ScrollReveal key={svc.title} delay={Math.min((i % 4) + 1, 4)}>
+                <div className="amz-service-card">
+                  <div className="amz-service-card__icon">
+                    <Icon size={20} aria-hidden />
                   </div>
-                  <h3 className="text-base font-bold text-black leading-snug">{s.title}</h3>
-                  <p className="mt-2 text-sm text-[var(--amz-muted)] leading-relaxed">
-                    {s.description}
-                  </p>
-                </article>
+                  <h3 className="amz-service-card__title">{svc.title}</h3>
+                  <p className="amz-service-card__desc">{svc.desc}</p>
+                </div>
               </ScrollReveal>
             );
           })}

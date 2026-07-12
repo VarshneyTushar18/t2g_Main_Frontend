@@ -2,34 +2,35 @@
 
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 import { FiChevronLeft, FiChevronRight, FiStar } from "react-icons/fi";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import ScrollReveal from "./ScrollReveal";
 
 const TESTIMONIALS = [
   {
     quote:
-      "We'd tried managing our Amazon account in-house for a year with flat results. Tech2Globe rebuilt our listings and PPC structure, and within four months we had our first properly profitable quarter on Amazon.",
+      "We'd wasted nearly $40k on unmanaged Amazon ads before Tech2Globe stepped in. Within three months our ACOS dropped from 58% to 21% and we finally understood what we were spending and why.",
     role: "Operations Director",
-    brand: "Home & Kitchenware Brand, Melbourne",
+    brand: "Home & Living Brand, Melbourne",
     initials: "OD",
   },
   {
     quote:
-      "What stood out was that they actually understood the difference between the US Amazon marketplace and our local Amazon marketplace — the keyword research, the ad targeting, even the GST guidance was specific to our market.",
+      "Launching on Amazon AU felt overwhelming — GST registration, FBA setup, listing copy, ad strategy. Tech2Globe handled everything end-to-end. We hit Amazon's Choice on our hero SKU within 90 days.",
     role: "Founder",
     brand: "Skincare Brand, Sydney",
-    initials: "FS",
+    initials: "SB",
   },
   {
     quote:
-      "Our ACOS was out of control before we brought Tech2Globe on. They rebuilt our campaign structure and got us to a sustainable number within eight weeks, without sacrificing sales volume.",
+      "What sets Tech2Globe apart is that they actually know the Australian market. Not just Amazon theory copied from US guides — real local knowledge that shaped our keyword strategy and review approach.",
     role: "Ecommerce Manager",
-    brand: "Pet Care Brand, Brisbane",
-    initials: "EM",
+    brand: "Pet Accessories Brand, Brisbane",
+    initials: "PM",
   },
 ];
 
@@ -39,24 +40,19 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-16 md:py-24 scroll-mt-24 bg-[var(--amz-bg)]"
+      className="amz-testimonials"
       aria-labelledby="testimonials-heading"
     >
       <div className="amz-container">
-        <ScrollReveal className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
-          <p className="text-[var(--amz-orange-dark)] font-semibold text-sm uppercase tracking-wide mb-3">
-            Client Testimonials
-          </p>
-          <h2
-            id="testimonials-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-black"
-          >
-            What Sellers Say About Working With Us
+        <ScrollReveal className="amz-section-head">
+          <p className="amz-label">Client Testimonials</p>
+          <h2 id="testimonials-heading" className="amz-title">
+            What Australian Amazon Sellers Say About Us
           </h2>
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="relative max-w-3xl mx-auto">
+          <div className="amz-testimonials__wrap">
             <button
               type="button"
               className="amz-testimonial-nav amz-testimonial-prev"
@@ -75,8 +71,9 @@ export default function TestimonialsSection() {
             </button>
 
             <Swiper
-              modules={[Autoplay, Pagination, EffectFade]}
+              modules={[Autoplay, Pagination, Navigation, EffectFade]}
               slidesPerView={1}
+              spaceBetween={0}
               loop
               effect="fade"
               fadeEffect={{ crossFade: true }}
@@ -89,25 +86,35 @@ export default function TestimonialsSection() {
                 <SwiperSlide key={t.brand}>
                   <article className="amz-testimonial-card">
                     <div
-                      className="flex justify-center gap-1 mb-5 text-[var(--amz-orange)]"
+                      className="amz-testimonial-quote-mark"
+                      aria-hidden
+                    >
+                      &ldquo;
+                    </div>
+
+                    <div
+                      className="amz-testimonial-stars"
                       aria-label="5 star rating"
                     >
                       {Array.from({ length: 5 }).map((_, i) => (
                         <FiStar key={i} size={16} fill="currentColor" />
                       ))}
                     </div>
+
                     <blockquote>
-                      <p className="amz-testimonial-quote">&ldquo;{t.quote}&rdquo;</p>
+                      <p className="amz-testimonial-quote">{t.quote}</p>
                     </blockquote>
+
                     <div className="amz-testimonial-author">
-                      <div className="amz-testimonial-avatar" aria-hidden>
+                      <div
+                        className="amz-testimonial-avatar"
+                        aria-hidden
+                      >
                         {t.initials}
                       </div>
-                      <div className="text-left">
-                        <cite className="not-italic font-bold text-black block">
-                          {t.role}
-                        </cite>
-                        <span className="text-sm text-[var(--amz-muted)]">{t.brand}</span>
+                      <div>
+                        <cite>{t.role}</cite>
+                        <span>{t.brand}</span>
                       </div>
                     </div>
                   </article>

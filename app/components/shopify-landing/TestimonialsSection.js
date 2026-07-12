@@ -13,21 +13,21 @@ import ScrollReveal from "./ScrollReveal";
 const TESTIMONIALS = [
   {
     quote:
-      "We'd tried three different Shopify freelancers before Tech2Globe. They were the first team that actually understood how our customers check out.",
+      "We'd tried three different Shopify freelancers before Tech2Globe. They were the first team that actually understood how our customers check out, not just generic best practice.",
     role: "Founder",
     brand: "Homewares Brand",
     initials: "HB",
   },
   {
     quote:
-      "The migration from Squarespace was seamless. No downtime, no lost rankings, and mobile conversions nearly tripled.",
+      "The migration off Squarespace was seamless. No lost rankings, no downtime, and our mobile conversion rate nearly tripled within four months.",
     role: "Ecommerce Manager",
     brand: "Beauty Brand",
     initials: "BB",
   },
   {
     quote:
-      "Having developers in our timezone made support incredibly fast.",
+      "Having a dev team in our own time zone made a real difference. Issues got fixed same-day, not after a 12-hour delay.",
     role: "Operations Lead",
     brand: "Activewear Brand",
     initials: "AB",
@@ -40,32 +40,19 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-16 md:py-24 scroll-mt-24 relative overflow-hidden"
+      className="sp-testimonials"
       aria-labelledby="testimonials-heading"
     >
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(149,191,71,0.12), transparent 60%), #ffffff",
-        }}
-      />
-
       <div className="sp-container">
-        <ScrollReveal className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
-          <p className="text-[var(--sp-green-dark)] font-semibold text-sm uppercase tracking-wide mb-3">
-            Testimonials
-          </p>
-          <h2
-            id="testimonials-heading"
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--sp-ink)]"
-          >
-            Brands That Trust Tech2Globe
+        <ScrollReveal className="sp-section-head">
+          <p className="sp-label">Client Testimonials</p>
+          <h2 id="testimonials-heading" className="sp-title">
+            What Our Clients Say About Working With Us
           </h2>
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="relative max-w-3xl mx-auto">
+          <div className="sp-testimonials__wrap">
             <button
               type="button"
               className="sp-testimonial-nav sp-testimonial-prev"
@@ -102,10 +89,7 @@ export default function TestimonialsSection() {
                       &ldquo;
                     </div>
 
-                    <div
-                      className="flex justify-center gap-1 mb-5 text-amber-500"
-                      aria-label="5 star rating"
-                    >
+                    <div className="sp-testimonial-stars" aria-label="5 star rating">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <FiStar key={i} size={16} fill="currentColor" />
                       ))}
@@ -119,13 +103,9 @@ export default function TestimonialsSection() {
                       <div className="sp-testimonial-avatar" aria-hidden>
                         {t.initials}
                       </div>
-                      <div className="text-left">
-                        <cite className="not-italic font-bold text-[var(--sp-ink)] block text-base">
-                          {t.role}
-                        </cite>
-                        <span className="text-sm text-[var(--sp-muted)]">
-                          {t.brand}
-                        </span>
+                      <div>
+                        <cite>{t.role}</cite>
+                        <span>{t.brand}</span>
                       </div>
                     </div>
                   </article>

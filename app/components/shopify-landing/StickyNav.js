@@ -34,46 +34,33 @@ export default function StickyNav() {
   }, [open]);
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-[0_4px_24px_rgba(11,18,32,0.08)]"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="sp-container flex items-center justify-between h-16 md:h-[4.5rem]">
-        <Link href="/" className="relative z-10 flex-shrink-0" aria-label="Tech2Globe home">
+    <header className={`sp-header${scrolled ? " sp-header--scrolled" : ""}`}>
+      <div className="sp-container sp-header__inner">
+        <Link href="/" className="sp-header__logo" aria-label="Tech2Globe home">
           <Image
-            src="/images/landingpageimages/tech2globe-logo.webp"
+            src="/images/tech2globe-logo.png"
             alt="Tech2Globe"
-            width={180}
-            height={56}
-            className="h-9 md:h-11 w-auto"
+            width={840}
+            height={244}
             priority
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Primary">
+        <nav className="sp-header__nav" aria-label="Primary">
           {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-[var(--sp-muted)] hover:text-[var(--sp-green-dark)] transition-colors"
-            >
+            <a key={link.href} href={link.href} className="sp-header__link">
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden lg:block">
-          <a href="#contact" className="sp-btn sp-btn-primary text-sm !py-2.5 !px-5">
-            Book Free Audit
-          </a>
-        </div>
+        <a href="#contact" className="sp-btn sp-btn-primary sp-header__cta">
+          Contact Now
+        </a>
 
         <button
           type="button"
-          className="lg:hidden relative z-10 p-2 rounded-lg text-[var(--sp-ink)] hover:bg-[var(--sp-green-soft)]"
+          className="sp-hamburger"
           aria-expanded={open}
           aria-controls="shopify-mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -85,29 +72,24 @@ export default function StickyNav() {
 
       <div
         id="shopify-mobile-nav"
-        className={`lg:hidden fixed inset-0 top-16 bg-white transition-transform duration-300 ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`sp-mobile-nav${open ? " sp-mobile-nav--open" : ""}`}
       >
-        <nav className="flex flex-col p-6 gap-1" aria-label="Mobile">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="py-3 px-3 rounded-xl text-base font-medium text-[var(--sp-ink)] hover:bg-[var(--sp-green-soft)]"
-            >
-              {link.label}
-            </a>
-          ))}
+        {NAV_LINKS.map((link) => (
           <a
-            href="#contact"
+            key={link.href}
+            href={link.href}
             onClick={() => setOpen(false)}
-            className="sp-btn sp-btn-primary mt-4"
           >
-            Book Free Audit
+            {link.label}
           </a>
-        </nav>
+        ))}
+        <a
+          href="#contact"
+          onClick={() => setOpen(false)}
+          className="sp-btn sp-btn-primary"
+        >
+          Contact Now
+        </a>
       </div>
     </header>
   );

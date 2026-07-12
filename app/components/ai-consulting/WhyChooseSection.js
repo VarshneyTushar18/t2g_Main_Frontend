@@ -30,36 +30,41 @@ export default function WhyChooseSection() {
   return (
     <section
       id="why-us"
-      className="py-16 md:py-24 scroll-mt-24 bg-[var(--ai-navy)] text-white"
+      className="choose-section py-20 md:py-28 scroll-mt-24 text-white"
       aria-labelledby="why-heading"
     >
       <div className="ai-container">
-        <ScrollReveal className="max-w-3xl mb-12">
-          <p className="text-[#B6A2BB] font-semibold text-sm uppercase tracking-wide mb-3">
+        <ScrollReveal className="max-w-3xl mb-14">
+          <p className="text-[var(--ai-cyan)] font-semibold text-sm uppercase tracking-wide mb-3">
             Why Businesses Choose Us
           </p>
           <h2
             id="why-heading"
             className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight"
           >
-            Local Business Knowledge. Practical AI Expertise.
+            Local Business Knowledge. <span className="ai-gradient-text">Practical AI Expertise.</span>
           </h2>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="row g-4 justify-content-center">
           {FEATURES.map((f, i) => {
             const Icon = f.icon;
+            // For bootstrap grid, we can make them 4-cols on lg (3 cards per row) and 6-cols on md (2 cards per row)
+            // The last card (index 4) can take a wider size or align center.
+            const isLast = i === FEATURES.length - 1;
+            const gridClass = isLast ? "col-md-12 col-lg-4" : "col-md-6 col-lg-4";
+            
             return (
               <ScrollReveal
                 key={f.text}
-                delay={Math.min(i + 1, 4)}
-                className={i === FEATURES.length - 1 ? "md:col-span-2 lg:col-span-1" : ""}
+                delay={Math.min(i + 1, 3)}
+                className={`${gridClass} d-flex`}
               >
-                <article className="h-full rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                  <span className="w-11 h-11 rounded-xl bg-[#410275] text-[#B6A2BB] grid place-items-center mb-4">
-                    <Icon size={20} aria-hidden />
-                  </span>
-                  <p className="text-sm text-white/80 leading-relaxed">{f.text}</p>
+                <article className="choose-card ai-glow-border d-flex flex-column align-items-start w-100">
+                  <div className="choose-icon-wrapper mb-4">
+                    <Icon size={22} aria-hidden />
+                  </div>
+                  <p className="text-sm text-white/80 leading-relaxed m-0">{f.text}</p>
                 </article>
               </ScrollReveal>
             );

@@ -6,91 +6,85 @@ import ScrollReveal from "./ScrollReveal";
 
 const FAQS = [
   {
-    q: "Do I need an ABN to sell on Amazon?",
-    a: "It's not mandatory for all international sellers, but having an ABN builds buyer trust, simplifies GST registration, and is required if you plan to claim GST credits on Amazon fees, import duty or ad spend. We help you understand what applies to your situation.",
+    q: "Do I need an ABN to sell on Amazon AU?",
+    a: "An ABN is not mandatory for all sellers, but it is strongly recommended if you are an Australian resident or operating a local business. It simplifies GST registration, builds trust with Amazon and is required for certain vendor arrangements. We help you understand what applies to your specific situation during the free audit.",
   },
   {
-    q: "When do I need to register for GST as an Amazon seller?",
-    a: "Generally, GST registration becomes mandatory once your local sales reach AUD $75,000 in a rolling 12-month period. Rules differ depending on whether you're using FBA with stock stored locally versus low-value imported goods, where Amazon may collect GST on your behalf. We recommend confirming your specific obligations with a registered tax agent.",
+    q: "When does GST registration become compulsory for Amazon sellers?",
+    a: "You are required to register for GST once your annual GST turnover reaches $75,000 or more. Amazon also collects GST on behalf of overseas sellers for digital goods, but physical goods sold by local businesses are subject to different rules. We flag this threshold for you and work alongside your accountant to ensure compliance.",
   },
   {
-    q: "How is this Amazon marketplace different from the US Amazon marketplace for ranking purposes?",
-    a: "This Amazon marketplace is smaller and faster-growing, with different search volume, competition density, and buyer behaviour than the US marketplace. Keyword strategy, PPC budgets and even image/content preferences that work on the US marketplace often need to be rebuilt specifically for this market.",
+    q: "How does Amazon AU ranking (A10 algorithm) differ from Amazon US?",
+    a: "Amazon AU's A10 algorithm places stronger weight on organic sales velocity, conversion rate and external traffic compared to earlier versions. Keyword relevance, review recency and listing completeness also differ in weighting. A strategy built purely on US best practice often underperforms in the AU marketplace — which is why local expertise matters.",
   },
   {
-    q: "How long does it take to see results on Amazon?",
-    a: "Most clients see initial ranking and traffic movement within 4-8 weeks of listing optimisation and PPC restructuring, with meaningful revenue growth typically compounding over 3-6 months as organic ranking strengthens.",
+    q: "How long does it take to see meaningful results?",
+    a: "Most clients see measurable improvements in impressions and click-through rates within 2–4 weeks of listing optimisation. Organic rank improvements typically show within 45–90 days. PPC profitability (ACOS reduction) is usually visible within the first billing cycle. We set realistic milestones during the strategy session.",
   },
   {
-    q: "Can you help brands new to Amazon, not just existing sellers?",
-    a: "Yes. We support brand-new market entry — from Seller Central setup and category research to launch-phase PPC and market-specific keyword mapping — as well as scaling existing underperforming accounts.",
+    q: "Can you work with completely new brands launching on Amazon?",
+    a: "Absolutely. New brand launches are one of our strongest services. We handle everything from ASIN creation and Brand Registry enrollment to launch PPC campaigns, early review strategy and A+ Content — giving your products the best possible start against established competitors.",
   },
   {
-    q: "Do you manage Amazon PPC for Sydney, Melbourne, Brisbane and Perth-based sellers?",
-    a: "Yes, our Amazon PPC management works with sellers across all states. Location doesn't affect service delivery — what matters is your product category, target ACOS/TACOS, and growth stage.",
+    q: "Which cities do you cover for Amazon PPC and management services?",
+    a: "We work with Amazon sellers across all major Australian cities including Sydney, Melbourne, Brisbane and Perth, as well as regional businesses shipping nationally. Our team is fully remote-capable, so location is never a barrier to getting started.",
   },
   {
-    q: "What's the difference between FBA and FBM for Amazon sellers?",
-    a: "FBA (Fulfilment by Amazon) means Amazon stores and ships your inventory from local fulfilment centres — faster delivery, Prime eligibility, but higher fees. FBM (Merchant Fulfilled) gives you more control and lower fixed costs but requires you to manage shipping and customs compliance yourself. We help you model which is right for your margins.",
+    q: "What is the difference between FBA and FBM for Australian sellers?",
+    a: "FBA (Fulfilled by Amazon) means your stock is stored in Amazon's fulfilment centres — Amazon handles picking, packing, shipping and returns. FBM (Fulfilled by Merchant) means you handle logistics yourself. FBA typically wins the Buy Box more consistently and qualifies for Prime, but has storage fees. We help you model the right mix based on your margins and product dimensions.",
   },
   {
-    q: "Do you offer a free audit before we commit to a plan?",
-    a: "Yes — we start every new relationship with a free Amazon account and listing audit so you can see exactly where the gaps are before deciding to work with us.",
+    q: "Is the initial Amazon account audit genuinely free?",
+    a: "Yes — completely free, no obligation and no credit card required. We review your current listings, ad account structure, BSR position, review profile and competitor landscape. You receive a written summary with priority recommendations whether you proceed with us or not.",
   },
 ];
 
 export default function FAQSection() {
-  const [openId, setOpenId] = useState(0);
+  const [openIdx, setOpenIdx] = useState(0);
+
+  const toggle = (i) => setOpenIdx(openIdx === i ? null : i);
 
   return (
-    <section id="faq" className="py-16 md:py-24 scroll-mt-24" aria-labelledby="faq-heading">
-      <div className="amz-container max-w-3xl">
-        <ScrollReveal className="text-center mb-10">
-          <p className="text-[var(--amz-orange-dark)] font-semibold text-sm uppercase tracking-wide mb-3">
+    <section id="faq" className="amz-faq" aria-labelledby="faq-heading">
+      <div className="amz-container">
+        <ScrollReveal className="amz-section-head">
+          <p className="amz-label">Common Questions</p>
+          <h2 id="faq-heading" className="amz-title">
             Frequently Asked Questions
-          </p>
-          <h2 id="faq-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
-            Amazon Seller FAQs
           </h2>
+          <p className="amz-sub">
+            Everything you need to know about selling on Amazon AU — from GST to
+            algorithm strategy.
+          </p>
         </ScrollReveal>
 
-        <div className="space-y-3" role="list">
-          {FAQS.map((faq, i) => {
-            const isOpen = openId === i;
-            return (
-              <ScrollReveal key={faq.q} delay={Math.min(i, 3)}>
-                <div className={`amz-faq-item ${isOpen ? "is-open" : ""}`} role="listitem">
-                  <h3>
-                    <button
-                      type="button"
-                      className="amz-faq-btn"
-                      aria-expanded={isOpen}
-                      aria-controls={`amz-faq-panel-${i}`}
-                      id={`amz-faq-btn-${i}`}
-                      onClick={() => setOpenId(isOpen ? -1 : i)}
-                    >
-                      <span>{faq.q}</span>
-                      <FiChevronDown
-                        className={`flex-shrink-0 text-[var(--amz-orange-dark)] transition-transform duration-300 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                        aria-hidden
-                      />
-                    </button>
-                  </h3>
-                  <div
-                    id={`amz-faq-panel-${i}`}
-                    role="region"
-                    aria-labelledby={`amz-faq-btn-${i}`}
-                    className="amz-faq-panel"
-                  >
-                    <p className="text-sm leading-relaxed">{faq.a}</p>
-                  </div>
+        <ScrollReveal>
+          <div className="amz-faq__list" role="list">
+            {FAQS.map((faq, i) => (
+              <div
+                key={faq.q}
+                className={`amz-faq-item${openIdx === i ? " is-open" : ""}`}
+                role="listitem"
+              >
+                <button
+                  type="button"
+                  className="amz-faq-btn"
+                  aria-expanded={openIdx === i}
+                  onClick={() => toggle(i)}
+                >
+                  {faq.q}
+                  <FiChevronDown size={20} aria-hidden />
+                </button>
+                <div
+                  className="amz-faq-panel"
+                  aria-hidden={openIdx !== i}
+                >
+                  <p>{faq.a}</p>
                 </div>
-              </ScrollReveal>
-            );
-          })}
-        </div>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

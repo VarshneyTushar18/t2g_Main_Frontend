@@ -46,11 +46,11 @@ export default function ProcessSection() {
   return (
     <section
       id="process"
-      className="py-16 md:py-24 scroll-mt-24 bg-[var(--ai-bg)]"
+      className="py-20 md:py-28 scroll-mt-24 bg-[var(--ai-bg)]"
       aria-labelledby="process-heading"
     >
       <div className="ai-container">
-        <ScrollReveal className="text-center max-w-2xl mx-auto mb-12">
+        <ScrollReveal className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-[var(--ai-purple)] font-semibold text-sm uppercase tracking-wide mb-3">
             How We Work
           </p>
@@ -60,37 +60,42 @@ export default function ProcessSection() {
           >
             Our AI Consulting Process
           </h2>
-          <p className="mt-4 text-[var(--ai-muted)]">
+          <p className="mt-4 text-[var(--ai-muted)] text-base">
             A clear path from audit to rollout — built for measurable value, not endless pilots.
           </p>
         </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="row g-4 justify-content-center">
           {STEPS.map((step, i) => {
             const Icon = step.icon;
-            const isLast = i === STEPS.length - 1;
+            // 5 steps: 3 in first row, 2 in second row on lg screens
+            const isLastRow = i >= 3;
+            const gridClass = isLastRow ? "col-md-6 col-lg-5" : "col-md-6 col-lg-4";
+            
             return (
               <ScrollReveal
                 key={step.title}
-                delay={Math.min(i + 1, 4)}
-                className={isLast ? "sm:col-span-2 lg:col-span-1" : ""}
+                delay={Math.min(i + 1, 3)}
+                className={`${gridClass} d-flex`}
               >
-                <article className="ai-step-card group h-full">
-                  <div className="flex items-start justify-between mb-5">
-                    <span className="ai-step-icon">
-                      <Icon size={20} aria-hidden />
-                    </span>
-                    <span className="ai-step-watermark" aria-hidden>
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
+                <article className="ai-step-card ai-glow-border-light d-flex flex-column justify-content-between w-100">
+                  <div>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "1.5rem" }}>
+                      <span className="ai-step-icon">
+                        <Icon size={20} aria-hidden />
+                      </span>
+                      <span className="ai-step-watermark" aria-hidden>
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--ai-purple)] mb-2">
+                      Step {i + 1}
+                    </p>
+                    <h3 className="font-bold text-[var(--ai-ink)] text-lg mb-2">
+                      {step.title}
+                    </h3>
                   </div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-[var(--ai-purple)] mb-2">
-                    Step {i + 1}
-                  </p>
-                  <h3 className="font-bold text-[var(--ai-ink)] text-lg leading-snug">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2.5 text-sm text-[var(--ai-muted)] leading-relaxed">
+                  <p className="text-sm text-[var(--ai-muted)] leading-relaxed m-0">
                     {step.description}
                   </p>
                 </article>
