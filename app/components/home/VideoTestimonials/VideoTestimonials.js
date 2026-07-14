@@ -49,6 +49,17 @@ const videos = [
       { value: "+65%", label: "Daily Orders" },
     ],
   },
+  {
+    id: "vidreviewFive",
+    title: "Full Account Management",
+    type: "self-hosted",
+    src: "/images/testimonials/1783928150235-c5450883-ac34-427e-9ce2-1a1f73f6d7c6.webm",
+    thumbnail: "/images/testimonials/full-account-management-services-video-testimonial.webp",
+    stats: [
+      { value: "+10%", label: "Managed Platforms" },
+      { value: "+14.5%", label: "ROAS" },
+    ],
+  },
   // {
   //   id: "vidreviewFour",
   //   title: "Digital Marketing Services",
