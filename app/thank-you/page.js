@@ -3,7 +3,13 @@ import Link from "next/link";
 export default function ThankYouPage() {
   return (
     <>
-    
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`
+          gtag('event', 'conversion', {
+            'send_to': 'AW-972611168/GnpVCOviqJsZEOC8488D'
+          });
+        `}
+      </Script>
 
       <section className="container inner-page-content">
         <div className="row text-center">
