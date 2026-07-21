@@ -48,6 +48,9 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-972611168');
+            gtag('config', 'AW-972611168/l3PiCL6LgZwZEOC8488D', {
+              phone_conversion_number: '9899675039'
+            });
           `}
         </Script>
         
@@ -66,6 +69,14 @@ export default function RootLayout({ children }) {
           }}
         />
 
+         <Script id="google-ads-phone-conversion" strategy="afterInteractive">
+          {`
+            gtag('config', 'AW-972611168/l3PiCL6LgZwZEOC8488D', {
+              phone_conversion_number: '9899675039'
+            });
+          `}
+        </Script>
+
 
 
       </head>
@@ -79,6 +90,8 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+
+        
 
         <div className="main-wrapper">
           <Script
