@@ -314,11 +314,12 @@ export default function Header() {
                                           <div className="menu-container">
                                              <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
                                              <h5 className="menu-header">
-                                                <a href="#!" className="text-decoration-none">Ecommerce Back Office Support
+                                                <a href="/ecommerce-back-office-support" className="text-decoration-none">Ecommerce Back Office Support
                                                 </a>
                                              </h5>
                                           </div>
                                           <ul className="list-unstyled ps-2 menu-items">
+                                             
                                              <li><a className="menu-link" href="/customer-support">Customer Support</a></li>
                                              <li><a className="menu-link" href="/order-processing-services">Order Processing</a></li>
                                              <li><a className="menu-link" href="/catalog-management-services">Catalog Management Services</a></li>
@@ -735,9 +736,6 @@ export default function Header() {
                                              </li>
                                              <li><a className="menu-link" href="/accounts-receivable-services">Accounts
                                                 Receivable</a>
-                                             </li>
-                                             <li><a className="menu-link" href="/ecommerce-back-office-support">Ecommerce
-                                                Back Office Support</a>
                                              </li>
                                              <li><a className="menu-link" href="/tax-preparation">Tax
                                                 Preparation</a>
@@ -2133,7 +2131,7 @@ export default function Header() {
                                        </li>
                                        <li>
                                           <div className="accordion__item__megamenu">
-                                             <a href="#!" className="accordion-button collapsed"
+                                             <a href="/ecommerce-back-office-support" className="accordion-button collapsed"
                                                 type="button" data-bs-toggle="collapse"
                                                 data-bs-target="#amazonConsultingOne2-5" aria-expanded="false"
                                                 aria-controls="amazonConsultingOne2-5">Ecommerce Back Office Support
@@ -2946,10 +2944,6 @@ export default function Header() {
                                                    <li><a
                                                       href="/accounts-receivable-services">Accounts
                                                       Receivable</a>
-                                                   </li>
-                                                   <li><a
-                                                      href="/ecommerce-back-office-support">Ecommerce
-                                                      Back Office Support</a>
                                                    </li>
                                                    <li><a href="/tax-preparation">Tax
                                                       Preparation</a>

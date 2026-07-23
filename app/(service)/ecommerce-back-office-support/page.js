@@ -9,15 +9,14 @@ import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 import FaqSection from "@/app/components/services/faqs/faqs";
 import {
   FaAmazon,
-  FaBook,
-  FaBalanceScale,
+  FaHeadset,
+  FaClipboardList,
+  FaThList,
+  FaUserFriends,
+  FaDatabase,
+  FaTruck,
+  FaComments,
   FaFileInvoiceDollar,
-  FaHandHoldingUsd,
-  FaChartPie,
-  FaStore,
-  FaChartLine,
-  FaUserTie,
-  FaMoneyBillWave,
   FaCheckCircle,
   FaClipboardCheck,
   FaUsers,
@@ -28,11 +27,11 @@ import {
   FaCogs,
   FaLayerGroup,
   FaShoppingBag,
-  FaTruck,
-  FaSyncAlt,
+  FaStore,
   FaBuilding,
-  FaBriefcase,
-  FaMicrosoft,
+  FaSyncAlt,
+  FaClock,
+  FaGlobe,
 } from "react-icons/fa";
 import {
   SiShopify,
@@ -41,22 +40,22 @@ import {
   SiEbay,
   SiEtsy,
   SiBigcommerce,
-  SiXero,
-  SiQuickbooks,
-  SiZoho,
 } from "react-icons/si";
 
 export const metadata = {
   title: "Ecommerce Back Office Support Services | Tech2Globe",
   description:
-    "Streamline ecommerce operations with Tech2Globe back office support—bookkeeping, accounting, reconciliation, reporting, and dedicated operational assistance.",
+    "Outsource ecommerce back office support to Tech2Globe—customer support, order processing, catalog management, virtual assistants, data entry, logistics, chat, and invoicing.",
   keywords: [
     "Ecommerce Back Office Support",
-    "ecommerce bookkeeping services",
-    "ecommerce accounting services",
-    "marketplace reconciliation",
-    "ecommerce financial reporting",
-    "outsourced ecommerce accounting",
+    "ecommerce customer support",
+    "order processing services",
+    "catalog management services",
+    "hire virtual assistant",
+    "product data entry",
+    "ecommerce logistics",
+    "chat support",
+    "invoice processing",
   ],
   alternates: {
     canonical: "https://stagenew.tech2globe.tech/ecommerce-back-office-support",
@@ -64,7 +63,7 @@ export const metadata = {
   openGraph: {
     title: "Ecommerce Back Office Support Services | Tech2Globe",
     description:
-      "Streamline ecommerce operations with Tech2Globe back office support—bookkeeping, accounting, reconciliation, reporting, and dedicated operational assistance.",
+      "Outsource ecommerce back office support to Tech2Globe—customer support, order processing, catalog management, virtual assistants, data entry, logistics, chat, and invoicing.",
     url: "https://stagenew.tech2globe.tech/ecommerce-back-office-support",
     siteName: "Tech2Globe Web Solutions LLP",
     type: "website",
@@ -73,161 +72,169 @@ export const metadata = {
     card: "summary_large_image",
     title: "Ecommerce Back Office Support Services | Tech2Globe",
     description:
-      "Streamline ecommerce operations with Tech2Globe back office support—bookkeeping, accounting, reconciliation, reporting, and dedicated operational assistance.",
+      "Outsource ecommerce back office support to Tech2Globe—customer support, order processing, catalog management, virtual assistants, data entry, logistics, chat, and invoicing.",
   },
 };
 
 const pageHeaderData = {
   title: "Ecommerce Back Office Support",
   description:
-    "Streamline your ecommerce operations with dedicated back-office support covering bookkeeping, accounting, reconciliation, order management, reporting, and operational assistance.",
+    "Streamline your online store operations with dedicated back-office support covering customer support, order processing, catalog management, virtual assistants, product data entry, logistics, chat support, and invoice processing.",
   buttonText: "Talk to Our Experts",
   buttonLink: "/contact-us",
   backgroundImage: "/images/skyscraper.jpg",
 };
 
 const usefulLinks = [
-  { id: 1, name: "Bookkeeping Services", path: "/bookkeeping-services" },
-  { id: 2, name: "Accounting Services", path: "/accounting-services" },
-  { id: 3, name: "Accounts Payable", path: "/accounts-payable-services" },
-  { id: 4, name: "Accounts Receivable", path: "/accounts-receivable-services" },
-  { id: 5, name: "Financial Accounting", path: "/financial-accounting-services" },
-  { id: 6, name: "E-Commerce Support", path: "/e-commerce-support-services" },
-  { id: 7, name: "Order Processing", path: "/order-processing-services" },
-  { id: 8, name: "Payroll Services", path: "/payroll-processing-services" },
+  { id: 1, name: "Customer Support", path: "/customer-support" },
+  { id: 2, name: "Order Processing", path: "/order-processing-services" },
+  { id: 3, name: "Catalog Management Services", path: "/catalog-management-services" },
+  { id: 4, name: "Hire Virtual Assistant", path: "/virtual-assistant-services" },
+  { id: 5, name: "Product Data Entry", path: "/product-data-entry-services" },
+  { id: 6, name: "Logistic Services", path: "/logistics-services" },
+  { id: 7, name: "Chat Support", path: "/chat-support-services" },
+  { id: 8, name: "Invoice Processing", path: "/invoice-processing-services" },
 ];
 
 const sidebarSections = [
-  { heading: "Useful Links", links: usefulLinks },
+  { heading: "Ecommerce Back Office Support", links: usefulLinks },
 ];
 
 const coreServices = [
   {
-    icon: <FaBook size={36} color="#f15a29" />,
-    title: "Ecommerce Bookkeeping",
+    icon: <FaHeadset size={36} color="#f15a29" />,
+    title: "Customer Support",
+    path: "/customer-support",
     description:
-      "Maintain an accurate, up-to-date ledger across storefronts, marketplaces, and payment gateways so leadership can trust the numbers behind every decision.",
+      "Deliver responsive, brand-aligned customer care across email, phone, and helpdesk channels so shoppers get answers fast and keep coming back.",
     bullets: [
-      "Record marketplace, website, and gateway transactions",
-      "Categorize COGS, shipping, ads, and operating expenses",
-      "Sync multi-channel sales data into one ledger",
-      "Manage digital receipts and invoices",
-      "Close books monthly with data validation",
+      "Order status, returns, and refund queries",
+      "Product information and purchase guidance",
+      "Ticket triage and escalation handling",
+      "Multilingual support options",
+      "Quality monitoring and SLA reporting",
     ],
   },
   {
-    icon: <FaBalanceScale size={36} color="#f15a29" />,
-    title: "Accounts Reconciliation",
+    icon: <FaClipboardList size={36} color="#f15a29" />,
+    title: "Order Processing",
+    path: "/order-processing-services",
     description:
-      "Match internal records with bank statements and processor reports to eliminate discrepancies and reflect your true cash position.",
+      "Process orders accurately from placement to fulfillment confirmation, reducing delays, cancellations, and manual errors.",
     bullets: [
-      "Bank and credit card reconciliation",
-      "Payment gateway deposit matching",
-      "Marketplace payout verification",
-      "Flag unexpected fees and charges",
-      "Verify refunds, returns, and chargebacks",
+      "Order validation and exception handling",
+      "Payment and address verification support",
+      "Fulfillment handoff and status updates",
+      "Returns and exchange processing",
+      "Peak-season volume scaling",
+    ],
+  },
+  {
+    icon: <FaThList size={36} color="#f15a29" />,
+    title: "Catalog Management Services",
+    path: "/catalog-management-services",
+    description:
+      "Keep product catalogs clean, consistent, and conversion-ready across storefronts and marketplaces.",
+    bullets: [
+      "SKU setup and attribute enrichment",
+      "Category mapping and taxonomy cleanup",
+      "Bulk catalog updates and syncs",
+      "Content consistency across channels",
+      "Ongoing catalog maintenance",
+    ],
+  },
+  {
+    icon: <FaUserFriends size={36} color="#f15a29" />,
+    title: "Hire Virtual Assistant",
+    path: "/virtual-assistant-services",
+    description:
+      "Add flexible ecommerce VAs who handle admin, seller workflows, and day-to-day operational tasks as an extension of your team.",
+    bullets: [
+      "Seller account and dashboard management",
+      "Listing updates and competitor checks",
+      "Inbox and calendar support",
+      "Reporting and task coordination",
+      "Part-time or dedicated resource models",
+    ],
+  },
+  {
+    icon: <FaDatabase size={36} color="#f15a29" />,
+    title: "Product Data Entry",
+    path: "/product-data-entry-services",
+    description:
+      "Upload and maintain accurate product data at scale—titles, specs, images metadata, pricing, and inventory fields.",
+    bullets: [
+      "New product uploads and updates",
+      "Attribute and variation mapping",
+      "Image and description association",
+      "Pricing and inventory field entry",
+      "Quality checks before go-live",
+    ],
+  },
+  {
+    icon: <FaTruck size={36} color="#f15a29" />,
+    title: "Logistic Services",
+    path: "/logistics-services",
+    description:
+      "Coordinate shipping, tracking, and delivery follow-ups so customers receive orders on time and exceptions are resolved quickly.",
+    bullets: [
+      "Shipment booking and label coordination",
+      "Tracking updates and carrier follow-ups",
+      "Delivery exception management",
+      "Return logistics support",
+      "Fulfillment status reporting",
+    ],
+  },
+  {
+    icon: <FaComments size={36} color="#f15a29" />,
+    title: "Chat Support",
+    path: "/chat-support-services",
+    description:
+      "Convert live conversations into sales and satisfaction with trained chat agents who resolve issues in real time.",
+    bullets: [
+      "Live website and marketplace chat",
+      "Pre-sales and post-purchase support",
+      "Cart recovery and upsell prompts",
+      "Chat-to-ticket escalation",
+      "Shift coverage for peak hours",
     ],
   },
   {
     icon: <FaFileInvoiceDollar size={36} color="#f15a29" />,
-    title: "Accounts Payable",
+    title: "Invoice Processing",
+    path: "/invoice-processing-services",
     description:
-      "Keep supplier payments on track without disrupting inventory procurement or day-to-day operations.",
+      "Process vendor and customer invoices accurately—capture, validate, and route documents so accounts stay organized.",
     bullets: [
-      "Vendor invoice processing and validation",
-      "Payment scheduling and due-date tracking",
-      "Purchase and expense recording",
-      "Vendor ledger maintenance",
-      "Outstanding payable monitoring",
-    ],
-  },
-  {
-    icon: <FaHandHoldingUsd size={36} color="#f15a29" />,
-    title: "Accounts Receivable",
-    description:
-      "Tighten control over outstanding payments for D2C, wholesale, and hybrid selling models with varied payment cycles.",
-    bullets: [
-      "Customer and wholesale invoice creation",
-      "Payment tracking across channels",
-      "Receivables aging reports",
-      "Overdue invoice follow-up support",
-      "Credit notes, refunds, and adjustments",
-    ],
-  },
-  {
-    icon: <FaChartPie size={36} color="#f15a29" />,
-    title: "Financial Reporting",
-    description:
-      "Deliver clear, scheduled reports that show profitability, cost trends, and channel performance for operators and stakeholders.",
-    bullets: [
-      "Monthly, quarterly, and annual P&L statements",
-      "Balance sheet reporting",
-      "Channel, product, and region segmentation",
-      "Comparative period reporting",
-      "Investor and lender-ready formats",
-    ],
-  },
-  {
-    icon: <FaStore size={36} color="#f15a29" />,
-    title: "Marketplace Payment Analysis",
-    description:
-      "Translate complex settlement data into actionable insight on true earnings after fees, ads, fulfillment, and deductions.",
-    bullets: [
-      "Settlement, fee, and deduction analysis",
-      "Margin erosion from returns and chargebacks",
-      "Profitability by marketplace and channel",
-      "Ad spend and fulfillment cost impact",
-      "Budget planning from payout data",
-    ],
-  },
-  {
-    icon: <FaChartLine size={36} color="#f15a29" />,
-    title: "Cash Flow Planning",
-    description:
-      "Project cash movement around sales performance, inventory cycles, and marketplace payout timelines to protect liquidity.",
-    bullets: [
-      "Map inflows against inventory and fulfillment",
-      "Plan for peaks, promos, and growth investments",
-      "Marketplace payout timing projections",
-      "Working capital and OpEx planning",
-      "Rolling short-term cash forecasts",
-    ],
-  },
-  {
-    icon: <FaUserTie size={36} color="#f15a29" />,
-    title: "CFO Support",
-    description:
-      "Get senior-level financial guidance without a full-time in-house CFO—strategy, KPIs, and growth-ready decision support.",
-    bullets: [
-      "Financial strategy aligned to growth goals",
-      "Budget planning and performance monitoring",
-      "Margin and cost-structure analysis",
-      "KPI tracking and executive reporting",
-      "Advisory for investments and expansion",
+      "Invoice data capture and validation",
+      "PO matching and exception flags",
+      "Vendor and customer invoice workflows",
+      "Digital filing and retrieval",
+      "Processing status reports",
     ],
   },
 ];
 
 const benefits = [
-  { icon: <FaMoneyBillWave size={28} />, title: "Reduced Operational Costs", text: "Replace fragmented in-house effort with a focused back-office team that scales with order volume." },
-  { icon: <FaTachometerAlt size={28} />, title: "Better Cash Flow Visibility", text: "See payout cycles, liabilities, and working capital needs before they become surprises." },
-  { icon: <FaClipboardCheck size={28} />, title: "Accurate Bookkeeping", text: "Keep multi-channel transactions categorized, reconciled, and audit-ready month after month." },
-  { icon: <FaSyncAlt size={28} />, title: "Marketplace Reconciliation", text: "Match settlements, fees, and holdbacks to orders so net margins stay trustworthy." },
-  { icon: <FaCheckCircle size={28} />, title: "Audit-Ready Financials", text: "Produce statements that stand up to internal review, investors, lenders, and auditors." },
-  { icon: <FaUsers size={28} />, title: "Dedicated Experts", text: "Work with ecommerce-focused accountants who understand platform fee structures." },
-  { icon: <FaCogs size={28} />, title: "Faster Month-End Closing", text: "Standardized workflows reduce backlog and shorten closing cycles." },
-  { icon: <FaExpandArrowsAlt size={28} />, title: "Scalable Support", text: "Expand coverage as you add SKUs, channels, or brands without rebuilding your finance team." },
+  { icon: <FaTachometerAlt size={28} />, title: "Faster Daily Operations", text: "Reduce backlog across support, orders, catalogs, and invoices with trained specialists." },
+  { icon: <FaCheckCircle size={28} />, title: "Fewer Manual Errors", text: "Standardized workflows improve accuracy in order processing, data entry, and invoicing." },
+  { icon: <FaClock size={28} />, title: "Extended Coverage Hours", text: "Keep customer and chat support available when your buyers expect replies." },
+  { icon: <FaUsers size={28} />, title: "Dedicated Back-Office Team", text: "Work with specialists for support, catalog, logistics, and virtual assistant tasks." },
+  { icon: <FaExpandArrowsAlt size={28} />, title: "Scale During Peak Seasons", text: "Ramp capacity for holidays and campaigns without long hiring cycles." },
+  { icon: <FaCogs size={28} />, title: "Process Consistency", text: "Documented SOPs keep every ticket, order, and listing update handled the same way." },
+  { icon: <FaGlobe size={28} />, title: "Multi-Channel Ready", text: "Support operations across Shopify, Amazon, marketplaces, and branded stores." },
+  { icon: <FaClipboardCheck size={28} />, title: "Clear Reporting", text: "Get visibility into tickets, orders processed, catalog updates, and turnaround times." },
 ];
 
 const industries = [
-  { icon: <FaShoppingBag size={32} />, title: "D2C Brands", text: "Owned storefronts with high marketing spend, variable margins, and fast transaction cycles." },
-  { icon: <FaStore size={32} />, title: "Marketplace Sellers", text: "Sellers managing multiple payout schedules, fee structures, and settlement reports." },
-  { icon: <FaLayerGroup size={32} />, title: "Omnichannel Retailers", text: "Retailers selling across marketplaces, branded sites, wholesale, and physical stores." },
-  { icon: <FaBuilding size={32} />, title: "Wholesale Businesses", text: "B2B sellers with bulk orders, negotiated pricing, credit terms, and longer cycles." },
-  { icon: <FaSyncAlt size={32} />, title: "Subscription Businesses", text: "Membership, replenishment, and subscription-box models with recurring revenue." },
-  { icon: <FaTruck size={32} />, title: "Dropshipping", text: "Supplier-fulfilled models with dynamic cost structures and light inventory ownership." },
-  { icon: <FaBriefcase size={32} />, title: "CPA Firms", text: "Firms supporting marketplace sellers and online retailers that need ecommerce specialists." },
-  { icon: <FaChartPie size={32} />, title: "Ecommerce Aggregators", text: "Groups managing multi-brand portfolios that need consolidated financial oversight." },
+  { icon: <FaShoppingBag size={32} />, title: "D2C Brands", text: "Owned stores that need reliable support, catalog upkeep, and order handling." },
+  { icon: <FaStore size={32} />, title: "Marketplace Sellers", text: "Amazon, Walmart, eBay, and multi-marketplace sellers managing high order volume." },
+  { icon: <FaLayerGroup size={32} />, title: "Omnichannel Retailers", text: "Brands selling across websites, marketplaces, and wholesale channels." },
+  { icon: <FaBuilding size={32} />, title: "Wholesale & B2B", text: "Bulk order processing, invoice workflows, and account support." },
+  { icon: <FaSyncAlt size={32} />, title: "Subscription Brands", text: "Recurring orders, customer care, and catalog maintenance." },
+  { icon: <FaTruck size={32} />, title: "Dropshipping Stores", text: "Order routing, supplier coordination, and shipment follow-ups." },
+  { icon: <FaHeadset size={32} />, title: "Growing Startups", text: "Lean teams that need flexible VA and support capacity." },
+  { icon: <FaThList size={32} />, title: "Large Catalog Sellers", text: "High-SKU businesses needing continuous product data and catalog work." },
 ];
 
 const platforms = [
@@ -239,65 +246,59 @@ const platforms = [
   { name: "eBay", icon: <SiEbay size={40} /> },
   { name: "Etsy", icon: <SiEtsy size={40} /> },
   { name: "BigCommerce", icon: <SiBigcommerce size={40} /> },
-  { name: "Xero", icon: <SiXero size={40} /> },
-  { name: "QuickBooks", icon: <SiQuickbooks size={40} /> },
-  { name: "Zoho Books", icon: <SiZoho size={40} /> },
-  { name: "NetSuite", icon: <FaBuilding size={40} /> },
-  { name: "FreshBooks", icon: <FaBook size={40} /> },
-  { name: "Microsoft Dynamics", icon: <FaMicrosoft size={40} /> },
 ];
 
 const processSteps = [
-  { step: 1, title: "Requirement Analysis", text: "Audit historical data, chart of accounts, and channel mix to define the right engagement model." },
-  { step: 2, title: "Platform Access", text: "Establish secure access to storefronts, marketplaces, banks, and accounting software." },
-  { step: 3, title: "Data Migration", text: "Import and validate opening balances, open invoices, and historical transactions." },
-  { step: 4, title: "Accounting Setup", text: "Configure ledgers, categories, automations, and channel-level reporting structures." },
-  { step: 5, title: "Daily Operations", text: "Record sales, fees, expenses, and payouts with continuous reconciliation checkpoints." },
-  { step: 6, title: "Monthly Reporting", text: "Deliver closed books, P&L, cash flow, and channel performance packs on schedule." },
-  { step: 7, title: "Continuous Optimization", text: "Refine workflows, close faster, and surface margin insights as your business grows." },
+  { step: 1, title: "Requirement Analysis", text: "Map your support channels, order flow, catalog size, and back-office priorities." },
+  { step: 2, title: "Process & Access Setup", text: "Align SOPs, tools, and secure access to storefronts, marketplaces, and helpdesks." },
+  { step: 3, title: "Team Onboarding", text: "Assign specialists for support, orders, catalog, VA, logistics, chat, and invoicing." },
+  { step: 4, title: "Pilot Execution", text: "Run a controlled pilot on priority workflows and refine quality benchmarks." },
+  { step: 5, title: "Daily Operations", text: "Execute tickets, orders, catalog updates, chats, logistics follow-ups, and invoices." },
+  { step: 6, title: "Quality Monitoring", text: "Track accuracy, response time, and SLA performance with regular reviews." },
+  { step: 7, title: "Continuous Optimization", text: "Scale coverage, improve scripts, and streamline workflows as volume grows." },
 ];
 
 const whyChoose = [
-  { icon: <FaUserCheck size={28} />, title: "Experienced Ecommerce Specialists", text: "Teams who understand marketplace fee schedules, holdbacks, and multi-channel accounting." },
-  { icon: <FaShieldAlt size={28} />, title: "Secure Data Handling", text: "Controlled access, confidentiality practices, and secure workflows for financial data." },
-  { icon: <FaUsers size={28} />, title: "Dedicated Account Managers", text: "A clear point of contact who understands your brands, channels, and reporting cadence." },
-  { icon: <FaBalanceScale size={28} />, title: "Accurate Reconciliations", text: "Transaction-level matching across banks, gateways, and marketplace settlements." },
-  { icon: <FaExpandArrowsAlt size={28} />, title: "Scalable Engagement Models", text: "Flexible coverage—from single specialists to full outsourced finance support." },
-  { icon: <FaClipboardCheck size={28} />, title: "Transparent Reporting", text: "Scheduled packs tailored for operators, investors, and internal stakeholders." },
-  { icon: <FaCogs size={28} />, title: "Modern Accounting Software Expertise", text: "Hands-on experience with leading cloud accounting and ERP platforms." },
-  { icon: <FaLayerGroup size={28} />, title: "Multi-Marketplace Experience", text: "Proven workflows for Amazon, Shopify, Walmart, eBay, and omnichannel stacks." },
+  { icon: <FaUserCheck size={28} />, title: "Experienced Ecommerce Specialists", text: "Teams trained on marketplace and storefront workflows—not generic admin support." },
+  { icon: <FaShieldAlt size={28} />, title: "Secure Data Handling", text: "Controlled access and confidentiality practices for customer and order data." },
+  { icon: <FaUsers size={28} />, title: "Dedicated Account Managers", text: "A clear point of contact who understands your channels and priorities." },
+  { icon: <FaClipboardCheck size={28} />, title: "Quality-First Delivery", text: "Checks on tickets, listings, orders, and invoices before work is marked complete." },
+  { icon: <FaExpandArrowsAlt size={28} />, title: "Scalable Engagement Models", text: "Start with one function or combine full back-office coverage as you grow." },
+  { icon: <FaCogs size={28} />, title: "Tool & Platform Flexibility", text: "We work within your existing helpdesk, OMS, catalog, and shipping tools." },
+  { icon: <FaClock size={28} />, title: "Reliable Turnaround", text: "Predictable SLAs for support replies, order processing, and catalog updates." },
+  { icon: <FaLayerGroup size={28} />, title: "End-to-End Back Office Coverage", text: "One partner for support, operations, catalog, logistics, chat, and invoicing." },
 ];
 
 const faqs = [
   {
     id: "One",
-    question: "How do you transition our current bookkeeping setup to your team?",
+    question: "What is included in ecommerce back office support?",
     answer:
-      "We begin with an audit of historical data and your existing chart of accounts, map current workflows, connect securely to your sales channels, and run a trial reconciliation before fully taking over day-to-day accounting.",
+      "Our ecommerce back office support covers customer support, order processing, catalog management, virtual assistants, product data entry, logistics coordination, chat support, and invoice processing—delivered as a combined package or individual services.",
   },
   {
     id: "Two",
-    question: "Can you support businesses selling across multiple channels?",
+    question: "Can we start with only one or two services?",
     answer:
-      "Yes. Multi-channel support is core to our ecommerce back office services. We consolidate marketplace, storefront, and payment gateway data into one ledger while preserving channel-level segmentation for performance analysis.",
+      "Yes. Many clients begin with customer support, order processing, or catalog management and expand into virtual assistants, chat, logistics, or invoice processing as volume grows.",
   },
   {
     id: "Three",
-    question: "How do you handle discrepancies between marketplace payouts and financial records?",
+    question: "Do you support multiple marketplaces and storefronts?",
     answer:
-      "Our team systematically reconciles marketplace settlements with internal records and bank statements. Missing transactions, fee mismatches, and processing errors are identified and resolved at the transaction level.",
+      "Yes. We support operations across major platforms including Shopify, Amazon, WooCommerce, Magento, Walmart, eBay, Etsy, and BigCommerce, following your channel-specific workflows.",
   },
   {
     id: "Four",
-    question: "Do you support multi-entity or multi-storefront accounting?",
+    question: "How quickly can a virtual assistant or support team start?",
     answer:
-      "Yes. We maintain separate books for each legal entity, properly record intercompany transactions, and produce consolidated statements that give ownership a clear view of aggregate performance.",
+      "After requirement analysis and access setup, we onboard dedicated resources and begin with a pilot. Timelines depend on scope, but most engagements start within a short onboarding window.",
   },
   {
     id: "Five",
-    question: "Will we have a dedicated point of contact?",
+    question: "How do you maintain quality for order processing and data entry?",
     answer:
-      "You can choose a dedicated account manager for personalized support or a specialist team model where different experts handle bookkeeping, reconciliation, and reporting. Engagement models include retainers and custom packages.",
+      "We use documented SOPs, dual-check processes for critical fields, exception queues for incomplete orders or catalog records, and regular accuracy reporting shared with your account manager.",
   },
 ];
 
@@ -305,20 +306,20 @@ const testimonials = [
   {
     id: 1,
     quote: "/images/services/service-inner/quote-icon.png",
-    text: "Tech2Globe took over our multi-channel bookkeeping and finally gave us clean month-end numbers we can trust. Marketplace fees and payouts used to be a black box—now they are clear.",
+    text: "Tech2Globe took over our customer support and order processing during peak season. Response times improved and our internal team finally got back to growth work.",
     name: "D2C Brand Founder – USA",
   },
   {
     id: 2,
     quote: "/images/services/service-inner/quote-icon.png",
-    text: "Their reconciliation work across Amazon and Shopify saved our finance team hours every week. Reporting is timely, accurate, and easy for leadership to act on.",
+    text: "Their catalog management and product data entry keep our Amazon and Shopify listings consistent. Virtual assistants handle the daily admin we never had time for.",
     name: "Marketplace Seller – UK",
   },
   {
     id: 3,
     quote: "/images/services/service-inner/quote-icon.png",
-    text: "We needed scalable back-office support without hiring a full in-house accounting team. Tech2Globe delivered dedicated specialists and audit-ready books.",
-    name: "Ecommerce Aggregator – Australia",
+    text: "Chat support, logistics follow-ups, and invoice processing are now handled by one reliable partner. Back-office operations feel organized for the first time.",
+    name: "Omnichannel Retailer – Australia",
   },
 ];
 
@@ -330,15 +331,27 @@ export default function EcommerceBackOfficeSupport() {
         "@type": "Service",
         name: "Ecommerce Back Office Support Services",
         description:
-          "Dedicated ecommerce back office support covering bookkeeping, accounting, reconciliation, reporting, cash flow planning, and operational assistance for online retailers.",
+          "Dedicated ecommerce back office support covering customer support, order processing, catalog management, virtual assistants, product data entry, logistics, chat support, and invoice processing.",
         provider: {
           "@type": "Organization",
           name: "Tech2Globe Web Solutions LLP",
           url: "https://www.tech2globe.com",
         },
         url: "https://stagenew.tech2globe.tech/ecommerce-back-office-support",
-        serviceType: "Ecommerce Accounting and Back Office Support",
+        serviceType: "Ecommerce Back Office Support",
         areaServed: "Worldwide",
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Ecommerce Back Office Support",
+          itemListElement: usefulLinks.map((link) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: link.name,
+              url: `https://stagenew.tech2globe.tech${link.path}`,
+            },
+          })),
+        },
       },
       {
         "@type": "FAQPage",
@@ -375,39 +388,39 @@ export default function EcommerceBackOfficeSupport() {
               />
 
               <div id="overview" className={Style.ContentDiv}>
-                <h2>Ecommerce Back Office Support That Delivers Real Financial Visibility</h2>
+                <h2>Ecommerce Back Office Support That Keeps Your Store Running</h2>
                 <p>
-                  Accurate ecommerce accounting goes far beyond recording gross sales. Each sales channel
-                  brings its own fee schedules, payout cycles, returns, advertising deductions, and
-                  fulfillment costs. When those details are mishandled, financial statements misrepresent
-                  true net margins, cash position, and operational profitability.
+                  Growing an online business takes more than driving traffic. Behind every successful
+                  storefront is a reliable back office—handling customers, orders, catalogs, logistics,
+                  and documentation without delays or quality gaps.
                 </p>
                 <p>
-                  Tech2Globe provides end-to-end <strong>ecommerce back office support</strong> that
-                  consolidates multi-channel transaction data, platform fees, settlement records, and
-                  operating expenses into clear, audit-ready books. Our team reconciles settlements against
-                  bank records and internal ledgers, resolves discrepancies at the transaction level, and
-                  keeps your finance operations running smoothly so you can focus on growth.
+                  Tech2Globe provides end-to-end <strong>ecommerce back office support</strong> so your
+                  team can focus on selling while we manage the operational work that keeps buyers happy
+                  and channels clean. From customer care and chat to catalog updates, virtual assistants,
+                  order processing, logistics coordination, and invoice workflows, we act as an extension
+                  of your operations team.
                 </p>
                 <p>
-                  From daily bookkeeping and accounts reconciliation to reporting and CFO-level guidance,
-                  we help online retailers improve operational efficiency and maintain complete financial
-                  visibility across every channel they sell on.
+                  Whether you sell on Shopify, Amazon, or across multiple marketplaces, our specialists
+                  follow your SOPs and tools to deliver consistent, scalable support every day.
                 </p>
               </div>
 
               <div id="services" className={Style.ContentDiv}>
-                <h2 className="text-danger pt-3">Core Ecommerce Back Office Services</h2>
+                <h2 className="text-danger pt-3">Our Ecommerce Back Office Support Services</h2>
                 <p className="mb-4">
-                  Comprehensive financial and operational support designed for high-volume online retail—
-                  covering every function from transaction recording to strategic planning.
+                  Complete operational coverage designed around the services online sellers need most—
+                  available individually or as a combined back-office engagement.
                 </p>
                 <div className="row">
                   {coreServices.map((service) => (
                     <div key={service.title} className="col-lg-6 col-md-6 col-sm-12 mb-4">
                       <div className={Style.CardBox}>
                         <div className="mb-2">{service.icon}</div>
-                        <h5>{service.title}</h5>
+                        <h5>
+                          <Link href={service.path}>{service.title}</Link>
+                        </h5>
                         <p>{service.description}</p>
                         <ul className="ps-3 mb-0">
                           {service.bullets.map((bullet) => (
@@ -423,8 +436,8 @@ export default function EcommerceBackOfficeSupport() {
               <div id="benefits" className={Style.ContentDiv}>
                 <h2 className="text-danger pt-3">Why Businesses Outsource Ecommerce Back Office Support</h2>
                 <p className="mb-4">
-                  Outsourcing gives you specialized ecommerce finance expertise, faster closes, and clearer
-                  visibility into margins—without the overhead of building every capability in-house.
+                  Outsourcing gives you trained ecommerce operators, faster turnaround, and scalable
+                  coverage—without building every function in-house.
                 </p>
                 <div className="row">
                   {benefits.map((item) => (
@@ -442,8 +455,8 @@ export default function EcommerceBackOfficeSupport() {
               <div id="industries" className={Style.ContentDiv}>
                 <h2 className="text-danger pt-3">Industries We Support</h2>
                 <p className="mb-4">
-                  Outsourced accounting and bookkeeping support tailored for diverse online retail
-                  operations and the firms that serve them.
+                  Back-office support tailored for online retailers and sellers across growth stages and
+                  selling models.
                 </p>
                 <div className="row">
                   {industries.map((item) => (
@@ -461,8 +474,8 @@ export default function EcommerceBackOfficeSupport() {
               <div id="platforms" className={Style.ContentDiv}>
                 <h2 className="text-danger pt-3">Platforms We Work With</h2>
                 <p className="mb-4">
-                  Deep functional expertise across leading commerce platforms and accounting tools—so we
-                  can manage high-volume transactions without disrupting your existing workflows.
+                  Our teams support day-to-day operations across leading ecommerce platforms and
+                  marketplaces.
                 </p>
                 <div className="row">
                   {platforms.map((platform) => (
@@ -479,8 +492,8 @@ export default function EcommerceBackOfficeSupport() {
               <div id="process" className={Style.ContentDiv}>
                 <h2 className="text-danger pt-3">Our Process</h2>
                 <p className="mb-4">
-                  A clear onboarding-to-optimization path that keeps your books accurate from day one and
-                  improves as your ecommerce operation scales.
+                  A clear onboarding-to-optimization path that gets your back office running smoothly and
+                  improving as volume grows.
                 </p>
                 <div className="row">
                   {processSteps.map((step) => (
@@ -498,8 +511,8 @@ export default function EcommerceBackOfficeSupport() {
               <div className={Style.ContentDiv}>
                 <h2 className="text-danger pt-3">Why Choose Tech2Globe</h2>
                 <p className="mb-4">
-                  Leading ecommerce businesses trust us with their finances because we combine platform
-                  expertise, secure processes, and accountable delivery.
+                  Ecommerce brands trust us with their back-office operations because we combine platform
+                  experience, process discipline, and accountable delivery.
                 </p>
                 <div className="row">
                   {whyChoose.map((item) => (
@@ -515,9 +528,9 @@ export default function EcommerceBackOfficeSupport() {
               </div>
 
               <div className={Style.ContentDiv}>
-                <h2 className="text-danger pt-3">Related Services</h2>
+                <h2 className="text-danger pt-3">Explore Our Back Office Services</h2>
                 <p className="mb-3">
-                  Explore more finance and ecommerce support offerings from Tech2Globe.
+                  Jump into any service under Ecommerce Back Office Support.
                 </p>
                 <div className="row">
                   {usefulLinks.map((link) => (
@@ -545,8 +558,8 @@ export default function EcommerceBackOfficeSupport() {
               <div className={`${Style.CtaSection} text-center mt-5 mb-3 p-5 rounded-3`}>
                 <h2 className="text-white mb-3">Ready to Simplify Your Ecommerce Back Office?</h2>
                 <p className="text-white mb-4">
-                  Partner with Tech2Globe for accurate bookkeeping, marketplace reconciliation, and
-                  reporting that gives you complete visibility into true net margins.
+                  Partner with Tech2Globe for customer support, order processing, catalog management,
+                  virtual assistants, logistics, chat, and invoice processing—handled by one reliable team.
                 </p>
                 <div className={`${Style.BtnBlock} d-flex justify-content-center`}>
                   <Link href="/contact-us" className="button-red">
