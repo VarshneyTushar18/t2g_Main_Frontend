@@ -736,6 +736,9 @@ export default function Header() {
                                              <li><a className="menu-link" href="/accounts-receivable-services">Accounts
                                                 Receivable</a>
                                              </li>
+                                             <li><a className="menu-link" href="/ecommerce-back-office-support">Ecommerce
+                                                Back Office Support</a>
+                                             </li>
                                              <li><a className="menu-link" href="/tax-preparation">Tax
                                                 Preparation</a>
                                              </li>
@@ -2943,6 +2946,10 @@ export default function Header() {
                                                    <li><a
                                                       href="/accounts-receivable-services">Accounts
                                                       Receivable</a>
+                                                   </li>
+                                                   <li><a
+                                                      href="/ecommerce-back-office-support">Ecommerce
+                                                      Back Office Support</a>
                                                    </li>
                                                    <li><a href="/tax-preparation">Tax
                                                       Preparation</a>
