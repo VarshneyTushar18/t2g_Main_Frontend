@@ -47,6 +47,7 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            gtag('config', 'G-53V1YCWQ0C');
             gtag('config', 'AW-972611168');
             gtag('config', 'AW-972611168/l3PiCL6LgZwZEOC8488D', {
               phone_conversion_number: '9899675039'
