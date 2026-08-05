@@ -1390,10 +1390,39 @@ body .d2c_mobile_view {
     column-count: 5;
 }
 
-
 .clients_wrapper .clients_wrapper_body ul li img {
     filter: brightness(0.7);
     padding: 12px;
+}
+
+.hero-brand-logos.brand-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    padding: 14px;
+    margin: 0;
+    list-style: none;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+}
+
+.hero-brand-logos .brand-logo-grid__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 72px;
+    padding: 14px 12px;
+    background: transparent;
+}
+
+.hero-brand-logos .brand-logo-grid__cell img {
+    width: 100%;
+    max-width: 140px;
+    height: 52px;
+    object-fit: contain;
+    filter: brightness(1.1);
+    padding: 0;
 }
 
 
@@ -1931,6 +1960,189 @@ textarea {
     display: inline-block
 }
 
+.hero-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.d2c_hero_wrapper .btn-hero-secondary {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.d2c_hero_wrapper .btn-hero-secondary:hover {
+    color: var(--secondary_color);
+    background: #fff;
+    border-color: #fff;
+}
+
+.hero-brand-proof__label {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.hero-trust-badges {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    padding: 14px;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-trust-badges__item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-trust-badges__item img {
+    width: 100%;
+    max-width: 100%;
+    height: 72px;
+    object-fit: contain;
+}
+
+/* Hero section — responsive (mobile ad traffic) */
+@media (max-width: 991px) {
+    .hero-brand-logos.brand-logo-grid,
+    .hero-trust-badges {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .hero-brand-logos .brand-logo-grid__cell,
+    .hero-trust-badges__item {
+        min-height: 76px;
+        padding: 8px 6px;
+    }
+
+    .hero-brand-logos .brand-logo-grid__cell img {
+        height: 46px;
+        max-width: 100%;
+    }
+
+    .hero-trust-badges__item img {
+        height: 64px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-brand-proof__label {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .hero-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-cta-row .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-brand-logos.brand-logo-grid,
+    .hero-trust-badges {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .hero-brand-logos .brand-logo-grid__cell,
+    .hero-trust-badges__item {
+        min-height: 64px;
+        padding: 8px 6px;
+    }
+
+    .hero-brand-logos .brand-logo-grid__cell img {
+        height: 40px;
+        max-width: 100%;
+    }
+
+    .hero-trust-badges__item img {
+        height: 52px;
+    }
+}
+
+@media (max-width: 479px) {
+    .hero-brand-logos.brand-logo-grid,
+    .hero-trust-badges {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .hero-brand-logos .brand-logo-grid__cell,
+    .hero-trust-badges__item {
+        min-height: 58px;
+        padding: 6px 4px;
+    }
+
+    .hero-brand-logos .brand-logo-grid__cell img {
+        height: 36px;
+    }
+
+    .hero-trust-badges__item img {
+        height: 48px;
+    }
+}
+
+.enterprise-partnership {
+    background: #f8f9fb;
+    color: #121820;
+}
+
+.enterprise-partnership h2,
+.enterprise-partnership h3,
+.enterprise-partnership .d2c_sub_title {
+    color: #121820;
+}
+
+.enterprise-partnership h2 span,
+.enterprise-partnership h3 span {
+    color: var(--primary_color);
+}
+
+.enterprise-partnership > .container > p {
+    color: rgba(18, 24, 32, 0.78);
+}
+
+.enterprise-partnership .d2c_title::after {
+    display: none;
+}
+
+.enterprise-partnership__card {
+    background: #fff;
+    border: 1px solid rgba(18, 24, 32, 0.08);
+    border-radius: 12px;
+    padding: 24px;
+    height: 100%;
+}
+
+.enterprise-partnership__card h3 {
+    color: #121820;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.enterprise-partnership__card p {
+    color: rgba(18, 24, 32, 0.72);
+    line-height: 1.6;
+}
+
 @media (max-width:767px) {
 
     .highlight-points ul {
@@ -2298,9 +2510,10 @@ textarea {
     position: fixed;
     bottom: 3%;
     right: 2%;
-    z-index: 9999;
+    z-index: 999;
     transition: all ease 0.4s;
     text-align: center;
+    max-width: min(280px, calc(100vw - 24px));
 }
 
 .sticky_button .btn {

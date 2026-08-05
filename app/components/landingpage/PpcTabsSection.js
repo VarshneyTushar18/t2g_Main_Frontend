@@ -11,48 +11,52 @@ import {
 
 const tabs = [
   {
-    id: "high-acos",
-    label: "High ACOS",
+    id: "scaling-spend",
+    label: "Rising ACOS / TACOS",
     icon: FaFire,
-    title: "High",
-    titleSuffix: "ACOS",
-    description: "You're getting sales… but barely making profit.",
+    title: "Ad Spend Scaling",
+    titleSuffix: "Faster Than Profit",
+    description:
+      "ACOS and TACOS climb as you scale — spend grows, but contribution margin does not.",
     image: "/images/landingpage/Hight-Acos1.webp",
-    imageAlt: "High Acos",
+    imageAlt: "Rising ACOS and TACOS",
     imageClass: "coloredbg",
   },
   {
-    id: "wasted-spend",
-    label: "Wasted Ad Spend",
-    icon: FaMoneyBillWave,
-    title: "Wasted",
-    titleSuffix: "Ad Spend",
-    description: "Money goes into ads, but nothing comes back.",
-    image: "/images/landingpage/Wasted-Ad-Spend1.webp",
-    imageAlt: "Wasted Ad Spend",
-    imageClass: "coloredbg",
-  },
-  {
-    id: "poor-keywords",
-    label: "Poor Keywords",
-    icon: FaBullseye,
-    title: "Poor",
-    titleSuffix: "Keywords",
-    description: "Your ads show to the wrong people.",
-    image: "/images/landingpage/keyword.webp",
-    imageAlt: "Poor Keywords",
-    imageClass: "",
-  },
-  {
-    id: "growth",
-    label: "No Growth from Ads",
+    id: "growth-stall",
+    label: "Growth Stalling",
     icon: FaChartLine,
-    title: "No",
-    titleSuffix: "Growth from Ads",
-    description: "You keep spending, but your business isn't growing.",
+    title: "Marketplace Growth",
+    titleSuffix: "Stalling",
+    description:
+      "Your D2C brand is strong, but Amazon / Flipkart / Nykaa growth has plateaued.",
     image: "/images/landingpage/No-Growth.webp",
-    imageAlt: "Low Organic Rank",
+    imageAlt: "Marketplace growth stalling",
     imageClass: "",
+  },
+  {
+    id: "fragmented-teams",
+    label: "Fragmented Marketplaces",
+    icon: FaBullseye,
+    title: "No Single Team",
+    titleSuffix: "Owning All Channels",
+    description:
+      "Amazon, Flipkart and Nykaa sit with different vendors — no one owns the full P&L.",
+    image: "/images/landingpage/keyword.webp",
+    imageAlt: "Fragmented marketplace ownership",
+    imageClass: "",
+  },
+  {
+    id: "buy-box",
+    label: "Share & Price Erosion",
+    icon: FaMoneyBillWave,
+    title: "Losing Buy Box",
+    titleSuffix: "& Market Share",
+    description:
+      "Competitors undercut pricing and erode share while reporting stays vanity-metric deep.",
+    image: "/images/landingpage/Wasted-Ad-Spend1.webp",
+    imageAlt: "Buy Box and price erosion",
+    imageClass: "coloredbg",
   },
 ];
 
@@ -65,7 +69,7 @@ export default function PpcTabsSection() {
         <div className="row">
           <div className="col-lg-12">
             <h2 className="d2c_title text_start text-center position-relative">
-              Why <span>Amazon Sellers</span> Struggle With PPC
+              Why <span>Established Brands</span> Struggle on Marketplaces
             </h2>
           </div>
         </div>
