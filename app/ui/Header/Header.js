@@ -1423,6 +1423,8 @@ export default function Header() {
                                        Building Services</a></li>
                                     <li><a className="menu-link" href="mobile-seo-services">Mobile
                                        SEO Services</a></li>
+                                    <li><a className="menu-link" href="seo-aeo-geo-services">SEO, AEO
+                                       &amp; GEO Services</a></li>
                                  </ul>
                                  <div className="menu-container">
                                     <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
@@ -2593,6 +2595,10 @@ export default function Header() {
                                                    <li><a
                                                       href="/mobile-seo-services">Mobile
                                                       SEO Services</a>
+                                                   </li>
+                                                   <li><a
+                                                      href="/seo-aeo-geo-services">SEO, AEO
+                                                      &amp; GEO Services</a>
                                                    </li>
                                                 </ul>
                                              </div>
