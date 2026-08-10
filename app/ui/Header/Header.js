@@ -1410,6 +1410,8 @@ export default function Header() {
                                     </h5>
                                  </div>
                                  <ul className="list-unstyled ps-2 menu-items">
+                                 <li><a className="menu-link" href="seo-aeo-geo-services">SEO, AEO
+                                 &amp; GEO Services</a></li>
                                     <li><a href="local-seo" className="menu-link">Local SEO</a></li>
                                     <li><a href="technical-seo" className="menu-link">Technical
                                        SEO</a></li>
@@ -1423,8 +1425,7 @@ export default function Header() {
                                        Building Services</a></li>
                                     <li><a className="menu-link" href="mobile-seo-services">Mobile
                                        SEO Services</a></li>
-                                    <li><a className="menu-link" href="seo-aeo-geo-services">SEO, AEO
-                                       &amp; GEO Services</a></li>
+                                    
                                  </ul>
                                  <div className="menu-container">
                                     <FontAwesomeIcon icon={faAngleDoubleRight}></FontAwesomeIcon>
@@ -2571,6 +2572,10 @@ export default function Header() {
                                                    <li><a href="/seo-services">Search
                                                       Engine Optimization</a>
                                                    </li>
+                                                   <li><a
+                                                      href="/seo-aeo-geo-services">SEO, AEO
+                                                      &amp; GEO Services</a>
+                                                   </li>
                                                    <li><a href="/local-seo">Local
                                                       SEO </a>
                                                    </li>
@@ -2596,10 +2601,7 @@ export default function Header() {
                                                       href="/mobile-seo-services">Mobile
                                                       SEO Services</a>
                                                    </li>
-                                                   <li><a
-                                                      href="/seo-aeo-geo-services">SEO, AEO
-                                                      &amp; GEO Services</a>
-                                                   </li>
+                                                   
                                                 </ul>
                                              </div>
                                           </div>
