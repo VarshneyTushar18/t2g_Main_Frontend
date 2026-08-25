@@ -7,6 +7,23 @@ import { useState, useEffect, Suspense } from "react";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "";
 
+const ALLOWED_RESUME_TYPES = [
+  "application/pdf",
+  "application/msword",
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+];
+const ALLOWED_RESUME_EXTENSIONS = [".pdf", ".doc", ".docx"];
+const MAX_RESUME_BYTES = 2 * 1024 * 1024; // matches backend multer limit
+
+const isAllowedResume = (file) => {
+  if (!file) return false;
+  const name = (file.name || "").toLowerCase();
+  const hasValidExt = ALLOWED_RESUME_EXTENSIONS.some((ext) => name.endsWith(ext));
+  const hasValidMime =
+    !file.type || ALLOWED_RESUME_TYPES.includes(file.type);
+  return hasValidExt && hasValidMime;
+};
+
 const INITIAL_FORM = {
   jobId: "",
   firstName: "",
@@ -179,9 +196,12 @@ function MultiStepSignupInner() {
 
       if (!formData.resume) {
         newErrors.resume = "Please upload your resume to continue.";
-      } else if (formData.resume.size > 3 * 1024 * 1024) {
+      } else if (!isAllowedResume(formData.resume)) {
         newErrors.resume =
-          "Resume file is too large. Please upload a file smaller than 3MB.";
+          "Only PDF, DOC, and DOCX resume files are allowed. Images are not accepted.";
+      } else if (formData.resume.size > MAX_RESUME_BYTES) {
+        newErrors.resume =
+          "Resume file is too large. Please upload a file smaller than 2MB.";
       }
     }
 
@@ -228,20 +248,43 @@ function MultiStepSignupInner() {
         body: data,
       });
 
-      const result = await res.json();
+      const raw = await res.text();
+      let result = null;
+      try {
+        result = raw ? JSON.parse(raw) : null;
+      } catch {
+        result = null;
+      }
 
       if (res.ok) {
         setStep(5);
-      } else {
-        setApiError(
-          result?.error ||
-            result?.message ||
-            "Submission failed. Please review your details and try again."
-        );
+        return;
+      }
+
+      const serverMessage =
+        result?.error ||
+        result?.message ||
+        (res.status === 413
+          ? "Resume file is too large. Please upload a file smaller than 2MB."
+          : null);
+
+      setApiError(
+        serverMessage ||
+          `Submission failed (error ${res.status}). Please upload a PDF/DOC/DOCX resume under 2MB and try again.`
+      );
+
+      if (
+        serverMessage &&
+        /pdf|doc|docx|resume|file|upload|size/i.test(serverMessage)
+      ) {
+        setStep(3);
+        setErrors((prev) => ({ ...prev, resume: serverMessage }));
       }
     } catch (err) {
       console.error(err);
-      setApiError("Network error. Please check your connection and try again.");
+      setApiError(
+        "Could not submit your application. Please check your connection and try again."
+      );
     } finally {
       setSubmitting(false);
     }
@@ -555,10 +598,31 @@ function MultiStepSignupInner() {
                     <input
                       type="file"
                       name="resume"
-                      onChange={(e) =>
-                        updateField({ resume: e.target.files?.[0] || null })
-                      }
-                      accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0] || null;
+                        if (file && !isAllowedResume(file)) {
+                          e.target.value = "";
+                          updateField({ resume: null });
+                          setErrors((prev) => ({
+                            ...prev,
+                            resume:
+                              "Only PDF, DOC, and DOCX resume files are allowed. Images are not accepted.",
+                          }));
+                          return;
+                        }
+                        if (file && file.size > MAX_RESUME_BYTES) {
+                          e.target.value = "";
+                          updateField({ resume: null });
+                          setErrors((prev) => ({
+                            ...prev,
+                            resume:
+                              "Resume file is too large. Please upload a file smaller than 2MB.",
+                          }));
+                          return;
+                        }
+                        updateField({ resume: file });
+                      }}
+                      accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                     />
                     {formData.resume && (
                       <p className="field-hint selected-file">
@@ -567,8 +631,8 @@ function MultiStepSignupInner() {
                     )}
                     <FieldError message={errors.resume} />
                     <span className="text-muted file-hint">
-                      Allowed file types: PDF, JPG, PNG, Word, DOC (Max size:
-                      less than 3MB)
+                      Allowed file types: PDF, DOC, DOCX only (Max size: less
+                      than 2MB)
                     </span>
 
                     <div className="row pt-3">
