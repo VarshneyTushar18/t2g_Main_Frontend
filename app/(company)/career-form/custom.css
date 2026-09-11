@@ -22,12 +22,13 @@
     position: relative
 }
 
-.form-card {
-    text-align: left
+/* Hide inactive wizard steps without unmounting (keeps entered values) */
+#msform fieldset.msform-step-hidden {
+    display: none !important;
 }
 
-#msform fieldset:not(:first-of-type) {
-    display: none
+.form-card {
+    text-align: left
 }
 
 #msform input,
