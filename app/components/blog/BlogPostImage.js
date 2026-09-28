@@ -15,7 +15,17 @@ export default function BlogPostImage({
 }) {
   const initial = resolvePostImage(post);
   const [src, setSrc] = useState(initial);
-  const alt = stripHtml(post?.title?.rendered || post?.title || "Blog post");
+  const alt =
+    stripHtml(
+      post?.featured_image_alt ||
+        post?.yoast_head_json?.og_image_alt ||
+        post?.title?.rendered ||
+        post?.title ||
+        "Blog post",
+    ) || "Blog post";
+  const titleAttr = stripHtml(
+    post?.featured_image_title || post?.title?.rendered || post?.title || "",
+  );
   const external = isExternalSrc(src);
 
   const onError = () => {
@@ -42,6 +52,7 @@ export default function BlogPostImage({
         <img
           src={src}
           alt={alt}
+          title={titleAttr || undefined}
           className={className}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
@@ -55,6 +66,7 @@ export default function BlogPostImage({
       <img
         src={src}
         alt={alt}
+        title={titleAttr || undefined}
         width={480}
         height={240}
         className={className}
@@ -71,6 +83,7 @@ export default function BlogPostImage({
       <Image
         src={src}
         alt={alt}
+        title={titleAttr || undefined}
         width={1200}
         height={630}
         sizes="(max-width: 768px) 100vw, 800px"
@@ -99,6 +112,7 @@ export default function BlogPostImage({
     <Image
       src={src}
       alt={alt}
+      title={titleAttr || undefined}
       width={480}
       height={240}
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

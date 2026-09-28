@@ -87,7 +87,7 @@ const caseStudies = [
         image: "/images/services/service-inner/buxaz-case-study.png",
         description:
             "We believe amazing products should be sold in amazing stores. We are accredited Shopify Experts with a proven track....",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Buxaz%20case%20study.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Buxaz%20case%20study.pdf",
     },
     {
         id: 2,
@@ -95,7 +95,7 @@ const caseStudies = [
         image: "/images/services/service-inner/nopcommerce-development.jpg",
         description:
             "Besteleasy.nl based on Netherlands and offers best quality electronic gadgets in the entire location of Europe, especially wireless speakers, data cables & headphones.....",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%20-%20Besteleasy.nl%20(FINAL%20CASE%20STUDY).pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Case%20Study%20-%20Besteleasy.nl%20(FINAL%20CASE%20STUDY).pdf",
     },
     {
         id: 3,
@@ -103,7 +103,7 @@ const caseStudies = [
         image: "/images/services/service-inner/workshop-internal-employees-400x300.png",
         description:
             "Vichitra Collection based on New Delhi, India and offers best quality traditional textiles and arts outlet. Company established in 1996 and running their business offline.....",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%20-%20VichitraCollection.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Case%20Study%20-%20VichitraCollection.pdf",
     },
     {
         id: 4,
@@ -111,7 +111,7 @@ const caseStudies = [
         image: "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         description:
             "This website is a well-established brand in the USA, and they are dealing into women beauty & grooming products. They owned 100% women-oriented products....",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study_%20Shopify%20Multi%20Currency%20Checkout%20.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Case%20Study_%20Shopify%20Multi%20Currency%20Checkout%20.pdf",
     },
     {
         id: 5,
@@ -119,7 +119,7 @@ const caseStudies = [
         image: "/images/services/service-inner/OnlineBusinessGrowth.png",
         description:
             "Ellie Bianca is a proudly Canadian, all-natural, environmentally sustainable, socially conscious, luxury skin care....",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/ellie%20bianca.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/ellie%20bianca.pdf",
     },
 ];
 

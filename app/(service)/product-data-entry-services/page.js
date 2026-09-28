@@ -83,7 +83,7 @@ const caseStudies = [
     image: "/images/services/service-inner/data-processing-2-bn.jpg",
     description:
       "Company was approached by a client seeking assistance in creating a robust account database within their CRM portal....",
-    docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study-Product%20Data%20Entry.pdf",
+    docLink: "https://tech2globe.com/casestudies-docs1/Case%20Study-Product%20Data%20Entry.pdf",
   },
 ];
 

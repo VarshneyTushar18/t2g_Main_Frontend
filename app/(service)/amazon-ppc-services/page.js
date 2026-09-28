@@ -102,7 +102,7 @@ const caseStudies = [
         image: "/images/services/service-inner/amazon-ppc.png",
         description:
             "Clients came to us with a range of Amazon PPC management difficulties. Among them were poor search term management, bids, insufficient...",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon%20PPC-converted.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Amazon%20PPC-converted.pdf",
     },
     {
         id: 2,
@@ -110,7 +110,7 @@ const caseStudies = [
         image: "/images/services/service-inner/amazon-sale-boost.jpg",
         description:
             "Clients often approach us with challenges in managing their Amazon PPC campaigns effectively....",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-ppc-case-study.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/amazon-ppc-case-study.pdf",
     },
 ];
 

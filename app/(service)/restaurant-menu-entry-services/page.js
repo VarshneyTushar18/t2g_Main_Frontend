@@ -79,7 +79,7 @@ const caseStudies = [
         image: "/images/services/service-inner/restaurant-menu-data-entry.jpg",
         description:
             "A leading UK based restaurant brand with over 1000+ employees with 70 nationalities across 5 continents work for delivery hero.....",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/restaurant-menu-data-entry.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/restaurant-menu-data-entry.pdf",
     },
     {
         id: 2,

@@ -217,7 +217,7 @@ const caseStudies = [
         image: "/images/services/service-inner/untitled-design-20.png",
         description:
             "The client has been in the lighting business since 2011, specializing...",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%202%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Case%20Study%202%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
     },
     {
         id: 2,
@@ -225,7 +225,7 @@ const caseStudies = [
         image: "/images/services/service-inner/ebca.png",
         description:
             "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%203%20-%20EBC%20and%20Storefront-converted.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Case%20Study%203%20-%20EBC%20and%20Storefront-converted.pdf",
     },
     {
         id: 3,
@@ -233,7 +233,7 @@ const caseStudies = [
         image: "/images/services/service-inner/amazon-ppc.png",
         description:
             "Clients came to us with a range of Amazon PPC management difficulties....",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon%20PPC-converted.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Amazon%20PPC-converted.pdf",
     },
     {
         id: 4,
@@ -241,7 +241,7 @@ const caseStudies = [
         image: "/images/services/service-inner/untitled-design-18.png",
         description:
             "Client has been in the business of selling fine grooming products for over 15 years......",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%201%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Case%20Study%201%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
     },
     {
         id: 5,
@@ -249,7 +249,7 @@ const caseStudies = [
         image: "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         description:
             "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce%20Store%20for%20Luxury%20Goods-converted.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/E-Commerce%20Store%20for%20Luxury%20Goods-converted.pdf",
     },
     {
         id: 6,
@@ -257,7 +257,7 @@ const caseStudies = [
         image: "/images/services/service-inner/amazon-sale-boost.jpg",
         description:
             "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf",
     },
     {
         id: 7,
@@ -265,7 +265,7 @@ const caseStudies = [
         image: "/images/services/service-inner/about-drop-shipping.jpg",
         description:
             "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%202%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Case%20Study%202%20-%20Sales%20Increase%20in%20different%20categories-converted.pdf",
     },
     {
         id: 8,
@@ -273,7 +273,7 @@ const caseStudies = [
         image: "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         description:
             "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce%20Store%20for%20Luxury%20Goods-converted.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/E-Commerce%20Store%20for%20Luxury%20Goods-converted.pdf",
     },
     {
         id: 9,
@@ -281,7 +281,7 @@ const caseStudies = [
         image: "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         description:
             "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce%20version%20upgrade%20(1).pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/E-commerce%20version%20upgrade%20(1).pdf",
     },
     {
         id: 10,
@@ -297,7 +297,7 @@ const caseStudies = [
         image: "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         description:
             "In 2.5 periods of month projects handling, we've generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion%20of%202%20x%20Shopify%20Stores-converted.pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Promotion%20of%202%20x%20Shopify%20Stores-converted.pdf",
     }
 ];
 

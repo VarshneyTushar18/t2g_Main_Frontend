@@ -380,28 +380,28 @@ const caseStudies = [
         "title": "Providing Favourable Results",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "Understand previous and existing marketing strategies adapted by client before Tech2Globe...",
-        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 2,
         "title": "Store Creation",
         "image": "/images/services/service-inner/store-creation1.jpg",
         "description": "Client wanted to drive awareness and engagement about their newly launched products and its benefits....",
-        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%20%20-(Store%20Creation)%20(1).pdf"
+        "docLink": "https://tech2globe.com/casestudies-docs1/Case%20Study%20%20-(Store%20Creation)%20(1).pdf"
     },
     {
         "id": 3,
         "title": "Amazon Store Creation",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "A store which should contain his all good ranking ASINs of the Wise brand and for different product types e.g. Product for Skin Care, Hair Care etc....",
-        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case%20Study%201%20(Store%20Creation)%20(1).pdf"
+        "docLink": "https://tech2globe.com/casestudies-docs1/Case%20Study%201%20(Store%20Creation)%20(1).pdf"
     },
     {
         "id": 4,
         "title": "Professional Amazon Store Front",
         "image": "/images/services/service-inner/New-Ecommerce-Store.jpg",
         "description": "Our core focus to create client&apos;s Amazon Store more effective by using trending layouts, visual appealing imagery and multimedia content...",
-        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/case-study-professional-amazon-store-front.pdf"
+        "docLink": "https://tech2globe.com/casestudies-docs1/case-study-professional-amazon-store-front.pdf"
     },
 ]
 

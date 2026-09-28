@@ -79,7 +79,7 @@ const caseStudies = [
         image: "/images/services/service-inner/data-extraction-services-bn-1.jpg",
         description:
             "Reviewing the customer account and classified the data....",
-        docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/Data%20Extraction%20services-converted%20(1).pdf",
+        docLink: "https://tech2globe.com/casestudies-docs1/Data%20Extraction%20services-converted%20(1).pdf",
     },
 ];
 

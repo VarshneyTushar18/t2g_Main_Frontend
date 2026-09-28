@@ -69,7 +69,7 @@ const caseStudies = [
     image: "/images/services/service-inner/data-processing-2-bn.jpg",
     description:
       "Data Processing is an upgrade over our data entry services, offered upon the requirement...",
-    docLink: "https://stagenew.tech2globe.tech/casestudies-docs1/CASE%20STUDY%20-%20Data%20Processing%20Case%20Study%20.pdf",
+    docLink: "https://tech2globe.com/casestudies-docs1/CASE%20STUDY%20-%20Data%20Processing%20Case%20Study%20.pdf",
   },
 ];
 
