@@ -1,3 +1,4 @@
+import { permanentRedirect } from "next/navigation";
 import Style from "./style.module.css";
 import PageHeader from "@/app/components/services/PageHeader/PageHeader";
 import BrandSection from "@/app/components/home/BrandSection/BrandSection";
@@ -378,6 +379,8 @@ const testimonials = [
 
 
 export default function AmazonReviewRating() {
+    permanentRedirect("/amazon-consulting-services");
+
     return (
 
         <>

@@ -1,11 +1,50 @@
-// app/components/CaseStudiesSection.jsx
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaArrowRight } from "react-icons/fa";
 import Style from "./ServiceCaseStudy.module.css";
 
 export default function CaseStudiesService({ caseStudies }) {
-  
+  const pathname = usePathname() || "";
+  const normalizedPath = pathname.toLowerCase();
+
+  const hiddenTabPatterns = [
+    "amazon",
+    "walmart",
+    "ecommerce",
+    "shopify",
+    "magento",
+    "woocommerce",
+    "bigcommerce",
+    "volusion",
+    "ebay",
+    "flipkart",
+    "myntra",
+    "meesho",
+    "noon",
+    "onbuy",
+    "marketplace",
+    "newegg",
+    "rakuten",
+    "overstock",
+    "bestbuy",
+    "cdiscount",
+    "wayfair",
+    "lazada",
+    "sharafdg",
+    "quick-commerce",
+    "costco",
+    "seller-reinstatement",
+  ];
+
+  const shouldHideCaseStudies = hiddenTabPatterns.some((pattern) =>
+    normalizedPath.includes(pattern)
+  );
+
+  if (shouldHideCaseStudies) return null;
+
   return (
     <section
       className="container cartFeature portfolio inner-pagE-Content case-studies py-5"

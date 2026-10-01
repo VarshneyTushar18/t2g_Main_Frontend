@@ -11,7 +11,7 @@ import { FaChartBar, FaDatabase, FaFolderOpen, FaImages, FaPoll, FaUserPlus } fr
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 
 export const metadata = {
-    title: "Web Data Extraction Services | AI-Powered Scraping & Structured Data Solutions",
+    title: "Data Extraction Services | AI-Powered Scraping & Structured Data Solutions",
     description:
         "Extract high-value data at scale with Tech2Globe's AI-powered web data extraction services. We use intelligent scraping technology to gather, clean, and structure web data — delivering actionable insights that fuel smarter business decisions.",
     keywords: [
@@ -22,7 +22,7 @@ export const metadata = {
         "Best Data Extraction Services"
     ],
     openGraph: {
-        title: "Web Data Extraction Services | AI-Powered Scraping & Structured Data Solutions",
+        title: "Data Extraction Services | AI-Powered Scraping & Structured Data Solutions",
         siteName: "Tech2Globe Web Solutions LLP",
         description:
             "Extract high-value data at scale with Tech2Globe's AI-powered web data extraction services. We use intelligent scraping technology to gather, clean, and structure web data — delivering actionable insights that fuel smarter business decisions.",
@@ -30,7 +30,7 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Web Data Extraction Services | AI-Powered Scraping & Structured Data Solutions",
+        title: "Data Extraction Services | AI-Powered Scraping & Structured Data Solutions",
         description:
             "Extract high-value data at scale with Tech2Globe's AI-powered web data extraction services. We use intelligent scraping technology to gather, clean, and structure web data — delivering actionable insights that fuel smarter business decisions."
     },
