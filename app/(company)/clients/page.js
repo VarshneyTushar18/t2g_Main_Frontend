@@ -67,7 +67,7 @@ const clients = [
   { img: "/images/clients/clientpage/vantagevista.png", title: "Vantage Vista" },
   { img: "/images/clients/clientpage/windsorone.png", title: "Windsor One" },
   { img: "/images/clients/clientpage/follett-logo.png", title: "Folllett" },
-  { img: "/images/clients/clientpage/amazon-usa.png", title: "Amazon" },
+  // { img: "/images/clients/clientpage/amazon-usa.png", title: "Amazon" },
   { img: "/images/clients/clientpage/aquatech.png", title: "Aquatech" },
   { img: "/images/clients/clientpage/cantabil.png", title: "Cantabil" },
   { img: "/images/clients/clientpage/bluebird.png", title: "Bluebird" },

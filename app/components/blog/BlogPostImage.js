@@ -67,8 +67,6 @@ export default function BlogPostImage({
         src={src}
         alt={alt}
         title={titleAttr || undefined}
-        width={480}
-        height={240}
         className={className}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
@@ -113,8 +111,7 @@ export default function BlogPostImage({
       src={src}
       alt={alt}
       title={titleAttr || undefined}
-      width={480}
-      height={240}
+      fill
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       loading={priority ? undefined : "lazy"}
       priority={priority}

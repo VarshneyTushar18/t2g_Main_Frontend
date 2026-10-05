@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { blogPostHref, stripHtml, formatBlogListDate } from "@/lib/blogApi";
+import BlogPostImage from "@/app/components/blog/BlogPostImage";
 import Style from "@/app/blogs/blogs.module.css";
 
-export default function BlogCard({ post }) {
+export default function BlogCard({ post, priority = false }) {
   const href = blogPostHref(post);
   const title = stripHtml(post.title?.rendered || "");
   const excerpt = stripHtml(post.excerpt?.rendered || "");
@@ -15,12 +16,14 @@ export default function BlogCard({ post }) {
     <article className={Style.card}>
       <Link href={href} className={Style.cardImageWrap} aria-label={title}>
         {image ? (
-          <div
+          <BlogPostImage
+            post={post}
+            variant="card"
+            priority={priority}
             className={Style.cardImage}
-            style={{ backgroundImage: `url(${image})` }}
           />
         ) : (
-          <div className={Style.cardImagePlaceholder} />
+          <div className={Style.cardImagePlaceholder} aria-hidden="true" />
         )}
       </Link>
       <div className={Style.cardBody}>
