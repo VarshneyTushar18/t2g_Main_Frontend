@@ -643,13 +643,13 @@ export default function AmazonSellerCentralManagement() {
 
                                                     <div className="amazon-btn text-light bg-danger rounded-0-list">
 
-                                                        <a href="https://www.amazon.com/dp/B076TGSDYH#aplus3p_feature_div" className="btn" target="_blank">Sample 1</a>
+                                                        Sample 1
 
-                                                        <a href="https://www.amazon.com/dp/B078GXZBFF#dpx-aplus-3p-product-description_feature_div" className="btn" target="_blank">Sample 2</a>
+                                                        Sample 2
 
-                                                        <a href="https://www.amazon.com/dp/B07GT7XZ6C#dpx-aplus-3p-product-description_feature_div" className="btn" target="_blank">Sample 3</a>
+                                                        Sample 3
 
-                                                        <a href="https://www.amazon.com/dp/B01M3XPZCU#dpx-aplus-3p-product-description_feature_div" className="btn" target="_blank">Sample 4</a>
+                                                        Sample 4
 
                                                     </div>
 
@@ -769,13 +769,13 @@ export default function AmazonSellerCentralManagement() {
 
                                                     <div className="amazon-btn text-light bg-danger rounded-0-list">
 
-                                                        <a href="https://www.amazon.com/dp/B076TGSDYH#aplus3p_feature_div" className="btn" target="_blank">Sample 1</a>
+                                                        Sample 1
 
-                                                        <a href="https://www.amazon.com/dp/B078GXZBFF#dpx-aplus-3p-product-description_feature_div" className="btn" target="_blank">Sample 2</a>
+                                                        Sample 2
 
-                                                        <a href="https://www.amazon.com/dp/B07GT7XZ6C#dpx-aplus-3p-product-description_feature_div" className="btn" target="_blank">Sample 3</a>
+                                                        Sample 3
 
-                                                        <a href="https://www.amazon.com/dp/B01M3XPZCU#dpx-aplus-3p-product-description_feature_div" className="btn" target="_blank">Sample 4</a>
+                                                        Sample 4
 
                                                     </div>
 

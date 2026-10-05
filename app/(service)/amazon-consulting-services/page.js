@@ -876,80 +876,74 @@ export default function AmazonConsulting() {
                                 </thead>
                                 <tbody className="mytbody">
                                     <tr>
-                                        <td><a href="https://www.amazon.com/dp/B07M8VYY4L" className="mylink">https://www.amazon.com/dp/B07M8VYY4L</a>
+                                        <td>B07M8VYY4L
                                         </td>
-                                        <td><a href="https://www.amazon.com/dp/B07FM6DPMG" className="mylink">https://www.amazon.com/dp/B09J3PMRFX</a>
+                                        <td>B09J3PMRFX
                                         </td>
-                                        <td><a href="https://www.amazon.com/tulimed" className="mylink">https://www.amazon.com/lilcuddlers</a></td>
-                                        <td><a href="https://www.amazon.in/dp/B01M06ICNA" className="mylink">https://www.amazon.in/dp/B01M06ICNA</a>
+                                        <td>lilcuddlers</td>
+                                        <td>B01M06ICNA
                                         </td>
-                                        <td><a href="https://www.amazon.in/dp/B078HWPJSJ" className="mylink"> https://www.amazon.in/dp/B078HWPJSJ</a>
+                                        <td> B078HWPJSJ
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="https://www.amazon.co.uk/dp/B00IVNC114"
-                                            className="mylink">https://www.amazon.co.uk/dp/B00IVNC114</a></td>
-                                        <td><a href="https://www.amazon.in/dp/B07KKM37T4" className="mylink"> https://www.amazon.com/dp/B0753ZWYKX</a>
+                                        <td>B00IVNC114</td>
+                                        <td> B0753ZWYKX
                                         </td>
-                                        <td><a href="https://www.amazon.com/stores/page/A6347872-5FA2-4541-90CB-E2386113006F"
-                                            className="mylink">https://www.amazon.com/stores/page/https://www.amazon.com/mysticsilver</a></td>
-                                        <td><a href="https://www.amazon.co.uk/dp/B01N5227U7" className="mylink">https://www.amazon.co.uk/dp/B01N5227U7
-                                        </a></td>
-                                        <td><a href="https://www.amazon.co.uk/dp/B01BGBJ8Y0"
-                                            className="mylink">https://www.amazon.co.uk/dp/B01BGBJ8Y0</a></td>
+                                        <td>https</td>
+                                        <td>B01N5227U7
+                                        </td>
+                                        <td>B01BGBJ8Y0</td>
                                     </tr>
                                     <tr>
-                                        <td><a href="https://www.amazon.de/dp/B07G8MT1C9" className="mylink">https://www.amazon.de/dp/B07G8MT1C9</a>
+                                        <td>B07G8MT1C9
                                         </td>
-                                        <td><a href="https://www.amazon.com/dp/B00E1P4BRS" className="mylink">https://www.amazon.com/dp/B097CXQWPN</a>
+                                        <td>B097CXQWPN
                                         </td>
-                                        <td><a href="https://www.amazon.com/lemirch" className="mylink">https://www.amazon.com/aquaeasy </a></td>
-                                        <td><a href="https://www.amazon.com/dp/B073DLZWX7" className="mylink">https://www.amazon.com/dp/B073DLZWX7
-                                        </a></td>
-                                        <td><a href="https://www.amazon.co.uk/dp/B00AYNRLFA" className="mylink">https://www.amazon.co.uk/dp/B00AYNRLFA
-                                        </a></td>
+                                        <td>aquaeasy </td>
+                                        <td>B073DLZWX7
+                                        </td>
+                                        <td>B00AYNRLFA
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="https://www.amazon.in/dp/B078HWPJSJ" className="mylink">https://www.amazon.in/dp/B078HWPJSJ </a>
+                                        <td>B078HWPJSJ 
                                         </td>
-                                        <td><a href="https://www.amazon.com/dp/B07C7Q2R6D" className="mylink">https://www.amazon.com/dp/B09NTR2F1B</a>
+                                        <td>B09NTR2F1B
                                         </td>
-                                        <td><a
-                                            href="javascript:;">https://www.amazon.com/stores/Equi-Tape/page/49485A46-E078-43F8-95A2-1E75CE0B1B56?ref_=ast_bln</a>
+                                        <td>49485A46 E078 43F8 95A2 1E75CE0B1B56
                                         </td>
-                                        <td><a href="https://www.amazon.com/dp/B07LBDGXQ3" className="mylink">https://www.amazon.com/dp/B07LBDGXQ3</a>
+                                        <td>B07LBDGXQ3
                                         </td>
-                                        <td><a href="javascript:;">-</a></td>
+                                        <td>-</td>
                                     </tr>
                                     <tr>
-                                        <td><a href="https://www.amazon.co.uk/dp/B00548P1DE" className="mylink">https://www.amazon.co.uk/dp/B00548P1DE
-                                        </a></td>
-                                        <td><a href="https://www.amazon.co.uk/dp/B019VE5S98"
-                                            className="mylink">https://www.amazon.com/dp/B083HTQDJX</a></td>
-                                        <td><a href="javascript:;">https://www.amazon.com/kostrseggr</a></td>
-                                        <td><a href="https://www.amazon.fr/dp/B072FJXFBW" className="mylink">https://www.amazon.fr/dp/B072FJXFBW </a>
+                                        <td>B00548P1DE
                                         </td>
-                                        <td><a href="javascript:;">-</a></td>
+                                        <td>B083HTQDJX</td>
+                                        <td>kostrseggr</td>
+                                        <td>B072FJXFBW 
+                                        </td>
+                                        <td>-</td>
                                     </tr>
                                     <tr>
-                                        <td><a href="https://www.amazon.co.uk/dp/B01BGBJ8Y0" className="mylink">https://www.amazon.co.uk/dp/B01BGBJ8Y0
-                                        </a></td>
-                                        <td><a href="https://www.amazon.com/dp/B071FTW381" className="mylink">https://www.amazon.com/dp/B089CVC66G</a>
+                                        <td>B01BGBJ8Y0
                                         </td>
-                                        <td><a href="javascript:;">https://www.amazon.co.uk/bonsai2u</a></td>
-                                        <td><a href="javascript:;">-</a></td>
-                                        <td><a href="javascript:;">-</a></td>
+                                        <td>B089CVC66G
+                                        </td>
+                                        <td>bonsai2u</td>
+                                        <td>-</td>
+                                        <td>-</td>
                                     </tr>
                                     <tr>
-                                        <td><a href="https://www.amazon.ae/dp/B07RGTTJ4V" className="mylink">https://www.amazon.ae/dp/B07RGTTJ4V </a>
+                                        <td>B07RGTTJ4V 
                                         </td>
-                                        <td><a href="https://www.amazon.com/dp/B07QTCFLFC" className="mylink">https://www.amazon.com/dp/B09NLJV1LT</a>
+                                        <td>B09NLJV1LT
                                         </td>
-                                        <td><a
-                                            href="javascript:;">https://www.amazon.co.uk/stores/TranquilPlants/TranquilPlants/page/2B31F008-F9E0-4094-A34F-7BCE3C9504DF</a>
+                                        <td>TranquilPlants
                                         </td>
-                                        <td><a href="javascript:;">-</a></td>
-                                        <td><a href="javascript:;">-</a></td>
+                                        <td>-</td>
+                                        <td>-</td>
                                     </tr>
                                 </tbody>
                             </table>

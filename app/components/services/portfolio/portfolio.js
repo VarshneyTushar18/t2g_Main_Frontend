@@ -96,9 +96,14 @@ function PortfolioGrid({ items }) {
       "";
 
     if (!rawLink) return "";
-    return rawLink.startsWith("http")
+    const normalized = rawLink.startsWith("http")
       ? rawLink
       : `https://${rawLink}`;
+    // Block outbound Amazon marketplace redirects
+    if (/https?:\/\/([^/]*\.)?(amazon\.|amzn\.to|sellercentral\.amazon|advertising\.amazon)/i.test(normalized)) {
+      return "";
+    }
+    return normalized;
   };
 
   // ✅ Normalize IMAGE (FIXED ISSUE)

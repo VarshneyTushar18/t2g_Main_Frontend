@@ -73,32 +73,26 @@ const portfolio = [
         items: [
             {
                 title: "Alvish",
-                link: "https://www.amazon.com/dp/B07M8VYY4L",
                 img: "/images/services/portfolio-img/alvish.jpg",
             },
             {
                 title: "Teliaoils",
-                link: "https://www.amazon.co.uk/dp/B00IVNC114/",
                 img: "/images/services/portfolio-img/teliaoils.jpg",
             },
             {
                 title: "Joe Kitchen",
-                link: "https://www.amazon.de/dp/B07G8MT1C9",
                 img: "/images/services/portfolio-img/joejis-kitchen.jpg",
             },
             {
                 title: "Elegent",
-                link: "https://www.amazon.in/dp/B078HWPJSJ",
                 img: "/images/services/portfolio-img/elegant.jpg",
             },
             {
                 title: "Jabra",
-                link: "https://www.amazon.co.uk/dp/B00548P1DE",
                 img: "/images/services/portfolio-img/jabra.jpg",
             },
             {
                 title: "Logitech",
-                link: "https://www.amazon.co.uk/dp/B01BGBJ8Y0",
                 img: "/images/services/portfolio-img/logitech.jpg",
             },
         ],
@@ -108,37 +102,30 @@ const portfolio = [
         items: [
             {
                 title: "Hopwater",
-                link: "https://www.amazon.com/dp/B07FM6DPMG",
                 img: "/images/services/portfolio-img/hopwater.jpg",
             },
             {
                 title: "Djmate",
-                link: "https://www.amazon.in/dp/B07KKM37T4",
                 img: "/images/services/portfolio-img/djmate.jpg",
             },
             {
                 title: "Glomania",
-                link: "https://www.amazon.com/dp/B00E1P4BRS",
                 img: "/images/services/portfolio-img/glomania.jpg",
             },
             {
                 title: "Greenyi",
-                link: "https://www.amazon.com/dp/B07C7Q2R6D",
                 img: "/images/services/portfolio-img/greenyi.jpg",
             },
             {
                 title: "Lesenz",
-                link: "https://www.amazon.co.uk/dp/B019VE5S98",
                 img: "/images/services/portfolio-img/lesenz.jpg",
             },
             {
                 title: "K-Linda",
-                link: "https://www.amazon.com/dp/B071FTW381",
                 img: "/images/services/portfolio-img/k-linda.jpg",
             },
             {
                 title: "CHZ",
-                link: "https://www.amazon.com/dp/B07QTCFLFC",
                 img: "/images/services/portfolio-img/chz.jpg",
             },
         ],
@@ -148,17 +135,14 @@ const portfolio = [
         items: [
             {
                 title: "Tulimed",
-                link: "https://www.amazon.com/tulimed",
                 img: "/images/services/portfolio-img/tulimed-store.jpg",
             },
             {
                 title: "Weavely",
-                link: "https://www.amazon.com/stores/page/A6347872-5FA2-4541-90CB-E2386113006F",
                 img: "/images/services/portfolio-img/weavely-store.jpg",
             },
             {
                 title: "Le Mirch",
-                link: "https://www.amazon.com/lemirch",
                 img: "/images/services/portfolio-img/le-mirch-store.jpg",
             },
         ],
@@ -168,12 +152,10 @@ const portfolio = [
         items: [
             {
                 title: "Demarkt",
-                link: "https://www.amazon.co.uk/dp/B01N5227U7",
                 img: "/images/services/portfolio-img/demarkt.jpg",
             },
             {
                 title: "Maxboost",
-                link: "https://www.amazon.com/dp/B073DLZWX7",
                 img: "/images/services/portfolio-img/maxboost.jpg",
             },
             {
@@ -183,7 +165,6 @@ const portfolio = [
             },
             {
                 title: "720° Dgree",
-                link: "https://www.amazon.fr/dp/B072FJXFBW",
                 img: "/images/services/portfolio-img/720-dgree.jpg",
             },
         ]
@@ -193,17 +174,14 @@ const portfolio = [
         items: [
             {
                 title: "Elegent",
-                link: "https://www.amazon.in/dp/B078HWPJSJ",
                 img: "/images/services/portfolio-img/elegant.jpg",
             },
             {
                 title: "Logitech",
-                link: "https://www.amazon.co.uk/dp/B01BGBJ8Y0",
                 img: "/images/services/portfolio-img/logitech.jpg",
             },
             {
                 title: "Belkin",
-                link: "https://www.amazon.co.uk/dp/B00AYNRLFA",
                 img: "/images/services/portfolio-img/belkin.jpg",
             },
         ],

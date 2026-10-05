@@ -794,53 +794,53 @@ export default function BusinessManagementAmazon() {
                                             </thead>
                                             <tbody class="mytbody">
                                                 <tr>
-                                                    <td><a href="https://www.amazon.com/dp/B07M8VYY4L" class="mylink">https://www.amazon.com/dp/B07M8VYY4L</a></td>
-                                                    <td><a href="https://www.amazon.com/dp/B07FM6DPMG" class="mylink">https://www.amazon.com/dp/B07FM6DPMG</a></td>
-                                                    <td><a href="https://www.amazon.com/tulimed" class="mylink">https://www.amazon.com/tulimed </a></td>
-                                                    <td><a href="https://www.amazon.in/dp/B01M06ICNA" class="mylink">https://www.amazon.in/dp/B01M06ICNA</a></td>
-                                                    <td><a href="https://www.amazon.in/dp/B078HWPJSJ" class="mylink"> https://www.amazon.in/dp/B078HWPJSJ</a> </td>
+                                                    <td>B07M8VYY4L</td>
+                                                    <td>B07FM6DPMG</td>
+                                                    <td>tulimed </td>
+                                                    <td>B01M06ICNA</td>
+                                                    <td> B078HWPJSJ </td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="https://www.amazon.co.uk/dp/B00IVNC114" class="mylink">https://www.amazon.co.uk/dp/B00IVNC114</a></td>
-                                                    <td><a href="https://www.amazon.in/dp/B07KKM37T4" class="mylink"> https://www.amazon.in/dp/B07KKM37T4</a></td>
-                                                    <td><a href="https://www.amazon.com/stores/page/A6347872-5FA2-4541-90CB-E2386113006F" class="mylink">https://www.amazon.com/stores/page/<br />A6347872-5FA2-4541-90CB-E2386113006F</a></td>
-                                                    <td><a href="https://www.amazon.co.uk/dp/B01N5227U7" class="mylink">https://www.amazon.co.uk/dp/B01N5227U7 </a></td>
-                                                    <td><a href="https://www.amazon.co.uk/dp/B01BGBJ8Y0" class="mylink">https://www.amazon.co.uk/dp/B01BGBJ8Y0</a></td>
+                                                    <td>B00IVNC114</td>
+                                                    <td> B07KKM37T4</td>
+                                                    <td>A6347872 5FA2 4541 90CB E2386113006F</td>
+                                                    <td>B01N5227U7 </td>
+                                                    <td>B01BGBJ8Y0</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="https://www.amazon.de/dp/B07G8MT1C9" class="mylink">https://www.amazon.de/dp/B07G8MT1C9</a></td>
-                                                    <td><a href="https://www.amazon.com/dp/B00E1P4BRS" class="mylink">https://www.amazon.com/dp/B00E1P4BRS</a></td>
-                                                    <td><a href="https://www.amazon.com/lemirch" class="mylink">https://www.amazon.com/lemirch </a></td>
-                                                    <td><a href="https://www.amazon.com/dp/B073DLZWX7" class="mylink">https://www.amazon.com/dp/B073DLZWX7 </a></td>
-                                                    <td><a href="https://www.amazon.co.uk/dp/B00AYNRLFA" class="mylink">https://www.amazon.co.uk/dp/B00AYNRLFA </a></td>
+                                                    <td>B07G8MT1C9</td>
+                                                    <td>B00E1P4BRS</td>
+                                                    <td>lemirch </td>
+                                                    <td>B073DLZWX7 </td>
+                                                    <td>B00AYNRLFA </td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="https://www.amazon.in/dp/B078HWPJSJ" class="mylink">https://www.amazon.in/dp/B078HWPJSJ </a></td>
-                                                    <td><a href="https://www.amazon.com/dp/B07C7Q2R6D" class="mylink">https://www.amazon.com/dp/B07C7Q2R6D</a></td>
-                                                    <td><a href="#">-</a></td>
-                                                    <td><a href="https://www.amazon.com/dp/B07LBDGXQ3" class="mylink">https://www.amazon.com/dp/B07LBDGXQ3</a></td>
-                                                    <td><a href="#">-</a></td>
+                                                    <td>B078HWPJSJ </td>
+                                                    <td>B07C7Q2R6D</td>
+                                                    <td>-</td>
+                                                    <td>B07LBDGXQ3</td>
+                                                    <td>-</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="https://www.amazon.co.uk/dp/B00548P1DE" class="mylink">https://www.amazon.co.uk/dp/B00548P1DE </a></td>
-                                                    <td><a href="https://www.amazon.co.uk/dp/B019VE5S98" class="mylink">https://www.amazon.co.uk/dp/B019VE5S98</a></td>
-                                                    <td><a href="#">-</a></td>
-                                                    <td><a href="https://www.amazon.fr/dp/B072FJXFBW" class="mylink">https://www.amazon.fr/dp/B072FJXFBW </a></td>
-                                                    <td><a href="#">-</a></td>
+                                                    <td>B00548P1DE </td>
+                                                    <td>B019VE5S98</td>
+                                                    <td>-</td>
+                                                    <td>B072FJXFBW </td>
+                                                    <td>-</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="https://www.amazon.co.uk/dp/B01BGBJ8Y0" class="mylink">https://www.amazon.co.uk/dp/B01BGBJ8Y0 </a></td>
-                                                    <td><a href="https://www.amazon.com/dp/B071FTW381" class="mylink">https://www.amazon.com/dp/B071FTW381</a></td>
-                                                    <td><a href="#">-</a></td>
-                                                    <td><a href="#">-</a></td>
-                                                    <td><a href="#">-</a></td>
+                                                    <td>B01BGBJ8Y0 </td>
+                                                    <td>B071FTW381</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="https://www.amazon.ae/dp/B07RGTTJ4V" class="mylink">https://www.amazon.ae/dp/B07RGTTJ4V </a></td>
-                                                    <td><a href="https://www.amazon.com/dp/B07QTCFLFC" class="mylink">https://www.amazon.com/dp/B07QTCFLFC</a></td>
-                                                    <td><a href="#">-</a></td>
-                                                    <td><a href="#">-</a></td>
-                                                    <td><a href="#">-</a></td>
+                                                    <td>B07RGTTJ4V </td>
+                                                    <td>B07QTCFLFC</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
                                                 </tr>
                                             </tbody>
                                         </table>
