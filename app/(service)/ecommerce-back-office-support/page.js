@@ -31,7 +31,7 @@ import {
   FaClock,
   FaGlobe,
 } from "react-icons/fa";
-import { SiShopify, SiWoo, SiWalmart, SiEbay, SiEtsy, SiBigcommerce } from "react-icons/si";
+import { SiShopify, SiWoo, SiEbay, SiEtsy, SiBigcommerce } from "react-icons/si";
 
 export const metadata = {
   title: "eCommerce Accounting & Bookkeeping Services | Tech2Globe",
@@ -233,7 +233,7 @@ const platforms = [
   { name: "Amazon", icon: <FaAmazon size={40} /> },
   { name: "WooCommerce", icon: <SiWoo size={40} /> },
   { name: "Magento", icon: <FaShoppingBag size={40} /> },
-  { name: "Walmart", icon: <SiWalmart size={40} /> },
+  { name: "Walmart", icon: <FaStore size={40} /> },
   { name: "eBay", icon: <SiEbay size={40} /> },
   { name: "Etsy", icon: <SiEtsy size={40} /> },
   { name: "BigCommerce", icon: <SiBigcommerce size={40} /> },
