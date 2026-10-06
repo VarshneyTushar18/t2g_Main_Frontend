@@ -131,13 +131,6 @@ export default function AssociationsAscription() {
 
                   <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
                     <div className={Style.AssociationsCard}>
-                      <img src="images/associations-ascription/amazone-seller.jpg" alt="Certified AMAZON Seller Service Provider"/>
-                      <h3>Certified AMAZON Seller Service Provider</h3>
-                    </div>
-                  </div>
-
-                  <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
-                    <div className={Style.AssociationsCard}>
                       <img src="images/associations-ascription/flipkart-ads.jpg" alt="Certified FLIPKART ADS Seller Service Provider"/>
                       <h3>Certified FLIPKART ADS Seller Service Provider</h3>
                     </div>
@@ -154,20 +147,6 @@ export default function AssociationsAscription() {
                     <div className={Style.AssociationsCard}>
                       <img src="images/associations-ascription/awards-3.jpg" alt="Certified SHOPIFY Service Provider"/>
                       <h3>Certified SHOPIFY Service Provider</h3>
-                    </div>
-                  </div>
-
-                  <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
-                    <div className={Style.AssociationsCard}>
-                      <img src="images/associations-ascription/awards-4.jpg" alt="Certified AMAZON SPN Service Provider"/>
-                      <h3>Certified AMAZON SPN Service Provider</h3>
-                    </div>
-                  </div>
-
-                  <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 pb-5">
-                    <div className={Style.AssociationsCard}>
-                      <img src="images/associations-ascription/awards-5.jpg" alt="Certified AMAZON SPONSORED PRODUCT Service Provider"/>
-                      <h3>Certified AMAZON SPONSORED PRODUCT Service Provider</h3>
                     </div>
                   </div>
 
