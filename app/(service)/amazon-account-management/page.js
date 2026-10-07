@@ -368,7 +368,7 @@ export default function AmazonAccountManagement() {
                                 <p>While account maintenance through Amazon&apos;s Seller and Vendor Central appears to be simple, it is not. Given the complicated and changing Amazon rules and guidelines, it needs strategic and thorough management. Dedicated, experienced, and trained employees are required to manage a seller and vendor account in a way that enhances product visibility/exposure, brand positioning, and sales. Tech2Globe, as an Amazon virtual assistant, can help you with this.</p>
                             </div>
                             <div className={Style.ContentDiv}>
-                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/amazon-icon.png" alt="" className={Style.InnerIcon} /> Account Profitability Optimization</h5>
+                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/clicker.png" alt="" className={Style.InnerIcon} /> Account Profitability Optimization</h5>
                                 <p>
                                     Our <strong>Amazon account management services</strong> concentrate on simplifying and managing processes and optimizing your account for increased product exposure and revenue. We will always help you in all the processes including shop creation, product listing, day-to-day Seller Central operations, catalog and inventory management, buyer–seller interactions management, pricing & delivering sales growth analytics.
                                 </p>

@@ -445,7 +445,7 @@ export default function AmazonProductCatalog() {
                                 </p>
 
                                 <h2 className={`${Style.headingText} pt-4 pb-3`}>
-                                    <img className={`${Style.innerIcons} lazyload pr-20 content-imag`} src="images/services/amazon-icon.png" alt="A+ Cataloging" />
+                                    <img className={`${Style.innerIcons} lazyload pr-20 content-imag`} src="images/services/clicker.png" alt="A+ Cataloging" />
                                     A+ CatalogingCataloging Services Offered by Tech2Globe
                                 </h2>
                                 <div className={`${Style.PageAccordion} accordion`} id="accordionSection1">

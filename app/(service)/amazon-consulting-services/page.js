@@ -832,21 +832,24 @@ export default function AmazonConsulting() {
                             <img src="/images/services/service-inner/11-11.jpg" alt="Amazon Store" className="img-fluid pb-3" />
                             <img src="/images/services/service-inner/2-2.jpg" alt="Amazon Store" className="img-fluid pb-3" />
                             <img src="/images/services/service-inner/26-26.jpg" alt="Amazon Store" className="img-fluid pb-3" />
+                            <img src="/images/services/service-inner/19-19.jpg" alt="PPC Results" className="img-fluid pb-3" />
+                            <img src="/images/services/service-inner/20-20.jpg" alt="PPC Results" className="img-fluid pb-3" />
+                            
                         </div>
 
                         <div className={`${Style.ContentImage} col-md-4`}>
                             <h3 className="text-center text-danger pb-3">PPC Results</h3>
-                            <img src="/images/services/service-inner/19-19.jpg" alt="PPC Results" className="img-fluid pb-3" />
-                            <img src="/images/services/service-inner/20-20.jpg" alt="PPC Results" className="img-fluid pb-3" />
+                            
                             <img src="/images/services/service-inner/21-21.jpg" alt="PPC Results" className="img-fluid pb-3" />
                             <img src="/images/services/service-inner/22-22.jpg" alt="PPC Results" className="img-fluid pb-3" />
                             <img src="/images/services/service-inner/23-23.jpg" alt="PPC Results" className="img-fluid pb-3" />
                             <img src="/images/services/service-inner/24-24.jpg" alt="PPC Results" className="img-fluid pb-3" />
+                            <img src="/images/services/service-inner/12-12.jpg" alt="A+ Cataloguing" className="img-fluid pb-3" />
                         </div>
 
                         <div className={`${Style.ContentImage} col-md-4`}>
                             <h3 className="text-center text-danger pb-3">A+ Cataloguing</h3>
-                            <img src="/images/services/service-inner/12-12.jpg" alt="A+ Cataloguing" className="img-fluid pb-3" />
+                            
                             <img src="/images/services/service-inner/14-14.jpg" alt="A+ Cataloguing" className="img-fluid pb-3" />
                             <img src="/images/services/service-inner/15-15.jpg" alt="A+ Cataloguing" className="img-fluid pb-3" />
                             <img src="/images/services/service-inner/16-16.jpg" alt="A+ Cataloguing" className="img-fluid pb-3" />
@@ -857,7 +860,7 @@ export default function AmazonConsulting() {
                 </div>
             </div>
 
-            <div className="pt-5 pb-3">
+            {/* <div className="pt-5 pb-3">
                 <div className="container">
                     <div className="row">
                         <h2 className="main-heading mb-4 text-danger text-center">
@@ -950,7 +953,7 @@ export default function AmazonConsulting() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
             <div className="pt-5 pb-5">

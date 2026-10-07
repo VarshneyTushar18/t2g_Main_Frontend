@@ -426,7 +426,7 @@ export default function AmazonDSP() {
                             </div>
 
                             <div className={Style.ContentDiv}>
-                                <h5 className="pt-2 pb-2"><img src="/images/services/service-inner/amazon-icon.png" alt="" className={Style.InnerIcon} /> Amazon A+ Content: Elevate Your Product with Enhanced Amazon A+ Content</h5>
+                                <h5 className="pt-2 pb-2"><img src="/images/services/service-inner/clicker.png" alt="" className={Style.InnerIcon} /> Amazon A+ Content: Elevate Your Product with Enhanced Amazon A+ Content</h5>
                                 <p>Make use of Tech2Globe&apos;s considerable knowledge and skill in providing Amazon A+ content writing services and developing unique Amazon-enhanced brand content design for eCommerce businesses selling on Amazon. Our professionals create fascinating, engaging content that gives online customers all the information they need to make a purchase. As part of our <strong>A+ content Amazon</strong> services, we develop everything from click-to-enlarge photos and extensive product descriptions to comparison charts and buying recommendations.</p>
                                 <p>Our professionals follow Amazon&apos;s criteria to produce Amazon A+ cataloging pages, include keyword-rich material, and ensure that photos are the proper size, resolution, and style, allowing you to stand out from the crowd and enhance conversion rates. We at Tech2Globe assist in creating extremely appealing, keyword-rich Amazon A+ cataloging pages that provide clear communication and meaningful search, resulting in increased sales and conversion rates.</p>
                             </div>

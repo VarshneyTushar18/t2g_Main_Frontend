@@ -232,7 +232,7 @@ export default function ecommercesupport() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12  mb-3">
                     <div className="card h-100 shadow-sm">
                       <div className="card-body text-center">
-                        <img src="images/services/service-inner/amazon_icon.png"  alt="Amazon Product Listing" />
+                        <img src="images/services/service-inner/clicker.png"  alt="Amazon Product Listing" />
                         <h5 className="card-title text-danger py-3 mb-2">Amazon Product Listing</h5>
                         <p className="card-text mb-2">Delivering a rich array of <Link href="/product-data-entry-services">Amazon product data entry services</Link>, Tech2Globe supports online retailers in growing their business online.</p>
                       </div>

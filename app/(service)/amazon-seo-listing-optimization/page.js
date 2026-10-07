@@ -538,7 +538,7 @@ export default function AmazonSeoListingOptimization() {
                             </div>
 
                             <div className={Style.ContentDiv}>
-                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/amazon-icon.png" alt="" className={Style.InnerIcon} /> Services For Amazon SEO</h5>
+                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/clicker.png" alt="" className={Style.InnerIcon} /> Services For Amazon SEO</h5>
 
                                 <p>The following are some of our Amazon SEO Services:</p>
 

@@ -368,7 +368,7 @@ export default function SellerReinstatement() {
                                 <p>You have all reasons to be concerned when your Amazon seller account is suspended; after all, if you can&apos;t sell, you can&apos;t make money. However, there are options available, such as suspension appeals. Although there is no one-size-fits-all answer for <strong>Amazon seller suspension</strong>, there are several crucial variables to consider when developing an appealing strategy that will improve your chances of being reinstated. At Tech2Globe, we specialize in reinstating suspended Amazon Seller Accounts.</p>
                             </div>
                             <div className={Style.ContentDiv}>
-                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/amazon-icon.png" alt="" className={Style.InnerIcon} /> Why Did Your Amazon Seller Account Get Suspend?</h5>
+                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/clicker.png" alt="" className={Style.InnerIcon} /> Why Did Your Amazon Seller Account Get Suspend?</h5>
                                 <p>If you have had your selling rights revoked, it is usually because of one of the following reasons.</p>
                                 <div className={`${Style.PageAccordion} accordion`} id="accordionSection1">
 

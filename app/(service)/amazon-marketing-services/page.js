@@ -179,12 +179,12 @@ const sidebarSections = [
 ];
 
 const certifications = [
-    { src: "/images/certifications/amazon-spn.png", alt: "Amazon SPN" },
+    // { src: "/images/certifications/amazon-spn.png", alt: "Amazon SPN" },
     { src: "/images/certifications/ebay.png", alt: "Ebay" },
     { src: "/images/certifications/flipkart.png", alt: "Flipkart" },
-    { src: "/images/certifications/AWS-Partner-Network.png", alt: "AWS Partner Network" },
-    { src: "/images/certifications/amazon-advertising-logo.png", alt: "Amazon Advertising" },
-    { src: "/images/certifications/tool-106.png", alt: "Amazon Global Selling" },
+    // { src: "/images/certifications/AWS-Partner-Network.png", alt: "AWS Partner Network" },
+    // { src: "/images/certifications/amazon-advertising-logo.png", alt: "Amazon Advertising" },
+    // { src: "/images/certifications/tool-106.png", alt: "Amazon Global Selling" },
     { src: "/images/certifications/cer-1.png", alt: "Dmca-protected" },
     { src: "/images/certifications/cer-2.png", alt: "Hubspot certified partner" },
     { src: "/images/certifications/cer-3.png", alt: "clutch-certified" },

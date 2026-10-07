@@ -366,13 +366,13 @@ export default function AmazonCopywriting() {
                                 </p>
                             </div>
                             <div className={Style.ContentDiv}>
-                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/amazon-icon.png" alt="" className={Style.InnerIcon} /> Our Copywriting Service for Amazon</h5>
+                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/clicker.png" alt="" className={Style.InnerIcon} /> Our Copywriting Service for Amazon</h5>
                                 <p>With thousands of items to select from, your listings must stand out and sell your products faster than your competitors. We use B+ content (above the fold material) to showcase the product&apos;s USPs in punchy bullet points. Additionally, there is A+ material below the fold to elaborate on the product and communicate the brand narrative.</p>
                                 <p>We have a thorough grasp of Amazon&apos;s platform and have collaborated with several different vendors. Our understanding goes beyond standard copywriting talents because we take the time to understand your product better than anybody else. For us, <strong>Amazon product listing copywriting</strong> is more than simply writing. The content we write is not only for Amazon; it is also for search engines. Because well-optimized Amazon listings display on search engine results pages. Drafting material with this in mind can help you generate sales not only from Amazon directly but also from a search engine like Google or Bing.</p>
                             </div>
 
                             <div className={Style.ContentDiv}>
-                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/amazon-icon.png" alt="" className={Style.InnerIcon} />What Can We Do to Assist You?</h5>
+                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/clicker.png" alt="" className={Style.InnerIcon} />What Can We Do to Assist You?</h5>
 
                                 <p>The following are the steps of our <strong>Amazon Copywriting</strong> process, which we are proud of:</p>
 
@@ -460,7 +460,7 @@ export default function AmazonCopywriting() {
                             </div>
 
                             <div className={Style.ContentDiv}>
-                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/amazon-icon.png" alt="" className={Style.InnerIcon} /> How Do We Help?</h5>
+                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/clicker.png" alt="" className={Style.InnerIcon} /> How Do We Help?</h5>
 
                                 <p>We will make sure to send the right message to your audience in a brand-consistent manner after we have a clear grasp of the market gap your product fills. Our primary aim is to provide a return on investment for your business within a few months of working on optimizing your account for Amazon&apos;s A9 ranking algorithm. When calculating your listing&apos;s rating, the A9 algorithm considers two factors: product listing optimization and organic sales velocity. Our <strong>Amazon Copywriting</strong> service aims to create <a href="/search-engine-optimization" className="text-decoration-underline fw-bold">search engine optimization</a> listings while maintaining a sense of user experience.</p>
 

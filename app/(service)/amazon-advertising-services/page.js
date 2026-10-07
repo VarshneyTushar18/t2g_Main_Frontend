@@ -465,7 +465,7 @@ export default function AmazonAdvertising() {
                                 <p>Learn more about our Amazon eCommerce advertising services, technological know-how, and a thorough understanding of e-commerce by scrolling down.</p>
                             </div>
                             <div className={Style.ContentDiv}>
-                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/amazon-icon.png" alt="" className={Style.InnerIcon} /> What Is Amazon Advertising Services and How Does It Work?</h5>
+                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/clicker.png" alt="" className={Style.InnerIcon} /> What Is Amazon Advertising Services and How Does It Work?</h5>
                                 <p>Amazon-sponsored ads are comparable to those on the Google Shopping Network. They are keyword-based and operate on a pay-per-click basis. When you run Amazon advertisements, you pay for your items to be highlighted or appear higher in search results for relevant terms. You may experiment with a variety of Amazon PPC campaign options, such as headline search advertisements, sponsored ads, product display ads, video ads, native ads, and more. Depending on the product type, market circumstances, demands, and other factors, you may select the most appropriate ones.</p>
                             </div>
 

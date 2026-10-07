@@ -366,7 +366,7 @@ export default function AmazonDSP() {
                                 <p>You will need an <strong>Amazon EBC consultant</strong> to deploy <strong>EBC Amazon</strong> who can control the content and visuals on each page to deliver your unique brand narrative while removing distractions and visual clutter. Amazon A Plus content provides unique opportunity to differentiate your brand and products from other competitors by utilizing rich media formats within the product description field.</p>
                             </div>
                             <div className={Style.ContentDiv}>
-                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/amazon-icon.png" alt="" className={Style.InnerIcon} /> Best Amazon EBC Services</h5>
+                                <h5 className="pt-3 pb-2"><img src="/images/services/service-inner/clicker.png" alt="" className={Style.InnerIcon} /> Best Amazon EBC Services</h5>
 
                                 <p><strong>Amazon rich content</strong> can increase traffic and sales conversions while also keeping users on your pages for longer. Your product display page may assist buyers in better comprehending your offers and answering more of their inquiries, resulting in increased sales and fewer returns.</p>
 

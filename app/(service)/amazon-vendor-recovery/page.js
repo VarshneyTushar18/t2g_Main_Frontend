@@ -182,7 +182,7 @@ export default function AmazonVendorRecovery() {
         <div className="container">
           <div className="row">
             <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-              <ServiceBanner imageSrc="/images/services/service-inner/amazon-vendor-banner.webp" />
+              <ServiceBanner imageSrc="/images/services/service-inner/amazon-vendor-banner-updated.jpg" />
               <div className={Style.ContentDiv}>
                 <h2 className="text-danger">Maximize Your Amazon Vendor Revenue with Tech2Globe</h2>
                 <p>Professionally managed end-to-end Amazon Vendor recovery, dispute management, and financial optimization</p>

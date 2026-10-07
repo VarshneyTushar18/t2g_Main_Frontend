@@ -417,7 +417,7 @@ export default function AmazonVendorCentralManagement() {
                                 </ul>
 
                                 <h2 className={`${Style.headingText} pb-3`}>
-                                    <img className={`${Style.innerIcons} lazyload pr-20 content-imag`} src="/images/services/service-inner/amazon-icon.png" alt="Amazon Vendor Central Premium A+ Content Support" />
+                                    <img className={`${Style.innerIcons} lazyload pr-20 content-imag`} src="/images/services/service-inner/clicker.png" alt="Amazon Vendor Central Premium A+ Content Support" />
                                     Amazon Vendor Central Premium A+ Content Support
                                 </h2>
                                 <p className="para-text">Improved user experiences, multimedia modules, and a fantastic purchase process can help your Amazon business convert more customers. A+ Product Detail Pages for Amazon that are well-optimized increase consumer engagement, brand value propositions, brand reputation guarantees, and encourage more significant ROIs.</p>
@@ -435,7 +435,7 @@ export default function AmazonVendorCentralManagement() {
                                 <p>Every customer of Tech2Globe benefits from cutting-edge technology, advanced industry practices, and day-to-day management by the top advertising brains in the industry. Our <strong>Amazon vendor central consultant</strong> works 24*7 to eliminate vulnerabilities and improve the popularity and performance of your eStore.</p>
 
                                 <h2 className={`${Style.headingText} pb-3`}>
-                                    <img className={`${Style.innerIcons} lazyload pr-20 content-imag`} src="/images/services/amazon-icon.png" alt="Our Vendor Central Management Services For Amazon" />
+                                    <img className={`${Style.innerIcons} lazyload pr-20 content-imag`} src="/images/services/clicker.png" alt="Our Vendor Central Management Services For Amazon" />
                                     Our Vendor Central Management Services For Amazon
                                 </h2>
 

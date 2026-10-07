@@ -421,7 +421,7 @@ export default function StoreCreation() {
                                 <p>Our <strong>Amazon store creation consultants</strong> design Amazon Web Stores that allow merchants to communicate their brands&apos; stories and sell their wares. They provide <strong>Amazon store optimization services</strong> to meet the demands of <strong>Amazon store SEO</strong>. We create bespoke-designed brand shops that cover the most selling area on the Amazon platform. We help create custom URL and page statistics to measure the growth in sales. Our <strong>Amazon store consultant</strong> can assist you in more successfully creating your Amazon Store by finishing the Amazon template design by using trending layouts, aesthetically attractive graphics, and multimedia content.</p>
                             </div>
                             <div className={Style.ContentDiv}>
-                                <h5><Image src="/images/services/service-inner/amazon-icon.png" alt="" width={30} height={30} className={Style.ImgIco} /> Our Store Creation Services</h5>
+                                <h5><Image src="/images/services/service-inner/clicker.png" alt="" width={30} height={30} className={Style.ImgIco} /> Our Store Creation Services</h5>
                                 <p>When you choose Tech2Globe to set up and maintain your Amazon Store, you get a comprehensive set of deliverables to help you achieve maximum success on Amazon. It can help you improve sales and revenue while also increasing your online presence in Amazon search results. Here are our Amazon Store management services:</p>
 
                                 <div className={`${Style.PageAccordion} accordion`} id="accordionSection1">
@@ -470,7 +470,7 @@ export default function StoreCreation() {
                             </div>
 
                             <div className={Style.ContentDiv}>
-                                <h5><Image src="/images/services/service-inner/amazon-icon.png" alt="" width={30} height={30} className={Style.ImgIco} /> Why Should You Consider Amazon Store Management?</h5>
+                                <h5><Image src="/images/services/service-inner/clicker.png" alt="" width={30} height={30} className={Style.ImgIco} /> Why Should You Consider Amazon Store Management?</h5>
                                 <p>Are you pondering whether or not to invest in an <strong>Amazon store setup service in the USA</strong> for your business? There are several reasons to think about Amazon and an Amazon shop, mainly because the site handles 40% of all online transactions. Businesses are also investing in the creation of Amazon stores for the following reasons:</p>
 
                                 <div className={`${Style.PageAccordion} accordion`} id="accordionSection1">
@@ -519,7 +519,7 @@ export default function StoreCreation() {
                             </div>
 
                             <div className={Style.ContentDiv}>
-                                <h5 className="pt-3"><Image src="/images/services/service-inner/amazon-icon.png" alt="" width={30} height={30} className={Style.ImgIco} /> Why Choose Us?</h5>
+                                <h5 className="pt-3"><Image src="/images/services/service-inner/clicker.png" alt="" width={30} height={30} className={Style.ImgIco} /> Why Choose Us?</h5>
                                 <p>Seller Storefront adds flair to your brand and listings by enhancing your brand story and establishing a solid presence on the platform. An appealing and SEO-friendly store allows merchants to promote their products internationally and provide a multi-page buying experience, allowing them to enhance product exposure and conversion rates while also driving traffic with advertising. In terms of <strong>Amazon storefront design services</strong> in India, we are the finest.</p>
                                 <p>Our services have several beneficial points, resulting in a consistent increase in ROI and company sustainability. Feel free to discuss your Amazon business needs with us. Our experts can assist you with the <strong>Amazon store setup service in India</strong> or manage your Amazon Store, allowing you to improve your sales on the eCommerce platform.</p>
                             </div>
