@@ -777,7 +777,7 @@ export default function BusinessManagementAmazon() {
                             </div>
                         </div>
 
-                        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5">
+                        {/* <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5">
                             <div className="row">
                                 <div className={Style.ContentDiv}>
                                     <h2 className="text-danger text-center mt-4 mb-4">Tech2Globe Amazon Portfolio</h2>
@@ -848,7 +848,7 @@ export default function BusinessManagementAmazon() {
 
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
 
                     </div>

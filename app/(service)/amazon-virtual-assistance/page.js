@@ -71,7 +71,7 @@ const pageHeaderData = {
         "Get Amazon virtual assistants to run your store from start to finish.",
     buttonText: "Contact us",
     buttonLink: "/contact-us/",
-    backgroundImage: "/images/services/amazon-virtual-assistant-banner.png", // your banner image
+    backgroundImage: "/images/services/service-inner/amazon-virtual-assistant-banner-updated.webp", // your banner image
 };
 
 const resources = [
@@ -221,7 +221,7 @@ export default function AmazonVirtualAssistance() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                            <ServiceBanner pageName="Amazon Virtual Assistance" imageSrc="/images/services/service-inner/amazon-virtual-assistant-top-banner2.jpg" />
+                            <ServiceBanner pageName="Amazon Virtual Assistance" imageSrc="/images/services/service-inner/amazon-virtual-assistant-banner-updated.jpg" />
                             <div className={Style.ContentDiv}>
                                 <h3 className="pb-3">Experience efficient support with Amazon&apos;s Virtual Assistants</h3>
                                 <p>Get Amazon virtual assistants to run your store from start to finish. Get prompt, cost-effective, and seamless assistance with inventory management, customer service, listing optimization, FBA administration, product photo editing , data entry, and other routine e-store maintenance tasks. Amazon VAs can also be hired for specialized duties such as product sourcing, Amazon Advertising, and Enhanced Brand Content. Our Amazon virtual assistant services are designed to give immediate business value while reducing redundancy. With Tech2Globe, you may take advantage of the most valuable Amazon VA services without any hidden information or terms of service!</p>

@@ -266,7 +266,7 @@ export default function AmazonPPCServices() {
                                 <ul className={Style.partners}>
                                     <li><img src="/images/clients/hp.png" alt="tool-logo" width="300px" className={Style.partner} /></li>
                                     <li><img src="/images/clients/nike.png" alt="tool-logo" width="300px" className={Style.partner} /></li>
-                                    <li><img src="/images/clients/amazon-usa.png" alt="tool-logo" width="300px" className={Style.partner} /></li>
+                                    {/* <li><img src="/images/clients/amazon-usa.png" alt="tool-logo" width="300px" className={Style.partner} /></li> */}
                                     <li><img src="/images/clients/mahmayi.png" alt="tool-logo" width="300px" className={Style.partner} /></li>
                                     <li><img src="/images/clients/abrams.png" alt="tool-logo" width="300px" className={Style.partner} /></li>
                                     <li><img src="/images/clients/creative-arcades.png" alt="tool-logo" width="300px" className={Style.partner} /></li>
@@ -592,7 +592,7 @@ export default function AmazonPPCServices() {
             
 
             <ClientPortfolio clients={portfolioClients} />
-            <CaseStudiesService caseStudies={caseStudies} />
+            {/* <CaseStudiesService caseStudies={caseStudies} /> */}
             <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />
         </>

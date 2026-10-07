@@ -520,7 +520,7 @@ export default function AmazonDSP() {
             
 
             <ClientPortfolio clients={portfolioClients} />
-            <CaseStudiesService caseStudies={caseStudies} />
+            {/* <CaseStudiesService caseStudies={caseStudies} /> */}
             <ClientSlider testimonials={testimonials} />
         </>
     )
