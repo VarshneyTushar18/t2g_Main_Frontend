@@ -150,7 +150,7 @@ const usefulLinks = [
     { id: 7, name: "Amazon Account Management", path: "/amazon-account-management" },
     { id: 8, name: "Amazon SEO & Listing Optimization", path: "/amazon-seo-listing-optimization" },
     { id: 9, name: "Amazon Dropshipping", path: "/amazon-dropshipping" },
-    { id: 10, name: "Store Creation", path: "/store-creation" },
+    { id: 10, name: "Store Creation", path: "/amazon-store-setup-service" },
     { id: 11, name: "Guest Posting Services", path: "/guest-posting-services" },
 ];
 

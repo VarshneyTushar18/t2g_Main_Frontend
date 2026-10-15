@@ -57,7 +57,7 @@ const usefulLinks = [
     { id: 8, name: "Amazon seo optimization", path: "/amazon-seo-listing-optimization" },
     { id: 9, name: "Amazon listing optimization", path: "/amazon-seo-listing-optimization" },
     { id: 10, name: "Amazon dropshipping services", path: "/amazon-dropshipping" },
-    { id: 11, name: "Amazon store creation", path: "/store-creation" },
+    { id: 11, name: "Amazon store creation", path: "/amazon-store-setup-service" },
     { id: 12, name: "Amazon storefront design services", path: "/guest-posting-services" }
 ];
 

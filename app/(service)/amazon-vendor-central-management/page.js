@@ -27,7 +27,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Get professional Amazon product cataloging services with Tech2Globe. Optimize listings, SKUs, images and descriptions to boost visibility, sales and ROI.",
-        url: "https://stagenew.tech2globe.tech/amazon-product-catalog"
+        url: "https://stagenew.tech2globe.tech/amazon-vendor-central-management"
     },
     twitter: {
         card: "summary_large_image",
@@ -36,7 +36,7 @@ export const metadata = {
             "Get professional Amazon product cataloging services with Tech2Globe. Optimize listings, SKUs, images and descriptions to boost visibility, sales and ROI."
     },
     alternates: {
-        canonical: "https://stagenew.tech2globe.tech/amazon-product-catalog"
+        canonical: "https://stagenew.tech2globe.tech/amazon-vendor-central-management"
     }
 };
 

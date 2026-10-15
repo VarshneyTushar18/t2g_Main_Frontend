@@ -106,7 +106,7 @@ export default function Header() {
                                              <li><a className="menu-link" href="/amazon-copywriting">Amazon
                                                 Copywriting</a>
                                              </li>
-                                             <li><a className="menu-link" href="/amazon-product-catalog">Amazon
+                                             <li><a className="menu-link" href="/amazon-catalog-management-services">Amazon
                                                 Product Cataloging</a>
                                              </li>
                                              <li><a className="menu-link" href="/amazon-product-translation">Amazon
@@ -173,7 +173,7 @@ export default function Header() {
                                              </h5>
                                           </div>
                                           <ul className="list-unstyled ps-2 menu-items">
-                                             <li><a className="menu-link" href="/store-creation">Store Creation</a></li>
+                                             <li><a className="menu-link" href="/amazon-store-setup-service">Store Creation</a></li>
                                              <li><a className="menu-link" href="/enhanced-brand-content">Enhanced
                                                 Brand Content</a>
                                              </li>
@@ -1887,7 +1887,7 @@ export default function Header() {
                                                       Copywriting </a>
                                                    </li>
                                                    <li><a
-                                                      href="/amazon-product-catalog">Amazon
+                                                      href="/amazon-catalog-management-services">Amazon
                                                       Product Cataloging</a>
                                                    </li>
                                                    <li><a
@@ -1999,7 +1999,7 @@ export default function Header() {
                                              <div id="amazonConsultingOne1-3" className="accordion-collapse collapse"
                                                 data-bs-parent="#accordionExample">
                                                 <ul>
-                                                   <li><a href="/store-creation">Store
+                                                   <li><a href="/amazon-store-setup-service">Store
                                                       Creation </a>
                                                    </li>
                                                    <li><a

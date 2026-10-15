@@ -88,7 +88,7 @@ const services = [
             { "label": "Amazon Consulting", "link": "/amazon-consulting-services" },
             { "label": "Amazon PPC", "link": "/amazon-ppc-services" },
             { "label": "Amazon Dropshipping", "link": "/amazon-dropshipping" },
-            { "label": "Amazon Store", "link": "/store-creation" },
+            { "label": "Amazon Store", "link": "/amazon-store-setup-service" },
             { "label": "Amazon EBC", "link": "/amazon-ebc-services" },
             { "label": "Vendor Account Management", "link": "/vendor-account-management" },
             { "label": "Amazon Virtual Assistance", "link": "/amazon-virtual-assistance" },

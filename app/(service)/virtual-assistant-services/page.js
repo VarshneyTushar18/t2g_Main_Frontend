@@ -295,20 +295,172 @@ const serviceAccordionItems = [
     },
 ];
 
-export default function VirtualAssistantServices() {
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: faqs.map((faq) => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
+const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.tech2globe.com/#organization",
+            "name": "Tech2Globe",
+            "url": "https://www.tech2globe.com/",
+            "email": "info@tech2globe.com",
+            "telephone": [
+                "+1-516-858-5840",
+                "+91-9899675039"
+            ],
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "contactType": "sales",
+                    "email": "info@tech2globe.com",
+                    "telephone": "+1-516-858-5840",
+                    "availableLanguage": [
+                        "English"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.tech2globe.com/#website",
+            "url": "https://www.tech2globe.com/",
+            "name": "Tech2Globe",
+            "publisher": {
+                "@id": "https://www.tech2globe.com/#organization"
             },
-        })),
-    };
+            "inLanguage": "en"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.tech2globe.com/virtual-assistant-services#webpage",
+            "url": "https://www.tech2globe.com/virtual-assistant-services",
+            "name": "Virtual Assistant Services | Flexible Business Support",
+            "description": "Get reliable virtual assistant services for administrative, ecommerce, customer support, research and business tasks. Scale your team with Tech2Globe.",
+            "isPartOf": {
+                "@id": "https://www.tech2globe.com/#website"
+            },
+            "about": {
+                "@id": "https://www.tech2globe.com/virtual-assistant-services#service"
+            },
+            "publisher": {
+                "@id": "https://www.tech2globe.com/#organization"
+            },
+            "breadcrumb": {
+                "@id": "https://www.tech2globe.com/virtual-assistant-services#breadcrumb"
+            },
+            "inLanguage": "en"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.tech2globe.com/virtual-assistant-services#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tech2globe.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Virtual Assistant Services",
+                    "item": "https://www.tech2globe.com/virtual-assistant-services"
+                }
+            ]
+        },
+        {
+            "@type": "Service",
+            "@id": "https://www.tech2globe.com/virtual-assistant-services#service",
+            "name": "Virtual Assistant Services",
+            "serviceType": "Virtual Assistant Services",
+            "url": "https://www.tech2globe.com/virtual-assistant-services",
+            "description": "Managing everyday business tasks can take valuable time away from your core operations. From managing emails and calendars to handling customer support, research, data entry, and ecommerce activities, repetitive administrative work can quickly become difficult to manage internally.",
+            "provider": {
+                "@id": "https://www.tech2globe.com/#organization"
+            },
+            "mainEntityOfPage": {
+                "@id": "https://www.tech2globe.com/virtual-assistant-services#webpage"
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://www.tech2globe.com/virtual-assistant-services#faq",
+            "url": "https://www.tech2globe.com/virtual-assistant-services",
+            "name": "Virtual Assistant Services FAQs",
+            "isPartOf": {
+                "@id": "https://www.tech2globe.com/virtual-assistant-services#webpage"
+            },
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "H3: What is a virtual assistant?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A virtual assistant is a remote professional who provides administrative, operational, customer service, research, ecommerce, or other business support without working from the company's physical office."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "H3: What services does a virtual assistant offer?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A virtual assistant can provide administrative support, email and calendar management, customer service, data entry, ecommerce assistance, research, lead generation, social media support, and other recurring business tasks."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "H3: Why should I hire a virtual assistant?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Hiring a virtual assistant can help reduce repetitive work, provide flexible operational support, and allow your internal team to focus on more important business activities."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "H3: How much do virtual assistant services cost?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Pricing depends on the type of work, required experience, workload, working hours, and level of support. A customized quote can provide a more accurate estimate based on your requirements."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "H3: Can a virtual assistant work with my existing tools?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Virtual assistant workflows can be organized around the tools, platforms, communication channels, and processes used by your business, subject to the specific requirements of the project."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "H3: Can I hire a virtual assistant for specific tasks?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. You can outsource specific recurring tasks such as email management, data entry, research, customer support, ecommerce administration, scheduling, or lead research."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "H3: Can virtual assistants support ecommerce businesses?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Ecommerce virtual assistants can assist with product information, catalog administration, customer communication, research, marketplace tasks, and other operational activities."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "H3: How do I get started with Tech2Globe virtual assistant services?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Share your required tasks, workload, working hours, tools, and expected outcomes with our team. We can review your requirements and recommend an appropriate virtual assistant support model."
+                    }
+                }
+            ]
+        }
+    ]
+};
 
+export default function VirtualAssistantServices() {
     return (
         <>
             <script

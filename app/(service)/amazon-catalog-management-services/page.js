@@ -36,7 +36,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Keep your Amazon product catalog accurate and organized with Tech2Globe. Get expert catalog management, SKU updates, product data, and error resolution.",
-        url: "https://stagenew.tech2globe.tech/amazon-product-catalog"
+        url: "https://stagenew.tech2globe.tech/amazon-catalog-management-services"
     },
     twitter: {
         card: "summary_large_image",
@@ -45,7 +45,7 @@ export const metadata = {
             "Keep your Amazon product catalog accurate and organized with Tech2Globe. Get expert catalog management, SKU updates, product data, and error resolution."
     },
     alternates: {
-        canonical: "https://stagenew.tech2globe.tech/amazon-product-catalog"
+        canonical: "https://stagenew.tech2globe.tech/amazon-catalog-management-services"
     }
 };
 
@@ -241,9 +241,161 @@ const testimonials = [
     },
 ];
 
+const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.tech2globe.com/#organization",
+            "name": "Tech2Globe",
+            "url": "https://www.tech2globe.com/"
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.tech2globe.com/#website",
+            "url": "https://www.tech2globe.com/",
+            "name": "Tech2Globe",
+            "publisher": {
+                "@id": "https://www.tech2globe.com/#organization"
+            },
+            "inLanguage": "en"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.tech2globe.com/amazon-catalog-management-services#webpage",
+            "url": "https://www.tech2globe.com/amazon-catalog-management-services",
+            "name": "Amazon Catalog Management Services | Tech2Globe",
+            "description": "Keep your Amazon product catalog accurate and organized with Tech2Globe. Get expert catalog management, SKU updates, product data, and error resolution.",
+            "isPartOf": {
+                "@id": "https://www.tech2globe.com/#website"
+            },
+            "about": {
+                "@id": "https://www.tech2globe.com/amazon-catalog-management-services#service"
+            },
+            "breadcrumb": {
+                "@id": "https://www.tech2globe.com/amazon-catalog-management-services#breadcrumb"
+            },
+            "mainEntity": {
+                "@id": "https://www.tech2globe.com/amazon-catalog-management-services#service"
+            },
+            "inLanguage": "en"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.tech2globe.com/amazon-catalog-management-services#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tech2globe.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Amazon Catalog Management Services",
+                    "item": "https://www.tech2globe.com/amazon-catalog-management-services"
+                }
+            ]
+        },
+        {
+            "@type": "Service",
+            "@id": "https://www.tech2globe.com/amazon-catalog-management-services#service",
+            "name": "Amazon Catalog Management Services",
+            "serviceType": "Amazon catalog management",
+            "url": "https://www.tech2globe.com/amazon-catalog-management-services",
+            "description": "Tech2Globe provides Amazon catalog management services including product data management, SKU and catalog organization, product categorization, listing content updates, variation management, catalog audits, and error resolution.",
+            "provider": {
+                "@id": "https://www.tech2globe.com/#organization"
+            },
+            "areaServed": "Worldwide"
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://www.tech2globe.com/amazon-catalog-management-services#faq",
+            "url": "https://www.tech2globe.com/amazon-catalog-management-services",
+            "name": "Amazon Catalog Management Services FAQs",
+            "isPartOf": {
+                "@id": "https://www.tech2globe.com/amazon-catalog-management-services#webpage"
+            },
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is Amazon catalog management?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Amazon catalog management involves creating, organizing, updating, reviewing, and maintaining product information within an Amazon catalog."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why is Amazon catalog management important?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Accurate catalog information helps businesses maintain consistent product data, organize SKUs, reduce errors, and provide shoppers with clearer product information."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you manage large Amazon catalogs?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Catalog management processes can be structured around large product ranges, including businesses with hundreds or thousands of SKUs."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you update existing Amazon product information?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Product information can be reviewed and updated when details such as descriptions, specifications, attributes, images, or other listing information change."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you manage product variations?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Variation-related information can be reviewed and managed to help maintain accurate relationships between products and their available options."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you help resolve catalog errors?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We can review catalog information to identify issues such as missing data, inconsistent attributes, categorization problems, and other product information errors, then work through the required corrections."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How often should an Amazon catalog be updated?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "There is no single schedule that works for every business. Catalogs should be reviewed whenever products, specifications, pricing-related information, packaging, images, or other relevant details change. Businesses with large or frequently changing catalogs may benefit from ongoing maintenance."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can catalog management be outsourced?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Outsourcing catalog operations can give businesses access to dedicated resources for repetitive and detail-oriented product data tasks while internal teams focus on strategy and growth."
+                    }
+                }
+            ],
+            "inLanguage": "en"
+        }
+    ]
+};
+
 export default function AmazonProductCatalog() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
             <PageHeader pageHeaderData={pageHeaderData} />
             <Breadcrumb parentName="Services" pageName="Amazon Catalog Management" />
             <BrandSection />

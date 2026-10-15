@@ -41,7 +41,7 @@ export const metadata = {
         siteName: "Tech2Globe web Solutions LLP",
         description:
             "Get a professional Amazon Store setup service from Tech2Globe. Build a branded Amazon Store with strategic design, product organization, and a better shopping experience.",
-        url: "https://stagenew.tech2globe.tech/store-creation"
+        url: "https://stagenew.tech2globe.tech/amazon-store-setup-service"
     },
     twitter: {
         card: "summary_large_image",
@@ -50,7 +50,7 @@ export const metadata = {
             "Get a professional Amazon Store setup service from Tech2Globe. Build a branded Amazon Store with strategic design, product organization, and a better shopping experience."
     },
     alternates: {
-        canonical: "https://stagenew.tech2globe.tech/store-creation"
+        canonical: "https://stagenew.tech2globe.tech/amazon-store-setup-service"
     }
 };
 
@@ -204,9 +204,158 @@ const testimonials = [
     },
 ];
 
+const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://www.tech2globe.com/#organization",
+            "name": "Tech2Globe",
+            "url": "https://www.tech2globe.com/"
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.tech2globe.com/#website",
+            "url": "https://www.tech2globe.com/",
+            "name": "Tech2Globe",
+            "publisher": {
+                "@id": "https://www.tech2globe.com/#organization"
+            }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.tech2globe.com/amazon-store-setup-service#webpage",
+            "url": "https://www.tech2globe.com/amazon-store-setup-service",
+            "name": "Amazon Store Setup Service | Amazon Brand Store | Tech2Globe",
+            "description": "Get a professional Amazon Store setup service from Tech2Globe. Build a branded Amazon Store with strategic design, product organization, and a better shopping experience.",
+            "isPartOf": {
+                "@id": "https://www.tech2globe.com/#website"
+            },
+            "about": {
+                "@id": "https://www.tech2globe.com/amazon-store-setup-service#service"
+            },
+            "breadcrumb": {
+                "@id": "https://www.tech2globe.com/amazon-store-setup-service#breadcrumb"
+            },
+            "mainEntity": {
+                "@id": "https://www.tech2globe.com/amazon-store-setup-service#service"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.tech2globe.com/amazon-store-setup-service#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.tech2globe.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Amazon Store Setup Service",
+                    "item": "https://www.tech2globe.com/amazon-store-setup-service"
+                }
+            ]
+        },
+        {
+            "@type": "Service",
+            "@id": "https://www.tech2globe.com/amazon-store-setup-service#service",
+            "name": "Amazon Store Setup Service",
+            "serviceType": [
+                "Amazon Brand Store strategy and structure",
+                "Amazon Store design",
+                "Product and category organization",
+                "Brand storytelling",
+                "Amazon Store build and launch",
+                "Ongoing Amazon Store updates"
+            ],
+            "description": "Tech2Globe provides Amazon Store setup services including Store strategy, custom design, product and category organization, brand storytelling, Store build and launch, and ongoing updates.",
+            "url": "https://www.tech2globe.com/amazon-store-setup-service",
+            "provider": {
+                "@id": "https://www.tech2globe.com/#organization"
+            },
+            "mainEntityOfPage": {
+                "@id": "https://www.tech2globe.com/amazon-store-setup-service#webpage"
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://www.tech2globe.com/amazon-store-setup-service#faq",
+            "url": "https://www.tech2globe.com/amazon-store-setup-service",
+            "isPartOf": {
+                "@id": "https://www.tech2globe.com/amazon-store-setup-service#webpage"
+            },
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is an Amazon Brand Store?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "An Amazon Brand Store is a dedicated destination on Amazon where eligible brands can showcase products, organize categories, communicate their brand story, and help customers explore their offerings."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who can create an Amazon Brand Store?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Eligibility depends on Amazon's current requirements and available brand programs. Brands should meet the applicable requirements before creating a Store."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How much does an Amazon Store setup cost?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The cost of professional setup depends on factors such as the number of pages, catalog size, design requirements, content, and level of customization. Eligible brands can create an Amazon Brand Store without paying Amazon a separate Store creation fee, while professional design and setup services have their own costs."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long does it take to set up an Amazon Store?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The timeline depends on the size and complexity of the Store, the number of products and pages, content requirements, and the review process. A simple Store generally requires less work than a large multi-category experience."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can an existing Amazon Store be redesigned?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. An existing Store can be reviewed and redesigned to improve its navigation, visual presentation, product organization, messaging, and overall customer experience."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can an Amazon Brand Store help customers discover products?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A well-organized Store gives shoppers another way to browse a brand's products through categories, collections, and other sections. This can make it easier for customers to explore products beyond the listing they initially discovered."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can the Store be updated after launch?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Brands can update their Store as products, collections, campaigns, and business priorities change. Regular reviews can help keep the experience current and relevant."
+                    }
+                }
+            ]
+        }
+    ]
+};
+
 export default function StoreCreation() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
             <PageHeader pageHeaderData={pageHeaderData} />
             <Breadcrumb parentName="Services" pageName="Amazon Store Setup" />
             <BrandSection />
