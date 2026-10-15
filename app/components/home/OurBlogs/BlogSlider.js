@@ -53,13 +53,14 @@ export default function BlogSlider({ posts }) {
                                         : undefined
                                 }
                             >
+                                
+                            </div>
+                            <div className={Style.blogContent}>
                                 <div
                                     className={Style.blogTitle}
                                     dangerouslySetInnerHTML={{ __html: titleHtml }}
                                 />
-                            </div>
-                            <div className={Style.blogContent}>
-                                <p className={`${Style.blogExcerpt} m-0`}>{excerpt}</p>
+                                {/* <p className={`${Style.blogExcerpt} m-0`}>{excerpt}</p> */}
                             </div>
                             <div className={Style.blogCardFooter}>
                                 <Link
@@ -68,7 +69,7 @@ export default function BlogSlider({ posts }) {
                                     aria-label={readMoreLabel}
                                     title={readMoreLabel}
                                 >
-                                    Read More
+                                    Read More...
                                 </Link>
                             </div>
                         </div>
