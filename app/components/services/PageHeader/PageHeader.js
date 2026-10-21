@@ -47,7 +47,10 @@ export default function PageHeader({ pageHeaderData }) {
                                         href={pageHeaderData.buttonLink}
                                         className="button-red mt-2 mx-0"
                                     >
-                                        {pageHeaderData.buttonText}
+                                        <span className="d-inline-flex align-items-center gap-2">
+                                            {pageHeaderData.buttonIcon}
+                                            {pageHeaderData.buttonText}
+                                        </span>
                                     </a>
                                 </div>
                             </div>

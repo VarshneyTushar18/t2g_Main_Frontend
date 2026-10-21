@@ -11,7 +11,7 @@ import ClientPortfolio from "@/app/components/services/ClientPortfolio/ClientPor
 export const metadata = {
     title: "AI-Powered Amazon Consulting Services | Smart PPC, SEO & Account Growth",
     description:
-        "Grow faster on Amazon with Tech2Globe's AI-powered consulting services. We use intelligent data analysis to optimize your PPC campaigns, product listings, and seller account — driving higher rankings and consistent revenue growth.",
+        "Get AI-powered Amazon Consulting Services to optimize product listings, improve PPC campaigns, strengthen SEO, and drive smarter, data-driven growth for your Amazon business.",
     keywords: [
         "amazon consulting services",
         "amazon consulting service",
@@ -25,19 +25,19 @@ export const metadata = {
         title: "AI-Powered Amazon Consulting Services | Smart PPC, SEO & Account Growth",
         siteName: "Tech2Globe web Solutions LLP",
         description:
-            "Grow faster on Amazon with Tech2Globe's AI-powered consulting services. We use intelligent data analysis to optimize your PPC campaigns, product listings, and seller account — driving higher rankings and consistent revenue growth.",
+            "Get AI-powered Amazon Consulting Services to optimize product listings, improve PPC campaigns, strengthen SEO, and drive smarter, data-driven growth for your Amazon business.",
         url: "https://stagenew.tech2globe.tech/amazon-consulting-services",
         images: [
-            "https://stagenew.tech2globe.tech/images/tech2globe-consulting-banner-2.jpg",
+            "https://stagenew.tech2globe.tech/images/services/service-inner/tech2globe-consulting-banner-2.jpg",
         ],
     },
     twitter: {
         card: "summary_large_image",
         title: "AI-Powered Amazon Consulting Services | Smart PPC, SEO & Account Growth",
         description:
-            "Grow faster on Amazon with Tech2Globe's AI-powered consulting services. We use intelligent data analysis to optimize your PPC campaigns, product listings, and seller account — driving higher rankings and consistent revenue growth.",
+            "Get AI-powered Amazon Consulting Services to optimize product listings, improve PPC campaigns, strengthen SEO, and drive smarter, data-driven growth for your Amazon business.",
         images: [
-            "https://stagenew.tech2globe.tech/images/tech2globe-consulting-banner-2.jpg",
+            "https://stagenew.tech2globe.tech/images/services/service-inner/tech2globe-consulting-banner-2.jpg",
         ],
     },
     alternates: {
@@ -160,63 +160,63 @@ const caseStudies = [
         "title": "Product Visibility & Drive Sales 0.1",
         "image": "/images/services/service-inner/untitled-design-20.png",
         "description": "The client has been in the lighting business since 2011, specializing...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 2 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 2,
         "title": "EBC and Storefront",
         "image": "/images/services/service-inner/ebca.png",
         "description": "Client deals in Health & Household items and Pet Supplies products on Amazon and wants...",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 3 - EBC and Storefront-converted.pdf"
     },
     {
         "id": 3,
         "title": "Amazon PPC",
         "image": "/images/services/service-inner/amazon-ppc.png",
         "description": "Clients came to us with a range of Amazon PPC management difficulties....",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Amazon PPC-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Amazon PPC-converted.pdf"
     },
     {
         "id": 4,
         "title": "Product Visibility & Drive Sales",
         "image": "/images/services/service-inner/untitled-design-18.png",
         "description": "Client has been in the business of selling fine grooming products for over 15 years......",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case Study 1 - Sales Increase in different categories-converted.pdf"
     },
     {
         "id": 5,
         "title": "e-Commerce Store for Luxury Goods",
         "image": "/images/services/service-inner/e-commerce-store-for-luxury-goods.png",
         "description": "It is the ultimate luxury fashion destination for the distribution and retail of Italian, French…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-Commerce Store for Luxury Goods-converted.pdf"
     },
     {
         "id": 6,
         "title": "Amazon Sale Boost",
         "image": "/images/services/service-inner/amazon-sale-boost.jpg",
         "description": "Find out the most important areas where our team required utmost attention to showcase the work from day one …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/amazon-india-case-study.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/amazon-india-case-study.pdf"
     },
     {
         "id": 7,
         "title": "About Drop shipping",
         "image": "/images/services/service-inner/about-drop-shipping.jpg",
         "description": "Drop shipping is an e-retail term where someone facilitates the selling and delivery of an online product without …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Case-Study-Drop-Shipping.pdf"
     },
     {
         "id": 8,
         "title": "Migration from Sooq to Amazon.ae",
         "image": "/images/services/service-inner/migration-from-sooq-to-amazon-ae.jpg",
         "description": "Forgiving the best solution to our client and comprehensive support is our specialty which we successfully …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Migration-from-Sooq-to-AmazonAE.pdf"
     },
     {
         "id": 9,
         "title": "e-Commerce Multivendor Store 1.0",
         "image": "/images/services/service-inner/e-commerce-multivendor-store-1-0.jpg",
         "description": "Our client approached us for Ecommerce services that included multi-vendor customized solutions along with …",
-        "docLink": "https://tech2globe.com/casestudies-docs1/E-commerce version upgrade (1).pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/E-commerce version upgrade (1).pdf"
     },
     {
         "id": 10,
@@ -230,59 +230,153 @@ const caseStudies = [
         "title": "Promotion of 2 x Shopify Stores",
         "image": "/images/services/service-inner/promotion-of-2-x-shopify-stores.png",
         "description": "In 2.5 periods of month projects handling, we've generated more than 6,000 Facebook Page Followers on “Fashion & Cosmetic”…",
-        "docLink": "https://tech2globe.com/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
+        "docLink": "https://stagenew.tech2globe.tech/casestudies-docs1/Promotion of 2 x Shopify Stores-converted.pdf"
     }
 ];
 
 const faqs = [
     {
         id: "One",
-        question: "What is Amazon Consulting Services?",
-        answer: `
-        Amazon consulting services is a complete Amazon management service and your go-to reference for selling on Amazon. Amazon consulting has highly specialized Amazon seller services aimed at providing you with the Amazon expert assistance you want exactly when you need it.
-      `,
+        question: "What are Amazon consulting services?",
+        answer:
+            "Amazon consulting services help businesses improve their performance on Amazon through expert guidance on seller accounts, product listings, advertising, product research, and marketplace strategy. These services help sellers identify business challenges, improve their operations, and build a practical plan for long-term growth.",
     },
     {
         id: "Two",
-        question: "Are there any prerequisites for hiring Amazon Consulting Services?",
-        answer: `
-        When it comes to hiring the top Amazon consultants for your company, much study and assessment are required. Examine their previous performance, price structure and competence, number of years in the company, range of services provided, and emphasis on good communication.
-      `,
+        question: "How can Amazon consulting services help grow my business?",
+        answer:
+            "Amazon consulting services can help you identify opportunities to improve product visibility, optimize listings, manage advertising campaigns, and analyze competitors. The right strategy depends on your products, target audience, budget, and current account performance. While these improvements can support business growth, actual results depend on market demand and competition.",
     },
     {
         id: "Three",
-        question: "Why should I consider hiring Amazon Consulting Services?",
-        answer: `
-        You should hire Amazon consultants to analyze your items and branding. These services will work with you to identify your objectives and develop a thorough marketing plan. Tech2Globe is dedicated to assisting businesses in leveraging the strong Amazon platform. We use our knowledge of Amazon marketing services and Amazon AWS consulting to identify the most cost-effective strategies to boost your ROI and meet your company objectives.
-      `,
+        question: "How much do Amazon consulting services cost?",
+        answer:
+            "The cost of Amazon consulting services depends on the scope of work, the number of products, account complexity, and whether you need a one-time consultation or ongoing support. Services may include account audits, listing optimization, PPC strategy, product research, or account management. Contact our team to discuss your requirements and receive a customized quote.",
     },
     {
         id: "Four",
-        question: "How do I choose the right Amazon Consultant for my business?",
-        answer: `
-        Qualities to look out for to hire the right Amazon Consultant are:
-        <ul>
-        <li>Emphasize on powerful SEO strategy</li>
-        <li>Immense and relevant work experience</li>
-        <li>Pursues an individual approach</li>
-        <li>Transparent pricing structure</li>
-        <li>Compliance experts</li>
-        <li>Quickly adapts to changes</li>
-        </ul>
-      `,
+        question: "Can an Amazon consultant help with a suspended seller account?",
+        answer:
+            "Yes. An Amazon consultant can review the suspension notice, identify potential policy or performance issues, and help prepare an appeal with a clear Plan of Action. This may include explaining the root cause, outlining corrective steps, and describing measures to prevent the issue from happening again. Account reinstatement depends on Amazon's review and approval, so it cannot be guaranteed.",
     },
     {
         id: "Five",
-        question: "What specific services do Amazon Consultants offer?",
-        answer: `
-        Amazon consultants use Amazon seller account management approaches as well as Amazon vendor account management knowledge to generate lucrative results. Whether you require full-time help or monthly account audits, Tech2Globe's Amazon specialists will work around your requirements. You can expect extensive reporting and precise suggestions from our Amazon specialists.
-      `,
+        question: "Can Amazon consultants help me find profitable products to sell?",
+        answer:
+            "Yes. Amazon consultants can help evaluate product opportunities by researching customer demand, competition, pricing, estimated costs, and potential profit margins. They may also use product research tools and marketplace data to identify promising niches. However, profitability depends on factors such as sourcing costs, Amazon fees, advertising expenses, and changes in market demand.",
+    },
+    {
+        id: "Six",
+        question: "Do Amazon consulting services include PPC and listing optimization?",
+        answer:
+            "Yes. Depending on the agreed scope, Amazon consulting services can include PPC campaign analysis, keyword research, listing optimization, competitor analysis, pricing recommendations, and performance monitoring. These activities help identify opportunities to improve ad efficiency, product discoverability, and conversions while aligning the strategy with your business goals.",
+    },
+    {
+        id: "Seven",
+        question: "Can Amazon consulting services help me sell in international marketplaces?",
+        answer:
+            "Yes. Amazon consultants can guide businesses looking to expand into international marketplaces by helping them assess market opportunities, understand account setup requirements, research local competition, and plan product listings and advertising. They can also help identify considerations such as taxes, shipping, localization, and marketplace policies. Requirements vary by country, so the expansion plan should be tailored to your target market.",
     },
 ];
 
 export default function AmazonConsulting() {
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://www.tech2globe.com/#organization",
+                name: "Tech2Globe",
+                url: "https://www.tech2globe.com/",
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://www.tech2globe.com/#website",
+                url: "https://www.tech2globe.com/",
+                name: "Tech2Globe",
+                publisher: {
+                    "@id": "https://www.tech2globe.com/#organization",
+                },
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://www.tech2globe.com/amazon-consulting-services#webpage",
+                url: "https://www.tech2globe.com/amazon-consulting-services",
+                name: "Amazon Consulting Services",
+                description:
+                    "Amazon consulting services to help businesses improve seller account performance, product listings, advertising, product research, marketplace strategy, and long-term growth.",
+                isPartOf: {
+                    "@id": "https://www.tech2globe.com/#website",
+                },
+                about: {
+                    "@id": "https://www.tech2globe.com/amazon-consulting-services#service",
+                },
+                publisher: {
+                    "@id": "https://www.tech2globe.com/#organization",
+                },
+                breadcrumb: {
+                    "@id": "https://www.tech2globe.com/amazon-consulting-services#breadcrumb",
+                },
+                inLanguage: "en-US",
+            },
+            {
+                "@type": "Service",
+                "@id": "https://www.tech2globe.com/amazon-consulting-services#service",
+                name: "Amazon Consulting Services",
+                serviceType: "Amazon Marketplace Consulting",
+                description:
+                    "Amazon consulting services covering seller account guidance, product listing optimization, advertising strategy, product research, competitor analysis, account audits, marketplace expansion, and performance improvement.",
+                provider: {
+                    "@id": "https://www.tech2globe.com/#organization",
+                },
+                url: "https://www.tech2globe.com/amazon-consulting-services",
+                mainEntityOfPage: {
+                    "@id": "https://www.tech2globe.com/amazon-consulting-services#webpage",
+                },
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.tech2globe.com/amazon-consulting-services#breadcrumb",
+                itemListElement: [
+                    {
+                        "@type": "ListItem",
+                        position: 1,
+                        name: "Home",
+                        item: "https://www.tech2globe.com/",
+                    },
+                    {
+                        "@type": "ListItem",
+                        position: 2,
+                        name: "Amazon Consulting Services",
+                        item: "https://www.tech2globe.com/amazon-consulting-services",
+                    },
+                ],
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.tech2globe.com/amazon-consulting-services#faq",
+                url: "https://www.tech2globe.com/amazon-consulting-services",
+                isPartOf: {
+                    "@id": "https://www.tech2globe.com/amazon-consulting-services#webpage",
+                },
+                mainEntity: faqs.map((faq) => ({
+                    "@type": "Question",
+                    name: faq.question,
+                    acceptedAnswer: {
+                        "@type": "Answer",
+                        text: faq.answer,
+                    },
+                })),
+            },
+        ],
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+            />
             <div className="">
                 <img src="/images/services/service-inner/Amazon-consult-banner.png" alt="AMAZON PPC CONSULTING" className="img-fluid" />
             </div>
@@ -834,11 +928,11 @@ export default function AmazonConsulting() {
                             <img src="/images/services/service-inner/26-26.jpg" alt="Amazon Store" className="img-fluid pb-3" />
                             <img src="/images/services/service-inner/19-19.jpg" alt="PPC Results" className="img-fluid pb-3" />
                             <img src="/images/services/service-inner/20-20.jpg" alt="PPC Results" className="img-fluid pb-3" />
-                            
                         </div>
 
                         <div className={`${Style.ContentImage} col-md-4`}>
                             <h3 className="text-center text-danger pb-3">PPC Results</h3>
+                            
                             
                             <img src="/images/services/service-inner/21-21.jpg" alt="PPC Results" className="img-fluid pb-3" />
                             <img src="/images/services/service-inner/22-22.jpg" alt="PPC Results" className="img-fluid pb-3" />
@@ -860,7 +954,7 @@ export default function AmazonConsulting() {
                 </div>
             </div>
 
-            {/* <div className="pt-5 pb-3">
+            <div className="pt-5 pb-3 d-none" aria-hidden="true">
                 <div className="container">
                     <div className="row">
                         <h2 className="main-heading mb-4 text-danger text-center">
@@ -879,81 +973,87 @@ export default function AmazonConsulting() {
                                 </thead>
                                 <tbody className="mytbody">
                                     <tr>
-                                        <td>B07M8VYY4L
+                                        <td><a href="https://www.amazon.com/dp/B07M8VYY4L" className="mylink">https://www.amazon.com/dp/B07M8VYY4L</a>
                                         </td>
-                                        <td>B09J3PMRFX
+                                        <td><a href="https://www.amazon.com/dp/B07FM6DPMG" className="mylink">https://www.amazon.com/dp/B09J3PMRFX</a>
                                         </td>
-                                        <td>lilcuddlers</td>
-                                        <td>B01M06ICNA
+                                        <td><a href="https://www.amazon.com/tulimed" className="mylink">https://www.amazon.com/lilcuddlers</a></td>
+                                        <td><a href="https://www.amazon.in/dp/B01M06ICNA" className="mylink">https://www.amazon.in/dp/B01M06ICNA</a>
                                         </td>
-                                        <td> B078HWPJSJ
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>B00IVNC114</td>
-                                        <td> B0753ZWYKX
-                                        </td>
-                                        <td>https</td>
-                                        <td>B01N5227U7
-                                        </td>
-                                        <td>B01BGBJ8Y0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>B07G8MT1C9
-                                        </td>
-                                        <td>B097CXQWPN
-                                        </td>
-                                        <td>aquaeasy </td>
-                                        <td>B073DLZWX7
-                                        </td>
-                                        <td>B00AYNRLFA
+                                        <td><a href="https://www.amazon.in/dp/B078HWPJSJ" className="mylink"> https://www.amazon.in/dp/B078HWPJSJ</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>B078HWPJSJ 
+                                        <td><a href="https://www.amazon.co.uk/dp/B00IVNC114"
+                                            className="mylink">https://www.amazon.co.uk/dp/B00IVNC114</a></td>
+                                        <td><a href="https://www.amazon.in/dp/B07KKM37T4" className="mylink"> https://www.amazon.com/dp/B0753ZWYKX</a>
                                         </td>
-                                        <td>B09NTR2F1B
-                                        </td>
-                                        <td>49485A46 E078 43F8 95A2 1E75CE0B1B56
-                                        </td>
-                                        <td>B07LBDGXQ3
-                                        </td>
-                                        <td>-</td>
+                                        <td><a href="https://www.amazon.com/stores/page/A6347872-5FA2-4541-90CB-E2386113006F"
+                                            className="mylink">https://www.amazon.com/stores/page/https://www.amazon.com/mysticsilver</a></td>
+                                        <td><a href="https://www.amazon.co.uk/dp/B01N5227U7" className="mylink">https://www.amazon.co.uk/dp/B01N5227U7
+                                        </a></td>
+                                        <td><a href="https://www.amazon.co.uk/dp/B01BGBJ8Y0"
+                                            className="mylink">https://www.amazon.co.uk/dp/B01BGBJ8Y0</a></td>
                                     </tr>
                                     <tr>
-                                        <td>B00548P1DE
+                                        <td><a href="https://www.amazon.de/dp/B07G8MT1C9" className="mylink">https://www.amazon.de/dp/B07G8MT1C9</a>
                                         </td>
-                                        <td>B083HTQDJX</td>
-                                        <td>kostrseggr</td>
-                                        <td>B072FJXFBW 
+                                        <td><a href="https://www.amazon.com/dp/B00E1P4BRS" className="mylink">https://www.amazon.com/dp/B097CXQWPN</a>
                                         </td>
-                                        <td>-</td>
+                                        <td><a href="https://www.amazon.com/lemirch" className="mylink">https://www.amazon.com/aquaeasy </a></td>
+                                        <td><a href="https://www.amazon.com/dp/B073DLZWX7" className="mylink">https://www.amazon.com/dp/B073DLZWX7
+                                        </a></td>
+                                        <td><a href="https://www.amazon.co.uk/dp/B00AYNRLFA" className="mylink">https://www.amazon.co.uk/dp/B00AYNRLFA
+                                        </a></td>
                                     </tr>
                                     <tr>
-                                        <td>B01BGBJ8Y0
+                                        <td><a href="https://www.amazon.in/dp/B078HWPJSJ" className="mylink">https://www.amazon.in/dp/B078HWPJSJ </a>
                                         </td>
-                                        <td>B089CVC66G
+                                        <td><a href="https://www.amazon.com/dp/B07C7Q2R6D" className="mylink">https://www.amazon.com/dp/B09NTR2F1B</a>
                                         </td>
-                                        <td>bonsai2u</td>
-                                        <td>-</td>
-                                        <td>-</td>
+                                        <td><a
+                                            href="javascript:;">https://www.amazon.com/stores/Equi-Tape/page/49485A46-E078-43F8-95A2-1E75CE0B1B56?ref_=ast_bln</a>
+                                        </td>
+                                        <td><a href="https://www.amazon.com/dp/B07LBDGXQ3" className="mylink">https://www.amazon.com/dp/B07LBDGXQ3</a>
+                                        </td>
+                                        <td><a href="javascript:;">-</a></td>
                                     </tr>
                                     <tr>
-                                        <td>B07RGTTJ4V 
+                                        <td><a href="https://www.amazon.co.uk/dp/B00548P1DE" className="mylink">https://www.amazon.co.uk/dp/B00548P1DE
+                                        </a></td>
+                                        <td><a href="https://www.amazon.co.uk/dp/B019VE5S98"
+                                            className="mylink">https://www.amazon.com/dp/B083HTQDJX</a></td>
+                                        <td><a href="javascript:;">https://www.amazon.com/kostrseggr</a></td>
+                                        <td><a href="https://www.amazon.fr/dp/B072FJXFBW" className="mylink">https://www.amazon.fr/dp/B072FJXFBW </a>
                                         </td>
-                                        <td>B09NLJV1LT
+                                        <td><a href="javascript:;">-</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://www.amazon.co.uk/dp/B01BGBJ8Y0" className="mylink">https://www.amazon.co.uk/dp/B01BGBJ8Y0
+                                        </a></td>
+                                        <td><a href="https://www.amazon.com/dp/B071FTW381" className="mylink">https://www.amazon.com/dp/B089CVC66G</a>
                                         </td>
-                                        <td>TranquilPlants
+                                        <td><a href="javascript:;">https://www.amazon.co.uk/bonsai2u</a></td>
+                                        <td><a href="javascript:;">-</a></td>
+                                        <td><a href="javascript:;">-</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://www.amazon.ae/dp/B07RGTTJ4V" className="mylink">https://www.amazon.ae/dp/B07RGTTJ4V </a>
                                         </td>
-                                        <td>-</td>
-                                        <td>-</td>
+                                        <td><a href="https://www.amazon.com/dp/B07QTCFLFC" className="mylink">https://www.amazon.com/dp/B09NLJV1LT</a>
+                                        </td>
+                                        <td><a
+                                            href="javascript:;">https://www.amazon.co.uk/stores/TranquilPlants/TranquilPlants/page/2B31F008-F9E0-4094-A34F-7BCE3C9504DF</a>
+                                        </td>
+                                        <td><a href="javascript:;">-</a></td>
+                                        <td><a href="javascript:;">-</a></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
 
             <div className="pt-5 pb-5">
@@ -988,7 +1088,7 @@ export default function AmazonConsulting() {
 
             <ClientPortfolio clients={portfolioClients} />
 
-            <CaseStudiesService caseStudies={caseStudies} />
+            {/* <CaseStudiesService caseStudies={caseStudies} /> */}
 
             <ClientSlider testimonials={testimonials} />
             <FaqSection faqs={faqs} />
