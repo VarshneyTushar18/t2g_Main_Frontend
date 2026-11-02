@@ -25,6 +25,26 @@ const nextConfig = {
         destination: "/amazon-catalog-management-services",
         permanent: true,
       },
+      {
+        source: "/walmart-advertisement",
+        destination: "/walmart-advertising-agency",
+        permanent: true,
+      },
+      {
+        source: "/walmart-marketplace-management",
+        destination: "/walmart-marketplace-management-services",
+        permanent: true,
+      },
+      {
+        source: "/walmart-full-service-management",
+        destination: "/walmart-account-management-services",
+        permanent: true,
+      },
+      {
+        source: "/shopping-ads-services",
+        destination: "/google-shopping-management-services",
+        permanent: true,
+      },
     ];
   },
 };
