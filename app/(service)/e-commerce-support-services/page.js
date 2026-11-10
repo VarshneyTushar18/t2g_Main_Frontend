@@ -7,7 +7,7 @@ import ServiceBanner from "@/app/components/services/ServiceBanner/ServiceBanner
 import ServiceSidebar from "@/app/components/services/ServiceSidebar/ServiceSidebar";
 import ClientSlider from "@/app/components/services/ClientSlider/ClientSlider";
 import FaqSection from "@/app/components/services/faqs/faqs";
-import { FaChartBar, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaLightbulb, FaSearch, FaShieldAlt, FaUsers, FaUsersCog } from "react-icons/fa";
+import { FaChartBar, FaClipboardList, FaClock, FaCogs, FaCube, FaDatabase, FaDownload, FaLightbulb, FaSearch, FaShieldAlt, FaUsers, FaUsersCog } from "react-icons/fa";
 import Breadcrumb from "@/app/components/breadcrumbs/breadcrumbs";
 
 export const metadata = {
@@ -232,7 +232,7 @@ export default function ecommercesupport() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12  mb-3">
                     <div className="card h-100 shadow-sm">
                       <div className="card-body text-center">
-                        <img src="images/services/service-inner/clicker.png"  alt="Amazon Product Listing" />
+                        <FaClipboardList className={Style.CardIconBlack} aria-hidden="true" />
                         <h5 className="card-title text-danger py-3 mb-2">Amazon Product Listing</h5>
                         <p className="card-text mb-2">Delivering a rich array of <Link href="/product-data-entry-services">Amazon product data entry services</Link>, Tech2Globe supports online retailers in growing their business online.</p>
                       </div>
@@ -241,7 +241,7 @@ export default function ecommercesupport() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12  mb-3">
                     <div className="card h-100 shadow-sm">
                       <div className="card-body text-center">
-                        <img src="images/services/service-inner/ebay.png"  alt="EBay Product Listing" />
+                        <img src="/images/services/service-inner/ebay.png" alt="EBay Product Listing" className={Style.CardIcon} />
                         <h5 className="card-title text-danger py-3 mb-2">EBay Product Listing</h5>
                         <p className="card-text mb-2">Our eBay <Link href = "/product-data-entry-services">product data entry</Link> specialists regularly manage and update product catalogs, and aim at developing a centralized shopping destination and make informed purchase decisions.</p>
                       </div>
@@ -250,7 +250,7 @@ export default function ecommercesupport() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12  mb-3">
                     <div className="card h-100 shadow-sm">
                       <div className="card-body text-center">
-                        <img src="images/services/service-inner/magento.png"  alt="Magento Product Listing" />
+                        <img src="/images/services/service-inner/magento.png" alt="Magento Product Listing" className={Style.CardIcon} />
                         <h5 className="card-title text-danger py-3 mb-2">Magento Product Listing</h5>
                         <p className="card-text mb-2">We can handle high-volume and complex <Link href="/magento-product-upload-services">Magento product upload </Link> projects, right from collating product details from various sources to keying-in and updating them in the product catalog.</p>
                       </div>
@@ -259,7 +259,7 @@ export default function ecommercesupport() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12  mb-3">
                     <div className="card h-100 shadow-sm">
                       <div className="card-body text-center">
-                        <img src="images/services/service-inner/shopify.png"  alt="Shopify Data Entry" />
+                        <img src="/images/services/service-inner/shopify.png" alt="Shopify Data Entry" className={Style.CardIcon} />
                         <h5 className="card-title text-danger py-3 mb-2">Shopify Data Entry</h5>
                         <p className="card-text mb-2">Whether you are selling physical and digital products or services, Tech2Globe can help you manage your online store with utmost accuracy. As part of our <strong>Ecommerce maintenance services</strong>, we ensure that your Shopify store is consistently updated and running smoothly.</p>
                       </div>
@@ -268,7 +268,7 @@ export default function ecommercesupport() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12  mb-3">
                     <div className="card h-100 shadow-sm">
                       <div className="card-body text-center">
-                        <img src="images/services/service-inner/output.png"  alt="Magento Product Upload" />
+                        <img src="/images/services/service-inner/output.png" alt="Magento Product Upload" className={Style.CardIcon} />
                         <h5 className="card-title text-danger py-3 mb-2">Magento Product Upload</h5>
                         <p className="card-text mb-2">Over the last decade Tech2Globe has become identical with quick and accurate Magento Data Entry Services. It's the capable and skilled team of Magento specialists that is behind this tag.</p>
                       </div>
@@ -277,7 +277,7 @@ export default function ecommercesupport() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12  mb-3">
                     <div className="card h-100 shadow-sm">
                       <div className="card-body text-center">
-                        <img src="images/services/service-inner/writing.png"  alt="Product Description Writing" />
+                        <img src="/images/services/service-inner/writing.png" alt="Product Description Writing" className={Style.CardIcon} />
                         <h5 className="card-title text-danger py-3 mb-2">Product Description Writing</h5>
                         <p className="card-text mb-2">When you outsource product description writing services to us, we initiate with a deep thoughtfulness of your target market so as to create precise, informative & engaging content that achieves your specific requirements and interests.</p>
                       </div>
@@ -286,7 +286,7 @@ export default function ecommercesupport() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12  mb-3">
                     <div className="card h-100 shadow-sm">
                       <div className="card-body text-center">
-                        <img src="images/services/service-inner/review.png"  alt="Product Review Writing" />
+                        <img src="/images/services/service-inner/review.png" alt="Product Review Writing" className={Style.CardIcon} />
                         <h5 className="card-title text-danger py-3 mb-2">Product Review Writing</h5>
                         <p className="card-text mb-2">Trusted by thousands of eCommerce store owners across the globe, Tech2Globe's <strong>E-commerce support specialists</strong> are renowned providers of product description writing services.</p>
                       </div>
@@ -295,7 +295,7 @@ export default function ecommercesupport() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12  mb-3">
                     <div className="card h-100 shadow-sm">
                       <div className="card-body text-center">
-                        <img src="images/services/service-inner/photography.png"  alt="Product Photography Post Processing" />
+                        <img src="/images/services/service-inner/photography.png" alt="Product Photography Post Processing" className={Style.CardIcon} />
                         <h5 className="card-title text-danger py-3 mb-2">Product Photography Post Processing</h5>
                         <p className="card-text mb-2">Tech2Globe holds specialization in offering product photo editing services for various industry segments, viz., apparels and accessories, jewelry, furniture, real estate, etc.</p>
                       </div>
@@ -304,7 +304,7 @@ export default function ecommercesupport() {
                   <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12  mb-3">
                     <div className="card h-100 shadow-sm">
                       <div className="card-body text-center">
-                        <img src="images/services/service-inner/order.png"  alt="Order & Inventory Management" />
+                        <img src="/images/services/service-inner/order.png" alt="Order & Inventory Management" className={Style.CardIcon} />
                         <h5 className="card-title text-danger py-3 mb-2">Order & Inventory Management</h5>
                         <p className="card-text mb-2">As part of <strong>E-commerce support services</strong>, we help our clients in processing a number of customer orders with utmost accuracy, right from the moment orders are placed through to fulfillment, timely invoicing, and payment.</p>
                       </div>
