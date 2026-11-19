@@ -37,7 +37,7 @@ export const metadata = {
 const pageHeaderData = {
     title: "LinkedIn Marketing Services",
     description:
-        "Grow your business through LinkedIn by joining us. We provide you with marketing services that will increase your brand’s popularity and create maximum engagement with prospective customers & partners. Our LinkedIn marketing agency will provide you with valuable insights and expertise to stay ahead and ensure that you maximize your revenue from your investments.<br/>Get a free proposal by filling out the contact form today.",
+        "Grow your business through LinkedIn by joining us. We provide you with marketing services that will increase your brand’s popularity and create maximum engagement with prospective customers & partners. Our LinkedIn marketing agency will provide you with valuable insights and expertise to stay ahead and ensure that you maximize your revenue from your investments. Get a free proposal by filling out the contact form today.",
     buttonText: "Contact us",
     buttonLink: "/contact-us",
     backgroundImage: "/images/services/service-inner/linkedin-banner.jpg", // your banner image
